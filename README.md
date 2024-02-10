@@ -1,4 +1,4 @@
-# GWAS_project
+# GWAS_learning_project
 
 GitHub repository of a bioinformatic Genome Wide Association Study project using
 Plink through `plinkr` R package. For learning puropses other repositories,
