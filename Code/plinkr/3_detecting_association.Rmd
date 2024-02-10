@@ -25,8 +25,8 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-In this vignette,
-we are going to detect associations between genetic information
+Script for an example of a   quantitative trait analysis.
+We are going to detect associations between genetic information
 and one or more quantitative traits.
 
 We will be using the data from PLINK files, which
@@ -66,23 +66,25 @@ if (is_plink_installed()) {
 
 ## Detecting associations for a single trait
 
-To do an association (both for a single and multiple traits), 
+To do an association (both for a single and multiple traits),
 we need some parameters:
 
- * The `.map` table or mapping table, which contains the location
+ * The `.map` table or **mapping table**, which contains the location
    of the single-nucleotide polymorphisms (SNPs)
- * The `.ped` table or pedigree table, which contains the pedigree
+ * The `.ped` table or **pedigree table**, which contains the pedigree
    of the individuals and their SNP values
- * The phenotype table, which contains the one or more phenotypes
+ * The **phenotype table**, which contains the one or more phenotypes
    of the individuals
- * The minor allele frequence (MAF)
+ * The **minor allele frequence** (MAF)
 
 Here, we get simple set of parameters, as to be used in testing,
 or -in this case- a simple demonstration:
- 
+`create_test_assoc_qt_data` gives you all the necessary test tables.
 ```{r}
 assoc_qt_data <- create_test_assoc_qt_data()
 ```
+
+Below, the single tables are shown.
 
 ### The mapping table
 
@@ -90,13 +92,17 @@ assoc_qt_data <- create_test_assoc_qt_data()
 knitr::kable(assoc_qt_data$data$map_table)
 ```
 
+Here we have 2 SNPs on the chromosome 1, at the 1<sup>st</sup> and <sup>2nd</sup> basepair location.
+The position in cM is unspecified.
+
 ### The pedigree table
 
-The PLINK example \code{.ped} contains, among others, the pedigree of the individuals:
+The PLINK example `.ped` contains, among others, the pedigree of the individuals:
 
 ```{r}
 knitr::kable(assoc_qt_data$data$ped_table)
 ```
+We have 6 family IDs, each has an individual unrelated to the other, father/mother are ignored, all the same sex (1=M, 2=F), phenotype is present but not used as we are going to use the phenotype table for that, last 4 columns are the two SNPs for the diploid values (1,3, 6 individual are homozygous on the first allele, 3,4,6 are homozygous on the second allele).
 
 Note that the pedigree table has a column called `case_control_code`,
 which will be completely ignored.
@@ -105,15 +111,21 @@ which will be completely ignored.
 
 The pedigree table has a column called `case_control_code`,
 which will be completely ignored, as it only allows to put in
-one phenotype. Instead, we use a table of one or more phenotypic
+one phenotype. Instead, we use a table of one (or more) phenotypic
 values:
 
 ```{r}
 knitr::kable(assoc_qt_data$phenotype_data$phe_table)
 ```
 
-These trait values, that is the values in the column `trait`,
-are clearly artificial. 
+The phenotype table has the first two column of IDs like teh pedigree table.
+And has the phenotypic values of the traits of interest.
+These trait values, that is the values in the column `P1`,
+are clearly artificial.
+
+```{r}
+knitr::kable(assoc_qt_data$phenotype_data$phe_table)
+```
 
 ### The minor allele frequency (MAF)
 
@@ -129,7 +141,7 @@ set to the lowest non-zero value.
 
 ### Detecting the association
 
-With the mapping, pedigree and phenotype table, 
+With the mapping, pedigree and phenotype table,
 we can detect the association between genotype and the single trait:
 
 ```{r}
@@ -138,7 +150,7 @@ if (is_plink_installed()) {
     assoc_qt_data = assoc_qt_data,
     assoc_qt_params = assoc_qt_params
   )
-  knitr::kable(t)
+  knitr::kable(t$qassoc_table)
 }
 ```
 
@@ -153,12 +165,16 @@ if (is_plink_installed()) {
  * `T`: Wald test (based on t-distribution)
  * `P`: Wald test asymptotic p-value
 
+For the log file of the association:
+
+`knitr::kable(t$log)`
+
 ## Detecting associations for multiple traits
 
 To detect associations for multiple traits,
 we can simply run multiple associations for single traits.
 
-Within `plinkr`, however, 
+Within `plinkr`, however,
 all we need to do is to extent the phenotype table,
 then re-run the analysis.
 
@@ -194,7 +210,7 @@ if (is_plink_installed()) {
 
 ### Detecting the association
 
-With the mapping, pedigree and phenotype table, 
+With the mapping, pedigree and phenotype table,
 we can detect the association between genotype and the two traits:
 
 ```{r}

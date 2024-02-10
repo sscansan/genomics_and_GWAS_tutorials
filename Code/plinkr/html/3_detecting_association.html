@@ -932,7 +932,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div id="content">
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>In this vignette, we are going to detect associations between genetic information and one or more quantitative traits.</p>
+<p>Script for an example of a quantitative trait analysis. We are going to detect associations between genetic information and one or more quantitative traits.</p>
 <p>We will be using the data from PLINK files, which is small, albeit a bit messy, where ‘messy’ is defined as that there is not a ideal 1-on-1 relation between genotype and phenotype. See the <strong>demo_assoc_qt.Rmd</strong> vignette where the same analysis is done with simulated ideal data.</p>
 </div>
 <div id="resources" class="section level2">
@@ -963,13 +963,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2>Detecting associations for a single trait</h2>
 <p>To do an association (both for a single and multiple traits), we need some parameters:</p>
 <ul>
-<li>The <code>.map</code> table or mapping table, which contains the location of the single-nucleotide polymorphisms (SNPs)</li>
-<li>The <code>.ped</code> table or pedigree table, which contains the pedigree of the individuals and their SNP values</li>
-<li>The phenotype table, which contains the one or more phenotypes of the individuals</li>
-<li>The minor allele frequence (MAF)</li>
+<li>The <code>.map</code> table or <strong>mapping table</strong>, which contains the location of the single-nucleotide polymorphisms (SNPs)</li>
+<li>The <code>.ped</code> table or <strong>pedigree table</strong>, which contains the pedigree of the individuals and their SNP values</li>
+<li>The <strong>phenotype table</strong>, which contains the one or more phenotypes of the individuals</li>
+<li>The <strong>minor allele frequence</strong> (MAF)</li>
 </ul>
-<p>Here, we get simple set of parameters, as to be used in testing, or -in this case- a simple demonstration:</p>
+<p>Here, we get simple set of parameters, as to be used in testing, or -in this case- a simple demonstration: <code>create_test_assoc_qt_data</code> gives you all the necessary test tables.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>assoc_qt_data &lt;-<span class="st"> </span><span class="kw">create_test_assoc_qt_data</span>()</span></code></pre></div>
+<p>Below, the single tables are shown.</p>
 <div id="the-mapping-table" class="section level3">
 <h3>The mapping table</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(assoc_qt_data<span class="op">$</span>data<span class="op">$</span>map_table)</span></code></pre></div>
@@ -997,10 +998,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
+<p>Here we have 2 SNPs on the chromosome 1, at the 1<sup>st</sup> and <sup>2nd</sup> basepair location. The position in cM is unspecified.</p>
 </div>
 <div id="the-pedigree-table" class="section level3">
 <h3>The pedigree table</h3>
-<p>The PLINK example  contains, among others, the pedigree of the individuals:</p>
+<p>The PLINK example <code>.ped</code> contains, among others, the pedigree of the individuals:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(assoc_qt_data<span class="op">$</span>data<span class="op">$</span>ped_table)</span></code></pre></div>
 <table>
 <colgroup>
@@ -1104,11 +1106,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
+<p>We have 6 family IDs, each has an individual unrelated to the other, father/mother are ignored, all the same sex (1=M, 2=F), phenotype is present but not used as we are going to use the phenotype table for that, last 4 columns are the two SNPs for the diploid values (1,3, 6 individual are homozygous on the first allele, 3,4,6 are homozygous on the second allele).</p>
 <p>Note that the pedigree table has a column called <code>case_control_code</code>, which will be completely ignored.</p>
 </div>
 <div id="the-phenotype-table" class="section level3">
 <h3>The phenotype table</h3>
-<p>The pedigree table has a column called <code>case_control_code</code>, which will be completely ignored, as it only allows to put in one phenotype. Instead, we use a table of one or more phenotypic values:</p>
+<p>The pedigree table has a column called <code>case_control_code</code>, which will be completely ignored, as it only allows to put in one phenotype. Instead, we use a table of one (or more) phenotypic values:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table)</span></code></pre></div>
 <table>
 <thead>
@@ -1151,29 +1154,67 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
-<p>These trait values, that is the values in the column <code>trait</code>, are clearly artificial.</p>
+<p>The phenotype table has the first two column of IDs like teh pedigree table. And has the phenotypic values of the traits of interest. These trait values, that is the values in the column <code>P1</code>, are clearly artificial.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">FID</th>
+<th align="right">IID</th>
+<th align="right">P1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0.1</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">0.1</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">1</td>
+<td align="right">0.1</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">1</td>
+<td align="right">0.2</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">0.2</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">1</td>
+<td align="right">0.2</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="the-minor-allele-frequency-maf" class="section level3">
 <h3>The minor allele frequency (MAF)</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>assoc_qt_params &lt;-<span class="st"> </span><span class="kw">create_test_assoc_qt_params</span>()</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="kw">message</span>(assoc_qt_params<span class="op">$</span>maf)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a><span class="co">#&gt; 2.2250738585072e-308</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>assoc_qt_params &lt;-<span class="st"> </span><span class="kw">create_test_assoc_qt_params</span>()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="kw">message</span>(assoc_qt_params<span class="op">$</span>maf)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a><span class="co">#&gt; 2.2250738585072e-308</span></span></code></pre></div>
 <p>The minor allele frequency (MAF) denotes that alleles that have an occurrence below this MAF will be excluded from the analysis. As we want to analyse all data, the MAF is set to the lowest non-zero value.</p>
 </div>
 <div id="detecting-the-association" class="section level3">
 <h3>Detecting the association</h3>
 <p>With the mapping, pedigree and phenotype table, we can detect the association between genotype and the single trait:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>  t &lt;-<span class="st"> </span><span class="kw">assoc_qt</span>(</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>    <span class="dt">assoc_qt_data =</span> assoc_qt_data,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    <span class="dt">assoc_qt_params =</span> assoc_qt_params</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>  )</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>  knitr<span class="op">::</span><span class="kw">kable</span>(t)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>}</span></code></pre></div>
-<table class="kable_wrapper">
-<tbody>
-<tr>
-<td>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>  t &lt;-<span class="st"> </span><span class="kw">assoc_qt</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    <span class="dt">assoc_qt_data =</span> assoc_qt_data,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>    <span class="dt">assoc_qt_params =</span> assoc_qt_params</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>  )</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>  knitr<span class="op">::</span><span class="kw">kable</span>(t<span class="op">$</span>qassoc_table)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>}</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1213,144 +1254,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 </tbody>
 </table>
-</td>
-<td>
-<table>
-<colgroup>
-<col width="100%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">x</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">PLINK v1.90b6.22 64-bit (16 Apr 2021)</td>
-</tr>
-<tr class="even">
-<td align="left">Options in effect:</td>
-</tr>
-<tr class="odd">
-<td align="left">–all-pheno</td>
-</tr>
-<tr class="even">
-<td align="left">–allow-extra-chr</td>
-</tr>
-<tr class="odd">
-<td align="left">–assoc</td>
-</tr>
-<tr class="even">
-<td align="left">–chr-set 95</td>
-</tr>
-<tr class="odd">
-<td align="left">–maf 2.2250738585072e-308</td>
-</tr>
-<tr class="even">
-<td align="left">–map /home/sscansa/.cache/plinkr/file3d54d6e6268ae.map</td>
-</tr>
-<tr class="odd">
-<td align="left">–out /home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output</td>
-</tr>
-<tr class="even">
-<td align="left">–ped /home/sscansa/.cache/plinkr/file3d54d6e6268ae.ped</td>
-</tr>
-<tr class="odd">
-<td align="left">–pheno /home/sscansa/.cache/plinkr/file3d54d56c17063/assoc_input.phe</td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Hostname: pop-os</td>
-</tr>
-<tr class="even">
-<td align="left">Working directory: /home/sscansa/MEGA/R/GWAS/Code</td>
-</tr>
-<tr class="odd">
-<td align="left">Start time: Sat Feb 10 14:32:11 2024</td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Random number seed: 1707571931</td>
-</tr>
-<tr class="even">
-<td align="left">63485 MB RAM detected; reserving 31742 MB for main workspace.</td>
-</tr>
-<tr class="odd">
-<td align="left">Scanning .ped file… done.</td>
-</tr>
-<tr class="even">
-<td align="left">Performing single-pass .bed write (2 variants, 6 samples).</td>
-</tr>
-<tr class="odd">
-<td align="left">–file:</td>
-</tr>
-<tr class="even">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output-temporary.bed +</td>
-</tr>
-<tr class="odd">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output-temporary.bim +</td>
-</tr>
-<tr class="even">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output-temporary.fam</td>
-</tr>
-<tr class="odd">
-<td align="left">written.</td>
-</tr>
-<tr class="even">
-<td align="left">2 variants loaded from .bim file.</td>
-</tr>
-<tr class="odd">
-<td align="left">6 samples (6 males, 0 females) loaded from .fam.</td>
-</tr>
-<tr class="even">
-<td align="left">6 phenotype values present after –pheno.</td>
-</tr>
-<tr class="odd">
-<td align="left">Using 1 thread (no multithreaded calculations invoked).</td>
-</tr>
-<tr class="even">
-<td align="left">Before main variant filters, 6 founders and 0 nonfounders present.</td>
-</tr>
-<tr class="odd">
-<td align="left">Calculating allele frequencies… done.</td>
-</tr>
-<tr class="even">
-<td align="left">0 variants removed due to minor allele threshold(s)</td>
-</tr>
-<tr class="odd">
-<td align="left">(–maf/–max-maf/–mac/–max-mac).</td>
-</tr>
-<tr class="even">
-<td align="left">2 variants and 6 samples pass filters and QC.</td>
-</tr>
-<tr class="odd">
-<td align="left">Phenotype data is quantitative.</td>
-</tr>
-<tr class="even">
-<td align="left">6 phenotype values present after –pheno.</td>
-</tr>
-<tr class="odd">
-<td align="left">Writing QT –assoc report to</td>
-</tr>
-<tr class="even">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output.P1.qassoc … done.</td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">End time: Sat Feb 10 14:32:11 2024</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
 <ul>
 <li><code>trait_name</code>: name of the quantitive trait,</li>
 <li><code>CHR</code>: Chromosome number</li>
@@ -1363,6 +1266,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><code>T</code>: Wald test (based on t-distribution)</li>
 <li><code>P</code>: Wald test asymptotic p-value</li>
 </ul>
+<p>For the log file of the association:</p>
+<p><code>knitr::kable(t$log)</code></p>
 </div>
 </div>
 <div id="detecting-associations-for-multiple-traits" class="section level2">
@@ -1372,21 +1277,21 @@ document.addEventListener('DOMContentLoaded', function() {
 <div id="the-phenotype-table-1" class="section level3">
 <h3>The phenotype table</h3>
 <p>We simply add another column with random values. First, however, we rename the first phenotype name from <code>trait</code> to <code>trait_x</code>:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>  <span class="co"># Rename</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>  <span class="kw">names</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table) &lt;-</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">c</span>(</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>      <span class="kw">names</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table)[<span class="op">-</span><span class="dv">3</span>],</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>      <span class="st">&quot;trait_x&quot;</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>    )</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>}</span></code></pre></div>
-<p>We simply add another column with random values for a trait called <code>trait_y</code>:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>  assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table<span class="op">$</span>trait_y &lt;-</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">seq_len</span>(<span class="kw">nrow</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table)) <span class="op">*</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">seq_len</span>(<span class="kw">nrow</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table))</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>  knitr<span class="op">::</span><span class="kw">kable</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>}</span></code></pre></div>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>  <span class="co"># Rename</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>  <span class="kw">names</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table) &lt;-</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">c</span>(</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>      <span class="kw">names</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table)[<span class="op">-</span><span class="dv">3</span>],</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>      <span class="st">&quot;trait_x&quot;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>    )</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>}</span></code></pre></div>
+<p>We simply add another column with random values for a trait called <code>trait_y</code>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a>  assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table<span class="op">$</span>trait_y &lt;-</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">seq_len</span>(<span class="kw">nrow</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table)) <span class="op">*</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">seq_len</span>(<span class="kw">nrow</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table))</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>  knitr<span class="op">::</span><span class="kw">kable</span>(assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>}</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1439,13 +1344,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <div id="detecting-the-association-1" class="section level3">
 <h3>Detecting the association</h3>
 <p>With the mapping, pedigree and phenotype table, we can detect the association between genotype and the two traits:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a>  t &lt;-<span class="st"> </span><span class="kw">assoc_qt</span>(</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>    <span class="dt">assoc_qt_data =</span> assoc_qt_data,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a>    <span class="dt">assoc_qt_params =</span> assoc_qt_params</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>  )</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>  knitr<span class="op">::</span><span class="kw">kable</span>(t)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a>  t &lt;-<span class="st"> </span><span class="kw">assoc_qt</span>(</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a>    <span class="dt">assoc_qt_data =</span> assoc_qt_data,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a>    <span class="dt">assoc_qt_params =</span> assoc_qt_params</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a>  )</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true"></a>  knitr<span class="op">::</span><span class="kw">kable</span>(t)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true"></a>}</span></code></pre></div>
 <table class="kable_wrapper">
 <tbody>
 <tr>
@@ -1545,16 +1450,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <td align="left">–maf 2.2250738585072e-308</td>
 </tr>
 <tr class="even">
-<td align="left">–map /home/sscansa/.cache/plinkr/file3d54d296697a9.map</td>
+<td align="left">–map /home/sscansa/.cache/plinkr/file4c3d623da74cc.map</td>
 </tr>
 <tr class="odd">
-<td align="left">–out /home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output</td>
+<td align="left">–out /home/sscansa/.cache/plinkr/file4c3d61ce51046/assoc_output</td>
 </tr>
 <tr class="even">
-<td align="left">–ped /home/sscansa/.cache/plinkr/file3d54d296697a9.ped</td>
+<td align="left">–ped /home/sscansa/.cache/plinkr/file4c3d623da74cc.ped</td>
 </tr>
 <tr class="odd">
-<td align="left">–pheno /home/sscansa/.cache/plinkr/file3d54d56c17063/assoc_input.phe</td>
+<td align="left">–pheno /home/sscansa/.cache/plinkr/file4c3d67e264748/assoc_input.phe</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
@@ -1563,16 +1468,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <td align="left">Hostname: pop-os</td>
 </tr>
 <tr class="even">
-<td align="left">Working directory: /home/sscansa/MEGA/R/GWAS/Code</td>
+<td align="left">Working directory: /home/sscansa/MEGA/R/GWAS/Code/plinkr</td>
 </tr>
 <tr class="odd">
-<td align="left">Start time: Sat Feb 10 14:32:15 2024</td>
+<td align="left">Start time: Sat Feb 10 16:09:56 2024</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">Random number seed: 1707571935</td>
+<td align="left">Random number seed: 1707577796</td>
 </tr>
 <tr class="even">
 <td align="left">63485 MB RAM detected; reserving 31742 MB for main workspace.</td>
@@ -1587,13 +1492,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <td align="left">–file:</td>
 </tr>
 <tr class="even">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output-temporary.bed +</td>
+<td align="left">/home/sscansa/.cache/plinkr/file4c3d61ce51046/assoc_output-temporary.bed +</td>
 </tr>
 <tr class="odd">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output-temporary.bim +</td>
+<td align="left">/home/sscansa/.cache/plinkr/file4c3d61ce51046/assoc_output-temporary.bim +</td>
 </tr>
 <tr class="even">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output-temporary.fam</td>
+<td align="left">/home/sscansa/.cache/plinkr/file4c3d61ce51046/assoc_output-temporary.fam</td>
 </tr>
 <tr class="odd">
 <td align="left">written.</td>
@@ -1635,7 +1540,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <td align="left">Writing QT –assoc report to</td>
 </tr>
 <tr class="even">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output.trait_x.qassoc …</td>
+<td align="left">/home/sscansa/.cache/plinkr/file4c3d61ce51046/assoc_output.trait_x.qassoc …</td>
 </tr>
 <tr class="odd">
 <td align="left">done.</td>
@@ -1647,7 +1552,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <td align="left">Writing QT –assoc report to</td>
 </tr>
 <tr class="even">
-<td align="left">/home/sscansa/.cache/plinkr/file3d54d2f738a4c/assoc_output.trait_y.qassoc …</td>
+<td align="left">/home/sscansa/.cache/plinkr/file4c3d61ce51046/assoc_output.trait_y.qassoc …</td>
 </tr>
 <tr class="odd">
 <td align="left">done.</td>
@@ -1656,7 +1561,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">End time: Sat Feb 10 14:32:15 2024</td>
+<td align="left">End time: Sat Feb 10 16:09:56 2024</td>
 </tr>
 </tbody>
 </table>
@@ -1680,8 +1585,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div id="cleanup" class="section level2">
 <h2>Cleanup</h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="kw">clear_plinkr_cache</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">check_empty_plinkr_folder</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">clear_plinkr_cache</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="kw">check_empty_plinkr_folder</span>()</span></code></pre></div>
 </div>
 </div>
 
