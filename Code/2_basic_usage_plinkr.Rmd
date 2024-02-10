@@ -1,0 +1,275 @@
+---
+title: "basic_usage_plink"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{basic_usage_plink}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+html_document:
+  theme: darkly
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(plinkr)
+```
+
+In this vignette, I run the PLINK
+commands at [http://zzz.bwh.harvard.edu/plink/data.shtml#plink](http://zzz.bwh.harvard.edu/plink/data.shtml#plink) using plinkr.
+This vignette is taken `and slightly modified` from the GitHub repository of `plinkr` at [https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/](https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/)
+
+This vignette will give output only if PLINK is installed:
+
+```{r check_plink_is_installed}
+if (!is_plink_installed()) {
+  message("PLINK is not installed")
+  message("Tip: use 'plinkr::install_plinks()'")
+}
+```
+
+Here is the first example on the PLINK website:
+that work in the commnad line
+
+```
+plink --file mydata --pheno pheno.raw --assoc --maf 0.05 --out run1
+```
+
+The `--file mydata` means that PLINK will look for the example files named
+`mydata.ped` (pedigree file) and `mydata.map` (genetic map). In this example, we will use these two from
+the PLINK v1.7 example files:
+
+```{r}
+if (is_plink_installed()) {
+  # Check both files exists
+  ped_filename <- get_plink_example_filename(
+    example_filename = "test.ped",
+    create_plink_v1_7_options()
+  )
+  map_filename <- get_plink_example_filename(
+    example_filename = "test.map",
+    create_plink_v1_7_options()
+  )
+  # Get the path without extension, can use either ped or map file
+  testthat::expect_equal(
+    tools::file_path_sans_ext(ped_filename),
+    tools::file_path_sans_ext(map_filename)
+  )
+  # Get the path without extension
+  mydata <- tools::file_path_sans_ext(ped_filename)
+}
+```
+
+The `--maf 0.05`, where `maf` is an abbreviation for
+**minor allele frequency** (MAF), denotes that alleles that
+have an occurrence below this MAF will be excluded from
+the analysis. In this PLINK example, this flag has no
+effect, as all alleles are present frequently enough.
+
+The `--pheno pheno.raw` means that PLINK will look for a files named `pheno.raw`. PLINK does not supply this example file, hence we will use one supplied by plinkr:
+
+```{r}
+phe_filename <- get_plinkr_filename("pheno.raw")
+```
+Now we have the **file paths** of the `.ped`, `.map`, and the `pheno.raw`.
+
+The `--out run1` means that PLINK will create a file that starts with  `run1`. In this context, where we test for an association for a quantitive trait, this file will be called `run1.qassoc`. 
+
+```{r}
+output_filename_base <- file.path(get_plinkr_tempfilename(), "run1")
+output_filename_base <- "run1"
+output_filename_qassoc <- paste0(output_filename_base, ".qassoc")
+output_filename_log <- paste0(output_filename_base, ".log")
+```
+All before is to get the files and now we run `run_plink()` from `plinkr`.
+
+So `plink --file mydata --pheno pheno.raw --assoc --maf 0.05 --out run1` becomes:
+
+```{r}
+if (is_plink_installed()) {
+  plinkr::run_plink(
+    args = c(
+      "--file", mydata, # mydata.ped and mydata.map
+      "--pheno", phe_filename,
+      "--assoc",
+      "--maf", "0.05",
+      "--out", output_filename_base
+    )
+  )
+}
+```
+
+Now, let's see what actually happened, except for calling PLINK, by showing what was in the input files, as well as what is in the output file:
+
+The `.ped` file:
+
+```{r}
+if (is_plink_installed()) {
+  knitr::kable(
+    read_plink_ped_file(ped_filename)
+  )
+}
+```
+
+Note that the `.ped` file contains a column called `case_control_code`.
+In this example, this column will be overruled by our the phenotypic
+values we supply.
+
+Now we take a look at the `.map` file,
+which maps the single-nucleotide variations (SNVs)
+to their position on the DNA:
+
+```{r}
+if (is_plink_installed()) {
+  knitr::kable(
+    read_plink_map_file(map_filename)
+  )
+}
+```
+
+These are:
+
+ * `r names(get_test_map_table())[1]`: 
+    the chromosome code or contig name
+ * `r names(get_test_map_table())[2]`: 
+    Variant identifier
+ * `r names(get_test_map_table())[3]`: 
+    Position in morgans or centimorgans.
+    This value is optional. Zeroes denote it is unused
+ * `r names(get_test_map_table())[4]`: 
+    Base-pair coordinat
+
+```{r how_phenotypes}
+if (is_plink_installed()) {
+  knitr::kable(
+    read_plink_phe_file(phe_filename)
+  )
+}
+```
+In the table:
+
+  * `r names(get_test_phe_table())[1]`:
+    family ID
+  * `r names(get_test_phe_table())[2]`:
+    individual ID (within family ID)
+  * `r names(get_test_phe_table())[3]`:
+    phenotype first trait (or more traits)
+    
+Reading the `plinkr` output:
+
+```{r show_qassoc}
+if (is_plink_installed()) {
+  knitr::kable(
+    read_plink_qassoc_file(output_filename_qassoc)
+  )
+}
+```
+
+ * `trait_name`: name of the quantitive trait,
+ * `CHR`: Chromosome number
+ * `SNP`: SNP identifier
+ * `BP`: Physical position (base-pair)
+ * `NMISS`: Number of non-missing genotypes
+ * `BETA`: Regression coefficient
+ * `SE`: Standard error
+ * `R2`: Regression r-squared
+ * `T`: Wald test (based on t-distribution)
+ * `P`: Wald test asymptotic p-value
+
+The PLINK log file:
+
+```{r show_log_assoc_qt}
+if (is_plink_installed()) {
+  utils::head(
+    read_plink_log_file(output_filename_log)
+  )
+}
+```
+
+Cleaning up:
+
+```{r cleanup_assoc_qt}
+if (is_plink_installed()) {
+  file.remove(output_filename_log)
+  file.remove(output_filename_qassoc)
+}
+```
+
+
+## Is the phenotype file mandatory?
+
+No, you can remove it from the command to run PLINK:
+
+```{r run_assoc}
+if (is_plink_installed()) {
+  plinkr::run_plink(
+    args = c(
+      "--file", mydata, # mydata.ped and mydata.map
+      "--assoc",
+      "--maf", "0.05",
+      "--out", output_filename_base
+    )
+  )
+}
+```
+
+Instead, PLINK will use the case-control code in the `.ped`
+file, from the column named `r names(get_test_ped_table())[6]`.
+
+As we run PLINK with a case-control study, 
+the input is now in `run1.assoc` instead:
+
+```{r show_assoc}
+if (is_plink_installed()) {
+  output_filename_assoc <- paste0(output_filename_base, ".assoc")
+  knitr::kable(
+    read_plink_assoc_file(output_filename_assoc)
+  )
+}
+```
+
+ * `trait_name`: name of the quantitive trait,
+ * `CHR`: Chromosome number
+ * `SNP`: SNP identifier
+ * `BP`: Physical position (base-pair)
+ * `A1`: Allele 1
+ * `F_A`: Frequency of allele A in cases 
+ * `F_U`: Frequency of allele A in controls
+ * `A2`: Allele 2
+ * `CHISQ`: Chi-squared statistic
+ * `P`: Wald test asymptotic p-value
+ * `OR`: Odds ratio
+
+The PLINK log file:
+
+```{r show_log_assoc}
+if (is_plink_installed()) {
+  utils::head(
+    read_plink_log_file(output_filename_log)
+  )
+}
+```
+
+Cleaning up:
+
+```{r cleanup_assoc}
+if (is_plink_installed()) {
+  file.remove(output_filename_log)
+  file.remove(output_filename_assoc)
+}
+```
+
+## Cleanup
+
+```{r clear_plinkr_cache_at_end}
+clear_plinkr_cache()
+```
+
+```{r check_empty_plinkr_folder_at_end}
+check_empty_plinkr_folder()
+```

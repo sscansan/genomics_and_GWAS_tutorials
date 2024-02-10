@@ -32,6 +32,50 @@ plinkr::run_plink(
     )
 )
 
+## Minimal example: show the PLINK help
+if (is_plink_installed(create_plink_v1_7_options())) {
+  # Without '--noweb', plinkr freezes with PLINK v1.7
+  run_plink(
+    args = c("--help", "--noweb"),
+    create_plink_v1_7_options()
+  )
+}
+
+if (is_plink_installed(create_plink_v1_9_options())) {
+  run_plink("--help", create_plink_v1_9_options())
+}
+
+if (is_plink_installed(create_plink_v2_0_options())) {
+  run_plink("--help", create_plink_v2_0_options())
+}
+
+# Do a case-control association
+# Note: using 'plinkr::assoc' is safer, easier and has a uniform
+# interface accross PLINK versions
+plink_options <- create_plink_v1_9_options()
+if (is_plink_installed(plink_options)) {
+  # Use the PLINK v1.9 example files
+  ped_filename <- get_plink_example_filename(
+    "toy.ped", plink_options
+  )
+  map_filename <- get_plink_example_filename(
+    "toy.map", plink_options
+  )
+
+  run_plink(
+    args = c(
+      "--ped", ped_filename,
+      "--map", map_filename
+    ),
+    plink_options
+  )
+
+  # Delete the created files
+  file.remove("plink.bed")
+  file.remove("plink.fam")
+  file.remove("plink.log")
+}
+
 # https://github.com/AJResearchGroup/plinkr
 ###   - See the vignette basic_usage for basic usage of PLINK, as taken from the PLINK website, which shows a quantitative trait - analysis
 ###  - See the vignette test_assoc_qt for the same basic usage of PLINK, using the plinkr interface
