@@ -124,6 +124,14 @@ These trait values, that is the values in the column `P1`,
 are clearly artificial.
 
 ```{r}
+names(assoc_qt_data$phenotype_data$phe_table) <-
+  c(
+    names(assoc_qt_data$phenotype_data$phe_table)[-3],
+    "trait_x"
+  )
+```
+
+```{r}
 knitr::kable(assoc_qt_data$phenotype_data$phe_table)
 ```
 
@@ -219,7 +227,7 @@ if (is_plink_installed()) {
     assoc_qt_data = assoc_qt_data,
     assoc_qt_params = assoc_qt_params
   )
-  knitr::kable(t)
+  knitr::kable(t$qassoc_table)
 }
 ```
 
