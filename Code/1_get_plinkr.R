@@ -110,3 +110,4 @@ assoc_qt_data <- create_assoc_qt_data(
 )
 assoc_qt_filenames <- assoc_qt(assoc_qt_data = assoc_qt_data)
 read_plink_qassoc_file(assoc_qt_filenames$qassoc_filenames[1])
+
