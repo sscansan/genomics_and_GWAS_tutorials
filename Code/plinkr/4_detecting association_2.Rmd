@@ -1,5 +1,6 @@
 ---
 title: "Detect associations with a simulated quantitative trait"
+author:
 output:
   rmdformats::html_clean:
   #rmdformats::downcute:
@@ -75,8 +76,8 @@ we need some data:
  * The **phenotype table**, which contains the one or more phenotypes
    of the individuals
 
-Here, we create some simple data, as to be used in testing,
-or -in this case- a simple demonstration:
+**Here, we create some simple data, as to be used in testing,
+or -in this case- a simple demonstration:**
 
 ```{r}
 assoc_qt_data <- create_demo_assoc_qt_data(

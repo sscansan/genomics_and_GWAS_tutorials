@@ -925,7 +925,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
 
       <!-- html_clean authors -->
-         
+         <h4 class="author"><em></em></h4>
+            
       
    
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
@@ -957,11 +958,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2>Detecting associations for quantitative traits</h2>
 <p>To do an association (both for a single and multiple traits), we need some data:</p>
 <ul>
-<li>The <code>.map</code> table or mapping table, which contains the location of the single-nucleotide polymorphisms (SNPs)</li>
-<li>The <code>.ped</code> table or pedigree table, which contains the pedigree of the individuals and their SNP values</li>
-<li>The phenotype table, which contains the one or more phenotypes of the individuals</li>
+<li>The <code>.map</code> table or <strong>mapping table</strong>, which contains the location of the single-nucleotide polymorphisms (SNPs) - information on the genetic markers.</li>
+<li>The <code>.ped</code> table or <strong>pedigree table</strong>, which contains the pedigree of the individuals and their SNP values - individuals and their genotypes.</li>
+<li>The <strong>phenotype table</strong>, which contains the one or more phenotypes of the individuals</li>
 </ul>
-<p>Here, we create some simple data, as to be used in testing, or -in this case- a simple demonstration:</p>
+<p><strong>Here, we create some simple data, as to be used in testing, or -in this case- a simple demonstration:</strong></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>assoc_qt_data &lt;-<span class="st"> </span><span class="kw">create_demo_assoc_qt_data</span>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>  <span class="dt">n_individuals =</span> <span class="dv">16</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>)</span></code></pre></div>
