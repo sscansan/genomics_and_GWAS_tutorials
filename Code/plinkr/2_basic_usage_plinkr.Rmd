@@ -47,7 +47,7 @@ plink --file mydata --pheno pheno.raw --assoc --maf 0.05 --out run1
 ```
 
 The `--file mydata` means that PLINK will look for the example files named
-`mydata.ped` (pedigree file) and `mydata.map` (genetic map). In this example, we will use these two from
+`mydata.ped` (pedigree file - information on the individuals and their genotypes) and `mydata.map` (genetic map - information on the genetic markers). In this example, we will use these two from
 the PLINK v1.7 example files:
 
 ```{r}

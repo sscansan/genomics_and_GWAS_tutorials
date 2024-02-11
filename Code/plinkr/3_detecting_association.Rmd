@@ -70,9 +70,9 @@ To do an association (both for a single and multiple traits),
 we need some parameters:
 
  * The `.map` table or **mapping table**, which contains the location
-   of the single-nucleotide polymorphisms (SNPs)
+   of the single-nucleotide polymorphisms (SNPs) - information on the genetic markers.
  * The `.ped` table or **pedigree table**, which contains the pedigree
-   of the individuals and their SNP values
+   of the individuals and their SNP values - individuals and their genotypes.
  * The **phenotype table**, which contains the one or more phenotypes
    of the individuals
  * The **minor allele frequence** (MAF)

@@ -68,16 +68,16 @@ if (is_plink_installed()) {
 To do an association (both for a single and multiple traits), 
 we need some data:
 
- * The `.map` table or mapping table, which contains the location
-   of the single-nucleotide polymorphisms (SNPs)
- * The `.ped` table or pedigree table, which contains the pedigree
-   of the individuals and their SNP values
- * The phenotype table, which contains the one or more phenotypes
+ * The `.map` table or **mapping table**, which contains the location
+   of the single-nucleotide polymorphisms (SNPs) - information on the genetic markers.
+ * The `.ped` table or **pedigree table**, which contains the pedigree
+   of the individuals and their SNP values - individuals and their genotypes.
+ * The **phenotype table**, which contains the one or more phenotypes
    of the individuals
 
 Here, we create some simple data, as to be used in testing,
 or -in this case- a simple demonstration:
- 
+
 ```{r}
 assoc_qt_data <- create_demo_assoc_qt_data(
   n_individuals = 16

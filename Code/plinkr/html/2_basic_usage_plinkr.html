@@ -939,7 +939,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>}</span></code></pre></div>
 <p>Here is the first example on the PLINK website: that work in the commnad line</p>
 <pre><code>plink --file mydata --pheno pheno.raw --assoc --maf 0.05 --out run1</code></pre>
-<p>The <code>--file mydata</code> means that PLINK will look for the example files named <code>mydata.ped</code> (pedigree file) and <code>mydata.map</code> (genetic map). In this example, we will use these two from the PLINK v1.7 example files:</p>
+<p>The <code>--file mydata</code> means that PLINK will look for the example files named <code>mydata.ped</code> (pedigree file - information on the individuals and their genotypes) and <code>mydata.map</code> (genetic map - information on the genetic markers). In this example, we will use these two from the PLINK v1.7 example files:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>  <span class="co"># Check both files exists</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>  ped_filename &lt;-<span class="st"> </span><span class="kw">get_plink_example_filename</span>(</span>
