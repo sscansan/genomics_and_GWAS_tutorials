@@ -79,6 +79,8 @@ we need some data:
 **Here, we create some simple data, as to be used in testing,
 or -in this case- a simple demonstration:**
 
+With the **plinkr** function `create_demo_assoc_qt_data()` we are able to generate mock simulated dataset that create **.map** table, **.ped** table and phenotype table.
+
 ```{r}
 assoc_qt_data <- create_demo_assoc_qt_data(
   n_individuals = 16
@@ -128,18 +130,17 @@ knitr::kable(assoc_qt_data$phenotype_data$phe_table)
 The phenotypes are named after their relationship to the
 genotype:
 
- * ´random´: there is no relationship, values are random
- * ´additive´: there is a perfect additive relationship, 
+ * **random**: there is no relationship, values are random
+ * **additive**: there is a perfect additive relationship,
    with a starting value of 10.0,
    where each 'T' increases the trait by 0.5
- * ´epistatic´: there is an epistatic phenotype, 
-   with a starting value of 20.0,
-   that can only be 21.0 if all four nucleotides on four
-   SNPs are the uncommon alleles
+ * **epistatic**: ("Any time two/or more different genes contribute to a single phenotype and their effects are not merely additive"/ "Polygenic trait"). There is an epistatic phenotype:
+   with a starting value of 20.0, that can only be 21.0 if all four nucleotides on four
+   SNPs are the uncommon alleles.
 
 ### Detecting the association
 
-With the mapping, pedigree and phenotype table, 
+With the mapping, pedigree and phenotype table,
 we can detect the association between genotype and the two traits:
 
 ```{r}
@@ -174,7 +175,7 @@ by the genotype.
 
 ```{r}
 assoc_qt_data$phenotype_data$phe_table$additive <-
-  assoc_qt_data$phenotype_data$phe_table$additive + 
+  assoc_qt_data$phenotype_data$phe_table$additive +
   runif(n = 16, min = -0.001, max = 0.001
 )
 ```

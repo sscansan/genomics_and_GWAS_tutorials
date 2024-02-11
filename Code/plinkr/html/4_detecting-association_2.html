@@ -963,6 +963,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>The <strong>phenotype table</strong>, which contains the one or more phenotypes of the individuals</li>
 </ul>
 <p><strong>Here, we create some simple data, as to be used in testing, or -in this case- a simple demonstration:</strong></p>
+<p>With the <strong>plinkr</strong> function <code>create_demo_assoc_qt_data()</code> we are able to generate mock simulated dataset that create <strong>.map</strong> table, <strong>.ped</strong> table and phenotype table.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>assoc_qt_data &lt;-<span class="st"> </span><span class="kw">create_demo_assoc_qt_data</span>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>  <span class="dt">n_individuals =</span> <span class="dv">16</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>)</span></code></pre></div>
@@ -1476,9 +1477,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </table>
 <p>The phenotypes are named after their relationship to the genotype:</p>
 <ul>
-<li>´random´: there is no relationship, values are random</li>
-<li>´additive´: there is a perfect additive relationship, with a starting value of 10.0, where each ‘T’ increases the trait by 0.5</li>
-<li>´epistatic´: there is an epistatic phenotype, with a starting value of 20.0, that can only be 21.0 if all four nucleotides on four SNPs are the uncommon alleles</li>
+<li><strong>random</strong>: there is no relationship, values are random</li>
+<li><strong>additive</strong>: there is a perfect additive relationship, with a starting value of 10.0, where each ‘T’ increases the trait by 0.5</li>
+<li><strong>epistatic</strong>: (“Any time two/or more different genes contribute to a single phenotype and their effects are not merely additive”/ “Polygenic trait”). There is an epistatic phenotype: with a starting value of 20.0, that can only be 21.0 if all four nucleotides on four SNPs are the uncommon alleles.</li>
 </ul>
 </div>
 <div id="detecting-the-association" class="section level3">
@@ -1657,7 +1658,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div id="add-a-bit-of-noise-to-the-data" class="section level2">
 <h2>Add a bit of noise to the data</h2>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table<span class="op">$</span>additive &lt;-</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="st">  </span>assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table<span class="op">$</span>additive <span class="op">+</span><span class="st"> </span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="st">  </span>assoc_qt_data<span class="op">$</span>phenotype_data<span class="op">$</span>phe_table<span class="op">$</span>additive <span class="op">+</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">runif</span>(<span class="dt">n =</span> <span class="dv">16</span>, <span class="dt">min =</span> <span class="fl">-0.001</span>, <span class="dt">max =</span> <span class="fl">0.001</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>)</span></code></pre></div>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>()) {</span>
