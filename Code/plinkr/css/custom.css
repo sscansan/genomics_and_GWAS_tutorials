@@ -1,0 +1,21 @@
+::-webkit-scrollbar {
+  width: 9px; /* Thinner scrollbar width */
+  margin-top: 5px; /* Add 5px of space below the scrollbar */
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333; /* Darker background color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555; /* Darker thumb color */
+  border-radius: 10px; /* Rounded thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Darker color on hover */
+}

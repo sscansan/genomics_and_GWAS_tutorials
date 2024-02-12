@@ -1,9 +1,10 @@
 ---
 title: "Detect associations with a simulated quantitative trait"
-author:
+#author:
 output:
-  rmdformats::html_clean:
-  #rmdformats::downcute:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
     use_bookdown: false
     self_contained: true
     thumbnails: true
@@ -12,7 +13,7 @@ output:
     gallery: true
     toc_depth: 3
     #code_folding: show
-    #css: css/custom.css
+    css: css/custom.css
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "html") })
 ---

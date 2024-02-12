@@ -1,8 +1,10 @@
 ---
 title: "Plink basis"
+#author:
 output:
-  rmdformats::html_clean:
-  #rmdformats::downcute:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
     use_bookdown: false
     self_contained: true
     thumbnails: true
@@ -11,7 +13,7 @@ output:
     gallery: true
     toc_depth: 3
     #code_folding: show
-    #css: css/custom.css
+    css: css/custom.css
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "html") })
 ---
@@ -29,7 +31,7 @@ help(plinkr)
 ```
 In this vignette, I run the PLINK
 commands at [http://zzz.bwh.harvard.edu/plink/data.shtml#plink](http://zzz.bwh.harvard.edu/plink/data.shtml#plink) using plinkr.
-This vignette is taken `and slightly modified` from the GitHub repository of `plinkr` at [https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/](https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/)
+This vignette is taken and slightly **modified** from the GitHub repository of `plinkr` at [https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/](https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/)
 
 This vignette will give output only if PLINK is installed:
 
@@ -95,7 +97,15 @@ output_filename_log <- paste0(output_filename_base, ".log")
 ```
 All before is to get the files and now we run `run_plink()` from `plinkr`.
 
-So `plink --file mydata --pheno pheno.raw --assoc --maf 0.05 --out run1` becomes:
+```
+plink \
+    --file mydata \
+    --pheno pheno.raw \
+    --assoc \
+    --maf 0.05 \
+    --out run1`
+```
+becomes:
 
 ```{r}
 if (is_plink_installed()) {
@@ -110,6 +120,8 @@ if (is_plink_installed()) {
   )
 }
 ```
+
+Pretty similar no?
 
 Now, let's see what actually happened, except for calling PLINK, by showing what was in the input files, as well as what is in the output file:
 

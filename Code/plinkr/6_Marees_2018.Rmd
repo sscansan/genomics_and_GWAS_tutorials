@@ -1,10 +1,21 @@
 ---
-title: "marees_et_al_2018"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{marees_et_al_2018}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+title: Marees et al., 2018"
+#author:
+output:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    use_bookdown: false
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    highlight: tango
+    gallery: true
+    toc_depth: 3
+    #code_folding: show
+    css: css/custom.css
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "html") })
 ---
 
 ```{r, include = FALSE}
