@@ -930,7 +930,8 @@ document.addEventListener('DOMContentLoaded', function() {
    
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
 <div id="content">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(plinkr)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(plinkr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">help</span>(plinkr)</span></code></pre></div>
 <p>In this vignette, I run the PLINK commands at <a href="http://zzz.bwh.harvard.edu/plink/data.shtml#plink">http://zzz.bwh.harvard.edu/plink/data.shtml#plink</a> using plinkr. This vignette is taken <code>and slightly modified</code> from the GitHub repository of <code>plinkr</code> at <a href="https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/">https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/</a></p>
 <p>This vignette will give output only if PLINK is installed:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">is_plink_installed</span>()) {</span>

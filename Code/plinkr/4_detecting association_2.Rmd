@@ -26,6 +26,9 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
+In this we are going to detect associations between genetic information and one or more quantitative traits.
+We will be using simulated data, with a simple relationship beteween genotype and phenotype. To see how this same analysis is done with more messy data, see the "test_assoc_qt" vignette on [https://github.com/richelbilderbeek/plinkr](https://github.com/richelbilderbeek/plinkr/blob/master/vignettes/test_assoc_qt.Rmd)
+
 In this vignette,
 we are going to detect associations between genetic information
 and one or more quantitative traits.

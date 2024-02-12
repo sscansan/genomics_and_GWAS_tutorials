@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>marees_et_al_2018</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">marees_et_al_2018</h1>
+
+
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(plinkr)</span></code></pre></div>
+<p>This vignette is based on the article [1], using the supplemented code at [2]</p>
+<p>For it, we need PLINK to be installed.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">is_plink_installed</span>()) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>  <span class="kw">message</span>(<span class="st">&quot;PLINK is not installed&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>  <span class="kw">message</span>(<span class="st">&quot;Tip: use &#39;plinkr::install_plinks()&#39;&quot;</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Also, we need the data installed</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">is_marees_et_al_data_installed</span>()) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  <span class="kw">message</span>(<span class="st">&quot;Marees et al. data is not installed&quot;</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>  <span class="kw">message</span>(<span class="st">&quot;Tip: use &#39;plinkr::install_marees_et_al_data()&#39;&quot;</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>}</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="co">#&gt; Marees et al. data is not installed</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="co">#&gt; Tip: use &#39;plinkr::install_marees_et_al_data()&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>good_to_go &lt;-<span class="st"> </span><span class="ot">FALSE</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="cf">if</span> (<span class="kw">is_plink_installed</span>() <span class="op">&amp;&amp;</span><span class="st"> </span><span class="kw">is_plink_tutorial_data_installed</span>()) {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>  good_to_go &lt;-<span class="st"> </span><span class="ot">TRUE</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>}</span></code></pre></div>
+<pre><code>################ Explanation of the main script ##########################
+
+# This tutorial uses freely available HapMap data: hapmap3_r3_b36_fwd.consensus.qc. We simulated a binary outcome measure (i.e., a binary phenotypic trait) and added this to the dataset. The outcome measure was only simulated for the founders in the HapMap data. This data set will be referred to as HapMap_3_r3_1. 
+# The HapMap data, without our simulated outcome measure, can also be obtained from http://hapmap.ncbi.nlm.nih.gov/downloads/genotypes/2010-05_phaseIII/plink_format/ 
+# It is essential for the execution of the tutorial that that all scripts belonging to this tutorial are in the same directory on your UNIX workstation.
+# Many scripts include comments which explain how these scripts work. Note, in order to complete the tutorial it is essential to execute all commands in this tutorial.
+# This script can also be used for your own data analysis, to use it as such, replace the name of the HapMap file with the name of your own data file. 
+# Furthermore, this script is based on a binary outcome measure, and is therefore not applicable for quantitative outcome measures (this would require some adaptations)
+# Note, most GWAS studies are performed on an ethnic homogenous population, in which population outliers are removed. The HapMap data, used for this tutorial, contains multiple distinct ethnic groups, which makes it problematic for analysis.
+# Therefore, we have selected only the EUR individuals of the complete HapMap sample for the tutorials 1-3. This selection is already performed in the HapMap_3_r3_1 file from our GitHub page.
+# The Rscripts used in this tutorial are all executed from the Unix command line.
+# Therefore, this tutorial and the other tutorials from our GitHub page, can be completed simply by copy-and-pasting all commands from the main scripts into the Unix terminal.
+# For a thorough theoretical explanation of all QC steps we refer to the article accompanying this tutorial entitled A tutorial on conducting Genome-Wide-Association Studies: Quality control and statistical analysis (https://www.ncbi.nlm.nih.gov/pubmed/29484742).
+
+
+##############################################################
+############### START ANALISIS ###############################
+##############################################################
+
+# Change directory to a folder on your UNIX device containing all files from 1_QC_GWAS.zip. 
+cd HOME/{user}/{path/folder containing your files}
+
+### Step 1 ### 
+
+# Investigate missingness per individual and per SNP and make histograms.
+plink --bfile HapMap_3_r3_1 --missing    
+# output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.
+
+
+# Generate plots to visualize the missingness results.
+Rscript --no-save hist_miss.R
+
+# Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.
+# The following two QC commands will not remove any SNPs or individuals. However, it is good practice to start the QC with these non-stringent thresholds.  
+# Delete SNPs with missingness &gt;0.2.
+plink --bfile HapMap_3_r3_1 --geno 0.2 --make-bed --out HapMap_3_r3_2
+
+# Delete individuals with missingness &gt;0.2.
+plink --bfile HapMap_3_r3_2 --mind 0.2 --make-bed --out HapMap_3_r3_3
+
+# Delete SNPs with missingness &gt;0.02.
+plink --bfile HapMap_3_r3_3 --geno 0.02 --make-bed --out HapMap_3_r3_4
+
+# Delete individuals with missingness &gt;0.02.
+plink --bfile HapMap_3_r3_4 --mind 0.02 --make-bed --out HapMap_3_r3_5
+
+###################################################################
+### Step2 ####
+
+# Check for sex discrepancy.
+# Subjects who were a priori determined as females must have a F value of &lt;0.2, and subjects who were a priori determined as males must have a F value &gt;0.8. This F value is based on the X chromosome inbreeding (homozygosity) estimate.
+# Subjects who do not fulfil these requirements are flagged &quot;PROBLEM&quot; by PLINK.
+
+plink --bfile HapMap_3_r3_5 --check-sex 
+
+# Generate plots to visualize the sex-check results.
+Rscript --no-save gender_check.R
+# These checks indicate that there is one woman with a sex discrepancy, F value of 0.99. (When using other datasets often a few discrepancies will be found). 
+
+# The following two scripts can be used to deal with individuals with a sex discrepancy.
+# Note, please use one of the two options below to generate the bfile hapmap_r23a_6, this file we will use in the next step of this tutorial.
+
+# 1) Delete individuals with sex discrepancy.
+grep &quot;PROBLEM&quot; plink.sexcheck| awk &#39;{print$1,$2}&#39;&gt; sex_discrepancy.txt
+# This command generates a list of individuals with the status PROBLEM.
+plink --bfile HapMap_3_r3_5 --remove sex_discrepancy.txt --make-bed --out HapMap_3_r3_6 
+# This command removes the list of individuals with the status PROBLEM.
+
+# 2) impute-sex.
+#plink --bfile HapMap_3_r3_5 --impute-sex --make-bed --out HapMap_3_r3_6
+# This imputes the sex based on the genotype information into your data set.
+
+###################################################
+### Step 3 ### 
+
+# Generate a bfile with autosomal SNPs only and delete SNPs with a low minor allele frequency (MAF).
+
+# Select autosomal SNPs only (i.e., from chromosomes 1 to 22).
+awk &#39;{ if ($1 &gt;= 1 &amp;&amp; $1 &lt;= 22) print $2 }&#39; HapMap_3_r3_6.bim &gt; snp_1_22.txt
+plink --bfile HapMap_3_r3_6 --extract snp_1_22.txt --make-bed --out HapMap_3_r3_7
+
+# Generate a plot of the MAF distribution.
+plink --bfile HapMap_3_r3_7 --freq --out MAF_check
+Rscript --no-save MAF_check.R
+
+# Remove SNPs with a low MAF frequency.
+plink --bfile HapMap_3_r3_7 --maf 0.05 --make-bed --out HapMap_3_r3_8
+# 1073226 SNPs are left
+# A conventional MAF threshold for a regular GWAS is between 0.01 or 0.05, depending on sample size.
+
+
+####################################################
+### Step 4 ###
+
+# Delete SNPs which are not in Hardy-Weinberg equilibrium (HWE).
+# Check the distribution of HWE p-values of all SNPs.
+
+plink --bfile HapMap_3_r3_8 --hardy
+# Selecting SNPs with HWE p-value below 0.00001, required for one of the two plot generated by the next Rscript, allows to zoom in on strongly deviating SNPs. 
+awk &#39;{ if ($9 &lt;0.00001) print $0 }&#39; plink.hwe&gt;plinkzoomhwe.hwe
+Rscript --no-save hwe.R
+
+# By default the --hwe option in plink only filters for controls.
+# Therefore, we use two steps, first we use a stringent HWE threshold for controls, followed by a less stringent threshold for the case data.
+plink --bfile HapMap_3_r3_8 --hwe 1e-6 --make-bed --out HapMap_hwe_filter_step1
+
+# The HWE threshold for the cases filters out only SNPs which deviate extremely from HWE. 
+# This second HWE step only focusses on cases because in the controls all SNPs with a HWE p-value &lt; hwe 1e-6 were already removed
+plink --bfile HapMap_hwe_filter_step1 --hwe 1e-10 --hwe-all --make-bed --out HapMap_3_r3_9
+
+# Theoretical background for this step is given in our accompanying article: https://www.ncbi.nlm.nih.gov/pubmed/29484742 .
+
+############################################################
+### step 5 ###
+
+# Generate a plot of the distribution of the heterozygosity rate of your subjects.
+# And remove individuals with a heterozygosity rate deviating more than 3 sd from the mean.
+
+# Checks for heterozygosity are performed on a set of SNPs which are not highly correlated.
+# Therefore, to generate a list of non-(highly)correlated SNPs, we exclude high inversion regions (inversion.txt [High LD regions]) and prune the SNPs using the command --indep-pairwise.
+# The parameters 50 5 0.2 stand respectively for: the window size, the number of SNPs to shift the window at each step, and the multiple correlation coefficient for a SNP being regressed on all other SNPs simultaneously.
+
+plink --bfile HapMap_3_r3_9 --exclude inversion.txt --range --indep-pairwise 50 5 0.2 --out indepSNP
+# Note, don&#39;t delete the file indepSNP.prune.in, we will use this file in later steps of the tutorial.
+
+plink --bfile HapMap_3_r3_9 --extract indepSNP.prune.in --het --out R_check
+# This file contains your pruned data set.
+
+# Plot of the heterozygosity rate distribution
+Rscript --no-save check_heterozygosity_rate.R
+
+# The following code generates a list of individuals who deviate more than 3 standard deviations from the heterozygosity rate mean.
+# For data manipulation we recommend using UNIX. However, when performing statistical calculations R might be more convenient, hence the use of the Rscript for this step:
+Rscript --no-save heterozygosity_outliers_list.R
+
+# Output of the command above: fail-het-qc.txt .
+# When using our example data/the HapMap data this list contains 2 individuals (i.e., two individuals have a heterozygosity rate deviating more than 3 SD&#39;s from the mean).
+# Adapt this file to make it compatible for PLINK, by removing all quotation marks from the file and selecting only the first two columns.
+sed &#39;s/&quot;// g&#39; fail-het-qc.txt | awk &#39;{print$1, $2}&#39;&gt; het_fail_ind.txt
+
+# Remove heterozygosity rate outliers.
+plink --bfile HapMap_3_r3_9 --remove het_fail_ind.txt --make-bed --out HapMap_3_r3_10
+
+
+############################################################
+### step 6 ###
+
+# It is essential to check datasets you analyse for cryptic relatedness.
+# Assuming a random population sample we are going to exclude all individuals above the pihat threshold of 0.2 in this tutorial.
+
+# Check for relationships between individuals with a pihat &gt; 0.2.
+plink --bfile HapMap_3_r3_10 --extract indepSNP.prune.in --genome --min 0.2 --out pihat_min0.2
+
+# The HapMap dataset is known to contain parent-offspring relations. 
+# The following commands will visualize specifically these parent-offspring relations, using the z values. 
+awk &#39;{ if ($8 &gt;0.9) print $0 }&#39; pihat_min0.2.genome&gt;zoom_pihat.genome
+
+# Generate a plot to assess the type of relationship.
+Rscript --no-save Relatedness.R
+
+# The generated plots show a considerable amount of related individuals (explentation plot; PO = parent-offspring, UN = unrelated individuals) in the Hapmap data, this is expected since the dataset was constructed as such.
+# Normally, family based data should be analyzed using specific family based methods. In this tutorial, for demonstrative purposes, we treat the relatedness as cryptic relatedness in a random population sample.
+# In this tutorial, we aim to remove all &#39;relatedness&#39; from our dataset.
+# To demonstrate that the majority of the relatedness was due to parent-offspring we only include founders (individuals without parents in the dataset).
+
+plink --bfile HapMap_3_r3_10 --filter-founders --make-bed --out HapMap_3_r3_11
+
+# Now we will look again for individuals with a pihat &gt;0.2.
+plink --bfile HapMap_3_r3_11 --extract indepSNP.prune.in --genome --min 0.2 --out pihat_min0.2_in_founders
+# The file &#39;pihat_min0.2_in_founders.genome&#39; shows that, after exclusion of all non-founders, only 1 individual pair with a pihat greater than 0.2 remains in the HapMap data.
+# This is likely to be a full sib or DZ twin pair based on the Z values. Noteworthy, they were not given the same family identity (FID) in the HapMap data.
+
+# For each pair of &#39;related&#39; individuals with a pihat &gt; 0.2, we recommend to remove the individual with the lowest call rate. 
+plink --bfile HapMap_3_r3_11 --missing
+# Use an UNIX text editor (e.g., vi(m) ) to check which individual has the highest call rate in the &#39;related pair&#39;. 
+
+# Generate a list of FID and IID of the individual(s) with a Pihat above 0.2, to check who had the lower call rate of the pair.
+# In our dataset the individual 13291  NA07045 had the lower call rate.
+vi 0.2_low_call_rate_pihat.txt
+i 
+13291  NA07045
+# Press esc on keyboard!
+:x
+# Press enter on keyboard
+# In case of multiple &#39;related&#39; pairs, the list generated above can be extended using the same method as for our lone &#39;related&#39; pair.
+
+# Delete the individuals with the lowest call rate in &#39;related&#39; pairs with a pihat &gt; 0.2 
+plink --bfile HapMap_3_r3_11 --remove 0.2_low_call_rate_pihat.txt --make-bed --out HapMap_3_r3_12
+
+################################################################################################################################
+
+# CONGRATULATIONS!! You&#39;ve just succesfully completed the first tutorial! You are now able to conduct a proper genetic QC. 
+
+# For the next tutorial, using the script: 2_Main_script_MDS.txt, you need the following files:
+# - The bfile HapMap_3_r3_12 (i.e., HapMap_3_r3_12.fam,HapMap_3_r3_12.bed, and HapMap_3_r3_12.bim
+# - indepSNP.prune.in</code></pre>
+<div id="references" class="section level1">
+<h1>References</h1>
+<ul>
+<li>[1] Marees, Andries T., et al. “A tutorial on conducting genome‐wide association studies: Quality control and statistical analysis.” International journal of methods in psychiatric research 27.2 (2018): e1608. <a href="https://onlinelibrary.wiley.com/doi/10.1002/mpr.1608">https://onlinelibrary.wiley.com/doi/10.1002/mpr.1608</a></li>
+<li>[2] <a href="https://github.com/MareesAT/GWA_tutorial">https://github.com/MareesAT/GWA_tutorial</a></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">clear_plinkr_cache</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">check_empty_plinkr_folder</span>()</span></code></pre></div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

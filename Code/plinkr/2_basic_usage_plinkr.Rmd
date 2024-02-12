@@ -25,6 +25,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(plinkr)
+help(plinkr)
 ```
 In this vignette, I run the PLINK
 commands at [http://zzz.bwh.harvard.edu/plink/data.shtml#plink](http://zzz.bwh.harvard.edu/plink/data.shtml#plink) using plinkr.
