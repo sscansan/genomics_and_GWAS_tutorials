@@ -9,3 +9,5 @@ scripts and sources have been used, taken or modified such as:
 * Marees AT, de Kluiver H, Stringer S, et al. A tutorial on conducting genome-wide association studies: Quality control and statistical analysis. *Int J Methods Psychiatr Res*. 2018; 27:e1608. [https://doi.org/10.1002/mpr.1608](https://doi.org/10.1002/mpr.1608)
 * *Marees et al. (2018) tutorial* [https://github.com/MareesAT/GWA_tutorial](https://github.com/MareesAT/GWA_tutorial)
 * Gábor Mészáros [https://genomicsbootcamp.github.io/book/](https://genomicsbootcamp.github.io/book/)
+* Naderi S, Rezaei HR, Pompanon F, Blum MGB, Negrini R, Naghash HR, et al. The goat domestication process inferred from large-scale mitochondrial DNA analysis of wild and domestic individuals. Proc Natl Acad Sci USA. 2008;105:17659–64. [https://gsejournal.biomedcentral.com/articles/10.1186/s12711-018-0421-y](https://gsejournal.biomedcentral.com/articles/10.1186/s12711-018-0421-y)
+* Data: [https://datadryad.org/stash/dataset/doi:10.5061/dryad.v8g21pt](https://datadryad.org/stash/dataset/doi:10.5061/dryad.v8g21pt)
