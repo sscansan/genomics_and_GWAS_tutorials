@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-Script for an example of a   quantitative trait analysis.
+Script for an example of a quantitative trait analysis.
 We are going to detect associations between genetic information
 and one or more quantitative traits.
 

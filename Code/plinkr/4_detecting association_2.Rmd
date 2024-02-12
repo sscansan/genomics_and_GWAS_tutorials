@@ -5,7 +5,7 @@ output:
   #rmdformats::html_clean:
   rmdformats::downcute:
     downcute_theme: "chaos"
-    use_bookdown: false
+    use_bookdown: true
     self_contained: true
     thumbnails: true
     lightbox: true
@@ -34,7 +34,7 @@ In this vignette,
 we are going to detect associations between genetic information
 and one or more quantitative traits.
 
-We will be using simulated data,
+We will be using **simulated data**,
 with a simple relationship between genotype and phenotype.
 To see how this same analysis is done with more
 messy data, see the 'test_assoc_qt' vignette.
