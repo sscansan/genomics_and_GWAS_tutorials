@@ -1,4 +1,7 @@
-/Data
+*.bed
+*.bim
+*.map
+*.ped
 *.zip
 *.map
 *.ped
