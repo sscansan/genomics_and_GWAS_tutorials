@@ -1,0 +1,47 @@
+---
+title: "Cattle data"
+#author:
+output:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    use_bookdown: false
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    highlight: tango
+    gallery: true
+    toc_depth: 3
+    #code_folding: show
+    css: css/custom.css
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "html") })
+---
+
+### Launch PLINK v.1.7/v.1.9/v.2.0
+
+PLINK([https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/)) can be executed directly in the system (if is added to the PATH) or, alternatively, directly in R with the `plinkr` package using the `run_plink()` command.
+
+```{r}
+#library(remotes)
+#install_github("richelbilderbeek/plinkr")
+#remotes::install_github("chrchang/plink-ng/2.0/pgenlibr")
+
+library(plinkr)
+#plinkr::install_plinks()
+
+get_plink_versions()
+
+# you can choose which version of plink to use
+#run_plink("--help")
+#run_plink(c("--help", "--noweb"), create_plink_v1_7_options())
+#run_plink("--help", create_plink_v1_9_options())
+#run_plink("--help", create_plink_v2_0_options())
+```
+
+```{r}
+run_plink("")
+```
+```{r}
+
+```
