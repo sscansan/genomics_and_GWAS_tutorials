@@ -1,5 +1,5 @@
 ---
-title: "Cattle data"
+title: "Goat data"
 #author:
 output:
   #rmdformats::html_clean:
@@ -21,27 +21,39 @@ knit: (function(inputFile, encoding) {
 ### Launch PLINK v.1.7/v.1.9/v.2.0
 
 PLINK([https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/)) can be executed directly in the system (if is added to the PATH) or, alternatively, directly in R with the `plinkr` package using the `run_plink()` command.
+I believe is a easier solution than using PLINK as system in R with `system("plink")`.
 
 ```{r}
-#library(remotes)
-#install_github("richelbilderbeek/plinkr")
-#remotes::install_github("chrchang/plink-ng/2.0/pgenlibr")
+rm(list = ls())
+```
+```{r}
+# library(remotes)
+# install_github("richelbilderbeek/plinkr")
+# remotes::install_github("chrchang/plink-ng/2.0/pgenlibr")
 
 library(plinkr)
-#plinkr::install_plinks()
+# plinkr::install_plinks()
 
 get_plink_versions()
 
 # you can choose which version of plink to use
-#run_plink("--help")
-#run_plink(c("--help", "--noweb"), create_plink_v1_7_options())
-#run_plink("--help", create_plink_v1_9_options())
-#run_plink("--help", create_plink_v2_0_options())
+run_plink("--help")
+# run_plink(c("--help", "--noweb"), create_plink_v1_7_options())
+# run_plink("--help", create_plink_v1_9_options())
+# run_plink("--help", create_plink_v2_0_options())
 ```
 
 ```{r}
+# system("plink")
 run_plink("")
 ```
+
+### Change data formats within PLINK
 ```{r}
 
+bfile <- "Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.bed"
+
+convert_plink_bin_files_to_plink_text_files()
+
+run_plink("--bfile --recode --out goat")
 ```
