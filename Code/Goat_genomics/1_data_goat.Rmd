@@ -20,8 +20,8 @@ knit: (function(inputFile, encoding) {
 
 ### Launch PLINK v.1.7/v.1.9/v.2.0
 
-PLINK([https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/)) can be executed directly in the system (if is added to the PATH) or, alternatively, directly in R with the `plinkr` package using the `run_plink()` command.
-I believe is a easier solution than using PLINK as system in R with `system("plink")`.
+PLINK([https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/)) can be executed directly in the system (if is added to the PATH) or, alternatively, directly in R with the `plinkr` package commands that integrates well later on with the R data analysis tools.
+Alternatively, using PLINK as system in R with `system("plink")`.
 
 ```{r}
 rm(list = ls())
