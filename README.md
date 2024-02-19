@@ -16,15 +16,15 @@ scripts and sources have been used, taken or modified such as:
   [https://github.com/MareesAT/GWA_tutorial](https://github.com/MareesAT/GWA_tutorial)
 - Gábor Mészáros (2021) Genomic Bootcamp Book
   [https://genomicsbootcamp.github.io/book/](https://genomicsbootcamp.github.io/book/)
-- Naderi S, Rezaei HR, Pompanon F, Blum MGB, Negrini R, Naghash HR, et al. The
+- Naderi S, Rezaei HR, Pompanon F, Blum MGB, Negrini R, Naghash HR, et al. *The
   goat domestication process inferred from large-scale mitochondrial DNA
-  analysis of wild and domestic individuals. Proc Natl Acad Sci USA.
+  analysis of wild and domestic individuals*. Proc Natl Acad Sci USA.
   2008;105:17659–64.
   [https://gsejournal.biomedcentral.com/articles/10.1186/s12711-018-0421-y](https://gsejournal.biomedcentral.com/articles/10.1186/s12711-018-0421-y),
   and data:
   [https://datadryad.org/stash/dataset/doi:10.5061/dryad.v8g21pt](https://datadryad.org/stash/dataset/doi:10.5061/dryad.v8g21pt)
-- Decker JE, McKay SD, Rolf MM, Kim J, Molina Alcalá A, et al. (2014) Worldwide
-  Patterns of Ancestry, Divergence, and Admixture in Domesticated Cattle. PLOS
+- Decker JE, McKay SD, Rolf MM, Kim J, Molina Alcalá A, et al. (2014) *Worldwide
+  Patterns of Ancestry, Divergence, and Admixture in Domesticated Cattle*. PLOS
   Genetics 10(3):
   e1004254.[https://doi.org/10.1371/journal.pgen.1004254](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004254),
   and data:
