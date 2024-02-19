@@ -1,0 +1,18 @@
+PLINK v1.90b7.2 64-bit (11 Dec 2023)
+Options in effect:
+  --allow-no-sex
+  --bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full
+  --cow
+  --make-bed
+  --nonfounders
+
+Hostname: pop-os
+Working directory: /home/sscansa/MEGA/R/GWAS/Code/Goat_genomics
+Start time: Mon Feb 19 17:17:30 2024
+
+Random number seed: 1708359450
+63485 MB RAM detected; reserving 31742 MB for main workspace.
+Error: Failed to open
+Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.bed.
+
+End time: Mon Feb 19 17:17:30 2024

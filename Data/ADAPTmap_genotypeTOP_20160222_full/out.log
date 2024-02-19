@@ -1,0 +1,18 @@
+PLINK v1.90b7.2 64-bit (11 Dec 2023)
+Options in effect:
+  --bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full
+  --out Data/ADAPTmap_genotypeTOP_20160222_full/out
+  --recode
+
+Hostname: pop-os
+Working directory: /home/sscansa/MEGA/R/GWAS
+Start time: Mon Feb 19 17:46:00 2024
+
+Random number seed: 1708361160
+63485 MB RAM detected; reserving 31742 MB for main workspace.
+
+Error: Invalid chromosome code '27' on line 48541 of .bim file.
+(This is disallowed for humans.  Check if the problem is with your data, or if
+you forgot to define a different chromosome set with e.g. --chr-set.)
+
+End time: Mon Feb 19 17:46:00 2024

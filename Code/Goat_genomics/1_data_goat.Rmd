@@ -1,0 +1,122 @@
+---
+title: "Goat data"
+#author:
+output:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    use_bookdown: false
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    highlight: tango
+    gallery: true
+    toc_depth: 3
+    code_folding: show
+    css: css/custom.css
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "html") })
+---
+
+# Launch PLINK v.1.7/v.1.9/v.2.0
+
+PLINK ([https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/)) can be executed directly in the system (if is added to the PATH) or, alternatively, directly in R with the `plinkr` package commands that integrates well later on with the R data analysis tools.
+Alternatively, using PLINK as system in R with `system("plink")`.
+
+```{r}
+rm(list = ls())
+getwd()
+list.files()
+```
+
+## `plinkr`
+```{r}
+# library(remotes)
+# install_github("richelbilderbeek/plinkr")
+# remotes::install_github("chrchang/plink-ng/2.0/pgenlibr")
+
+library(plinkr)
+# plinkr::install_plinks()
+
+get_plink_versions()
+
+# you can choose which version of plink to use
+# run_plink("--help")
+# run_plink(c("--help", "--noweb"), create_plink_v1_7_options())
+# run_plink("--help", create_plink_v1_9_options())
+# run_plink("--help", create_plink_v2_0_options())
+```
+
+## System PLINK
+```{r}
+getwd()
+system("mkdir Data/ADAPTmap_genotypeTOP_20160222_full/out")
+
+bfile <- "Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full"
+out <- "Data/ADAPTmap_genotypeTOP_20160222_full/out"
+
+# check PLINK installation
+system("plink")
+
+```
+
+# Change data formats within PLINK
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--recode \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out")
+
+# why not working?
+#system(print("plink --bfile", bfile, "--recode --out", out, sep = " "))
+```
+
+`--bfile` \[prefix]\ : Specify `.bed` + `.bim` + `.fam` prefix (default 'plink').
+
+`--bed` \<filename>\ : Specify full name of `.bed` file.
+
+`--bim` \<filename>\ : Specify full name of `.bim` file.
+
+`--fam` \<filename>\ : Specify full name of `.fam` file.
+
+This command gave error because does not match the number of chromosomes, whic hshould be given as a number.
+with the flag `--chr-set` [https://www.cog-genomics.org/plink/1.9/input#chr_set](https://www.cog-genomics.org/plink/1.9/input#chr_set) we give the number of chromosomes or we use a predifined number of chromosomes based on the organism that we have in study.
+In the case of goats, we have 2n=60 chromosomes, and 29 non-sex related chromosomes (Autosomes).
+In the case of goat, we have the same autosome number of cows, which is 29.
+for this we can use the either the flag `--chr-set 29 no-xy` or the flag `--cow`, which have the same meaning.
+
+### .bped &#x27A1; .ped with PLINK
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--recode \\
+--chr-set 29 no-xy \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full")
+```
+
+### .bped &#x27A1; .vcf with PLINK
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--recode vcf \\
+--chr-set 29 no-xy \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full")
+```
+
+### .ped &#x27A1; .vcf with PLINK
+```{r}
+system("plink \\
+--file Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full \\
+--recode vcf \\
+--chr-set 29 no-xy \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full")
+```
+
+## Change data formats with `plinkr`?
+Can we do the same with `plinkr`?
+```{r}
+run_plink("")
+
+#convert_plink_bin_files_to_plink_text_files()
+
+```

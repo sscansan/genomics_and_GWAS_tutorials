@@ -1,3 +1,7 @@
+*.pedind
+*.nosex
+*.vcf
+*.hh
 *.bed
 *.bim
 *.map
@@ -9,4 +13,6 @@
 *.png
 *.jpg
 *.pdf
-
+*.vcf
+*.nosex
+*.hh

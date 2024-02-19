@@ -1,0 +1,271 @@
+---
+title: "Quality Control PLINK"
+#author:
+output:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    use_bookdown: false
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    highlight: tango
+    gallery: true
+    toc_depth: 3
+    code_folding: show
+    css: css/custom.css
+knit:
+  (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
+  encoding, output_dir = "html") })
+---
+
+```{r}
+rm(list = ls())
+getwd()
+list.files()
+```
+
+# Quality control with PLINK
+
+## Get the data ready
+
+This is the base script to read the dataset and perform on it the quality control:
+
+  * Missingness pwe SNP: 0.1 `--geno`
+  * Missingness per Individual: 0.1 `--mind`
+  * Minor allele frequency: 0.05 `--maf`
+  * Hardy-Weinberg threshold: 0.0000001 `--hwe`
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--chr-set 29 no-xy \\
+--allow-no-sex \\
+--nonfounders \\
+--make-bed \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC")
+```
+
+`--chr-set 29 no-xy`: the semantic is the same as writnig `--cow` as goats and cows have the same number of chromosomes.
+`--allow-no-sex`: Do not treat ambiguous-sex samples as having missing
+                   phenotypes in analysis commands.  (Automatic /w --no-sex.)
+
+`--nonfounders`: Include nonfounders in allele freq/HWE calculations.
+
+`--make-bed`:  Create a new binary fileset.  Unlike the automatic text-to-binary
+  converters (which only heed chromosome filters), this supports all of
+  PLINK's filtering flags.
+
+Running this command we can see that the `.bed` file has not changed in size, stays at 62.1 Mb, indicatintg that the data has not been filtered out.
+Furthermore, we have the folowing output:
+```
+PLINK v1.90b7.2 64-bit (11 Dec 2023)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.log.
+Options in effect:
+  --allow-no-sex
+  --bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full
+  --cow
+  --make-bed
+  --nonfounders
+  --out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC
+
+63485 MB RAM detected; reserving 31742 MB for main workspace.
+53347 variants loaded from .bim file.
+4653 samples (32 males, 158 females, 4463 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 4653 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Warning: 191 het. haploid genotypes present (see
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.hh ); many commands treat
+these as missing.
+Total genotyping rate is 0.969745.
+53347 variants and 4653 samples pass filters and QC.
+Note: No phenotypes present.
+--make-bed to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bed +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bim +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.fam ... done.
+```
+## Apply QC parameters
+
+### Threshould missing SNPs
+
+With `--geno 0.1` we ask to filter the SNPs that have more than 10% of missing values in the Individuals (animals-goats).
+
+With `--mind 0.1` we ask to flter out the Individuals that have more than 10% missing values in the SNPs.
+
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--chr-set 29 no-xy \\
+--geno 0.1 \\
+--mind 0.1 \\
+--allow-no-sex \\
+--nonfounders \\
+--make-bed \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC")
+```
+
+```
+PLINK v1.90b7.2 64-bit (11 Dec 2023)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.log.
+Options in effect:
+  --allow-no-sex
+  --bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full
+  --cow
+  --geno 0.1
+  --make-bed
+  --mind 0.1
+  --nonfounders
+  --out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC
+
+63485 MB RAM detected; reserving 31742 MB for main workspace.
+53347 variants loaded from .bim file.
+4653 samples (32 males, 158 females, 4463 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.nosex .
+125 samples removed due to missing genotype data (--mind).
+IDs written to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.irem .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 4528 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Warning: 191 het. haploid genotypes present (see
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.hh ); many commands treat
+these as missing.
+Total genotyping rate in remaining samples is 0.976765.
+1998 variants removed due to missing genotype data (--geno).
+51349 variants and 4528 samples pass filters and QC.
+Note: No phenotypes present.
+--make-bed to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bed +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bim +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.fam ... done.
+```
+
+Running that we removed 125 animals (samples) with missing genotypes or NAs $\geq$ 10% SNPs.
+
+We run additional filters:
+
+`--maf 0.05`: Alleles with minimum allele frequency lower than 5% (Rare traits?).
+
+`--hwe 0.0000001`: hardy-Weinberg threshould, commonly used in QC, but with the data that we are working on, with many goat populations, it might cause the removal many SNPs.
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--chr-set 29 no-xy \\
+--geno 0.1 \\
+--mind 0.1 \\
+--maf 0.05 \\
+--allow-no-sex \\
+--nonfounders \\
+--make-bed \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC")
+```
+```
+PLINK v1.90b7.2 64-bit (11 Dec 2023)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.log.
+Options in effect:
+  --allow-no-sex
+  --bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full
+  --chr-set 29 no-xy
+  --geno 0.1
+  --maf 0.05
+  --make-bed
+  --mind 0.1
+  --nonfounders
+  --out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC
+
+63485 MB RAM detected; reserving 31742 MB for main workspace.
+53347 variants loaded from .bim file.
+4653 samples (32 males, 158 females, 4463 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.nosex .
+125 samples removed due to missing genotype data (--mind).
+IDs written to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.irem .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 4528 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Warning: 191 het. haploid genotypes present (see
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.hh ); many commands treat
+these as missing.
+Total genotyping rate in remaining samples is 0.976765.
+1998 variants removed due to missing genotype data (--geno).
+84 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+51265 variants and 4528 samples pass filters and QC.
+Note: No phenotypes present.
+--make-bed to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bed +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bim +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.fam ... done.
+```
+
+### QC Result discussion
+
+Starting with 53347 nucleotide variants and 4653 goat individuals samples, we removed 125 samples with more than 10&% missing SNPs
+Moreover, 1998 SNP variants were removed due to missing in more than 10% of the animals.
+And 84 SNPs removed due to a minor allele treshold.
+
+We remain with 51265 SNPs and 4528 samples.
+
+The warning message we received from PLINK indicates that there are 191 heterozygous haploid genotypes present in the dataset.
+Heterozygous haploid genotypes are situations where an individual is expected to have only one allele but is showing heterozygosity (two different alleles) at a particular locus on an autosome (non-sex chromosome).
+
+In many analyses, heterozygous haploid genotypes are treated as missing data because they often represent errors or unusual biological situations.
+As such, PLINK warns us about these genotypes and suggests that we may want to consider treating them as missing data.
+
+The `--autosome` option in PLINK helps filtering out non-autosomal chromosomes, such as sex chromosomes (X and Y).
+
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--chr-set 29 no-xy \\
+--geno 0.1 \\
+--mind 0.1 \\
+--maf 0.05 \\
+--autosome \\
+--allow-no-sex \\
+--nonfounders \\
+--make-bed \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC")
+```
+
+```
+PLINK v1.90b7.2 64-bit (11 Dec 2023)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.log.
+Options in effect:
+  --allow-no-sex
+  --autosome
+  --bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full
+  --chr-set 29 no-xy
+  --geno 0.1
+  --maf 0.05
+  --make-bed
+  --mind 0.1
+  --nonfounders
+  --out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC
+
+63485 MB RAM detected; reserving 31742 MB for main workspace.
+49953 out of 53347 variants loaded from .bim file.
+4653 samples (32 males, 158 females, 4463 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.nosex .
+121 samples removed due to missing genotype data (--mind).
+IDs written to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.irem .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 4532 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate in remaining samples is 0.982711.
+1332 variants removed due to missing genotype data (--geno).
+69 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+48552 variants and 4532 samples pass filters and QC.
+Note: No phenotypes present.
+--make-bed to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bed +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bim +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.fam ... done.
+```
+
+Running this we can see that the numbers are now lower because at first the non autosomal chromosomes have been filtered out.
