@@ -1,3 +1,5 @@
+*.mibs.id
+*.mibs
 *.mdist
 *.mdist.id
 *.pedind

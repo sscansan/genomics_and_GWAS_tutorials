@@ -27,21 +27,22 @@ list.files()
 
 We start from the data after QC of the file `2_QC_plink.Rmd`.
 
-We compute the euclidean distance between individuals (PCA).
+We compute the IBS (Identity-By-State) distance between individuals.
 ```{r}
 system("plink \\
 --chr-set 29 no-xy \\
 --allow-no-sex \\
 --nonfounders \\
 --file Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_TOP \\
---distance-matrix \\
+--distance ibs flat-missing \\
 --out Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data")
 ```
 
 ### Load distance matrix
 
 ```{r}
-dist_matrix <- read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist", header = T)
+dist_matrix <- read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist", header = F)
+head(dist_matrix)
 # Extract breeds names
 fam <- data.frame(famids = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 1])
 head(fam)
@@ -49,10 +50,11 @@ head(fam)
 famInd <- data.frame(IID = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 2])
 head(famInd)
 ```
-And PCA on the distance matrix of the dataset.
+And NMDS (PCoA) on the distance matrix of the dataset.
 #### With `cmdscale()`
 ```{r}
 mds_pop <- cmdscale(dist(dist_matrix), eig = TRUE, 6)
+head(mds_pop)
 ```
 #### With `princomp()`
 ```{r}

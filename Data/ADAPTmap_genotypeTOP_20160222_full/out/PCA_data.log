@@ -2,16 +2,16 @@ PLINK v1.90b7.2 64-bit (11 Dec 2023)
 Options in effect:
   --allow-no-sex
   --chr-set 29 no-xy
-  --distance-matrix
+  --distance ibs flat-missing
   --file Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_TOP
   --nonfounders
   --out Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data
 
 Hostname: pop-os
 Working directory: /home/sscansa/MEGA/R/GWAS
-Start time: Mon Feb 19 22:10:20 2024
+Start time: Wed Feb 21 00:08:17 2024
 
-Random number seed: 1708377020
+Random number seed: 1708470497
 63485 MB RAM detected; reserving 31742 MB for main workspace.
 Scanning .ped file... done.
 Performing single-pass .bed write (53347 variants, 4653 samples).
@@ -33,8 +33,8 @@ Total genotyping rate is 0.969745.
 Note: No phenotypes present.
 Excluding 1987 variants on non-autosomes from distance matrix calc.
 Distance matrix calculation complete.
-Distances (proportions) written to
-Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist , and IDs to
-Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id .
+IDs written to Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mibs.id .
+IBS matrix written to Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mibs
+.
 
-End time: Mon Feb 19 22:10:27 2024
+End time: Wed Feb 21 00:08:25 2024
