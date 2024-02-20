@@ -1,5 +1,5 @@
 ---
-title: "Goat data"
+title: "Goat Data"
 #author:
 output:
   #rmdformats::html_clean:
@@ -12,38 +12,25 @@ output:
     highlight: tango
     gallery: true
     toc_depth: 3
-<<<<<<< HEAD
     code_folding: show
-=======
-    #code_folding: show
->>>>>>> bb1d2933935acee3c272dde3f20f70b281bcb7d3
     css: css/custom.css
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_dir = "html") })
+knit:
+  (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
+  encoding, output_dir = "html") })
 ---
 
-<<<<<<< HEAD
 # Launch PLINK v.1.7/v.1.9/v.2.0
 
 PLINK ([https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/)) can be executed directly in the system (if is added to the PATH) or, alternatively, directly in R with the `plinkr` package commands that integrates well later on with the R data analysis tools.
-=======
-### Launch PLINK v.1.7/v.1.9/v.2.0
-
-PLINK([https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/)) can be executed directly in the system (if is added to the PATH) or, alternatively, directly in R with the `plinkr` package commands that integrates well later on with the R data analysis tools.
->>>>>>> bb1d2933935acee3c272dde3f20f70b281bcb7d3
 Alternatively, using PLINK as system in R with `system("plink")`.
 
 ```{r}
 rm(list = ls())
-<<<<<<< HEAD
 getwd()
 list.files()
 ```
 
 ## `plinkr`
-=======
-```
->>>>>>> bb1d2933935acee3c272dde3f20f70b281bcb7d3
 ```{r}
 # library(remotes)
 # install_github("richelbilderbeek/plinkr")
@@ -55,17 +42,12 @@ library(plinkr)
 get_plink_versions()
 
 # you can choose which version of plink to use
-<<<<<<< HEAD
 # run_plink("--help")
-=======
-run_plink("--help")
->>>>>>> bb1d2933935acee3c272dde3f20f70b281bcb7d3
 # run_plink(c("--help", "--noweb"), create_plink_v1_7_options())
 # run_plink("--help", create_plink_v1_9_options())
 # run_plink("--help", create_plink_v2_0_options())
 ```
 
-<<<<<<< HEAD
 ## System PLINK
 ```{r}
 getwd()
@@ -98,7 +80,7 @@ system("plink \\
 
 `--fam` \<filename>\ : Specify full name of `.fam` file.
 
-This command gave error because does not match the number of chromosomes, whic hshould be given as a number.
+This command gave error because does not match the number of chromosomes, which should be given as a number.
 with the flag `--chr-set` [https://www.cog-genomics.org/plink/1.9/input#chr_set](https://www.cog-genomics.org/plink/1.9/input#chr_set) we give the number of chromosomes or we use a predifined number of chromosomes based on the organism that we have in study.
 In the case of goats, we have 2n=60 chromosomes, and 29 non-sex related chromosomes (Autosomes).
 In the case of goat, we have the same autosome number of cows, which is 29.
@@ -131,26 +113,21 @@ system("plink \\
 --out Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full")
 ```
 
+### .ped &#x27A1; .map with PLINK
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--recode \\
+--chr-set 29 no-xy \\
+--nonfounders \\
+--allow-no-sex \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_TOP")
+```
+
 ## Change data formats with `plinkr`?
 Can we do the same with `plinkr`?
 ```{r}
 run_plink("")
 
 #convert_plink_bin_files_to_plink_text_files()
-
-=======
-```{r}
-# system("plink")
-run_plink("")
-```
-
-### Change data formats within PLINK
-```{r}
-
-bfile <- "Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.bed"
-
-convert_plink_bin_files_to_plink_text_files()
-
-run_plink("--bfile --recode --out goat")
->>>>>>> bb1d2933935acee3c272dde3f20f70b281bcb7d3
 ```

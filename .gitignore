@@ -1,3 +1,5 @@
+*.mdist
+*.mdist.id
 *.pedind
 *.nosex
 *.vcf
@@ -13,6 +15,3 @@
 *.png
 *.jpg
 *.pdf
-*.vcf
-*.nosex
-*.hh

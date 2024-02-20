@@ -7,9 +7,9 @@ Options in effect:
 
 Hostname: pop-os
 Working directory: /home/sscansa/MEGA/R/GWAS
-Start time: Mon Feb 19 17:46:19 2024
+Start time: Mon Feb 19 21:51:06 2024
 
-Random number seed: 1708361179
+Random number seed: 1708375866
 63485 MB RAM detected; reserving 31742 MB for main workspace.
 Scanning .ped file... done.
 Performing single-pass .bed write (53347 variants, 4653 samples).
@@ -39,4 +39,4 @@ Warning: Underscore(s) present in sample IDs.
 Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf
 ... done.
 
-End time: Mon Feb 19 17:46:25 2024
+End time: Mon Feb 19 21:51:12 2024

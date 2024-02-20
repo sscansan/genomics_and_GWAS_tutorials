@@ -24,3 +24,48 @@ rm(list = ls())
 getwd()
 list.files()
 ```
+
+We start from the data after QC of the file `2_QC_plink.Rmd`.
+
+We compute the euclidean distance between individuals (PCA).
+```{r}
+system("plink \\
+--chr-set 29 no-xy \\
+--allow-no-sex \\
+--nonfounders \\
+--file Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_TOP \\
+--distance-matrix \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data")
+```
+
+### Load distance matrix
+
+```{r}
+dist_matrix <- read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist", header = T)
+# Extract breeds names
+fam <- data.frame(famids = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 1])
+head(fam)
+# Extract individual names
+famInd <- data.frame(IID = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 2])
+head(famInd)
+```
+And PCA on the distance matrix of the dataset.
+#### With `cmdscale()`
+```{r}
+mds_pop <- cmdscale(dist(dist_matrix), eig = TRUE, 6)
+```
+#### With `princomp()`
+```{r}
+pca <- princomp(dist(dist_matrix))
+```
+```{r}
+eigenvec_populations <- cbind(fam, famInd, mds_pop$points)
+```
+```{r}
+nrow(fam)
+nrow(famInd)
+nrow(mds_pop$points)
+```
+```{r}
+head(mds_pop$points)
+```
