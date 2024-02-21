@@ -21,7 +21,7 @@ scripts and sources have been used, taken or modified such as:
 
 - **Naderi S**, Rezaei HR, Pompanon F, Blum MGB, Negrini R, Naghash HR, et al. (2008) The goat domestication process inferred from large-scale mitochondrial DNA analysis of wild and domestic individuals. *Proc Natl Acad Sci* USA. 105:17659–64.
 
-- *Bertolini, F.*, Servin, B., Talenti, A. et al. Signatures of selection and environmental adaptation across the goat genome post-domestication. *Genet Sel Evol* 50, 57 (2018). [https://doi.org/10.1186/s12711-018-0421-y](https://doi.org/10.1186/s12711-018-0421-y)
+- **Bertolini, F.**, Servin, B., Talenti, A. et al. Signatures of selection and environmental adaptation across the goat genome post-domestication. *Genet Sel Evol* 50, 57 (2018). [https://doi.org/10.1186/s12711-018-0421-y](https://doi.org/10.1186/s12711-018-0421-y)
 
 - **Colli, L.**, Milanesi, M., Talenti, A. et al. Genome-wide SNP profiling of worldwide goat populations reveals strong partitioning of diversity and highlights post-domestication migration routes. *Genet Sel Evol* 50, 58 (2018). [https://doi.org/10.1186/s12711-018-0422-x](https://doi.org/10.1186/s12711-018-0422-x)
 - **Colli et al.** (2020). Data from: Signatures of selection and environmental adaptation across the goat genome post-domestication [Dataset]. *Dryad*. [https://doi.org/10.5061/dryad.v8g21pt](https://doi.org/10.5061/dryad.v8g21pt)
