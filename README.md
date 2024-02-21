@@ -6,8 +6,10 @@ GitHub repository of a bioinformatic Genome Wide Association Study project using
 Plink through `plinkr` R package. For learning puropses other repositories,
 scripts and sources have been used, taken or modified such as:
 
+- PLINK 1.90 [https://www.cog-genomics.org/plink2/](https://www.cog-genomics.org/plink2/)
 - `plinkr` R package repository documentation
   [https://github.com/AJResearchGroup/plinkr](https://github.com/AJResearchGroup/plinkr)
+
 - **Marees AT**, de Kluiver H, Stringer S, et al. A tutorial on conducting
   genome-wide association studies: Quality control and statistical analysis.
   _Int J Methods Psychiatr Res_. 2018; 27:e1608.
@@ -34,7 +36,7 @@ scripts and sources have been used, taken or modified such as:
 
 ### Get PLINK working in Linux
 
-1.  Download PLINK v.1.9 [Linux 64-bit] from
+1.  Download PLINK v.1.9 [Linux 64-bit](https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20231211.zip) from
     [https://www.cog-genomics.org/plink/](https://www.cog-genomics.org/plink/)
 2.  Install PLINK
     ```
