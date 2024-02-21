@@ -68,9 +68,9 @@ scripts and sources have been used, taken or modified such as:
     export PATH=/usr/local/bin:$PATH
     ```
 
-Save and exit, you should be able to call `plink` from the terminal at any user
-position in the system
+    Save and exit, you should be able to call `plink` from the terminal at any user
+    position in the system
 
-```
-plink --help
-```
+    ```
+    plink --help
+    ```
