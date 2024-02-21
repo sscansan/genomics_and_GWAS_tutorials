@@ -36,7 +36,7 @@ scripts and sources have been used, taken or modified such as:
 
 ### Get PLINK working in Linux
 
-1.  Download PLINK v.1.9 [Linux 64-bit](https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20231211.zip)
+1.  Download [PLINK 1.90 Linux 64-bit](https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20231211.zip)
 2.  Install PLINK
     ```
     cd Downloads/
