@@ -28,13 +28,14 @@ list.files()
 We start from the data after QC of the file `2_QC_plink.Rmd`.
 
 We compute the IBS (Identity-By-State) distance between individuals.
+Not Euclidean distances!
 ```{r}
 system("plink \\
 --chr-set 29 no-xy \\
 --allow-no-sex \\
 --nonfounders \\
 --file Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_TOP \\
---distance ibs flat-missing \\
+--distance-matrix \\
 --out Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data")
 ```
 
@@ -50,24 +51,27 @@ head(fam)
 famInd <- data.frame(IID = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 2])
 head(famInd)
 ```
-And NMDS (PCoA) on the distance matrix of the dataset.
+And Multidimensional scaling (MDS/PCoA) on the distance matrix of the dataset.
 #### With `cmdscale()`
 ```{r}
 mds_pop <- cmdscale(dist(dist_matrix), eig = TRUE, 6)
 head(mds_pop)
 ```
-#### With `princomp()`
-```{r}
-pca <- princomp(dist(dist_matrix))
-```
-```{r}
-eigenvec_populations <- cbind(fam, famInd, mds_pop$points)
-```
 ```{r}
 nrow(fam)
 nrow(famInd)
 nrow(mds_pop$points)
+
+eigenvec_populations <- cbind(fam, famInd, mds_pop$points)
+head(eigenvec_populations)
+eigen_percent <- round(((mds_pop$eig) / sum(mds_pop$eig)) * 100, 2)
 ```
+We have calculated the Eigenvectors and Eigenvalues.
 ```{r}
-head(mds_pop$points)
+library(tidyverse)
+eigenvec_populations %>%
+  ggplot(aes(., x = `1`, y = `2`, color = famids)) +
+  geom_point() +
+  theme_bw()
 ```
+
