@@ -1,41 +1,19 @@
 PLINK v1.90b7.2 64-bit (11 Dec 2023)
 Options in effect:
   --allow-no-sex
+  --autosome
   --bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full
   --chr-set 29 no-xy
   --geno 0.1
   --maf 0.05
-  --make-bed
   --mind 0.1
   --nonfounders
   --out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC
 
 Hostname: pop-os
 Working directory: /home/sscansa/MEGA/R/GWAS
-Start time: Mon Feb 19 19:06:00 2024
+Start time: Wed Feb 21 19:06:48 2024
 
-Random number seed: 1708365960
-63485 MB RAM detected; reserving 31742 MB for main workspace.
-53347 variants loaded from .bim file.
-4653 samples (32 males, 158 females, 4463 ambiguous) loaded from .fam.
-Ambiguous sex IDs written to
-Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.nosex .
-125 samples removed due to missing genotype data (--mind).
-IDs written to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.irem .
-Using 1 thread (no multithreaded calculations invoked).
-Before main variant filters, 4528 founders and 0 nonfounders present.
-Calculating allele frequencies... done.
-Warning: 191 het. haploid genotypes present (see
-Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.hh ); many commands treat
-these as missing.
-Total genotyping rate in remaining samples is 0.976765.
-1998 variants removed due to missing genotype data (--geno).
-84 variants removed due to minor allele threshold(s)
-(--maf/--max-maf/--mac/--max-mac).
-51265 variants and 4528 samples pass filters and QC.
-Note: No phenotypes present.
---make-bed to Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bed +
-Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.bim +
-Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC.fam ... done.
+Warning: No output requested.  (Did you forget --make-bed?)  Exiting.
 
-End time: Mon Feb 19 19:06:01 2024
+End time: Wed Feb 21 19:06:48 2024

@@ -29,7 +29,11 @@ We start from the data after QC of the file `2_QC_plink.Rmd`.
 
 We compute the IBS (Identity-By-State) distance between individuals.
 Not Euclidean distances!
+
+--distance 1-ibs flat-missing
+
 ```{r}
+#system("plink --distance --help")
 system("plink \\
 --chr-set 29 no-xy \\
 --allow-no-sex \\
@@ -54,7 +58,7 @@ head(famInd)
 And Multidimensional scaling (MDS/PCoA) on the distance matrix of the dataset.
 #### With `cmdscale()`
 ```{r}
-mds_pop <- cmdscale(dist(dist_matrix), eig = TRUE, 6)
+mds_pop <- cmdscale(dist_matrix, eig = TRUE, 5)
 head(mds_pop)
 ```
 ```{r}
@@ -64,14 +68,91 @@ nrow(mds_pop$points)
 
 eigenvec_populations <- cbind(fam, famInd, mds_pop$points)
 head(eigenvec_populations)
-eigen_percent <- round(((mds_pop$eig) / sum(mds_pop$eig)) * 100, 2)
+eigen_percent <- round(((mds_pop$eig) / sum(mds_pop$eig)) * 100, 1)
 ```
 We have calculated the Eigenvectors and Eigenvalues.
+
 ```{r}
 library(tidyverse)
+
+mds_goat <-
 eigenvec_populations %>%
-  ggplot(aes(., x = `1`, y = `2`, color = famids)) +
-  geom_point() +
-  theme_bw()
+  ggplot(aes(., x = -`1`, y = `2`, color = famids, fill = famids)) +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  geom_point(alpha = .8, show.legend = FALSE) +
+  labs(
+    title = "MDS of worldwide goat population",
+    x = paste0("Dimension 1 (", eigen_percent[1], " %)"),
+    y = paste0("Dimension 2 (", eigen_percent[2], " %)")) +
+  theme_minimal() +
+    theme(
+      aspect.ratio = 1,
+      panel.grid = element_blank(),
+      axis.ticks = element_line()
+    )
+
+ggsave("Figures/goat_mds.pdf", plot = mds_goat, height = 6, width = 6, dpi = 600, device = grDevices::cairo_pdf)
+
 ```
 
+## MDS in plink
+There is an option to direct create the distance matrix, eigenvectors and eigenvalues directly in plink
+```{r}
+goats <- read_tsv("Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.fam", col_names = F)
+
+selectedAnimals <- goats %>%
+  filter(X1 == "TOG" | X1 == "RAN"| X1 == "TED") %>%
+  write_delim("Data/ADAPTmap_genotypeTOP_20160222_full/filtered_goats.txt", col_names = F)
+```
+```{r}
+system(str_c(
+  "plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--chr-set 29 no-xy \\
+--autosome ",
+  "--keep Data/ADAPTmap_genotypeTOP_20160222_full/filtered_goats.txt \\
+             --nonfounders ",
+  "--geno 0.1 \\
+             --mind 0.1 \\
+             --maf 0.05 ",
+  "--make-bed \\
+             --out Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats"
+))
+```
+```{r}
+system("plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats \\
+--chr-set 29 no-xy \\
+--pca \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats")
+```
+Visualisation:
+```{r}
+eigenValues <- read_delim("Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenval", delim = " ", col_names = F)
+eigenVectors <- read_delim("Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenvec", delim = " ", col_names = F)
+
+## Proportion of variation captured by each vector
+eigen_percent <- round((eigenValues / (sum(eigenValues))*100), 1)
+
+# PCA plot
+mds_gooat_filtered <-
+ggplot(data = eigenVectors) +
+  geom_point(mapping = aes(x = X3, y = X4, color = X1, shape = X1), size = 3, show.legend = TRUE ) +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+    labs(
+    title = "MDS of selected goat breeds",
+    x = paste0("Dimension 1 (", eigen_percent[1,1], " %)"),
+    y = paste0("Dimension 2 (", eigen_percent[2,1], " %)"),
+    colour = "Goat breeds", shape = "Goat breeds") +
+  theme_minimal() +
+    theme(
+      aspect.ratio = 1,
+      panel.grid = element_blank(),
+      axis.ticks = element_line()
+    )
+
+ggsave("Figures/goat_mds_filtered.pdf", plot = mds_gooat_filtered, height = 6, width = 6, dpi = 600, device = grDevices::cairo_pdf)
+
+```

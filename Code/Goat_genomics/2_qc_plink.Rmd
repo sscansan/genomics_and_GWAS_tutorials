@@ -227,8 +227,9 @@ system("plink \\
 --autosome \\
 --allow-no-sex \\
 --nonfounders \\
---make-bed \\
 --out Data/ADAPTmap_genotypeTOP_20160222_full/out/afterQC")
+
+## --make-bed \\
 ```
 
 ```

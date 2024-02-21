@@ -1,0 +1,30 @@
+PLINK v1.90b7.2 64-bit (11 Dec 2023)
+Options in effect:
+  --bfile Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats
+  --chr-set 29 no-xy
+  --out Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats
+  --pca
+
+Hostname: pop-os
+Working directory: /home/sscansa/MEGA/R/GWAS
+Start time: Wed Feb 21 21:06:48 2024
+
+Random number seed: 1708546008
+63485 MB RAM detected; reserving 31742 MB for main workspace.
+48333 variants loaded from .bim file.
+136 samples (0 males, 0 females, 136 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.nosex .
+Using up to 15 threads (change this with --threads).
+Before main variant filters, 136 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.996427.
+48333 variants and 136 samples pass filters and QC.
+Note: No phenotypes present.
+Relationship matrix calculation complete.
+--pca: Results saved to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenval
+and
+Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenvec .
+
+End time: Wed Feb 21 21:06:49 2024

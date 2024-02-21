@@ -1,0 +1,43 @@
+PLINK v1.90b7.2 64-bit (11 Dec 2023)
+Options in effect:
+  --autosome
+  --bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full
+  --chr-set 29 no-xy
+  --geno 0.1
+  --keep Data/ADAPTmap_genotypeTOP_20160222_full/filtered_goats.txt
+  --maf 0.05
+  --make-bed
+  --mind 0.1
+  --nonfounders
+  --out Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats
+
+Hostname: pop-os
+Working directory: /home/sscansa/MEGA/R/GWAS
+Start time: Wed Feb 21 21:06:01 2024
+
+Random number seed: 1708545961
+63485 MB RAM detected; reserving 31742 MB for main workspace.
+49953 out of 53347 variants loaded from .bim file.
+4653 samples (32 males, 158 females, 4463 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.nosex .
+--keep: 140 samples remaining.
+4 samples removed due to missing genotype data (--mind).
+IDs written to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.irem .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 136 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate in remaining samples is 0.986812.
+1094 variants removed due to missing genotype data (--geno).
+526 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+48333 variants and 136 samples pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.bed +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.bim +
+Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.fam ...
+done.
+
+End time: Wed Feb 21 21:06:02 2024

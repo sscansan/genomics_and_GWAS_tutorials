@@ -1,3 +1,5 @@
+*.dist
+*.dist.id
 *.mibs.id
 *.mibs
 *.mdist
