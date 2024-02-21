@@ -51,11 +51,12 @@ scripts and sources have been used, taken or modified such as:
 
 4.  Add PLINK to PATH
 
+    with Bourne-Again SHell :)
     ```
     sudo nano ~/.bashrc
     ```
 
-    or
+    or with zsh
 
     ```
     sudo nano ~/.zshrc
