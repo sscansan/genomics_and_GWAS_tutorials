@@ -69,4 +69,8 @@ scripts and sources have been used, taken or modified such as:
     ```
 
 Save and exit, you should be able to call `plink` from the terminal at any user
-position in the system.
+position in the system
+
+```
+plink --help
+```
