@@ -7,19 +7,19 @@ Options in effect:
 
 Hostname: pop-os
 Working directory: /home/sscansa/MEGA/R/GWAS
-Start time: Wed Feb 21 21:06:48 2024
+Start time: Thu Feb 22 14:54:55 2024
 
-Random number seed: 1708546008
+Random number seed: 1708610095
 63485 MB RAM detected; reserving 31742 MB for main workspace.
-48333 variants loaded from .bim file.
-136 samples (0 males, 0 females, 136 ambiguous) loaded from .fam.
+48511 variants loaded from .bim file.
+1346 samples (32 males, 157 females, 1157 ambiguous) loaded from .fam.
 Ambiguous sex IDs written to
 Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.nosex .
 Using up to 15 threads (change this with --threads).
-Before main variant filters, 136 founders and 0 nonfounders present.
+Before main variant filters, 1346 founders and 0 nonfounders present.
 Calculating allele frequencies... done.
-Total genotyping rate is 0.996427.
-48333 variants and 136 samples pass filters and QC.
+Total genotyping rate is 0.993736.
+48511 variants and 1346 samples pass filters and QC.
 Note: No phenotypes present.
 Relationship matrix calculation complete.
 --pca: Results saved to
@@ -27,4 +27,4 @@ Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenval
 and
 Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenvec .
 
-End time: Wed Feb 21 21:06:49 2024
+End time: Thu Feb 22 14:54:56 2024

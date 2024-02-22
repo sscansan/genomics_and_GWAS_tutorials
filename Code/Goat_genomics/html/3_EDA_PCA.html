@@ -1986,7 +1986,10 @@ background: #777;
       <div class="Wrap">
         <div class="Sidebar">
           <div class="SidebarItems" id="toc">
-            
+            <ul>
+            <li><a href="#load-distance-matrix">Load distance matrix</a></li>
+            <li><a href="#mds-in-plink">MDS in plink</a></li>
+            </ul>
           </div>
           <div data-position="sidebar:post-end" class="InjectedComponents"><div class="dark-theme-toggler"><div class="toggle checked"><div class="toggle-track"><div class="toggle-track-check"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div> <div class="toggle-track-x"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div></div> <div class="toggle-thumb"></div></div> <input type="checkbox" aria-label="Switch between Dark and Default theme" class="toggler-screen-reader-only"></div></div>
         </div>
@@ -2012,12 +2015,202 @@ background: #777;
    
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
 <div class="page-content has-page-title">
+<p><strong>!! The script works in R, however cannot be knitted in markdown because of an unresolved issue !!</strong></p>
+<pre><code>Error: Failed to open Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.log.  Try changing the --out parameter.</code></pre>
+<p>🌟 Suggestions are welcome! 🌟</p>
 <pre class="r"><code>rm(list = ls())
 getwd()</code></pre>
 <pre><code>## [1] &quot;/home/sscansa/MEGA/R/GWAS/Code/Goat_genomics&quot;</code></pre>
 <pre class="r"><code>list.files()</code></pre>
 <pre><code>## [1] &quot;1_data_goat.Rmd&quot; &quot;2_qc_plink.Rmd&quot;  &quot;3_EDA_PCA.Rmd&quot;   &quot;css&quot;            
 ## [5] &quot;html&quot;            &quot;plink.log&quot;</code></pre>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.3     ✔ readr     2.1.4
+## ✔ forcats   1.0.0     ✔ stringr   1.5.0
+## ✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+## ✔ purrr     1.0.2     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>knitr::opts_chunk$set(error = TRUE)</code></pre>
+<p>We start from the data after QC of the file <code>2_QC_plink.Rmd</code>.</p>
+<p>We compute the IBS (Identity-By-State) distance between individuals. Not Euclidean distances!</p>
+<p><code>--distance 1-ibs flat-missing</code> replaces <code>--distance-matrix</code> in PLINK 1.9.</p>
+<pre class="r"><code># system(&quot;plink --distance --help&quot;)
+system(&quot;plink \\
+--chr-set 29 no-xy \\
+--allow-no-sex \\
+--nonfounders \\
+--file Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_TOP \\
+--distance-matrix \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data&quot;)</code></pre>
+<div id="load-distance-matrix" class="section level3">
+<h3>Load distance matrix</h3>
+<pre class="r"><code>dist_matrix &lt;- read.table(&quot;Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist&quot;, header = F)</code></pre>
+<pre><code>## Warning in file(file, &quot;rt&quot;): cannot open file
+## &#39;Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist&#39;: No such file or
+## directory</code></pre>
+<pre><code>## Error in file(file, &quot;rt&quot;): cannot open the connection</code></pre>
+<pre class="r"><code># Extract breeds and individual names
+fam_ind &lt;- data.frame(
+  famids = read.table(&quot;Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id&quot;)[, 1],
+  IID = read.table(&quot;Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id&quot;)[, 2]
+)</code></pre>
+<pre><code>## Warning in file(file, &quot;rt&quot;): cannot open file
+## &#39;Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id&#39;: No such file
+## or directory</code></pre>
+<pre><code>## Error in file(file, &quot;rt&quot;): cannot open the connection</code></pre>
+<p>And Multidimensional scaling (MDS/PCoA) on the distance matrix of the dataset. #### With <code>cmdscale()</code></p>
+<pre class="r"><code>mds_pop &lt;- cmdscale(dist_matrix, eig = TRUE, 5)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;dist_matrix&#39; not found</code></pre>
+<pre class="r"><code>head(mds_pop)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_pop&#39; not found</code></pre>
+<pre class="r"><code>nrow(fam)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;fam&#39; not found</code></pre>
+<pre class="r"><code>nrow(famInd)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;famInd&#39; not found</code></pre>
+<pre class="r"><code>nrow(mds_pop$points)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_pop&#39; not found</code></pre>
+<pre class="r"><code>eigenvec_populations &lt;- cbind(fam_ind, mds_pop$points)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;fam_ind&#39; not found</code></pre>
+<pre class="r"><code>head(eigenvec_populations)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;eigenvec_populations&#39; not found</code></pre>
+<pre class="r"><code>eigen_percent &lt;- round(((mds_pop$eig) / sum(mds_pop$eig)) * 100, 1)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_pop&#39; not found</code></pre>
+<pre class="r"><code>eigen_percent_goat_pop &lt;-
+  eigen_percent %&gt;%
+  as.data.frame(.) %&gt;%
+  rename(&quot;exp_var&quot; = &quot;.&quot;) %&gt;%
+  mutate(&quot;row&quot; = as.numeric(rownames(.))) %&gt;%
+  select(&quot;row&quot;, &quot;exp_var&quot;) %&gt;%
+  filter(row_number() &lt;= 10) %&gt;%
+  as.tibble() %&gt;%
+  ggplot(aes(., x = row, y = exp_var)) +
+  geom_col(color = &quot;steelblue&quot;, fill = &quot;steelblue&quot;, alpha = .75) +
+  geom_line() +
+  geom_point() +
+  scale_x_continuous(expand = c(0.01, 0), breaks = c(1:10)) +
+  scale_y_continuous(expand = c(0.01, 0)) +
+  labs(title = &quot;Explained variances in the first 10 dimensions&quot;, x = &quot;Dimensions&quot;, y = &quot;Explained variance (%)&quot;) +
+  theme_classic() +
+  theme(
+    aspect.ratio = 1,
+    # panel.grid = element_blank(),
+    axis.ticks = element_line()
+  )</code></pre>
+<pre><code>## Warning: `as.tibble()` was deprecated in tibble 2.0.0.
+## ℹ Please use `as_tibble()` instead.
+## ℹ The signature and semantics have changed, see `?as_tibble`.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;eigen_percent&#39; not found</code></pre>
+<p>We have calculated the Eigenvectors and Eigenvalues.</p>
+<pre class="r"><code>mds_goat &lt;-
+eigenvec_populations %&gt;%
+  ggplot(.) +
+  geom_vline(xintercept = 0, linetype = &quot;dotted&quot;) +
+  geom_hline(yintercept = 0, linetype = &quot;dotted&quot;) +
+  geom_point(aes(x = -`1`, y = `2`, color = famids), size = 1, alpha = .8, show.legend = FALSE) +
+  labs(
+    title = &quot;MDS of worldwide goat population&quot;,
+    x = paste0(&quot;Dimension 1 (&quot;, eigen_percent[1], &quot; %)&quot;),
+    y = paste0(&quot;Dimension 2 (&quot;, eigen_percent[2], &quot; %)&quot;)) +
+  theme_minimal() +
+    theme(
+      aspect.ratio = 1,
+      panel.grid = element_blank(),
+      axis.ticks = element_line()
+    )</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;eigenvec_populations&#39; not found</code></pre>
+<pre class="r"><code>mds_goat_var &lt;- mds_goat + eigen_percent_goat_pop</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_goat&#39; not found</code></pre>
+<pre class="r"><code>mds_goat_var</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_goat_var&#39; not found</code></pre>
+<pre class="r"><code>ggsave(&quot;Figures/goat_mds.pdf&quot;, plot = mds_goat_var, height = 5, width = 9, dpi = 600, device = grDevices::cairo_pdf)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_goat_var&#39; not found</code></pre>
+</div>
+<div id="mds-in-plink" class="section level2">
+<h2>MDS in plink</h2>
+<p>There is an option to direct create the distance matrix, eigenvectors and eigenvalues directly in plink</p>
+<pre class="r"><code>goats &lt;- readr::read_tsv(&quot;Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.fam&quot;, col_names = F)</code></pre>
+<pre><code>## Error: &#39;Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.fam&#39; does not exist in current working directory (&#39;/home/sscansa/MEGA/R/GWAS/Code/Goat_genomics&#39;).</code></pre>
+<pre class="r"><code>summary(goats)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;goats&#39; not found</code></pre>
+<pre class="r"><code>selectedAnimals &lt;- goats %&gt;%
+  filter(X1 == &quot;ALP&quot; | X1 == &quot;ANG&quot; | X1 == &quot;BOE&quot; | X1 == &quot;CRE&quot; | X1 == &quot;BRK&quot; | X1 == &quot;RAN&quot;) %&gt;%
+  write_delim(&quot;Data/ADAPTmap_genotypeTOP_20160222_full/filtered_goats.txt&quot;, col_names = F)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;goats&#39; not found</code></pre>
+<pre class="r"><code>system(str_c(
+  &quot;plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full \\
+--chr-set 29 no-xy \\
+--autosome &quot;,
+  &quot;--keep Data/ADAPTmap_genotypeTOP_20160222_full/filtered_goats.txt \\
+             --nonfounders &quot;,
+  &quot;--geno 0.1 \\
+             --mind 0.1 \\
+             --maf 0.05 &quot;,
+  &quot;--make-bed \\
+             --out Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats&quot;
+))</code></pre>
+<pre class="r"><code>system(&quot;plink \\
+--bfile Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats \\
+--chr-set 29 no-xy \\
+--pca \\
+--out Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats&quot;)</code></pre>
+<p>Visualisation:</p>
+<pre class="r"><code>eigenValues &lt;- read_delim(&quot;Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenval&quot;, delim = &quot; &quot;, col_names = F)</code></pre>
+<pre><code>## Error: &#39;Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenval&#39; does not exist in current working directory (&#39;/home/sscansa/MEGA/R/GWAS/Code/Goat_genomics&#39;).</code></pre>
+<pre class="r"><code>eigenVectors &lt;- read_delim(&quot;Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenvec&quot;, delim = &quot; &quot;, col_names = F)</code></pre>
+<pre><code>## Error: &#39;Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenvec&#39; does not exist in current working directory (&#39;/home/sscansa/MEGA/R/GWAS/Code/Goat_genomics&#39;).</code></pre>
+<pre class="r"><code>## Proportion of variation captured by each vector
+eigen_percent &lt;- round((eigenValues / (sum(eigenValues))*100), 1)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;eigenValues&#39; not found</code></pre>
+<pre class="r"><code># PCA plot
+mds_gooat_filtered &lt;-
+  eigenVectors %&gt;%
+  mutate(
+    X1A = case_when(
+      X1 == &quot;ALP&quot; ~ &quot;Alpine&quot;,
+      X1 == &quot;ANG&quot; ~ &quot;Angora&quot;,
+      X1 == &quot;BOE&quot; ~ &quot;Boer&quot;,
+      X1 == &quot;CRE&quot; ~ &quot;Creole&quot;,
+      X1 == &quot;BRK&quot; ~ &quot;Barki&quot;,
+      X1 == &quot;RAN&quot; ~ &quot;Rangeland&quot;
+  ),
+    X1B = case_when(
+      X1 == &quot;ALP&quot; ~ &quot;Europe&quot;,
+      X1 == &quot;ANG&quot; ~ &quot;Worldwide&quot;,
+      X1 == &quot;BOE&quot; ~ &quot;Worldwide&quot;,
+      X1 == &quot;CRE&quot; ~ &quot;South America&quot;,
+      X1 == &quot;BRK&quot; ~ &quot;Africa&quot;,
+      X1 == &quot;RAN&quot; ~ &quot;Oceania&quot;
+    ))  %&gt;%
+ggplot(.) +
+  geom_hline(yintercept = 0, linetype = &quot;dotted&quot;) +
+  geom_vline(xintercept = 0, linetype = &quot;dotted&quot;) +
+  geom_point(mapping = aes(x = X3, y = X4, color = X1A, shape = X1B), size = 2, alpha = .8, show.legend = TRUE ) +
+    labs(
+    title = &quot;MDS of selected goat breeds&quot;,
+    x = paste0(&quot;Dimension 1 (&quot;, eigen_percent[1,1], &quot; %)&quot;),
+    y = paste0(&quot;Dimension 2 (&quot;, eigen_percent[2,1], &quot; %)&quot;),
+    colour = &quot;Goat breeds&quot;, shape = &quot;Origin&quot;) +
+  theme_minimal() +
+    theme(
+      aspect.ratio = 1,
+      panel.grid = element_blank(),
+      axis.ticks = element_line()
+    )</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;eigenVectors&#39; not found</code></pre>
+<pre class="r"><code>    mds_gooat_filtered</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_gooat_filtered&#39; not found</code></pre>
+<pre class="r"><code>ggsave(&quot;Figures/goat_mds_filtered.pdf&quot;, plot = mds_gooat_filtered, height = 5, width = 6, dpi = 600, device = grDevices::cairo_pdf)</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_gooat_filtered&#39; not found</code></pre>
+</div>
 </div>
 
    

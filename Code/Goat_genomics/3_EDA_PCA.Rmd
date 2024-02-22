@@ -19,21 +19,31 @@ knit:
   encoding, output_dir = "html") })
 ---
 
+**!! The script works in R, however cannot be knitted in markdown because of an unresolved issue !!**
+```
+Error: Failed to open Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.log.  Try changing the --out parameter.
+```
+
+🌟 Suggestions are welcome! 🌟
+
 ```{r}
 rm(list = ls())
 getwd()
 list.files()
 ```
-
+```{r}
+library(tidyverse)
+knitr::opts_chunk$set(error = TRUE)
+```
 We start from the data after QC of the file `2_QC_plink.Rmd`.
 
 We compute the IBS (Identity-By-State) distance between individuals.
 Not Euclidean distances!
 
---distance 1-ibs flat-missing
+`--distance 1-ibs flat-missing` replaces `--distance-matrix` in PLINK 1.9.
 
 ```{r}
-#system("plink --distance --help")
+# system("plink --distance --help")
 system("plink \\
 --chr-set 29 no-xy \\
 --allow-no-sex \\
@@ -47,40 +57,62 @@ system("plink \\
 
 ```{r}
 dist_matrix <- read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist", header = F)
-head(dist_matrix)
-# Extract breeds names
-fam <- data.frame(famids = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 1])
-head(fam)
-# Extract individual names
-famInd <- data.frame(IID = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 2])
-head(famInd)
 ```
+```{r}
+# Extract breeds and individual names
+fam_ind <- data.frame(
+  famids = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 1],
+  IID = read.table("Data/ADAPTmap_genotypeTOP_20160222_full/out/PCA_data.mdist.id")[, 2]
+)
+```
+
 And Multidimensional scaling (MDS/PCoA) on the distance matrix of the dataset.
 #### With `cmdscale()`
 ```{r}
 mds_pop <- cmdscale(dist_matrix, eig = TRUE, 5)
 head(mds_pop)
 ```
+
 ```{r}
 nrow(fam)
 nrow(famInd)
 nrow(mds_pop$points)
 
-eigenvec_populations <- cbind(fam, famInd, mds_pop$points)
+eigenvec_populations <- cbind(fam_ind, mds_pop$points)
 head(eigenvec_populations)
 eigen_percent <- round(((mds_pop$eig) / sum(mds_pop$eig)) * 100, 1)
+
+eigen_percent_goat_pop <-
+  eigen_percent %>%
+  as.data.frame(.) %>%
+  rename("exp_var" = ".") %>%
+  mutate("row" = as.numeric(rownames(.))) %>%
+  select("row", "exp_var") %>%
+  filter(row_number() <= 10) %>%
+  as.tibble() %>%
+  ggplot(aes(., x = row, y = exp_var)) +
+  geom_col(color = "steelblue", fill = "steelblue", alpha = .75) +
+  geom_line() +
+  geom_point() +
+  scale_x_continuous(expand = c(0.01, 0), breaks = c(1:10)) +
+  scale_y_continuous(expand = c(0.01, 0)) +
+  labs(title = "Explained variances in the first 10 dimensions", x = "Dimensions", y = "Explained variance (%)") +
+  theme_classic() +
+  theme(
+    aspect.ratio = 1,
+    # panel.grid = element_blank(),
+    axis.ticks = element_line()
+  )
 ```
 We have calculated the Eigenvectors and Eigenvalues.
 
 ```{r}
-library(tidyverse)
-
 mds_goat <-
 eigenvec_populations %>%
-  ggplot(aes(., x = -`1`, y = `2`, color = famids, fill = famids)) +
+  ggplot(.) +
   geom_vline(xintercept = 0, linetype = "dotted") +
   geom_hline(yintercept = 0, linetype = "dotted") +
-  geom_point(alpha = .8, show.legend = FALSE) +
+  geom_point(aes(x = -`1`, y = `2`, color = famids), size = 1, alpha = .8, show.legend = FALSE) +
   labs(
     title = "MDS of worldwide goat population",
     x = paste0("Dimension 1 (", eigen_percent[1], " %)"),
@@ -92,7 +124,11 @@ eigenvec_populations %>%
       axis.ticks = element_line()
     )
 
-ggsave("Figures/goat_mds.pdf", plot = mds_goat, height = 6, width = 6, dpi = 600, device = grDevices::cairo_pdf)
+mds_goat_var <- mds_goat + eigen_percent_goat_pop
+
+mds_goat_var
+
+ggsave("Figures/goat_mds.pdf", plot = mds_goat_var, height = 5, width = 9, dpi = 600, device = grDevices::cairo_pdf)
 
 ```
 
@@ -100,11 +136,13 @@ ggsave("Figures/goat_mds.pdf", plot = mds_goat, height = 6, width = 6, dpi = 600
 There is an option to direct create the distance matrix, eigenvectors and eigenvalues directly in plink
 ```{r}
 goats <- readr::read_tsv("Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.fam", col_names = F)
+summary(goats)
 
 selectedAnimals <- goats %>%
-  filter(X1 == "TOG" | X1 == "RAN"| X1 == "TED") %>%
+  filter(X1 == "ALP" | X1 == "ANG" | X1 == "BOE" | X1 == "CRE" | X1 == "BRK" | X1 == "RAN") %>%
   write_delim("Data/ADAPTmap_genotypeTOP_20160222_full/filtered_goats.txt", col_names = F)
 ```
+
 ```{r}
 system(str_c(
   "plink \\
@@ -120,6 +158,7 @@ system(str_c(
              --out Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats"
 ))
 ```
+
 ```{r}
 system("plink \\
 --bfile Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats \\
@@ -127,6 +166,7 @@ system("plink \\
 --pca \\
 --out Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats")
 ```
+
 Visualisation:
 ```{r}
 eigenValues <- read_delim("Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.eigenval", delim = " ", col_names = F)
@@ -137,15 +177,33 @@ eigen_percent <- round((eigenValues / (sum(eigenValues))*100), 1)
 
 # PCA plot
 mds_gooat_filtered <-
-ggplot(data = eigenVectors) +
-  geom_point(mapping = aes(x = X3, y = X4, color = X1, shape = X1), size = 3, show.legend = TRUE ) +
+  eigenVectors %>%
+  mutate(
+    X1A = case_when(
+      X1 == "ALP" ~ "Alpine",
+      X1 == "ANG" ~ "Angora",
+      X1 == "BOE" ~ "Boer",
+      X1 == "CRE" ~ "Creole",
+      X1 == "BRK" ~ "Barki",
+      X1 == "RAN" ~ "Rangeland"
+  ),
+    X1B = case_when(
+      X1 == "ALP" ~ "Europe",
+      X1 == "ANG" ~ "Worldwide",
+      X1 == "BOE" ~ "Worldwide",
+      X1 == "CRE" ~ "South America",
+      X1 == "BRK" ~ "Africa",
+      X1 == "RAN" ~ "Oceania"
+    ))  %>%
+ggplot(.) +
   geom_hline(yintercept = 0, linetype = "dotted") +
   geom_vline(xintercept = 0, linetype = "dotted") +
+  geom_point(mapping = aes(x = X3, y = X4, color = X1A, shape = X1B), size = 2, alpha = .8, show.legend = TRUE ) +
     labs(
     title = "MDS of selected goat breeds",
     x = paste0("Dimension 1 (", eigen_percent[1,1], " %)"),
     y = paste0("Dimension 2 (", eigen_percent[2,1], " %)"),
-    colour = "Goat breeds", shape = "Goat breeds") +
+    colour = "Goat breeds", shape = "Origin") +
   theme_minimal() +
     theme(
       aspect.ratio = 1,
@@ -153,6 +211,8 @@ ggplot(data = eigenVectors) +
       axis.ticks = element_line()
     )
 
-ggsave("Figures/goat_mds_filtered.pdf", plot = mds_gooat_filtered, height = 6, width = 6, dpi = 600, device = grDevices::cairo_pdf)
+    mds_gooat_filtered
+
+ggsave("Figures/goat_mds_filtered.pdf", plot = mds_gooat_filtered, height = 5, width = 6, dpi = 600, device = grDevices::cairo_pdf)
 
 ```

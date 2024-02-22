@@ -13,26 +13,26 @@ Options in effect:
 
 Hostname: pop-os
 Working directory: /home/sscansa/MEGA/R/GWAS
-Start time: Wed Feb 21 21:06:01 2024
+Start time: Thu Feb 22 14:54:55 2024
 
-Random number seed: 1708545961
+Random number seed: 1708610095
 63485 MB RAM detected; reserving 31742 MB for main workspace.
 49953 out of 53347 variants loaded from .bim file.
 4653 samples (32 males, 158 females, 4463 ambiguous) loaded from .fam.
 Ambiguous sex IDs written to
 Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.nosex .
---keep: 140 samples remaining.
-4 samples removed due to missing genotype data (--mind).
+--keep: 1430 samples remaining.
+84 samples removed due to missing genotype data (--mind).
 IDs written to
 Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.irem .
 Using 1 thread (no multithreaded calculations invoked).
-Before main variant filters, 136 founders and 0 nonfounders present.
+Before main variant filters, 1346 founders and 0 nonfounders present.
 Calculating allele frequencies... done.
-Total genotyping rate in remaining samples is 0.986812.
-1094 variants removed due to missing genotype data (--geno).
-526 variants removed due to minor allele threshold(s)
+Total genotyping rate in remaining samples is 0.980716.
+1277 variants removed due to missing genotype data (--geno).
+165 variants removed due to minor allele threshold(s)
 (--maf/--max-maf/--mac/--max-mac).
-48333 variants and 136 samples pass filters and QC.
+48511 variants and 1346 samples pass filters and QC.
 Note: No phenotypes present.
 --make-bed to
 Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.bed +
@@ -40,4 +40,4 @@ Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.bim +
 Data/ADAPTmap_genotypeTOP_20160222_full/out/AfterQC_filtered_goats.fam ...
 done.
 
-End time: Wed Feb 21 21:06:02 2024
+End time: Thu Feb 22 14:54:55 2024
