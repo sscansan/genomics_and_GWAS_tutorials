@@ -99,7 +99,7 @@ ggsave("Figures/goat_mds.pdf", plot = mds_goat, height = 6, width = 6, dpi = 600
 ## MDS in plink
 There is an option to direct create the distance matrix, eigenvectors and eigenvalues directly in plink
 ```{r}
-goats <- read_tsv("Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.fam", col_names = F)
+goats <- readr::read_tsv("Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.fam", col_names = F)
 
 selectedAnimals <- goats %>%
   filter(X1 == "TOG" | X1 == "RAN"| X1 == "TED") %>%
