@@ -1,3 +1,4 @@
+Data/*
 *.dist
 *.dist.id
 *.mibs.id
@@ -18,4 +19,3 @@
 *.ped
 *.png
 *.jpg
-*.pdf
