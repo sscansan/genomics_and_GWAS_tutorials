@@ -83,4 +83,4 @@ Data obtained from tghe DRYAD repository are licensed with a  CC0 1.0 Universal 
     You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
 "
 
-As such, also this repository, which is a collection of various resources, and own connections or code, is licensed with a CC0 1.0 License.
+As such, also this repository, which is a collection of various resources, and own code or ideas, is licensed with a CC0 1.0 License.
