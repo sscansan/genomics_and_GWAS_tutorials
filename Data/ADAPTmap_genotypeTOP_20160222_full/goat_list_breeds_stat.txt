@@ -1,7 +1,0 @@
-The table is the first Supplementary table in the paper of Colli et al., (2018).
-The table has been converted from a /docx file format to a .csv copying and checking the integrity in LibreOffice Calc. 
-
-Table Title: Table S1
-Summary statistics calculated over the whole set of ADAPTmap goat populations.
-
-Table Footnote: Breed code including country code, breed name, continent and country of provenance, longitude, latitude, number of individuals pre-QC, post-QC and in the working dataset (WD), number of polymorphic loci, observed heterozygosity (HO), expected heterozygosity (HE) values corrected over the number of usable loci, inbreeding coefficient (FIS). Underlined figures indicate thinning of large population sizes. Statistical significance as follows: *= P<0.05, **= P< 0.01, ***= P< 0.005.   
