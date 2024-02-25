@@ -1,5 +1,5 @@
 ---
-title: "Exploratory data analysis and PCA"
+title: "rTASSEL"
 #author:
 output:
   #rmdformats::html_clean:
@@ -19,12 +19,33 @@ knit:
   encoding, output_dir = "html") })
 ---
 
+# `rTASSEL` and goat genomics
+
+`rTASSEL` is an extension to TASSEL 5.
 ```{r}
 rm(list = ls())
 getwd()
 list.files()
+
 library(tidyverse)
 knitr::opts_chunk$set(error = TRUE)
+```
+
+```{r}
+if (!require("rJava")) install.packages("rJava", repos="https://rforge.net")
+library(rJava)
+
+if (!require("devtools")) install.packages("devtools")
+devtools::install_github("maize-genetics/rTASSEL")
+```
+Memory allocation for rTASSEL, here we allocate 12 Gb and start the logger
+```{r}
+options(java.parameters = c("-Xmx12g", "-Xms12g"))
+rTASSEL::startLogger(fullPath = NULL, fileName = NULL)
+```
+```{r}
+library(tidyverse)
+library(rTASSEL)
 ```
 
 ```{r}

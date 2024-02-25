@@ -6,14 +6,28 @@ GitHub repository of a bioinformatic Genome Wide Association Study project using
 Plink through `plinkr` R package. For learning puropses other repositories,
 scripts and sources have been used, taken or modified such as:
 
-- PLINK 1.90
+- **PLINK 1.90**
   [https://www.cog-genomics.org/plink2/](https://www.cog-genomics.org/plink2/)
-- `plinkr` R package repository documentation
+- `plinkr` R package repository documentation.
   [https://github.com/AJResearchGroup/plinkr](https://github.com/AJResearchGroup/plinkr)
 
-- **Marees AT**, de Kluiver H, Stringer S, et al. A tutorial on conducting
-  genome-wide association studies: Quality control and statistical analysis.
-  _Int J Methods Psychiatr Res_. 2018; 27:e1608.
+- **TASSEL 5**
+  [https://www.maizegenetics.net/tassel](https://www.maizegenetics.net/tassel)
+  **Bradbury** et al., (2007) TASSEL: software for association mapping of
+  complex traits in diverse samples, Bioinformatics, Volume 23, Issue 19, Pages
+  2633–2635
+  [https://doi.org/10.1093/bioinformatics/btm308](https://doi.org/10.1093/bioinformatics/btm308)
+- `rTASSEL` R package repository documentation. <br> Vignettes:
+  [https://rtassel.maizegenetics.net/index.html](https://rtassel.maizegenetics.net/index.html),
+  Repository:
+  [https://github.com/maize-genetics/rTASSEL](https://github.com/maize-genetics/rTASSEL)
+  **Monier et al.**, (2022). rTASSEL: An R interface to TASSEL for analyzing
+  genomic diversity. _Journal of Open Source Software_, 7(76), 4530,
+  [https://doi.org/10.21105/joss.04530](https://doi.org/10.21105/joss.04530)
+
+- **Marees et al.** (2018) A tutorial on conducting genome-wide association
+  studies: Quality control and statistical analysis. _Int J Methods Psychiatr
+  Res_. 27:e1608.
   [https://doi.org/10.1002/mpr.1608](https://doi.org/10.1002/mpr.1608)
 - **Marees et al.** (2018) tutorial
   [https://github.com/MareesAT/GWA_tutorial](https://github.com/MareesAT/GWA_tutorial)
@@ -23,30 +37,26 @@ scripts and sources have been used, taken or modified such as:
 - **Gábor Mészáros** video tutorials
   [https://www.youtube.com/c/GenomicsBootCamp](https://www.youtube.com/c/GenomicsBootCamp)
 
-- **Naderi S**, Rezaei HR, Pompanon F, Blum MGB, Negrini R, Naghash HR, et al.
-  (2008) The goat domestication process inferred from large-scale mitochondrial
-  DNA analysis of wild and domestic individuals. _Proc Natl Acad Sci_ USA.
-  105:17659–64.
+- **Naderi et al.** (2008) The goat domestication process inferred from
+  large-scale mitochondrial DNA analysis of wild and domestic individuals. _Proc
+  Natl Acad Sci_ USA. 105:17659–64.
 
-- **Bertolini, F.**, Servin, B., Talenti, A. et al. Signatures of selection and
-  environmental adaptation across the goat genome post-domestication. _Genet Sel
-  Evol_ 50, 57 (2018).
+- **Bertolini et al.** (2018) Signatures of selection and environmental
+  adaptation across the goat genome post-domestication. _Genet Sel Evol_ 50, 57.
   [https://doi.org/10.1186/s12711-018-0421-y](https://doi.org/10.1186/s12711-018-0421-y)
 
-- **Colli, L.**, Milanesi, M., Talenti, A. et al. Genome-wide SNP profiling of
-  worldwide goat populations reveals strong partitioning of diversity and
-  highlights post-domestication migration routes. _Genet Sel Evol_ 50, 58
-  (2018).
+- **Colli et al.** (2018) Genome-wide SNP profiling of worldwide goat
+  populations reveals strong partitioning of diversity and highlights
+  post-domestication migration routes. _Genet Sel Evol_ 50, 58.
   [https://doi.org/10.1186/s12711-018-0422-x](https://doi.org/10.1186/s12711-018-0422-x)
 - **Colli et al.** (2020). Data from: Signatures of selection and environmental
   adaptation across the goat genome post-domestication [Dataset]. _Dryad_.
   [https://doi.org/10.5061/dryad.v8g21pt](https://doi.org/10.5061/dryad.v8g21pt)
 
-- **Decker JE**, McKay SD, Rolf MM, Kim J, Molina Alcalá A, et al. (2014)
-  Worldwide Patterns of Ancestry, Divergence, and Admixture in Domesticated
-  Cattle. _PLOS Genetics_ 10(3):
+- **Decker et al.** (2014) Worldwide Patterns of Ancestry, Divergence, and
+  Admixture in Domesticated Cattle. _PLOS Genetics_ 10(3):
   e1004254.[https://doi.org/10.1371/journal.pgen.1004254](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004254),
-- **Decker et al.** (2015). Data from: Worldwide patterns of ancestry,
+- **Decker et al.** (2015) Data from: Worldwide patterns of ancestry,
   divergence, and admixture in domesticated cattle [Dataset]. Dryad.
   [https://doi.org/10.5061/dryad.th092](https://doi.org/10.5061/dryad.th092)
 
@@ -71,27 +81,50 @@ scripts and sources have been used, taken or modified such as:
 
 4.  Add PLINK to PATH
 
-    with Bourne-Again SHell
+    with bash/zsh/...
 
     ```
     sudo nano ~/.bashrc
     ```
 
-    or with zsh
-
-    ```
-    sudo nano ~/.zshrc
-    ```
-
-    then
+    adn include the line:
 
     ```
     export PATH=/usr/local/bin:$PATH
     ```
 
-    Save and exit, you should be able to call `plink` from the terminal at any
-    user position in the system
+    Save and exit. Refresh the terminal and you should be able to call `plink`
+    from the terminal at any user position in the system.
 
     ```
+    source ~/.bashrc
     plink --help
     ```
+
+### Get TASSEL/`rTASSEL` working in Linux
+
+1. `rJava` installation
+
+   ```
+   sudo apt install default-jdk
+   sudo R CMD javareconf
+   R install.packages("rJava")
+   ```
+
+2. Installation in R
+
+   ```
+   if (!require("devtools")) install.packages("devtools")
+   devtools::install_github(
+    repo = "maize-genetics/rTASSEL",
+    ref = "master",
+    build_vignettes = TRUE,
+    dependencies = TRUE
+   )
+   ```
+
+3. aaaa
+
+   ```
+   aa
+   ```
