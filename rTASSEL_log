@@ -1,1 +1,39 @@
 [main] INFO net.maizegenetics.util.LoggingUtils - Log File: /home/sscansa/MEGA/R/GWAS/rTASSEL_log
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 1:03:52
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+FileLoadPlugin Parameters
+format: Make Best Guess
+sortPositions: false
+keepDepth: false
+
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/R/x86_64-pc-linux-gnu-library/4.3/rTASSEL/extdata/maize_chr9_10thin40000.recode.vcf time: Feb 26, 2024 1:03:52
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - guessAtUnknowns: type: VCF
+BuilderFromVCF data timing 0.0248070s 
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Finished Loading File: /home/sscansa/R/x86_64-pc-linux-gnu-library/4.3/rTASSEL/extdata/maize_chr9_10thin40000.recode.vcf time: Feb 26, 2024 1:03:52
+Genotype Table Name: maize_chr9_10thin40000
+Number of Taxa: 189
+Number of Sites: 493
+Sites x Taxa: 93177
+Chromosomes...
+9: start site: 0 (66696) last site: 265 (19993899) total: 266
+10: start site: 266 (86703) last site: 492 (19785167) total: 227
+
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 1:03:52
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 1:03:54
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+FileLoadPlugin Parameters
+format: Make Best Guess
+sortPositions: false
+keepDepth: false
+
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 1:03:54
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - guessAtUnknowns: type: VCF
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 1:04:39
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+FileLoadPlugin Parameters
+format: Make Best Guess
+sortPositions: false
+keepDepth: false
+
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 1:04:39
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - guessAtUnknowns: type: VCF

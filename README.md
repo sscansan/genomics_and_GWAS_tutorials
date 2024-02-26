@@ -101,7 +101,21 @@ scripts and sources have been used, taken or modified such as:
     plink --help
     ```
 
-### Get TASSEL/`rTASSEL` working in Linux
+### Get TASSEL (GUI) on Linux
+
+1. Go on the website
+   [https://www.maizegenetics.net/tassel](https://www.maizegenetics.net/tassel)
+   and download the last UNIX verison.
+2. Download the TASSEL\_{xxx}\_unix.sh and make it executable
+   ```
+   chmod +x ~/Downloads/TASSEL_{xxx}_unix.sh
+   ```
+3. Run the TASSEL installer
+   ```
+   ~/Downloads/TASSEL_{xxx}_unix.sh
+   ```
+
+### Get `rTASSEL` working in Linux
 
 1. `rJava` installation
 
@@ -123,8 +137,27 @@ scripts and sources have been used, taken or modified such as:
    )
    ```
 
-3. aaaa
+3. Run `rTASSEL`
+
+   - Allocate jobs memory<sup>1</sup> and start the logger:
+
+   <sup>1</sup> in "-Xmx50g" and "-Xms50g" _50g_ represents 30 Gigabytes.
+
+   _!! Choose an appropriate value to your machine !!_
 
    ```
-   aa
+   options(java.parameters = c("-Xmx50g", "-Xms50g"))
+   rTASSEL::startLogger(fullPath = NULL, fileName = NULL)
    ```
+
+   - Run & infos
+
+   ```
+   library(rTASSEL)
+   ??rTASSEL
+   ```
+
+   Useful resource for `rTASSEL` are the vignettes and tutorials at
+   [https://rtassel.maizegenetics.net/index.html](https://rtassel.maizegenetics.net/index.html)
+
+---

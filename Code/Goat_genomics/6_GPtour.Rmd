@@ -1,0 +1,53 @@
+---
+title: "rTASSEL"
+#author:
+output:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    use_bookdown: false
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    highlight: tango
+    gallery: true
+    toc_depth: 3
+    code_folding: show
+    css: css/custom.css
+knit:
+  (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
+  encoding, output_dir = "html") })
+---
+
+# Genomic Prediction in R
+[https://github.com/miguelperezenciso/GPtour](https://github.com/miguelperezenciso/GPtour)
+
+```{R}
+install.packages("BGLR",repos="https://cran.r-project.org/")
+install.packages("glmnet",repos="https://cran.r-project.org/")
+install.packages("AGHmatrix", repos="https://cran.r-project.org/")
+install.packages('learnr',repos="https://cran.r-project.org/")
+install.packages('downloadthis',repos="https://cran.r-project.org/")
+install.packages("remotes",repos="https://cran.r-project.org/")
+remotes::install_github("rstudio/gradethis")
+```
+Anaconda/Miniconda python package manager/s have to be installed in the machine to run Keras through R.
+[https://keras.posit.co/articles/getting_started.html](https://keras.posit.co/articles/getting_started.html)
+```{r}
+install.packages("keras3")
+```
+and install the backend engine
+```{r}
+keras3::install_keras(backend = "tensorflow")
+```
+---
+Install GPtour
+```{r}
+install.packages('remotes')
+remotes::install_github('miguelperezenciso/GPtour')
+```
+```{r}
+library(GPtour)
+library(learnr)
+learnr::run_tutorial('tour', 'GPtour')
+```

@@ -40,13 +40,38 @@ devtools::install_github("maize-genetics/rTASSEL")
 ```
 Memory allocation for rTASSEL, here we allocate 12 Gb and start the logger
 ```{r}
-options(java.parameters = c("-Xmx12g", "-Xms12g"))
+options(java.parameters = c("-Xmx50g", "-Xms50g"))
 rTASSEL::startLogger(fullPath = NULL, fileName = NULL)
 ```
 ```{r}
 library(tidyverse)
 library(rTASSEL)
+??rTASSEL
 ```
+### Data import
+```{r, example}
+genoPathVCF <- system.file(
+    "extdata",
+    "maize_chr9_10thin40000.recode.vcf",
+    package = "rTASSEL"
+)
+genoPathVCF
+
+tasGenoVCF <- rTASSEL::readGenotypeTableFromPath(
+  path = genoPathVCF
+)
+tasGenoVCF
+```
+
+```{r, mydata}
+list.files("/home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/")
+getwd()
+
+path <- "/home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf"
+
+data <- rTASSEL::readGenotypeTableFromPath(path = path)
+```
+### Data Filtering and Cleaning
 
 ```{r}
 
