@@ -1,15 +1,16 @@
 [main] INFO net.maizegenetics.util.LoggingUtils - Log File: /home/sscansa/MEGA/R/GWAS/rTASSEL_log
-[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 1:03:52
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 18:35:22
 [main] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 FileLoadPlugin Parameters
 format: Make Best Guess
 sortPositions: false
 keepDepth: false
 
-[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/R/x86_64-pc-linux-gnu-library/4.3/rTASSEL/extdata/maize_chr9_10thin40000.recode.vcf time: Feb 26, 2024 1:03:52
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/R/x86_64-pc-linux-gnu-library/4.3/rTASSEL/extdata/maize_chr9_10thin40000.recode.vcf time: Feb 26, 2024 18:35:22
 [main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - guessAtUnknowns: type: VCF
-BuilderFromVCF data timing 0.0248070s 
-[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Finished Loading File: /home/sscansa/R/x86_64-pc-linux-gnu-library/4.3/rTASSEL/extdata/maize_chr9_10thin40000.recode.vcf time: Feb 26, 2024 1:03:52
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.analysis.data.FileLoadPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
+BuilderFromVCF data timing 0.194504s 
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Finished Loading File: /home/sscansa/R/x86_64-pc-linux-gnu-library/4.3/rTASSEL/extdata/maize_chr9_10thin40000.recode.vcf time: Feb 26, 2024 18:35:22
 Genotype Table Name: maize_chr9_10thin40000
 Number of Taxa: 189
 Number of Sites: 493
@@ -18,22 +19,151 @@ Chromosomes...
 9: start site: 0 (66696) last site: 265 (19993899) total: 266
 10: start site: 266 (86703) last site: 492 (19785167) total: 227
 
-[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 1:03:52
-[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 1:03:54
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 18:35:22
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 18:37:41
 [main] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 FileLoadPlugin Parameters
 format: Make Best Guess
 sortPositions: false
 keepDepth: false
 
-[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 1:03:54
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 18:37:41
 [main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - guessAtUnknowns: type: VCF
-[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 1:04:39
+BuilderFromVCF data timing 6.04931s 
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Finished Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 18:37:47
+Genotype Table Name: ADAPTmap_genotypeTOP_20160222_full
+Number of Taxa: 4653
+Number of Sites: 53347
+Sites x Taxa: 248223591
+Chromosomes...
+0: start site: 0 (0) last site: 1406 (0) total: 1407
+1: start site: 1407 (0) last site: 4664 (154928905) total: 3258
+2: start site: 4665 (0) last site: 7494 (135409132) total: 2830
+3: start site: 7495 (0) last site: 9875 (116773477) total: 2381
+4: start site: 9876 (15471) last site: 12290 (115925391) total: 2415
+5: start site: 12291 (22890) last site: 14533 (110992449) total: 2243
+6: start site: 14534 (25231) last site: 16970 (114319123) total: 2437
+7: start site: 16971 (0) last site: 19162 (106502640) total: 2192
+8: start site: 19163 (0) last site: 21514 (111015725) total: 2352
+9: start site: 21515 (54124) last site: 23408 (90267441) total: 1894
+10: start site: 23409 (18539) last site: 25506 (99104430) total: 2098
+11: start site: 25507 (17542) last site: 27644 (105280016) total: 2138
+12: start site: 27645 (11041) last site: 29393 (83587575) total: 1749
+13: start site: 29394 (19267) last site: 31042 (80605116) total: 1649
+14: start site: 31043 (0) last site: 32954 (92298181) total: 1912
+15: start site: 32955 (1102) last site: 34593 (78972597) total: 1639
+16: start site: 34594 (25565) last site: 36185 (77674341) total: 1592
+17: start site: 36186 (3333) last site: 37654 (71840720) total: 1469
+18: start site: 37655 (4536) last site: 38946 (60989742) total: 1292
+19: start site: 38947 (0) last site: 40175 (62123909) total: 1229
+20: start site: 40176 (37167) last site: 41670 (71198426) total: 1495
+21: start site: 41671 (11488) last site: 43100 (66714483) total: 1430
+22: start site: 43101 (7792) last site: 44269 (57862564) total: 1169
+23: start site: 44270 (24084) last site: 45316 (49384692) total: 1047
+24: start site: 45317 (0) last site: 46640 (61693109) total: 1324
+25: start site: 46641 (81587) last site: 47495 (41478468) total: 855
+26: start site: 47496 (59735) last site: 48539 (50152710) total: 1044
+27: start site: 48540 (0) last site: 49468 (44099106) total: 929
+28: start site: 49469 (30214) last site: 50382 (43203961) total: 914
+29: start site: 50383 (10503) last site: 51359 (48364878) total: 977
+30: start site: 51360 (0) last site: 53346 (121916336) total: 1987
+
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 18:37:47
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 18:38:3
 [main] INFO net.maizegenetics.plugindef.AbstractPlugin - 
 FileLoadPlugin Parameters
 format: Make Best Guess
 sortPositions: false
 keepDepth: false
 
-[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 1:04:39
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 18:38:3
 [main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - guessAtUnknowns: type: VCF
+BuilderFromVCF data timing 5.22704s 
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Finished Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 18:38:8
+Genotype Table Name: ADAPTmap_genotypeTOP_20160222_full
+Number of Taxa: 4653
+Number of Sites: 53347
+Sites x Taxa: 248223591
+Chromosomes...
+0: start site: 0 (0) last site: 1406 (0) total: 1407
+1: start site: 1407 (0) last site: 4664 (154928905) total: 3258
+2: start site: 4665 (0) last site: 7494 (135409132) total: 2830
+3: start site: 7495 (0) last site: 9875 (116773477) total: 2381
+4: start site: 9876 (15471) last site: 12290 (115925391) total: 2415
+5: start site: 12291 (22890) last site: 14533 (110992449) total: 2243
+6: start site: 14534 (25231) last site: 16970 (114319123) total: 2437
+7: start site: 16971 (0) last site: 19162 (106502640) total: 2192
+8: start site: 19163 (0) last site: 21514 (111015725) total: 2352
+9: start site: 21515 (54124) last site: 23408 (90267441) total: 1894
+10: start site: 23409 (18539) last site: 25506 (99104430) total: 2098
+11: start site: 25507 (17542) last site: 27644 (105280016) total: 2138
+12: start site: 27645 (11041) last site: 29393 (83587575) total: 1749
+13: start site: 29394 (19267) last site: 31042 (80605116) total: 1649
+14: start site: 31043 (0) last site: 32954 (92298181) total: 1912
+15: start site: 32955 (1102) last site: 34593 (78972597) total: 1639
+16: start site: 34594 (25565) last site: 36185 (77674341) total: 1592
+17: start site: 36186 (3333) last site: 37654 (71840720) total: 1469
+18: start site: 37655 (4536) last site: 38946 (60989742) total: 1292
+19: start site: 38947 (0) last site: 40175 (62123909) total: 1229
+20: start site: 40176 (37167) last site: 41670 (71198426) total: 1495
+21: start site: 41671 (11488) last site: 43100 (66714483) total: 1430
+22: start site: 43101 (7792) last site: 44269 (57862564) total: 1169
+23: start site: 44270 (24084) last site: 45316 (49384692) total: 1047
+24: start site: 45317 (0) last site: 46640 (61693109) total: 1324
+25: start site: 46641 (81587) last site: 47495 (41478468) total: 855
+26: start site: 47496 (59735) last site: 48539 (50152710) total: 1044
+27: start site: 48540 (0) last site: 49468 (44099106) total: 929
+28: start site: 49469 (30214) last site: 50382 (43203961) total: 914
+29: start site: 50383 (10503) last site: 51359 (48364878) total: 977
+30: start site: 51360 (0) last site: 53346 (121916336) total: 1987
+
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 18:38:8
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Starting net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 18:42:12
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+FileLoadPlugin Parameters
+format: Make Best Guess
+sortPositions: false
+keepDepth: false
+
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Start Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 18:42:12
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - guessAtUnknowns: type: VCF
+BuilderFromVCF data timing 4.33698s 
+[main] INFO net.maizegenetics.analysis.data.FileLoadPlugin - Finished Loading File: /home/sscansa/MEGA/R/GWAS/Data/ADAPTmap_genotypeTOP_20160222_full/out/ADAPTmap_genotypeTOP_20160222_full.vcf time: Feb 26, 2024 18:42:16
+Genotype Table Name: ADAPTmap_genotypeTOP_20160222_full
+Number of Taxa: 4653
+Number of Sites: 53347
+Sites x Taxa: 248223591
+Chromosomes...
+0: start site: 0 (0) last site: 1406 (0) total: 1407
+1: start site: 1407 (0) last site: 4664 (154928905) total: 3258
+2: start site: 4665 (0) last site: 7494 (135409132) total: 2830
+3: start site: 7495 (0) last site: 9875 (116773477) total: 2381
+4: start site: 9876 (15471) last site: 12290 (115925391) total: 2415
+5: start site: 12291 (22890) last site: 14533 (110992449) total: 2243
+6: start site: 14534 (25231) last site: 16970 (114319123) total: 2437
+7: start site: 16971 (0) last site: 19162 (106502640) total: 2192
+8: start site: 19163 (0) last site: 21514 (111015725) total: 2352
+9: start site: 21515 (54124) last site: 23408 (90267441) total: 1894
+10: start site: 23409 (18539) last site: 25506 (99104430) total: 2098
+11: start site: 25507 (17542) last site: 27644 (105280016) total: 2138
+12: start site: 27645 (11041) last site: 29393 (83587575) total: 1749
+13: start site: 29394 (19267) last site: 31042 (80605116) total: 1649
+14: start site: 31043 (0) last site: 32954 (92298181) total: 1912
+15: start site: 32955 (1102) last site: 34593 (78972597) total: 1639
+16: start site: 34594 (25565) last site: 36185 (77674341) total: 1592
+17: start site: 36186 (3333) last site: 37654 (71840720) total: 1469
+18: start site: 37655 (4536) last site: 38946 (60989742) total: 1292
+19: start site: 38947 (0) last site: 40175 (62123909) total: 1229
+20: start site: 40176 (37167) last site: 41670 (71198426) total: 1495
+21: start site: 41671 (11488) last site: 43100 (66714483) total: 1430
+22: start site: 43101 (7792) last site: 44269 (57862564) total: 1169
+23: start site: 44270 (24084) last site: 45316 (49384692) total: 1047
+24: start site: 45317 (0) last site: 46640 (61693109) total: 1324
+25: start site: 46641 (81587) last site: 47495 (41478468) total: 855
+26: start site: 47496 (59735) last site: 48539 (50152710) total: 1044
+27: start site: 48540 (0) last site: 49468 (44099106) total: 929
+28: start site: 49469 (30214) last site: 50382 (43203961) total: 914
+29: start site: 50383 (10503) last site: 51359 (48364878) total: 977
+30: start site: 51360 (0) last site: 53346 (121916336) total: 1987
+
+[main] INFO net.maizegenetics.plugindef.AbstractPlugin - Finished net.maizegenetics.analysis.data.FileLoadPlugin: time: Feb 26, 2024 18:42:16
