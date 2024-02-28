@@ -5,7 +5,7 @@
 GitHub repository of some bioinformatic Genome Wide Association Study projects using different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and `rTASSEL`, GEMMA. 
 The repository has been created for learning purposes and make use of other repositories, scripts and data sources, taken or modified such as:
 
-![Alt text](Figures/goat_mds.png?raw=true "multidimensional scaling of SNP data")
+![Alt text](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
 
 ## Tools
 - **PLINK 1.90**
