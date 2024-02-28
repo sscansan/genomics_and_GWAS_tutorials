@@ -1,4 +1,4 @@
-# Genomics_projects
+# Genomic_projects
 
 GitHub repository of bioinformatic projects recolving around genomics using
 different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and
@@ -7,17 +7,18 @@ make use of other repositories, scripts and data sources, taken or modified as
 such.
 
 1. SNP profiling of goat breeds.
-   ![Alt text](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
-   <small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
-   Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**
 
-The MDS plot visualizes genetic relationships among 4,653 individuals from 169
-goat breeds. Genetic distances were computed using PLINK to generate the kinship
-matrix, and MDS analysis was conducted with the `cmdscale` function based on
-genotyping data from 49,953 SNPs. Each point represents a goat, and spatial
-arrangement reflects genetic dissimilarities. This exploratory analysis offers
-insights into genetic diversity, population structure, and relatedness. _Data
-source_: **Colli et al.** (2018) https://doi.org/10.1186/s12711-018-0422-x
+![Alt text](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
+<small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
+Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
+
+<small>The MDS plot visualizes genetic relationships among 4,653 individuals
+from 169 goat breeds. Genetic distances were computed using PLINK to generate
+the kinship matrix, and MDS analysis was conducted with the `cmdscale` function
+based on genotyping data from 49,953 SNPs. Each point represents a goat, and
+spatial arrangement reflects genetic dissimilarities. This exploratory analysis
+offers insights into genetic diversity, population structure, and relatedness.
+_Data source_: **Colli et al.** (2018) https://doi.org/10.1186/s12711-018-0422-x
 </small>
 
 ## Tools
