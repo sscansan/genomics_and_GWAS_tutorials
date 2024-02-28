@@ -2,12 +2,15 @@
 
 ## Genetic association of quantitative traits
 
-GitHub repository of some bioinformatic Genome Wide Association Study projects using different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and `rTASSEL`, GEMMA. 
-The repository has been created for learning purposes and make use of other repositories, scripts and data sources, taken or modified such as:
+GitHub repository of some bioinformatic Genome Wide Association Study projects
+using different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and
+`rTASSEL`, GEMMA. The repository has been created for learning purposes and make
+use of other repositories, scripts and data sources, taken or modified such as:
 
 ![Alt text](Figures/goat_mds.png?raw=true "multidimensional scaling of SNP data")
 
 ## Tools
+
 - **PLINK 1.90**
   [https://www.cog-genomics.org/plink2/](https://www.cog-genomics.org/plink2/)
 - `plinkr` R package repository documentation.
@@ -32,7 +35,8 @@ The repository has been created for learning purposes and make use of other repo
   **Xiang Zhou and Matthew Stephens** (2012). Genome-wide efficient mixed-model
   analysis for association studies. _Nature Genetics_ 44, 821–824.
 
-## Data
+## Resources & Data
+
 - **Marees et al.** (2018) A tutorial on conducting genome-wide association
   studies: Quality control and statistical analysis. _Int J Methods Psychiatr
   Res_. 27:e1608.
@@ -45,30 +49,32 @@ The repository has been created for learning purposes and make use of other repo
 - **Gábor Mészáros** video tutorials
   [https://www.youtube.com/c/GenomicsBootCamp](https://www.youtube.com/c/GenomicsBootCamp)
 
-- **Naderi et al.** (2008) The goat domestication process inferred from
-  large-scale mitochondrial DNA analysis of wild and domestic individuals. _Proc
-  Natl Acad Sci_ USA. 105:17659–64.
-
-- **Bertolini et al.** (2018) Signatures of selection and environmental
-  adaptation across the goat genome post-domestication. _Genet Sel Evol_ 50, 57.
-  [https://doi.org/10.1186/s12711-018-0421-y](https://doi.org/10.1186/s12711-018-0421-y)
-
 - **Colli et al.** (2018) Genome-wide SNP profiling of worldwide goat
   populations reveals strong partitioning of diversity and highlights
   post-domestication migration routes. _Genet Sel Evol_ 50, 58.
   [https://doi.org/10.1186/s12711-018-0422-x](https://doi.org/10.1186/s12711-018-0422-x)
-- **Colli et al.** (2020). Data from: Signatures of selection and environmental
+- DATA: **Colli et al.** (2020). Signatures of selection and environmental
   adaptation across the goat genome post-domestication [Dataset]. _Dryad_.
   [https://doi.org/10.5061/dryad.v8g21pt](https://doi.org/10.5061/dryad.v8g21pt)
 
 - **Decker et al.** (2014) Worldwide Patterns of Ancestry, Divergence, and
   Admixture in Domesticated Cattle. _PLOS Genetics_ 10(3):
   e1004254.[https://doi.org/10.1371/journal.pgen.1004254](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004254),
-- **Decker et al.** (2015) Data from: Worldwide patterns of ancestry,
-  divergence, and admixture in domesticated cattle [Dataset]. Dryad.
+- DATA: **Decker et al.** (2015) Worldwide patterns of ancestry, divergence, and
+  admixture in domesticated cattle [Dataset]. Dryad.
   [https://doi.org/10.5061/dryad.th092](https://doi.org/10.5061/dryad.th092)
 
-## Linux working env setup
+## Setup of the working environment
+
+Install R:
+[The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/)
+
+IDE:
+[VSCode](https://code.visualstudio.com/)/[RStudio](https://posit.co/download/rstudio-desktop/)
+
+Install Python:
+[Miniconda 3](https://docs.anaconda.com/free/miniconda/index.html)
+
 ### Get PLINK working in Linux
 
 1.  Download
