@@ -215,8 +215,7 @@ ggplot(.) +
   theme(
       aspect.ratio = 1,
       panel.grid = element_blank(),
-      axis.ticks = element_line(),
-      plot.margin = grid::unit(c(0,0,0,0), "mm")
+      axis.ticks = element_line()
     )
 
     mds_gooat_filtered
