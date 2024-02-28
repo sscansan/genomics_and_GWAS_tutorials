@@ -227,13 +227,15 @@ ggplot(.) +
 
 ggsave("Figures/goat_mds_filtered.pdf", plot = mds_gooat_filtered, height = 5, width = 6, dpi = 600, device = grDevices::cairo_pdf)
 ggsave("Figures/goat_mds_filtered.png", plot = mds_gooat_filtered, height = 5, width = 6, dpi = 96)
-
+knitr::plot_crop("Figures/goat_mds_filtered.pdf")
+knitr::plot_crop("Figures/goat_mds_filtered.png")
 ```
 
 ```{r}
 final <- (mds_goat) + (mds_gooat_filtered)
 
 path <- "Figures/goat_mds_2.png"
+
 ggsave(path, plot = final, width = 10, dpi = 120, type = "cairo")
 
 knitr::plot_crop(path)
