@@ -2,7 +2,10 @@
 
 ## Genetic association of quantitative traits
 
-GitHub repository of a bioinformatic Genome Wide Association Study project using different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and `rTASSEL`, GEMMA. For learning puropses other repositories, scripts and data sources have been used, taken or modified such as:
+![Alt text](Figures/goat_mds.png?raw=true "multidimensional scaling of SNP data")
+
+GitHub repository of some bioinformatic Genome Wide Association Study projects using different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and `rTASSEL`, GEMMA. 
+The repository has been created for learning purposes and make use of other repositories, scripts and data sources, taken or modified such as:
 
 - **PLINK 1.90**
   [https://www.cog-genomics.org/plink2/](https://www.cog-genomics.org/plink2/)
