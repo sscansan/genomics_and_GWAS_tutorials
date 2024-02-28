@@ -13,6 +13,7 @@ scripts and sources have been used, taken or modified such as:
 
 - **TASSEL 5**
   [https://www.maizegenetics.net/tassel](https://www.maizegenetics.net/tassel)
+  
   **Bradbury** et al., (2007) TASSEL: software for association mapping of
   complex traits in diverse samples, Bioinformatics, Volume 23, Issue 19, Pages
   2633–2635
@@ -21,11 +22,14 @@ scripts and sources have been used, taken or modified such as:
   [https://rtassel.maizegenetics.net/index.html](https://rtassel.maizegenetics.net/index.html),
   Repository:
   [https://github.com/maize-genetics/rTASSEL](https://github.com/maize-genetics/rTASSEL)
+  
   **Monier et al.**, (2022). rTASSEL: An R interface to TASSEL for analyzing
   genomic diversity. _Journal of Open Source Software_, 7(76), 4530,
   [https://doi.org/10.21105/joss.04530](https://doi.org/10.21105/joss.04530)
 
-- `GEMMA` Genome-wide Efficient Mixed Model Association [https://github.com/genetics-statistics/GEMMA](https://github.com/genetics-statistics/GEMMA) Xiang Zhou and Matthew Stephens (2012). Genome-wide efficient mixed-model analysis for association studies. *Nature Genetics* 44, 821–824.
+- `GEMMA` Genome-wide Efficient Mixed Model Association [https://github.com/genetics-statistics/GEMMA](https://github.com/genetics-statistics/GEMMA)
+
+  Xiang Zhou and Matthew Stephens (2012). Genome-wide efficient mixed-model analysis for association studies. *Nature Genetics* 44, 821–824.
 
 - **Marees et al.** (2018) A tutorial on conducting genome-wide association
   studies: Quality control and statistical analysis. _Int J Methods Psychiatr
