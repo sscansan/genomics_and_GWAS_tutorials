@@ -228,7 +228,7 @@ ggsave("Figures/goat_mds_filtered.png", plot = mds_gooat_filtered, height = 5, w
 ```
 
 ```{r}
-final <- (mds_goat + theme(panel.background = element_blank())) + (mds_gooat_filtered + theme(panel.background = element_blank()))
-final <- final + theme(plot.background = element_blank())
-ggsave("Figures/goat_mds_2.png", plot = final, height = 5, width = 11, dpi = 120)
+final <- (mds_goat) + (mds_gooat_filtered)
+
+ggsave("Figures/goat_mds_2.png", plot = final,width = 10, dpi = 120, type = "cairo")
 ```
