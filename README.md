@@ -141,7 +141,7 @@ scripts and sources have been used, taken or modified such as:
 
    - Allocate jobs memory<sup>1</sup> and start the logger:
 
-   <sup>1</sup> in "-Xmx50g" and "-Xms50g" _50g_ represents 30 Gigabytes.
+   <sup>1</sup> in "-Xmx50g" and "-Xms50g" _50g_ represents 50 Gigabytes of memory.
 
    _!! Choose an appropriate value to your machine !!_
 
