@@ -105,7 +105,8 @@ eigen_percent_goat_pop <-
     aspect.ratio = 1,
     panel.grid = element_blank(),
     axis.ticks = element_line(),
-      plot.margin = element_blank()
+      plot.margin = element_blank(),
+      plot.margin = grid::unit(c(0,0,0,0), "mm")
   )
 ```
 We have calculated the Eigenvectors and Eigenvalues.
@@ -128,7 +129,8 @@ mds_goat <-
     theme(
       aspect.ratio = 1,
       panel.grid = element_blank(),
-      axis.ticks = element_line()
+      axis.ticks = element_line(),
+      plot.margin = grid::unit(c(0,0,0,0), "mm")
     )
 
 require("patchwork")
@@ -217,7 +219,8 @@ ggplot(.) +
   theme(
       aspect.ratio = 1,
       panel.grid = element_blank(),
-      axis.ticks = element_line()
+      axis.ticks = element_line(),
+      plot.margin = grid::unit(c(0,0,0,0), "mm")
     )
 
     mds_gooat_filtered
@@ -230,5 +233,8 @@ ggsave("Figures/goat_mds_filtered.png", plot = mds_gooat_filtered, height = 5, w
 ```{r}
 final <- (mds_goat) + (mds_gooat_filtered)
 
-ggsave("Figures/goat_mds_2.png", plot = final,width = 10, dpi = 120, type = "cairo")
+path <- "Figures/goat_mds_2.png"
+ggsave(path, plot = final, width = 10, dpi = 120, type = "cairo")
+
+knitr::plot_crop(path)
 ```
