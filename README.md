@@ -70,6 +70,7 @@ The repository has been created for learning purposes and make use of other repo
 
 ---
 
+## Linux working env setup
 ### Get PLINK working in Linux
 
 1.  Download
