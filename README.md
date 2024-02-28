@@ -139,11 +139,11 @@ scripts and sources have been used, taken or modified such as:
 
 3. Run `rTASSEL`
 
-   - Allocate jobs memory<sup>1</sup> and start the logger:
+   - Allocate job's memory<sup>1</sup> and start the logger (here at the root of the project):
 
-   <sup>1</sup> in "-Xmx50g" and "-Xms50g" _50g_ represents 30 Gigabytes.
+   <sup>1</sup>"-Xmx50g" and "-Xms50g", "_50g_" represents 50 Gigabytes of memory.
 
-   _!! Choose an appropriate value to your machine !!_
+   _!! Choose an appropriate value that fits your machine !!_
 
    ```
    options(java.parameters = c("-Xmx50g", "-Xms50g"))
