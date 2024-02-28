@@ -68,8 +68,6 @@ The repository has been created for learning purposes and make use of other repo
   divergence, and admixture in domesticated cattle [Dataset]. Dryad.
   [https://doi.org/10.5061/dryad.th092](https://doi.org/10.5061/dryad.th092)
 
----
-
 ## Linux working env setup
 ### Get PLINK working in Linux
 
