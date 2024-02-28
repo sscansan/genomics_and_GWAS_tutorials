@@ -1,5 +1,5 @@
 ---
-title: "rTASSEL"
+title: "Population stratification"
 #author:
 output:
   #rmdformats::html_clean:

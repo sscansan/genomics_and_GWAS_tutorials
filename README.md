@@ -25,7 +25,10 @@ scripts and sources have been used, taken or modified such as:
   genomic diversity. _Journal of Open Source Software_, 7(76), 4530,
   [https://doi.org/10.21105/joss.04530](https://doi.org/10.21105/joss.04530)
 
-- `GEMMA` Genome-wide Efficient Mixed Model Association [https://github.com/genetics-statistics/GEMMA](https://github.com/genetics-statistics/GEMMA). **Xiang Zhou and Matthew Stephens** (2012). Genome-wide efficient mixed-model analysis for association studies. *Nature Genetics* 44, 821–824.
+- `GEMMA` Genome-wide Efficient Mixed Model Association
+  [https://github.com/genetics-statistics/GEMMA](https://github.com/genetics-statistics/GEMMA).
+  **Xiang Zhou and Matthew Stephens** (2012). Genome-wide efficient mixed-model
+  analysis for association studies. _Nature Genetics_ 44, 821–824.
 
 - **Marees et al.** (2018) A tutorial on conducting genome-wide association
   studies: Quality control and statistical analysis. _Int J Methods Psychiatr
@@ -141,9 +144,11 @@ scripts and sources have been used, taken or modified such as:
 
 3. Run `rTASSEL`
 
-   - Allocate job's memory<sup>1</sup> and start the logger (here at the root of the project):
+   - Allocate job's memory<sup>1</sup> and start the logger (here at the root of
+     the project):
 
-   <sup>1</sup>"-Xmx50g" and "-Xms50g", "_50g_" represents 50 Gigabytes of memory.
+   <sup>1</sup>"-Xmx50g" and "-Xms50g", "_50g_" represents 50 Gigabytes of
+   memory.
 
    _!! Choose an appropriate value that fits your machine !!_
 
@@ -161,5 +166,26 @@ scripts and sources have been used, taken or modified such as:
 
    Useful resource for `rTASSEL` are the vignettes and tutorials at
    [https://rtassel.maizegenetics.net/index.html](https://rtassel.maizegenetics.net/index.html)
+
+### Get `GEMMA`
+
+GEMMA can be installed from source at the GitHub repo, but is also available
+through Bioconda
+[http://www.ddocent.com/bioconda/](http://www.ddocent.com/bioconda/). To install
+is suggested to have miniconda installed and working, and then added the channel
+for Bioconda, you should already have defaults and conda-forge.
+
+```
+conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels biocond
+conda install gemma
+```
+
+And use GEMMA with
+
+```
+gemma -h
+```
 
 ---

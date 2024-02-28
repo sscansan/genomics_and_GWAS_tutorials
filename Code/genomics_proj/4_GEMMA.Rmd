@@ -1,0 +1,46 @@
+---
+title: "GEMMA"
+#author:
+output:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    use_bookdown: false
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    highlight: tango
+    gallery: true
+    toc_depth: 3
+    code_folding: show
+    css: css/custom.css
+knit:
+  (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
+  encoding, output_dir = "html") })
+---
+
+# GWAS analysis with GEMMA
+
+```{r}
+rm(list = ls())
+```
+
+```{r}
+library(dplyr)
+library(readr)
+library(stringr)
+library(ggplot2)
+library(qqman)
+```
+
+# Project 1
+Data source: Hayward, Jessica et al. (2020). A genome-wide association study of deafness in three canine breeds [Dataset]. Dryad. https://doi.org/10.5061/dryad.sf7m0cg2n
+
+[https://datadryad.org/stash/dataset/doi:10.5061/dryad.sf7m0cg2n](https://datadryad.org/stash/dataset/doi:10.5061/dryad.sf7m0cg2n)
+
+#### Phenotype data preparation
+```{r}
+phenotype <- read_table("Data/deafness_dogs/deafness_pheno.txt")
+head(phenotype)
+```
+
