@@ -21,6 +21,8 @@ knit:
 
 # GWAS analysis with GEMMA
 
+GEMMA has the advantage that can use PLINK file directly, without conversions.
+
 ```{r}
 rm(list = ls())
 ```
@@ -34,13 +36,126 @@ library(qqman)
 ```
 
 # Project 1
-Data source: Hayward, Jessica et al. (2020). A genome-wide association study of deafness in three canine breeds [Dataset]. Dryad. https://doi.org/10.5061/dryad.sf7m0cg2n
+## Tutorial on canine deafness
 
-[https://datadryad.org/stash/dataset/doi:10.5061/dryad.sf7m0cg2n](https://datadryad.org/stash/dataset/doi:10.5061/dryad.sf7m0cg2n)
+- Code: [https://github.com/GenomicsBootCamp/codeFromGbcVideos/blob/main/GWAS_GEMMA_dogs.r](https://github.com/GenomicsBootCamp/codeFromGbcVideos/blob/main/GWAS_GEMMA_dogs.r)
+
+- *Data*: Hayward, Jessica et al. (2020). A genome-wide association study of deafness in three canine breeds [Dataset]. Dryad. (https://doi.org/10.5061/dryad.sf7m0cg2n).
+
+- *Paper*: Hayward JJ, Kelly-Smith M, Boyko AR, Burmeister L, De Risio L, et al. (2020) A genome-wide association study of deafness in three canine breeds. PLOS ONE 15(5): e0232900. https://doi.org/10.1371/journal.pone.0232900
+
+
 
 #### Phenotype data preparation
 ```{r}
-phenotype <- read_table("Data/deafness_dogs/deafness_pheno.txt")
-head(phenotype)
+phenoData <- read_table("./Data/deafness_dogs/deafness_pheno.txt")
+head(phenoData)
+```
+Empty variable for the phenotype column in PLINK (later on)
+```{r}
+PHENOTYPE <- "deafnessCaseControl"
 ```
 
+making the data usable by plink, the phenotypes ahve ben recoded with 1, 2, and 3.
+
+What happens in the case the phenotype is a continuous variable, for example height, weight or percentage of infection...?
+
+The phenotypee file had to be adapted as plink can only read the phenotypes i n numerical form.
+```{r}
+system("mkdir ./Data/deafness_dogs/AfterQC")
+# recode phenotypes according to methods in the paper
+tmp <- phenoData %>%
+  mutate(deafnessCode = case_when(
+    BAER_test_phenotype == "bilaterally_deaf" ~ "1",
+    BAER_test_phenotype == "unilaterally_deaf" ~ "2",
+    BAER_test_phenotype == "hearing" ~ "3"
+  )) %>%
+  mutate(deafnessCaseControl = case_when(
+    BAER_test_phenotype == "bilaterally_deaf" ~ "1",
+    BAER_test_phenotype == "hearing" ~ "2"
+  )) %>%
+  mutate(FID = dogID) %>%
+  rename(IID = dogID) %>%
+#  drop_na() %>%
+  select(FID, IID, deafnessCode, deafnessCaseControl) %>%
+  write_delim("./Data/deafness_dogs/AfterQC/GWAS_pheno_renamed.txt", delim = " ")
+```
+###Plink QC Genotype
+
+here we use the flag `--chr-set 38` instad of the equivalent flag `--dog`.
+
+`--nonfounders` does not take in consideration the pedigree (parental) information in the .fam file, because there is no parental information and therefore information has to be removed otherwine all the individuals (animals/plants/...) are treated as founders, i.e., individuals who establish a new population or breeding group.
+```{r}
+data_in <- "./Data/deafness_dogs/deafness"
+data_QC <- "./Data/deafness_dogs/AfterQC/deafness_QC"
+
+system(str_c("
+plink \\
+--chr-set 38 \\
+--nonfounders \\
+--bfile ", data_in, " \\
+--autosome \\
+--mind 0.1 \\
+--geno 0.05 \\
+--make-bed \\
+--out ", data_QC, sep = ""))
+```
+the data folder AfterQC contains all the data after quality filtering.
+
+### Merge Genotype - Phenotype table in PLINK
+```{r}
+GWAS_pheno <- "./Data/deafness_dogs/AfterQC/GWAS_pheno_renamed.txt"
+GEMMA_input <- "./Data/deafness_dogs/AfterQC/GEMMA_input"
+
+system(str_c("
+plink \\
+--chr-set 38 \\
+--bfile ", data_QC, " \\
+--nonfounders \\
+--allow-no-sex \\
+--pheno ", GWAS_pheno, " \\
+--pheno-name ", PHENOTYPE, " \\
+--make-bed \\
+--out ", GEMMA_input, sep = ""))
+```
+
+Now that we have created the phenotypes in the .fam file we can proceed to run the association genotype-phenotype with GEMMA.
+### # Optional filtering
+```{r}
+# filter of a single dog breed
+
+# select only Australian cattle dogs - direct comparison w the paper
+#phenoData %>%
+#  filter(breed == "australian_cattle_dog") %>%
+#  mutate(FID = dogID) %>%
+#  rename(IID = dogID) %>%
+#  select(FID, IID) %>%
+#  write_delim("dogsToKeep.txt", delim = " ")
+
+# Update the .fam file with a single dog breed as GEMMA input
+#system(str_c("./plink --dog --bfile inputForGemma --nonfounders --allow-no-sex ",
+#             " --keep dogsToKeep.txt --make-bed --out inputForGemma_ACD"))
+```
+
+### Run GWAS with GEMMA
+
+Filtered Dataset
+```{r}
+# compute the relationship matrix for population structure correction
+system(str_c("
+gemma \\
+-bfile ", GEMMA_input, " \\
+-gk 1 \\
+-o ", RelMat, sep = ""))
+
+# Note: all outputs and results will be saved in the "output" directory, created automatically
+
+# run GEMMA
+system(str_c("
+gemma -bfile inputForGemma_ACD -k ./output/RelMat.cXX.txt -lmm 2 -o GWASresults.lmm"))
+```
+
+Complete Dataset
+```{r}
+
+```

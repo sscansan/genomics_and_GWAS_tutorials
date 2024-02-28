@@ -1,0 +1,37 @@
+---
+title: "Exploratory data analysis and PCA"
+#author:
+output:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    use_bookdown: false
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    highlight: tango
+    gallery: true
+    toc_depth: 3
+    code_folding: show
+    css: css/custom.css
+knit:
+  (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
+  encoding, output_dir = "html") })
+---
+
+```{r}
+library(tidyverse)
+library(patchwork)
+
+p1 <- iris %>%
+    ggplot() +
+    geom_point(aes(Sepal.Length, Sepal.Width, color = Species))
+
+
+p2 <- cars %>%
+    ggplot() +
+    geom_point(aes(speed, dist))
+
+p3 <- p1 + p2
+
+```
