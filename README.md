@@ -139,7 +139,7 @@ scripts and sources have been used, taken or modified such as:
 
 3. Run `rTASSEL`
 
-   - Allocate jobs memory<sup>1</sup> and start the logger (here at the root of the project):
+   - Allocate job's memory<sup>1</sup> and start the logger (here at the root of the project):
 
    <sup>1</sup> in "-Xmx50g" and "-Xms50g", "_50g_" represents 50 Gigabytes of memory.
 
