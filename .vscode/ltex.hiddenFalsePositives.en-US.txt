@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe genetic distances between individuals were computed using PLINK to generate the kinship matrix and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q function to run MDS based on genotyping data obtained from 49,953 SNPs.\\E$"}

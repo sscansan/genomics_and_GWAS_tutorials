@@ -24,8 +24,6 @@ knit:
 Error: Failed to open Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS_filtered_goats.log.  Try changing the --out parameter.
 ```
 
-🌟 Suggestions are welcome! 🌟
-
 ```{r}
 rm(list = ls())
 getwd()
@@ -110,6 +108,7 @@ eigen_percent_goat_pop <-
 We have calculated the Eigenvectors and Eigenvalues.
 
 ```{r}
+#library(ggpomological)
 
 mds_goat <-
   eigenvec_populations %>%
@@ -122,6 +121,8 @@ mds_goat <-
     x = paste0("Dimension 1 (", eigen_percent[1], " %)"),
     y = paste0("Dimension 2 (", eigen_percent[2], " %)")
   ) +
+  #theme_pomological_fancy() +
+  #scale_color_pomological() +
   theme_minimal() +
     theme(
       aspect.ratio = 1,

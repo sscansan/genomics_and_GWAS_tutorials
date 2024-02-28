@@ -1,14 +1,24 @@
-# GWAS_project
+# Genomics_projects
 
-## Genetic association of quantitative traits
+GitHub repository of bioinformatic projects recolving around genomics using
+different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and
+`rTASSEL`, GEMMA. The repository has been created for self-teaching purposes and
+make use of other repositories, scripts and data sources, taken or modified as
+such.
 
-GitHub repository of some bioinformatic Genome Wide Association Study projects
-using different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and
-`rTASSEL`, GEMMA. The repository has been created for self-teaching purposes and make
-use of other repositories, scripts and data sources, taken or modified as such.
+1. SNP profiling of goat breeds.
+   ![Alt text](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
+   <small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
+   Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**
 
-![Alt text](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
-*<small>Multidimentsional scaling of 4653 individuals, of 169 goat populations. </small>*
+The MDS plot visualizes genetic relationships among 4,653 individuals from 169
+goat breeds. Genetic distances were computed using PLINK to generate the kinship
+matrix, and MDS analysis was conducted with the `cmdscale` function based on
+genotyping data from 49,953 SNPs. Each point represents a goat, and spatial
+arrangement reflects genetic dissimilarities. This exploratory analysis offers
+insights into genetic diversity, population structure, and relatedness. _Data
+source_: **Colli et al.** (2018) https://doi.org/10.1186/s12711-018-0422-x
+</small>
 
 ## Tools
 
@@ -26,7 +36,7 @@ use of other repositories, scripts and data sources, taken or modified as such.
 - `rTASSEL` R package repository documentation. <br> Vignettes:
   [https://rtassel.maizegenetics.net/index.html](https://rtassel.maizegenetics.net/index.html),
   Repository:
-  [https://github.com/maize-genetics/rTASSEL](https://github.com/maize-genetics/rTASSEL).  
+  [https://github.com/maize-genetics/rTASSEL](https://github.com/maize-genetics/rTASSEL).
   **Monier et al.**, (2022). rTASSEL: An R interface to TASSEL for analyzing
   genomic diversity. _Journal of Open Source Software_, 7(76), 4530,
   [https://doi.org/10.21105/joss.04530](https://doi.org/10.21105/joss.04530)
@@ -70,11 +80,14 @@ use of other repositories, scripts and data sources, taken or modified as such.
 Install R:
 [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/)
 
-IDE:
-[VSCode](https://code.visualstudio.com/)/[RStudio](https://posit.co/download/rstudio-desktop/)
+IDE:[VSCode](https://code.visualstudio.com/)/[RStudio](https://posit.co/download/)<sup>\*</sup>
 
 Install Python:
-[Miniconda 3](https://docs.anaconda.com/free/miniconda/index.html)
+[Miniconda 3](https://docs.anaconda.com/free/miniconda/index.html)<sup>\*</sup>
+
+OS: Linux<sup>\*</sup>/WSL
+
+<small><sup>\*</sup>Suggested</small>
 
 ### Get PLINK working in Linux
 
