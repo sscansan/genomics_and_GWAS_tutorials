@@ -7,7 +7,7 @@ The repository has been created for learning purposes and make use of other repo
 
 ![Alt text](Figures/goat_mds.png?raw=true "multidimensional scaling of SNP data")
 
-## TOOLS
+## Tools
 - **PLINK 1.90**
   [https://www.cog-genomics.org/plink2/](https://www.cog-genomics.org/plink2/)
 - `plinkr` R package repository documentation.
@@ -32,6 +32,7 @@ The repository has been created for learning purposes and make use of other repo
   **Xiang Zhou and Matthew Stephens** (2012). Genome-wide efficient mixed-model
   analysis for association studies. _Nature Genetics_ 44, 821–824.
 
+## Data
 - **Marees et al.** (2018) A tutorial on conducting genome-wide association
   studies: Quality control and statistical analysis. _Int J Methods Psychiatr
   Res_. 27:e1608.
