@@ -104,7 +104,8 @@ eigen_percent_goat_pop <-
   theme(
     aspect.ratio = 1,
     panel.grid = element_blank(),
-    axis.ticks = element_line()
+    axis.ticks = element_line(),
+      plot.margin = element_blank()
   )
 ```
 We have calculated the Eigenvectors and Eigenvalues.
@@ -122,7 +123,7 @@ mds_goat <-
     x = paste0("Dimension 1 (", eigen_percent[1], " %)"),
     y = paste0("Dimension 2 (", eigen_percent[2], " %)")
   ) +
-  dark_theme_minimal() +
+  theme_minimal() +
   #theme_minimal() +
     theme(
       aspect.ratio = 1,
@@ -211,7 +212,7 @@ ggplot(.) +
     x = paste0("Dimension 1 (", eigen_percent[1,1], " %)"),
     y = paste0("Dimension 2 (", eigen_percent[2,1], " %)"),
     colour = "Goat breeds", shape = "Origin") +
-  dark_theme_minimal() +
+  theme_minimal() +
     scale_color_frontiers() +
   theme(
       aspect.ratio = 1,
@@ -227,7 +228,7 @@ ggsave("Figures/goat_mds_filtered.png", plot = mds_gooat_filtered, height = 5, w
 ```
 
 ```{r}
-mds_goat | mds_gooat_filtered
-
-ggsave("Figures/goat_mds_2.png", plot = last_plot(), height = 5, width = 11, dpi = 120)
+final <- (mds_goat + theme(panel.background = element_blank())) + (mds_gooat_filtered + theme(panel.background = element_blank()))
+final <- final + theme(plot.background = element_blank())
+ggsave("Figures/goat_mds_2.png", plot = final, height = 5, width = 11, dpi = 120)
 ```

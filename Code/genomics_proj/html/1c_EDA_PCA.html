@@ -2040,6 +2040,8 @@ getwd()</code></pre>
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 <pre class="r"><code>library(patchwork)
+library(ggsci)
+library(ggdark)
 knitr::opts_chunk$set(error = TRUE)</code></pre>
 <p>We start from the data after QC of the file <code>2_QC_plink.Rmd</code>.</p>
 <p>We compute the IBS (Identity-By-State) distance between individuals. Not Euclidean distances!</p>
@@ -2100,11 +2102,12 @@ fam_ind &lt;- data.frame(
   scale_x_continuous(expand = c(0.01, 0), breaks = c(1:10)) +
   scale_y_continuous(expand = c(0.01, 0)) +
   labs(title = &quot;Explained variances in the first 10 dimensions&quot;, x = &quot;Dimensions&quot;, y = &quot;Explained variance (%)&quot;) +
-  theme_classic() +
+  dark_theme_classic() +
   theme(
     aspect.ratio = 1,
     panel.grid = element_blank(),
-    axis.ticks = element_line()
+    axis.ticks = element_line(),
+      plot.margin = element_blank()
   )</code></pre>
 <pre><code>## Warning: `as.tibble()` was deprecated in tibble 2.0.0.
 ## ℹ Please use `as_tibble()` instead.
@@ -2115,7 +2118,7 @@ fam_ind &lt;- data.frame(
 <pre><code>## Error in eval(expr, envir, enclos): object &#39;eigen_percent&#39; not found</code></pre>
 <p>We have calculated the Eigenvectors and Eigenvalues.</p>
 <pre class="r"><code>mds_goat &lt;-
-eigenvec_populations %&gt;%
+  eigenvec_populations %&gt;%
   ggplot(.) +
   geom_vline(xintercept = 0, linetype = &quot;dotted&quot;) +
   geom_hline(yintercept = 0, linetype = &quot;dotted&quot;) +
@@ -2123,8 +2126,10 @@ eigenvec_populations %&gt;%
   labs(
     title = &quot;MDS of worldwide goat population&quot;,
     x = paste0(&quot;Dimension 1 (&quot;, eigen_percent[1], &quot; %)&quot;),
-    y = paste0(&quot;Dimension 2 (&quot;, eigen_percent[2], &quot; %)&quot;)) +
+    y = paste0(&quot;Dimension 2 (&quot;, eigen_percent[2], &quot; %)&quot;)
+  ) +
   theme_minimal() +
+  #theme_minimal() +
     theme(
       aspect.ratio = 1,
       panel.grid = element_blank(),
@@ -2138,7 +2143,7 @@ mds_goat_var &lt;- mds_goat | eigen_percent_goat_pop</code></pre>
 <pre><code>## Error in `ggsave()`:
 ## ! Cannot find directory &#39;Figures&#39;.
 ## ℹ Please supply an existing directory or use `create.dir = TRUE`.</code></pre>
-<pre class="r"><code>ggsave(&quot;Figures/goat_mds.png&quot;, plot = mds_goat_var, height = 5, width = 9, dpi = 72)</code></pre>
+<pre class="r"><code>ggsave(&quot;Figures/goat_mds.png&quot;, plot = mds_goat_var, height = 5, width = 9, dpi = 96)</code></pre>
 <pre><code>## Error in `ggsave()`:
 ## ! Cannot find directory &#39;Figures&#39;.
 ## ℹ Please supply an existing directory or use `create.dir = TRUE`.</code></pre>
@@ -2210,7 +2215,8 @@ ggplot(.) +
     y = paste0(&quot;Dimension 2 (&quot;, eigen_percent[2,1], &quot; %)&quot;),
     colour = &quot;Goat breeds&quot;, shape = &quot;Origin&quot;) +
   theme_minimal() +
-    theme(
+    scale_color_frontiers() +
+  theme(
       aspect.ratio = 1,
       panel.grid = element_blank(),
       axis.ticks = element_line()
@@ -2222,7 +2228,15 @@ ggplot(.) +
 <pre><code>## Error in `ggsave()`:
 ## ! Cannot find directory &#39;Figures&#39;.
 ## ℹ Please supply an existing directory or use `create.dir = TRUE`.</code></pre>
-<pre class="r"><code>ggsave(&quot;Figures/goat_mds_filtered.png&quot;, plot = mds_gooat_filtered, height = 5, width = 6, dpi = 300)</code></pre>
+<pre class="r"><code>ggsave(&quot;Figures/goat_mds_filtered.png&quot;, plot = mds_gooat_filtered, height = 5, width = 6, dpi = 96)</code></pre>
+<pre><code>## Error in `ggsave()`:
+## ! Cannot find directory &#39;Figures&#39;.
+## ℹ Please supply an existing directory or use `create.dir = TRUE`.</code></pre>
+<pre class="r"><code>final &lt;- (mds_goat + theme(panel.background = element_blank())) + (mds_gooat_filtered + theme(panel.background = element_blank()))</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;mds_goat&#39; not found</code></pre>
+<pre class="r"><code>final &lt;- final + theme(plot.background = element_blank())</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;final&#39; not found</code></pre>
+<pre class="r"><code>ggsave(&quot;Figures/goat_mds_2.png&quot;, plot = final, height = 5, width = 11, dpi = 120)</code></pre>
 <pre><code>## Error in `ggsave()`:
 ## ! Cannot find directory &#39;Figures&#39;.
 ## ℹ Please supply an existing directory or use `create.dir = TRUE`.</code></pre>
