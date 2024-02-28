@@ -25,6 +25,8 @@ scripts and sources have been used, taken or modified such as:
   genomic diversity. _Journal of Open Source Software_, 7(76), 4530,
   [https://doi.org/10.21105/joss.04530](https://doi.org/10.21105/joss.04530)
 
+- `GEMMA` Genome-wide Efficient Mixed Model Association [https://github.com/genetics-statistics/GEMMA](https://github.com/genetics-statistics/GEMMA) Xiang Zhou and Matthew Stephens (2012). Genome-wide efficient mixed-model analysis for association studies. *Nature Genetics* 44, 821–824.
+
 - **Marees et al.** (2018) A tutorial on conducting genome-wide association
   studies: Quality control and statistical analysis. _Int J Methods Psychiatr
   Res_. 27:e1608.
