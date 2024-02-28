@@ -34,6 +34,7 @@ list.files()
 ```{r}
 library(tidyverse)
 library(patchwork)
+library(ggsci)
 knitr::opts_chunk$set(error = TRUE)
 ```
 We start from the data after QC of the file `2_QC_plink.Rmd`.
@@ -131,7 +132,7 @@ mds_goat_var <- mds_goat | eigen_percent_goat_pop
 
 
 ggsave("Figures/goat_mds.pdf", plot = mds_goat_var, height = 5, width = 9, dpi = 600, device = grDevices::cairo_pdf)
-ggsave("Figures/goat_mds.png", plot = mds_goat_var, height = 5, width = 9, dpi = 72)
+ggsave("Figures/goat_mds.png", plot = mds_goat_var, height = 5, width = 9, dpi = 96)
 
 ```
 
@@ -208,7 +209,8 @@ ggplot(.) +
     y = paste0("Dimension 2 (", eigen_percent[2,1], " %)"),
     colour = "Goat breeds", shape = "Origin") +
   theme_minimal() +
-    theme(
+    scale_color_frontiers() +
+  theme(
       aspect.ratio = 1,
       panel.grid = element_blank(),
       axis.ticks = element_line()
@@ -217,6 +219,12 @@ ggplot(.) +
     mds_gooat_filtered
 
 ggsave("Figures/goat_mds_filtered.pdf", plot = mds_gooat_filtered, height = 5, width = 6, dpi = 600, device = grDevices::cairo_pdf)
-ggsave("Figures/goat_mds_filtered.png", plot = mds_gooat_filtered, height = 5, width = 6, dpi = 300)
+ggsave("Figures/goat_mds_filtered.png", plot = mds_gooat_filtered, height = 5, width = 6, dpi = 96)
 
+```
+
+```{r}
+mds_goat | mds_gooat_filtered
+
+ggsave("Figures/goat_mds_2.png", plot = last_plot(), height = 5, width = 11, dpi = 120)
 ```
