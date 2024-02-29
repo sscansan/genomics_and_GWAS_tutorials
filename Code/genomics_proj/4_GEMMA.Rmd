@@ -209,6 +209,9 @@ makes a unique temp directory<sup>*</sup> where the output is stored, here relat
 
 #### Manhattan plot - entire dataset
 This actually couldd be a stand-alone script
+```{r}
+source("Code/genomics_proj/GWAS_plot_manhattan_population.R")
+```
 * Now we have as output the results of the GWAS analysis and we can plot it. The  next code will load the necessary packages and then present
 ```{r}
 # read in the GWAS results
