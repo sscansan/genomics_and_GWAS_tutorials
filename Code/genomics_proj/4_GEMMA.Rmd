@@ -21,7 +21,7 @@ knit:
 
 # GWAS analysis with GEMMA
 
-Genome-wide Efficient Mixed Model Association (GEMMA) has the advantage that can use PLINK file directly, without conversions.
+This is a GWAS attempt using a combination of R data handling and plotting in combination with PLINK for quality control and data filtering, followed by the use of Genome-wide Efficient Mixed Model Association (GEMMA) for the generation of the association/relationship matrices. GEMMA was developed to be used with PLINK, and therefore it ease the workflow accepting the same file formats and structure.
 
 ```{r}
 rm(list = ls())
@@ -245,6 +245,7 @@ labels[seq(1, length(x_axis_chr$chr), by = 2)] <- x_axis_chr$chr[seq(1, length(x
 ```
 ```{r}
 # compute the Bonferroni threshold
+bonferroni3 <- -log10(0.3 / nrow(resultGemma))
 bonferroni05 <- -log10(0.05 / nrow(resultGemma))
 bonferroni01 <- -log10(0.01 / nrow(resultGemma))
 tresh <- -log10(5 * 10^(-8))
@@ -291,8 +292,42 @@ is it possible to merge also the names of the canine breeds and run it through a
 ##### Select the most significant SNPs'
 
 ```{r}
-resultGemma %>%
+# Highest associated SNPS
+plot_tops <- resultGemma %>%
   mutate(negLogP = -log10(p_lrt)) %>%
   select(chr, rs, p_lrt, negLogP) %>%
-  filter(negLogP > 5)
+  filter(negLogP > 4.5) %>%
+  # Plot
+  ggplot(aes(x = factor(chr), y = negLogP, color = factor(rs))) +
+  geom_point(size = 4) +
+  #facet_wrap(~rs) +
+  labs(title = "top scoring SNPs - full dataset",
+  x = "Chromosome",
+  y = bquote(-log[10](italic(P)))) +
+  scale_color_discrete(name = "SNPs") +
+  theme_bw() +
+  theme(
+    panel.border = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    aspect.ratio = 1
+  )
+
+path_tops <- "Figures/top_SNPs.png"
+
+ggsave(path_tops , plot = plot_tops, width = 8, dpi = 120)
+knitr::plot_crop(path_manhattan)
+```
+
+```{r}
+source("Code/genomics_proj/GWAS_plot_manhattan_filtered.R")
+source("Code/genomics_proj/GWAS_plot_manhattan_population.R")
+
+library(patchwork)
+plot_tops_comb <- plot_tops + plot_tops_filtered
+
+path_tops_comb <- "Figures/top_SNPs_comb.png"
+ggsave(path_tops_comb , plot = plot_tops_comb, width = 12, dpi = 120)
+knitr::plot_crop(path_tops_comb)
 ```

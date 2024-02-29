@@ -27,9 +27,8 @@ spatial arrangement reflects genetic dissimilarities. This exploratory analysis
 offers insights into genetic diversity, population structure, and relatedness.
 </small>
 
-2. a. Manhattan plot of a GWAS on dog population for deafness. <br> _Data
-   source_: **Hayward et al.** (2020)
-   https://doi.org/10.1371/journal.pone.0232900
+2. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
+   **Hayward et al.** (2020) https://doi.org/10.1371/journal.pone.0232900
 
 ![plot_manhattan](Figures/manhattan_dogs.png?raw=true "manhattan plot for dog deafness")
 ![plot_manhattan](Figures/manhattan_filter_acd.png?raw=true "manhattan plot for dog deafness")
@@ -38,6 +37,10 @@ deafness and their genotype. The plot displays the genomic positions of single
 nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
 corresponding -log<sub>10</sub> transformed _P_-values indicating the strength
 of association with the trait on the y-axis. </small>
+
+1. b. Plot of the top significant SNPs identified by the above GWAS.
+
+![plot SNPs](Figures/top_SNPs_comb.png?raw=true "top SNPs plot for dog deafness")
 
 ## Tools
 
