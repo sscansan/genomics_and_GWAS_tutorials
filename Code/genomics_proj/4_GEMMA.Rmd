@@ -243,7 +243,7 @@ plot_mann <- data_man %>%
   geom_point(aes(color = as.factor(chr)), size = 2, alpha = .4, show.legend = FALSE) +
   geom_hline(yintercept = bonferroni05, linetype = "dashed") +
   #geom_hline(yintercept = bonferroni01, linetype = "dashed") +
-  scale_color_manual(values = rep(c("firebrick", "steelblue"), 38)) +
+  scale_color_manual(values = rep(c("blue", "steelblue"), 38)) +
   scale_x_continuous(label = x_axis_chr$chr, breaks = x_axis_chr$center) +
   scale_y_continuous(expand = c(0, 0)) +
   labs(
@@ -260,7 +260,7 @@ plot_mann <- data_man %>%
 
 path_manhattan <- "Figures/manhattan_dogs.png"
 
-ggsave(path_manhattan , plot = plot_mann, width = 10, dpi = 120)
+ggsave(path_manhattan , plot = plot_mann, width = 10, dpi = 96)
 knitr::plot_crop(path_manhattan)
 
 ```
