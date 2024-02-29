@@ -228,11 +228,12 @@ knitr::plot_crop("Figures/goat_mds_filtered.png")
 ```
 
 ```{r}
-final <- (mds_goat) + (mds_gooat_filtered)
+# assemble the 2 images
+
+final <- mds_goat + mds_gooat_filtered
 
 path <- "Figures/goat_mds_2.png"
 
 ggsave(path, plot = final, width = 10, dpi = 120, type = "cairo")
-
 knitr::plot_crop(path)
 ```

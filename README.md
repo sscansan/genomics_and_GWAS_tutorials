@@ -1,12 +1,19 @@
-# Genomic_projects
+# Genomic_projects_tutorials
 
+🛠️ Under construction 🛠️
+
+This repository contains a collection of genomic projects that I am working on.
 GitHub repository of bioinformatic projects recolving around genomics using
-different tools like Plink through `plinkr` R package, TASSEL 5 (GUI) and
-`rTASSEL`, GEMMA. The repository has been created for self-teaching purposes and
-make use of other repositories, scripts and data sources, taken or modified as
-such.
+different tools like Plink through `plinkr` R package, `rTASSEL` and TASSEL 5
+(GUI), GEMMA for mixed models analysis in R, SAMtools from the command line to
+analyze BAM files.
 
-1. SNP profiling of goat breeds.
+The repository has been created for self-teaching purposes of biological concept
+and bioinformatic tools, and make use of other repositories, scripts and data
+sources, taken or modified as such.
+
+1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
+   https://doi.org/10.1186/s12711-018-0422-x
 
 ![Alt text](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
 <small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
@@ -18,8 +25,13 @@ the kinship matrix, and MDS analysis was conducted with the `cmdscale` function
 based on genotyping data from 49,953 SNPs. Each point represents a goat, and
 spatial arrangement reflects genetic dissimilarities. This exploratory analysis
 offers insights into genetic diversity, population structure, and relatedness.
-_Data source_: **Colli et al.** (2018) https://doi.org/10.1186/s12711-018-0422-x
 </small>
+
+2. GWAS manhattan plot of dog deafness. <br> _Data source_: **AAA**
+
+![Alt text](Figures/manhattan_dogs.png?raw=true "multidimensional scaling of SNP data")
+<small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
+Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
 
 ## Tools
 
