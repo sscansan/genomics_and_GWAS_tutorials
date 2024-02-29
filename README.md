@@ -15,7 +15,7 @@ sources, taken or modified as such.
 1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
    https://doi.org/10.1186/s12711-018-0422-x
 
-![Alt text](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
+![plot_MDS](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
 <small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
 Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
 
@@ -29,7 +29,7 @@ offers insights into genetic diversity, population structure, and relatedness.
 
 2. GWAS manhattan plot of dog deafness. <br> _Data source_: **AAA**
 
-![Alt text](Figures/manhattan_dogs.png?raw=true "multidimensional scaling of SNP data")
+![plot_manhattan](Figures/manhattan_dogs.png?raw=true "multidimensional scaling of SNP data")
 <small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
 Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
 
