@@ -42,7 +42,8 @@ of association with the trait on the y-axis. </small>
 
 ![plot SNPs](Figures/top_SNPs_comb.png?raw=true "top SNPs plot for dog deafness")
 
-![ss](Figures/tooltip.html)
+{{ $r := resources.Get (printf "Figures/tooltip.html" ($.Get 0)) }}
+{{ $r.Content | safeHTML }}
 
 ## Tools
 
