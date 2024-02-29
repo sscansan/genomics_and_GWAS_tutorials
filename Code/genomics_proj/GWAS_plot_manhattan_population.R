@@ -72,7 +72,7 @@ plot_tops <- resultGemma %>%
     filter(negLogP > 4.5) %>%
     # Plot
     ggplot(aes(x = factor(chr), y = negLogP, color = factor(rs))) +
-    geom_point(size = 4, alpha = .8) +
+    geom_jitter(size = 4, alpha = .8, width = .1) +
     # facet_wrap(~rs) +
     labs(
         title = "top scoring SNPs - full dataset",
