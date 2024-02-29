@@ -2,6 +2,8 @@ library(dplyr)
 library(readr)
 library(stringr)
 library(ggplot2)
+library(ggrepel)
+library(plotly)
 
 # read in the GWAS results
 resultGemma <- read_table("Data/deafness_dogs/AfterQC/output/GWAS_res_filter_acd.lmm.assoc.txt")
@@ -95,3 +97,48 @@ path_tops <- "Figures/top_SNPs_filtered.png"
 
 ggsave(path_tops, plot = plot_tops_filtered, width = 8, dpi = 120)
 knitr::plot_crop(path_tops)
+
+#### select just the third chromosome
+
+third_chrom_data <-
+  resultGemma %>%
+  filter(chr == 3) %>%
+  mutate(
+    ps_mb = (ps - min(ps)) / 1e6,
+    neg_log_p = -log10(p_lrt)
+  ) %>%
+  filter(neg_log_p > 3.5)
+
+plot <- third_chrom_data %>%
+  select(rs, ps_mb, neg_log_p) %>%
+  rename(LOD = neg_log_p) %>%
+  ggplot(aes(x = ps_mb, y = LOD, text = rs, col = LOD)) +
+  geom_point() +
+  scale_color_gradient(low = "dodgerblue", high = "firebrick") +
+  labs(
+    x = "Rel. position on chr. 3 (Mb)",
+    y = "LOD"
+  ) +
+  theme_bw() +
+  theme(
+    panel.border = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
+
+plotly_chr3 <- plotly::ggplotly(plot, tooltip = c("ps_mb", "rs", "LOD"))
+htmlwidgets::saveWidget(as_widget(plotly_chr3), "tooltip.html")
+
+path_tops <- "Figures/SNP_chr3_top.png"
+
+ggsave(path_tops, plot = third_chrom, width = 8, dpi = 120)
+knitr::plot_crop(path_tops)
+
+
+p <- diamonds %>%
+  filter(cut == "Fair") %>%
+  ggplot() +
+  geom_point(aes(x = price, y = carat, color = clarity))
+
+ggplotly(p)

@@ -23,6 +23,8 @@ knit:
 
 This is a GWAS attempt using a combination of R data handling and plotting in combination with PLINK for quality control and data filtering, followed by the use of Genome-wide Efficient Mixed Model Association (GEMMA) for the generation of the association/relationship matrices. GEMMA was developed to be used with PLINK, and therefore it ease the workflow accepting the same file formats and structure.
 
+!!! this is a great resource for manhattan plot customisation [https://r-graph-gallery.com/101_Manhattan_plot.html](https://r-graph-gallery.com/101_Manhattan_plot.html)
+
 ```{r}
 rm(list = ls())
 ```
@@ -213,6 +215,21 @@ This actually couldd be a stand-alone script
 source("Code/genomics_proj/GWAS_plot_manhattan_population.R")
 ```
 * Now we have as output the results of the GWAS analysis and we can plot it. The  next code will load the necessary packages and then present
+
+But hey! here the association table description!
+
+  **chr**: This column represents the chromosome number where the genetic variant (SNP) is located.
+  **rs**: This column typically represents the SNP identifier (rsID), which is a unique identifier assigned to each SNP in the dbSNP database.  
+  **ps**: This column represents the physical position (base pair position) of the SNP on the chromosome.
+  **n_miss**: This column represents the number of missing genotypes for the SNP across all individuals in the study.
+  **allele1**: This column represents one of the alleles for the SNP. It is typically the less frequent allele.
+  **allele0**: This column represents the other allele for the SNP. It is typically the more frequent allele.
+  **af**: This column represents the minor allele frequency (MAF) of the SNP, which is the frequency of the less common allele in the population.  
+  **logl_H1**: This column represents the log-likelihood of the alternative hypothesis (H1) under the model used in the analysis.
+  **l_mle**: This column represents the maximum likelihood estimate (MLE) of the log-likelihood under the model.
+  **p_lrt**: This column represents the p-value calculated using the likelihood ratio test (LRT), which is used to assess the statistical significance of the association between the SNP and the trait of interest.
+
+
 ```{r}
 # read in the GWAS results
 resultGemma <- read_table("Data/deafness_dogs/AfterQC/output/GWASresults.lmm.assoc.txt")
@@ -276,8 +293,6 @@ ggsave(path_manhattan , plot = plot_mann, width = 10, dpi = 96)
 knitr::plot_crop(path_manhattan)
 
 ```
-
-this is a great resource for manhattan plot customisation [https://r-graph-gallery.com/101_Manhattan_plot.html](https://r-graph-gallery.com/101_Manhattan_plot.html)
 
 ```{r}
 library(qqman)

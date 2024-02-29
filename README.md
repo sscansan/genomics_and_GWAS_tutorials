@@ -42,6 +42,8 @@ of association with the trait on the y-axis. </small>
 
 ![plot SNPs](Figures/top_SNPs_comb.png?raw=true "top SNPs plot for dog deafness")
 
+![ss](Figures/tooltip.html)
+
 ## Tools
 
 - **PLINK 1.90**
