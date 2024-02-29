@@ -21,7 +21,7 @@ knit:
 
 # GWAS analysis with GEMMA
 
-GEMMA has the advantage that can use PLINK file directly, without conversions.
+Genome-wide Efficient Mixed Model Association (GEMMA) has the advantage that can use PLINK file directly, without conversions.
 
 ```{r}
 rm(list = ls())
@@ -80,11 +80,12 @@ tmp <- phenoData %>%
   select(FID, IID, deafnessCode, deafnessCaseControl) %>%
   write_delim("./Data/deafness_dogs/AfterQC/GWAS_pheno_renamed.txt", delim = " ")
 ```
-###Plink QC Genotype
+### Plink QC Genotype
 
 here we use the flag `--chr-set 38` instad of the equivalent flag `--dog`.
 
 `--nonfounders` does not take in consideration the pedigree (parental) information in the .fam file, because there is no parental information and therefore information has to be removed otherwine all the individuals (animals/plants/...) are treated as founders, i.e., individuals who establish a new population or breeding group.
+
 ```{r}
 data_in <- "./Data/deafness_dogs/deafness"
 data_QC <- "./Data/deafness_dogs/AfterQC/deafness_QC"
@@ -100,9 +101,11 @@ plink \\
 --make-bed \\
 --out ", data_QC, sep = ""))
 ```
+
 the data folder AfterQC contains all the data after quality filtering.
 
 ### Merge Genotype - Phenotype table in PLINK
+
 ```{r}
 GWAS_pheno <- "./Data/deafness_dogs/AfterQC/GWAS_pheno_renamed.txt"
 GEMMA_input <- "./Data/deafness_dogs/AfterQC/GEMMA_input"
@@ -120,7 +123,9 @@ plink \\
 ```
 
 Now that we have created the phenotypes in the .fam file we can proceed to run the association genotype-phenotype with GEMMA.
-### # Optional filtering
+
+#### Optional filtering
+
 ```{r}
 # filter of a single dog breed
 
@@ -140,22 +145,101 @@ Now that we have created the phenotypes in the .fam file we can proceed to run t
 ### Run GWAS with GEMMA
 
 Filtered Dataset
+
 ```{r}
-# compute the relationship matrix for population structure correction
+# select only Australian cattle dogs - direct comparison w the paper
+#phenoData %>%
+#  filter(breed == "australian_cattle_dog") %>%
+#  mutate(FID = dogID) %>%
+#  rename(IID = dogID) %>%
+#  select(FID, IID) %>%
+#  write_delim("dogsToKeep.txt", delim = " ")
+
+#system(str_c("./plink --dog --bfile inputForGemma --nonfounders --allow-no-sex ",
+#             " --keep dogsToKeep.txt --make-bed --out inputForGemma_ACD"))
+```
+
+Complete Dataset
+
+on the output flag `-o` seems there is no way to redirect the output files in a specific folder, either it will create a outut folder at the project root or it will pop an error messsage, strange.
+However, the folder that has been created is then moved to the "/Data/deafness_dogs/AfterQC/output/" where it belongs.
+
+```{r}
+# compute the relatedness matrix for population structure correction
+
+#RelMat <- "Data/deafness_dogs/AfterQC/RelMat/"
+
 system(str_c("
 gemma \\
 -bfile ", GEMMA_input, " \\
 -gk 1 \\
--o ", RelMat, sep = ""))
+-o RelMat"))
 
-# Note: all outputs and results will be saved in the "output" directory, created automatically
+system("mv output/ Data/deafness_dogs/AfterQC")
 
 # run GEMMA
 system(str_c("
-gemma -bfile inputForGemma_ACD -k ./output/RelMat.cXX.txt -lmm 2 -o GWASresults.lmm"))
+gemma \\
+-bfile Data/deafness_dogs/AfterQC/GEMMA_input \\
+-k Data/deafness_dogs/AfterQC/output//RelMat.cXX.txt \\
+-lmm 2 \\
+-o GWASresults.lmm"))
+
+system("rsync -av output/ Data/deafness_dogs/AfterQC/output/")
+system("rm -r output/")
+
+# in some cases the output file could contain incorrect line breaks
+# possible confusion of Windows and Linux line endings
+# in such cases run the following line - and than change the file name loaded for data vizualization
+#system("tr -d '\r' <GWASresults.lmm.assoc.txt > GWASresults.lmm.assoc.lineBreaksOk.txt")
 ```
 
-Complete Dataset
+Now we have as output the results of the GWAS analysis.
+
 ```{r}
 
+# read in the GWAS results
+resultGemma <- read_table("Data/deafness_dogs/AfterQC/output/GWASresults.lmm.assoc.txt")
+head(resultGemma)
+
+resultGemma$chr <- as.factor(resultGemma$chr)
+
+# compute the Bonferroni threshold
+bonferroni05 <- -log10(0.05 / nrow(resultGemma))
+bonferroni01 <- -log10(0.01 / nrow(resultGemma))
+bonferroni001 <--log10(0.001/ nrow(resultGemma))
+
+colors <- ifelse(as.integer(levels(resultGemma$chr)) %% 2 == 0, "firebrick", "steelblue")
+
+custom_labels <- function(x) {
+  ifelse(as.numeric(x) %% 2 == 0, as.character(x), "")
+}
+
+plot <- resultGemma %>%
+  ggplot() +
+  geom_jitter(aes(chr, -log(p_lrt), color = chr), size = 2, alpha = .6, show.legend = FALSE) +
+  geom_hline(yintercept = bonferroni05, linetype = "dashed") +
+  geom_hline(yintercept = bonferroni01, linetype = "dashed") +
+  geom_hline(yintercept = bonferroni001, linetype = "dashed") +
+  scale_color_manual(values = setNames(colors, levels(resultGemma$chr))) +
+  scale_x_discrete(labels = custom_labels) +
+  labs(x = "Chromosome") +
+  theme_bw() +
+  theme(aspect.ratio = 0.6)
+
+ggsave("plot.png", width = 6, height = 4, dpi = 96)
+
+
+#manhattan plot for Gemma results
+png("GWAS_deafnessCaseControl.png")
+manhattan(resultGemma,chr="chr",bp="ps",p="p_lrt",snp="rs",genomewideline=bonferroni)
+dev.off()
+#ggsave(str_c("GWASresults_",PHENOTYPE,".png"))
+
+# QQ plot
+png("GWAS_deafnessCaseControl_QQplot.png")
+  qq(resultGemma$p_lrt)
+dev.off()
 ```
+
+is it possible to merge also the names of the canine breeds and run a geom_wrap?
