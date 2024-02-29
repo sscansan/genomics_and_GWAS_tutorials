@@ -85,7 +85,7 @@ plot_tops <- resultGemma %>%
         panel.border = element_blank(),
         panel.grid.minor.y = element_blank(),
         panel.grid.minor.x = element_blank(),
-        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+        # axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
         aspect.ratio = 1
     )
 

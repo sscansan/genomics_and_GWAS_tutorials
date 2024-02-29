@@ -38,11 +38,12 @@ nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
 corresponding -log<sub>10</sub> transformed _P_-values indicating the strength
 of association with the trait on the y-axis. </small>
 
-1. b. Plot of the top significant SNPs identified by the above GWAS.
+2. b. Plot of the top significant SNPs identified by the above GWAS.
 
 ![plot SNPs](Figures/top_SNPs_comb.png?raw=true "top SNPs plot for dog deafness")
 
-<script src="Figures/tooltip.html"></script>
+![plot SNPs](Figures/SNP_chr3_top.png?raw=true "top SNPs plot for dog deafness"){:
+height="300px"}
 
 ## Tools
 

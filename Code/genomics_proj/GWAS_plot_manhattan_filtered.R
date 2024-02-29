@@ -89,7 +89,7 @@ plot_tops_filtered <- resultGemma %>%
     panel.border = element_blank(),
     panel.grid.minor.y = element_blank(),
     panel.grid.minor.x = element_blank(),
-    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    # axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
     aspect.ratio = 1
   )
 
@@ -107,38 +107,34 @@ third_chrom_data <-
     ps_mb = (ps - min(ps)) / 1e6,
     neg_log_p = -log10(p_lrt)
   ) %>%
-  filter(neg_log_p > 3.5)
+  filter(neg_log_p >= 3.5)
+
+ifelse(third_chrom_data$neg_log_p < 4.5, NA, third_chrom_data$neg_log_p)
 
 plot <- third_chrom_data %>%
   select(rs, ps_mb, neg_log_p) %>%
   rename(LOD = neg_log_p) %>%
-  ggplot(aes(x = ps_mb, y = LOD, text = rs, col = LOD)) +
-  geom_point() +
+  ggplot(aes(x = ps_mb, y = LOD, text = rs, color = LOD)) +
+  geom_point(size = 2) +
+  geom_text_repel(aes(label = rs), size = 3, max.overlaps = 4) +
   scale_color_gradient(low = "dodgerblue", high = "firebrick") +
   labs(
     x = "Rel. position on chr. 3 (Mb)",
-    y = "LOD"
+    y = bquote(-log[10](italic(P)))
   ) +
   theme_bw() +
   theme(
     panel.border = element_blank(),
     panel.grid.minor.y = element_blank(),
     panel.grid.major.x = element_blank(),
-    panel.grid.minor.x = element_blank()
+    panel.grid.minor.x = element_blank(),
+    aspect.ratio = 1
   )
 
-plotly_chr3 <- plotly::ggplotly(plot, tooltip = c("ps_mb", "rs", "LOD"))
-htmlwidgets::saveWidget(as_widget(plotly_chr3), "tooltip.html")
+# plotly_chr3 <- plotly::ggplotly(plot, tooltip = c("ps_mb", "rs", "LOD"))
+# htmlwidgets::saveWidget(as_widget(plotly_chr3), "tooltip.html")
 
 path_tops <- "Figures/SNP_chr3_top.png"
 
-ggsave(path_tops, plot = third_chrom, width = 8, dpi = 120)
+ggsave(path_tops, plot = plot, width = 5, dpi = 120)
 knitr::plot_crop(path_tops)
-
-
-p <- diamonds %>%
-  filter(cut == "Fair") %>%
-  ggplot() +
-  geom_point(aes(x = price, y = carat, color = clarity))
-
-ggplotly(p)
