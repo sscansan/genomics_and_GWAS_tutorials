@@ -6,7 +6,7 @@ This repository contains a collection of genomic projects that I am working on.
 GitHub repository of bioinformatic projects recolving around genomics using
 different tools like Plink through `plinkr` R package, `rTASSEL` and TASSEL 5
 (GUI), GEMMA for mixed models analysis in R, SAMtools from the command line to
-analyze BAM files.
+analyze BAM files, gBLUP coming soon.
 
 The repository has been created for self-teaching purposes of biological concept
 and bioinformatic tools, and make use of other repositories, scripts and data
@@ -27,11 +27,14 @@ spatial arrangement reflects genetic dissimilarities. This exploratory analysis
 offers insights into genetic diversity, population structure, and relatedness.
 </small>
 
-2. GWAS manhattan plot of dog deafness. <br> _Data source_: **AAA**
+2. a. Manhattan plot of a GWAS on dog population for deafness. <br> _Data
+   source_: **Hayward et al.** (2020)
+   https://doi.org/10.1371/journal.pone.0232900
 
 ![plot_manhattan](Figures/manhattan_dogs.png?raw=true "manhattan plot for dog deafness")
-<small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
-Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
+![plot_manhattan](Figures/manhattan_filter_acd.png?raw=true "manhattan plot for dog deafness")
+<small>**Manhattan plots showing the genome wide association between dog
+deafness**</small>
 
 ## Tools
 

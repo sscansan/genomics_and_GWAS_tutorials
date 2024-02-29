@@ -130,33 +130,38 @@ Now that we have created the phenotypes in the .fam file we can proceed to run t
 # filter of a single dog breed
 
 # select only Australian cattle dogs - direct comparison w the paper
-#phenoData %>%
-#  filter(breed == "australian_cattle_dog") %>%
-#  mutate(FID = dogID) %>%
-#  rename(IID = dogID) %>%
-#  select(FID, IID) %>%
-#  write_delim("dogsToKeep.txt", delim = " ")
+phenoData %>%
+filter(breed == "australian_cattle_dog") %>%
+  mutate(FID = dogID) %>%
+  rename(IID = dogID) %>%
+  select(FID, IID) %>%
+  write_delim("Data/deafness_dogs/deafness_filter_acd.txt", delim = " ")
 
 # Update the .fam file with a single dog breed as GEMMA input
-#system(str_c("./plink --dog --bfile inputForGemma --nonfounders --allow-no-sex ",
-#             " --keep dogsToKeep.txt --make-bed --out inputForGemma_ACD"))
+system(str_c("
+plink \\
+-chr-set 38 \\
+--bfile Data/deafness_dogs/AfterQC/GEMMA_input \\
+--nonfounders \\
+--allow-no-sex \\
+--keep Data/deafness_dogs/deafness_filter_acd.txt \\
+--make-bed \\
+--out Data/deafness_dogs/AfterQC/deafness_filter_acd"))
 ```
 
 ### Run GWAS with GEMMA
 
-#####Filtered Dataset
-
+##### filtered Dataset
 ```{r}
-# select only Australian cattle dogs - direct comparison w the paper
-#phenoData %>%
-#  filter(breed == "australian_cattle_dog") %>%
-#  mutate(FID = dogID) %>%
-#  rename(IID = dogID) %>%
-#  select(FID, IID) %>%
-#  write_delim("dogsToKeep.txt", delim = " ")
+# compute the relationship matrix for population structure correction
+system("gemma -bfile Data/deafness_dogs/AfterQC/deafness_filter_acd -gk 1 -o RelMat_filter_ACD")
+system("gemma -bfile Data/deafness_dogs/AfterQC/deafness_filter_acd -k ./output/RelMat_filter_ACD.cXX.txt -lmm 2 -o GWAS_res_filter_acd.lmm")
 
-#system(str_c("./plink --dog --bfile inputForGemma --nonfounders --allow-no-sex ",
-#             " --keep dogsToKeep.txt --make-bed --out inputForGemma_ACD"))
+system("rsync -av output/ Data/deafness_dogs/AfterQC/output/")
+system("rm -r output/")
+
+source("Code/genomics_proj/GWAS_plot_manhattan_filtered.R")
+
 ```
 
 ##### Complete Dataset
@@ -202,9 +207,9 @@ makes a unique temp directory<sup>*</sup> where the output is stored, here relat
 
 <sup>*</sup> Errata Corriege: The `mktemp` command creates a temporary filename (not a directory) which does not exist yet. The `-p` option tells to redirect in a directory.
 
+#### Manhattan plot - entire dataset
+This actually couldd be a stand-alone script
 * Now we have as output the results of the GWAS analysis and we can plot it. The  next code will load the necessary packages and then present
-
-
 ```{r}
 # read in the GWAS results
 resultGemma <- read_table("Data/deafness_dogs/AfterQC/output/GWASresults.lmm.assoc.txt")
@@ -231,6 +236,9 @@ data_man <- resultGemma %>%
 x_axis_chr <- data_man %>%
   group_by(chr) %>%
   summarise(center = (max(PScum) + min(PScum)) / 2)
+
+labels <- rep("", length(x_axis_chr$chr)) # Initialize labels with empty strings
+labels[seq(1, length(x_axis_chr$chr), by = 2)] <- x_axis_chr$chr[seq(1, length(x_axis_chr$chr), by = 2)]
 ```
 ```{r}
 # compute the Bonferroni threshold
@@ -241,13 +249,13 @@ tresh <- -log10(5 * 10^(-8))
 plot_mann <- data_man %>%
   ggplot(aes(PScum, neglogP)) +
   geom_point(aes(color = as.factor(chr)), size = 2, alpha = .4, show.legend = FALSE) +
-  geom_hline(yintercept = bonferroni05, linetype = "dashed") +
-  #geom_hline(yintercept = bonferroni01, linetype = "dashed") +
-  scale_color_manual(values = rep(c("blue", "steelblue"), 38)) +
-  scale_x_continuous(label = x_axis_chr$chr, breaks = x_axis_chr$center) +
+  geom_hline(yintercept = bonferroni05, linetype = "dashed", color = "indianred") +
+  annotate("text", x = 1920657988, y = bonferroni05-0.25, label = bquote(-log[10](0.05/italic(tests)))) +
+  scale_color_manual(values = rep(c("indianred", "steelblue3"), 38)) +
+  scale_x_continuous(label = labels, breaks = x_axis_chr$center) +
   scale_y_continuous(expand = c(0, 0)) +
   labs(
-    title = "manhattan_plot",
+    title = "Manhattan plot",
     x = "Chromosome #",
     y = bquote(-log[10](italic(P)))) +
   theme_bw() +
@@ -283,6 +291,5 @@ is it possible to merge also the names of the canine breeds and run it through a
 resultGemma %>%
   mutate(negLogP = -log10(p_lrt)) %>%
   select(chr, rs, p_lrt, negLogP) %>%
-  summary()
   filter(negLogP > 5)
 ```
