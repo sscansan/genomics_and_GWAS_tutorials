@@ -255,12 +255,12 @@ plot_mann <- data_man %>%
       panel.border = element_blank(),
       panel.grid.minor.x = element_blank(),
       panel.grid.major.x = element_blank(),
-      aspect.ratio = 0.6
+      aspect.ratio = 0.4
     )
 
 path_manhattan <- "Figures/manhattan_dogs.png"
 
-ggsave(path_manhattan , plot = plot_mann, width = 10)
+ggsave(path_manhattan , plot = plot_mann, width = 10, dpi = 120)
 knitr::plot_crop(path_manhattan)
 
 ```
