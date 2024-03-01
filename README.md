@@ -42,7 +42,7 @@ of association with the trait on the y-axis. </small>
 
 ![plot SNPs](Figures/top_SNPs_comb.png?raw=true "top SNPs plot for dog deafness")
 
-![plot SNPs](Figures/SNP_chr3_top.png?raw=true "top SNPs plot for dog deafness"){: height="300px"}
+<img src="Figures/SNP_chr3_top.png" height="300px">
 
 ## Tools
 
