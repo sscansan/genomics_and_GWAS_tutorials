@@ -39,7 +39,11 @@ nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
 corresponding -log<sub>10</sub> transformed _P_-values indicating the strength
 of association with the trait on the y-axis. </small>
 
+<<<<<<< HEAD
 1. b. Plot of the top significant SNPs identified by the above GWAS.
+=======
+2. b. Plot of the top significant SNPs identified in the above GWAS.
+>>>>>>> f12b1c818576aecd2395d1dbc41a7ca68f8da442
 
 <img src="Figures/top_SNPs_comb.png" height="350px">
 
