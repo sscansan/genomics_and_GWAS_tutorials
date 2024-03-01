@@ -1,6 +1,6 @@
-# Genomic_projects_tutorials
+# Genomic projects tutorials
 
-🛠️ Under construction 🛠️
+!!! warning "This repository is under construction"
 
 This repository contains a collection of genomic projects that I am working on.
 GitHub repository of bioinformatic projects recolving around genomics using
@@ -15,7 +15,8 @@ sources, taken or modified as such.
 1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
    https://doi.org/10.1186/s12711-018-0422-x
 
-![plot_MDS](Figures/goat_mds_2.png?raw=true "multidimensional scaling of SNP data")
+<img src="Figures/goat_mds_2.png" height="350px">
+
 <small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
 Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
 
@@ -27,22 +28,23 @@ spatial arrangement reflects genetic dissimilarities. This exploratory analysis
 offers insights into genetic diversity, population structure, and relatedness.
 </small>
 
-2. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
+1. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
    **Hayward et al.** (2020) https://doi.org/10.1371/journal.pone.0232900
 
-![plot_manhattan](Figures/manhattan_dogs.png?raw=true "manhattan plot for dog deafness")
-![plot_manhattan](Figures/manhattan_filter_acd.png?raw=true "manhattan plot for dog deafness")
+<img src="Figures/manhattan_dogs.png" height="350px">
+<img src="Figures/manhattan_filter_acd.png" height="350px">
 <small>Manhattan plots showing the genome wide association (GWA) between dog
 deafness and their genotype. The plot displays the genomic positions of single
 nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
 corresponding -log<sub>10</sub> transformed _P_-values indicating the strength
 of association with the trait on the y-axis. </small>
 
-2. b. Plot of the top significant SNPs identified by the above GWAS.
+1. b. Plot of the top significant SNPs identified by the above GWAS.
 
-![plot SNPs](Figures/top_SNPs_comb.png?raw=true "top SNPs plot for dog deafness")
+<img src="Figures/top_SNPs_comb.png" height="350px">
 
-<img src="Figures/SNP_chr3_top.png" height="300px">
+and a zoom in the chromosome 3 above LOD 3.5.
+<img src="Figures/SNP_chr3_top.png" height="350px">
 
 ## Tools
 

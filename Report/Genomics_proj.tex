@@ -1,0 +1,60 @@
+\documentclass[a4paper,onecolumn,10pt]{article}
+
+\usepackage{graphicx}
+\usepackage{markdown}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+
+\begin{document}
+
+\title{Genomic projects}
+\author{Stefano Scansani}
+\date{\today}
+\maketitle
+\begin{abstract}
+
+    So far this is the \LaTeX{} versin of the README.md.
+
+\end{abstract}
+\tableofcontents
+\listoffigures
+\listoftables
+
+%\input{output.tex}
+\markdownInput{../README.md}
+
+%\begin{twocolumn}
+
+\section{Project: SNP Profiling of worldwide goat populations}
+
+\subsection{Data}
+
+Data source: Colli et al. (2018)
+https://doi.org/10.1186/s12711-018-0422-x
+
+\section{Methods}
+
+\subsubsection{Data import}
+
+\section{Results}
+
+\subsubsection{Multidimensional scaling}
+\begin{figure*}
+    \centering
+    \includegraphics[height=8cm]{../Figures/goat_mds.pdf}
+    \label{fig:gwas_pop_PCA}
+    \caption{Multidimensional Scaling of the goat dataset}
+\end{figure*}
+
+
+\begin{figure*}
+    \centering
+    \includegraphics[height=8cm]{../Figures/goat_mds_filtered.pdf}
+    \label{fig:gwas_PCA}
+    \caption{Multidimensional Scaling of the goat dataset, subset of 6 goat breeds.}
+\end{figure*}
+
+%\end{twocolumn}
+\end{document}
