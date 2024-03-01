@@ -35,13 +35,13 @@ labels[seq(1, length(x_axis_chr$chr), by = 2)] <- x_axis_chr$chr[seq(1, length(x
 # compute the Bonferroni threshold
 bonferroni05 <- -log10(0.05 / nrow(resultGemma))
 bonferroni01 <- -log10(0.01 / nrow(resultGemma))
-tresh <- -log10(5 * 10^(-8))
+tresh <- quantile(data_man$neglogP, .9999)
 
 plot_mann <- data_man %>%
     ggplot(aes(PScum, neglogP)) +
     geom_point(aes(color = as.factor(chr)), size = 2, alpha = .4, show.legend = FALSE) +
-    geom_hline(yintercept = bonferroni05, linetype = "dashed", color = "indianred") +
-    annotate("text", x = 1920657988, y = bonferroni05 - 0.25, label = bquote(-log[10](0.05 / italic(tests)))) +
+    geom_hline(yintercept = tresh, linetype = "dashed", color = "indianred") +
+    # annotate("text", x = bonferroni05, y = bonferroni05 - 0.25, label = bquote(-log[10](0.05 / italic(tests)))) +
     scale_color_manual(values = rep(c("grey60", "steelblue3"), 38)) +
     scale_x_continuous(label = labels, breaks = x_axis_chr$center) +
     scale_y_continuous(expand = c(0, 0)) +
@@ -93,3 +93,6 @@ path_tops <- "Figures/top_SNPs.png"
 
 ggsave(path_tops, plot = plot_tops, width = 8, dpi = 120)
 knitr::plot_crop(path_tops)
+
+# Linkage disequilibrium decay
+#

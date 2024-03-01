@@ -1,8 +1,8 @@
 # Fdb version 4
-["lualatex"] 1709282835 "/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex" "build/Genomics_proj.pdf" "Genomics_proj" 1709282838 0
+["lualatex"] 1709301082 "/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex" "build/Genomics_proj.pdf" "Genomics_proj" 1709301085 0
   "../Figures/goat_mds.pdf" 1709162840 192670 d7510a84d9ff23b59fa5b500ef106421 ""
   "../Figures/goat_mds_filtered.pdf" 1709163114 44696 0657baa157c774ea7083400bd73872c0 ""
-  "../README.md" 1709282832 8414 0f4447afabf3159922b0465ed0a672ec ""
+  "../README.md" 1709301079 8826 8409c3d2b6f803ef0bf9d136f2c7f030 ""
   "/home/sscansa/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1689196955 127327 0c22a2c7faa4e80fd8c3443dc8dd3208 ""
   "/home/sscansa/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1689196955 350692 84fcdfdc5d8fb4c0b4328303e12305a0 ""
   "/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex" 1709282048 1204 22439003d71616f1aa3dc8a05e8975ba ""
@@ -171,12 +171,12 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1689196131 4643411 808b8df776595c3e72145e027cce2612 ""
   "/usr/local/texlive/2023/texmf-var/web2c/luahbtex/lualatex.fmt" 1689196212 12181538 96779bb1efaa886525defd832a092877 ""
   "Genomics_proj.tex" 1709282048 1204 22439003d71616f1aa3dc8a05e8975ba ""
-  "_markdown_Genomics_proj/0076d3067448ddd56a94d6f1c2646cf3.md.tex" 1709282835 17014 18ae7b9c1f8cecde253e5137087ab4ba ""
+  "_markdown_Genomics_proj/04cfb430a4c20f8c7f66a194ed316fef.md.tex" 1709301082 17612 a2e68af7719b3a3e9ca6ba18d33595a3 ""
   "build/../README.md" 1707732253 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "build/Genomics_proj.aux" 1709282838 2049 fa0998fd71fd6b863a9d052a2d79dda9 "lualatex"
-  "build/Genomics_proj.lof" 1709282838 238 34135a44a431ef17775c166b1d0b5e94 "lualatex"
-  "build/Genomics_proj.lot" 1709282838 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "build/Genomics_proj.toc" 1709282838 1033 de23a30914a03f64fb36dd6348bb2438 "lualatex"
+  "build/Genomics_proj.aux" 1709301085 2049 fa0998fd71fd6b863a9d052a2d79dda9 "lualatex"
+  "build/Genomics_proj.lof" 1709301085 238 34135a44a431ef17775c166b1d0b5e94 "lualatex"
+  "build/Genomics_proj.lot" 1709301085 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "build/Genomics_proj.toc" 1709301085 1033 de23a30914a03f64fb36dd6348bb2438 "lualatex"
   (generated)
   "build/Genomics_proj.aux"
   "build/Genomics_proj.lof"

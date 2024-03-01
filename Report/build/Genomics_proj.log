@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  1 MAR 2024 09:47
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  1 MAR 2024 14:51
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex
@@ -342,7 +342,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 \openout8 = Genomics_proj.lot
 Package markdown Info: Including markdown document "../README.md" on input line 26.
- (./_markdown_Genomics_proj/0076d3067448ddd56a94d6f1c2646cf3.md.tex [1
+ (./_markdown_Genomics_proj/04cfb430a4c20f8c7f66a194ed316fef.md.tex [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
@@ -364,111 +364,111 @@ Overfull \hbox (4.08667pt too wide) in paragraph at lines 16--16
 \T1/phv/m/sl/10 hat-tan\T1/phv/m/n/10 filter_acd.png" height="350px"> <small>Man-hat-tan plots show-ing the genome
  []
 
-
-Overfull \hbox (29.06613pt too wide) in paragraph at lines 21--21
-[]\T1/phv/m/n/10 and a zoom in the chro-mo-some 3 above LOD 3.5. <img src="Fig-ures/SNP\T1/phv/m/sl/10 chr3\T1/phv/m/n/10 top.png"
- []
-
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 23.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 25.
+(Font)              scaled to size 11.39996pt on input line 24.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 26.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 25.
+(Font)              scaled to size 9.49997pt on input line 26.
 
-Overfull \hbox (55.88193pt too wide) in paragraph at lines 26--27
+Overfull \hbox (55.88193pt too wide) in paragraph at lines 27--28
 []\T1/lmtt/m/n/10 plinkr \T1/phv/m/n/10 R pack-age repos-i-tory doc-u-men-ta-tion. $\T1/lmtt/m/n/10 https://github.com/AJResearchGroup/
  []
 
 
-Overfull \hbox (3.8096pt too wide) in paragraph at lines 28--29
+Overfull \hbox (3.8096pt too wide) in paragraph at lines 29--30
 \T1/lmtt/m/n/10 rtassel.maizegenetics.net/index.html$\T1/phv/m/n/10 , Repos-i-tory: $\T1/lmtt/m/n/10 https://github.
  []
 
 [2
 Missing character: There is no – (U+2013) in font phvr8t!
 ]
-Overfull \hbox (8.96573pt too wide) in paragraph at lines 36--37
+Overfull \hbox (42.33238pt too wide) in paragraph at lines 32--33
+[]\T1/lmtt/m/n/10 GPtour \T1/phv/m/n/10 Ge-nomic Pre-dic-tion in R us-ing Keras mod-els https://github.com/miguelperezen-
+ []
+
+
+Overfull \hbox (8.96573pt too wide) in paragraph at lines 39--40
 []\T1/phv/b/n/10 Ma-rees et al. \T1/phv/m/n/10 (2018) tu-to-rial $\T1/lmtt/m/n/10 https://github.com/MareesAT/GWA_tutorial$ 
  []
 
 
-Overfull \hbox (28.41689pt too wide) in paragraph at lines 37--38
+Overfull \hbox (28.41689pt too wide) in paragraph at lines 40--41
 []\T1/phv/b/n/10 Gá-bor Mészáros \T1/phv/m/n/10 (2021) Ge-nomic Boot Camp Book $\T1/lmtt/m/n/10 https://genomicsbootcamp.
  []
 
 
-Overfull \hbox (35.73947pt too wide) in paragraph at lines 38--39
+Overfull \hbox (35.73947pt too wide) in paragraph at lines 41--42
 []\T1/phv/b/n/10 Gá-bor Mészáros \T1/phv/m/n/10 video tu-to-ri-als $\T1/lmtt/m/n/10 https://www.youtube.com/c/GenomicsBootCamp$ 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 41.
+(Font)              scaled to size 6.64998pt on input line 44.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 41.
+(Font)              scaled to size 7.59998pt on input line 44.
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--41
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
 [][]$\T1/lmtt/m/n/8 https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.
  []
 
 
-Overfull \hbox (68.98935pt too wide) in paragraph at lines 41--42
+Overfull \hbox (68.98935pt too wide) in paragraph at lines 44--45
 \T1/phv/m/n/10 mix-ture in Do-mes-ti-cated Cat-tle. \T1/phv/m/sl/10 PLOS Ge-net-ics \T1/phv/m/n/10 10(3): e1004254.https://doi.org/10.1371/jour-
- []
-
-
-Overfull \hbox (35.5446pt too wide) in paragraph at lines 56--60
-[]\T1/phv/m/n/10 In-stall PLINK  \T1/lmtt/m/n/10 cd Downloads/ sudo unzip plink_linux_x86_64_20200616.zip
  []
 
 [3
 Missing character: There is no – (U+2013) in font phvr8t!
 ]
-Overfull \hbox (0.24907pt too wide) in paragraph at lines 65--66
+Overfull \hbox (35.5446pt too wide) in paragraph at lines 59--63
+[]\T1/phv/m/n/10 In-stall PLINK  \T1/lmtt/m/n/10 cd Downloads/ sudo unzip plink_linux_x86_64_20200616.zip
+ []
+
+
+Overfull \hbox (0.24907pt too wide) in paragraph at lines 68--69
 [] \T1/lmtt/m/n/10 cd plink_install sudo cp plink /usr/local/bin sudo chmod 755
  []
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 98.
 
-Overfull \hbox (84.7488pt too wide) in paragraph at lines 103--103
+Overfull \hbox (84.7488pt too wide) in paragraph at lines 106--106
 [] \T1/lmtt/m/n/10 sudo apt install default-jdk sudo R CMD javareconf R install.packages("rJava") 
  []
 
 
-Overfull \hbox (95.24876pt too wide) in paragraph at lines 115--115
+Overfull \hbox (95.24876pt too wide) in paragraph at lines 118--118
 [] \T1/lmtt/m/n/10 if (!require("devtools")) install.packages("devtools") devtools::install_github(
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 115--115
+Overfull \hbox (1.499pt too wide) in paragraph at lines 118--118
 \T1/lmtt/m/n/10 repo = "maize-genetics/rTASSEL", ref = "master", build_vignettes =
  []
 
 
-Overfull \hbox (95.24876pt too wide) in paragraph at lines 127--127
+Overfull \hbox (95.24876pt too wide) in paragraph at lines 130--130
 [] \T1/lmtt/m/n/10 options(java.parameters = c("-Xmx50g", "-Xms50g")) rTASSEL::startLogger(fullPath
  []
 
 [4]
-Overfull \hbox (7.68784pt too wide) in paragraph at lines 135--135
+Overfull \hbox (7.68784pt too wide) in paragraph at lines 138--138
 []\T1/phv/m/n/10 Use-ful re-source for \T1/lmtt/m/n/10 rTASSEL \T1/phv/m/n/10 are the vi-gnettes and tu-to-ri-als at $\T1/lmtt/m/n/10 https://rtassel.
  []
 
 
-Overfull \hbox (0.74904pt too wide) in paragraph at lines 145--145
+Overfull \hbox (0.74904pt too wide) in paragraph at lines 148--148
 [] \T1/lmtt/m/n/10 conda config --add channels defaults conda config --add channels
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 145--145
+Overfull \hbox (1.499pt too wide) in paragraph at lines 148--148
 \T1/lmtt/m/n/10 conda-forge conda config --add channels biocond conda install gemma 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 150--27
+Underfull \hbox (badness 10000) in paragraph at lines 153--27
 
  []
 
@@ -499,12 +499,12 @@ Here is how much of LuaTeX's memory you used:
  100000,1977958 words of node,token memory allocated
  580 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 8 glue, 4 kern, 1 glyph, 12 attribute, 58 glue_spec, 12 attribute_list, 1 write nodes
-   avail lists: 1:1,2:505,3:323,4:7,5:301,6:57,7:6475,8:78,9:293,10:5,11:416
+   avail lists: 1:1,2:516,3:336,4:7,5:303,6:57,7:6709,8:78,9:293,10:5,11:434
  28252 multiletter control sequences out of 65536+600000
  88 fonts using 5808287 bytes
  82i,8n,76p,985b,368s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Genomics_proj.pdf (6 pages, 356810 bytes).
+Output written on Genomics_proj.pdf (6 pages, 357315 bytes).
 
 PDF statistics: 73 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream

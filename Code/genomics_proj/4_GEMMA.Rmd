@@ -336,8 +336,8 @@ knitr::plot_crop(path_manhattan)
 ```
 
 ```{r}
-source("Code/genomics_proj/GWAS_plot_manhattan_filtered.R")
-source("Code/genomics_proj/GWAS_plot_manhattan_population.R")
+source("Code/genomics_proj/5a_GWAS_plot_manhattan_filtered.R")
+source("Code/genomics_proj/5b_GWAS_plot_manhattan_population.R")
 
 library(patchwork)
 plot_tops_comb <- plot_tops + plot_tops_filtered

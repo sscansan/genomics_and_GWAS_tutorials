@@ -8,7 +8,7 @@ different tools like Plink through `plinkr` R package, `rTASSEL` and TASSEL 5
 (GUI), GEMMA for mixed models analysis in R, SAMtools from the command line to
 analyze BAM files, gBLUP coming soon.
 
-The repository has been created for self-teaching purposes of biological concept
+The repository has been created for testing and self-teaching purposes of biological concept
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
@@ -36,14 +36,15 @@ offers insights into genetic diversity, population structure, and relatedness.
 <small>Manhattan plots showing the genome wide association (GWA) between dog
 deafness and their genotype. The plot displays the genomic positions of single
 nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
-corresponding -log<sub>10</sub> transformed _P_-values indicating the strength
-of association with the trait on the y-axis. </small>
+corresponding -log<sub>10</sub> transformed P-values indicating the strength
+of association with the trait on the y-axis. The red-dashed lines are representation of the 99.99 percentile treshold of the LOD values.</small>
 
 2. b. Plot of the top significant SNPs identified in the above GWAS.
 
 <img src="Figures/top_SNPs_comb.png" height="350px">
 
 and a zoom in the chromosome 3 above LOD 3.5.
+
 <img src="Figures/SNP_chr3_top.png" height="350px">
 
 ## Tools
@@ -71,6 +72,10 @@ and a zoom in the chromosome 3 above LOD 3.5.
   [https://github.com/genetics-statistics/GEMMA](https://github.com/genetics-statistics/GEMMA).
   **Xiang Zhou and Matthew Stephens** (2012). Genome-wide efficient mixed-model
   analysis for association studies. _Nature Genetics_ 44, 821–824.
+
+- `rMVP` A Memory-efficient, Visualization-enhanced, and Parallel-accelerated Tool for Genome-Wide Association Study https://github.com/xiaolei-lab/rMVP
+
+- `GPtour` Genomic Prediction in R using Keras models https://github.com/miguelperezenciso/GPtour and https://keras.posit.co/articles/getting_started.html
 
 ## Resources & Data
 

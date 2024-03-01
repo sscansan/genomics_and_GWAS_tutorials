@@ -39,18 +39,18 @@ labels[seq(1, length(x_axis_chr$chr), by = 2)] <- x_axis_chr$chr[seq(1, length(x
 bonferroni2 <- -log10(0.2 / nrow(resultGemma))
 bonferroni05 <- -log10(0.05 / nrow(resultGemma))
 bonferroni01 <- -log10(0.01 / nrow(resultGemma))
-tresh <- -log10(5 * 10^(-8))
+tresh <- quantile(data_man$neglogP, .9999)
 
 plot_mann <- data_man %>%
   ggplot(aes(PScum, neglogP)) +
   geom_point(aes(color = as.factor(chr)), size = 2, alpha = .4, show.legend = FALSE) +
-  geom_hline(yintercept = bonferroni2, linetype = "dashed", color = "indianred") +
-  annotate("text", x = 1920657988, y = bonferroni2 - 0.25, label = bquote(-log[10](0.1 / italic(tests)))) +
+  geom_hline(yintercept = tresh, linetype = "dashed", color = "indianred") +
+  # annotate("text", x = 1920657988, y = bonferroni2 - 0.25, label = bquote(-log[10](0.1 / italic(tests)))) +
   scale_color_manual(values = rep(c("grey60", "steelblue3"), 38)) +
   scale_x_continuous(label = labels, breaks = x_axis_chr$center) +
   scale_y_continuous(expand = c(0, 0)) +
   labs(
-    title = "Manhattan plot_subset individuals",
+    title = "Manhattan plot_subset individuals ACD breed",
     x = "Chromosome #",
     y = bquote(-log[10](italic(P)))
   ) +
