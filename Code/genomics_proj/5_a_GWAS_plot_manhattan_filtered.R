@@ -107,7 +107,7 @@ third_chrom_data <-
     ps_mb = (ps - min(ps)) / 1e6,
     neg_log_p = -log10(p_lrt)
   ) %>%
-  filter(neg_log_p >= 3.5)
+  filter(neg_log_p >= 4.5)
 
 ifelse(third_chrom_data$neg_log_p < 4.5, NA, third_chrom_data$neg_log_p)
 
@@ -116,7 +116,8 @@ plot <- third_chrom_data %>%
   rename(LOD = neg_log_p) %>%
   ggplot(aes(x = ps_mb, y = LOD, text = rs, color = LOD)) +
   geom_point(size = 2) +
-  geom_text_repel(aes(label = rs), size = 3, max.overlaps = 4) +
+  geom_hline(yintercept = tresh, linetype = "dashed", color = "indianred") +
+  geom_text_repel(aes(label = rs), size = 3, max.overlaps = 8) +
   scale_color_gradient(low = "dodgerblue", high = "firebrick") +
   labs(
     x = "Rel. position on chr. 3 (Mb)",

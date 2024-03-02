@@ -41,9 +41,11 @@ of association with the trait on the y-axis. The red-dashed lines are representa
 
 2. b. Plot of the top significant SNPs identified in the above GWAS.
 
+   <small>Points are jittered around their respective chromosome, not representing the chromosome position.</small>
+
 <img src="Figures/top_SNPs_comb.png" height="350px">
 
-and a zoom in the chromosome 3 above LOD 3.5.
+and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
 
 <img src="Figures/SNP_chr3_top.png" height="350px">
 
