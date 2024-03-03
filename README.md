@@ -15,7 +15,8 @@ sources, taken or modified as such.
 1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
    https://doi.org/10.1186/s12711-018-0422-x
 
-<img src="Figures/goat_mds_2.png" height="350px">
+<img src="Figures/goat_mds_12.png" height="350px">
+<img src="Figures/goat_mds_eigen_filter.png" height="350px">
 
 <small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
 Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>

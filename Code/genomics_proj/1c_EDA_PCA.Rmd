@@ -90,7 +90,7 @@ eigen_percent_goat_pop <-
   mutate("row" = as.numeric(rownames(.))) %>%
   select("row", "exp_var") %>%
   filter(row_number() <= 10) %>%
-  as.tibble() %>%
+  as_tibble() %>%
   ggplot(aes(., x = row, y = exp_var)) +
   geom_col(color = "gray", fill = "gray", alpha = .75) +
   geom_line(color = "gray20") +
@@ -130,12 +130,36 @@ mds_goat <-
       axis.ticks = element_line()
     )
 
+mds_goat_2 <-
+  eigenvec_populations %>%
+  ggplot(.) +
+  geom_vline(xintercept = 0, linetype = "dotted", color = "grey20") +
+  geom_hline(yintercept = 0, linetype = "dotted", color = "grey20") +
+  geom_point(aes(x = -`2`, y = `3`, color = famids), size = 1, alpha = .8, show.legend = FALSE) +
+  labs(
+    title = "MDS of worldwide goat population",
+    x = paste0("Dimension 2 (", eigen_percent[2], " %)"),
+    y = paste0("Dimension 3 (", eigen_percent[3], " %)")
+  ) +
+  #theme_pomological_fancy() +
+  #scale_color_pomological() +
+  theme_minimal() +
+    theme(
+      aspect.ratio = 1,
+      panel.grid = element_blank(),
+      axis.ticks = element_line()
+    )
+
+#assemble
 require("patchwork")
-mds_goat_var <- mds_goat | eigen_percent_goat_pop
+mds_goat_var <- mds_goat | mds_goat_2
+#save_cut
+path <- "Figures/goat_mds_12.png"
+ggsave(path, plot = mds_goat_var, width = 10, dpi = 120, type = "cairo")
+knitr::plot_crop(path)
 
-
-ggsave("Figures/goat_mds.pdf", plot = mds_goat_var, height = 5, width = 9, dpi = 600, device = grDevices::cairo_pdf)
-ggsave("Figures/goat_mds.png", plot = mds_goat_var, height = 5, width = 9, dpi = 96)
+#ggsave("Figures/goat_mds_12.pdf", plot = mds_goat_var, height = 5, width = 9, dpi = 600, device = grDevices::cairo_pdf)
+#ggsave("Figures/goat_mds_12.png", plot = mds_goat_var, height = 5, width = 9, dpi = 96)
 
 ```
 
@@ -183,7 +207,7 @@ eigenVectors <- read_delim("Data/ADAPTmap_genotypeTOP_20160222_full/out/plinkMDS
 eigen_percent <- round((eigenValues / (sum(eigenValues))*100), 1)
 
 # PCA plot
-mds_gooat_filtered <-
+mds_goat_filtered <-
   eigenVectors %>%
   mutate(
     X1A = case_when(
@@ -219,7 +243,7 @@ ggplot(.) +
       axis.ticks = element_line()
     )
 
-    mds_gooat_filtered
+    mds_goat_filtered
 
 ggsave("Figures/goat_mds_filtered.pdf", plot = mds_gooat_filtered, height = 5, width = 6, dpi = 600, device = grDevices::cairo_pdf)
 ggsave("Figures/goat_mds_filtered.png", plot = mds_gooat_filtered, height = 5, width = 6, dpi = 96)
@@ -230,10 +254,19 @@ knitr::plot_crop("Figures/goat_mds_filtered.png")
 ```{r}
 # assemble the 2 images
 
-final <- mds_goat + mds_gooat_filtered
+final <- mds_goat + mds_goat_filtered
 
 path <- "Figures/goat_mds_2.png"
 
 ggsave(path, plot = final, width = 10, dpi = 120, type = "cairo")
 knitr::plot_crop(path)
+```
+
+```{r}
+eigen_filter <- eigen_percent_goat_pop + mds_gooat_filtered
+
+path <- "Figures/goat_mds_eigen_filter.png"
+ggsave(path, plot = eigen_filter, width = 10, dpi = 120, type = "cairo")
+knitr::plot_crop(path)
+
 ```
