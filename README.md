@@ -49,8 +49,8 @@ The code of the pipeline to recreate the images is in `Code/genomics_proj/*.Rmd`
 1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
    https://doi.org/10.1186/s12711-018-0422-x
 
-<img src="Figures/goat_mds_12.png" height="350px">
-<img src="Figures/goat_mds_eigen_filter.png" height="325px">
+<img src="Figures/goat_mds_12.png" height="375px">
+<img src="Figures/goat_mds_eigen_filter.png" height="350px">
 
 <small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
 Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
@@ -66,8 +66,8 @@ offers insights into genetic diversity, population structure, and relatedness.
 2. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
    **Hayward et al.** (2020) https://doi.org/10.1371/journal.pone.0232900
 
-<img src="Figures/manhattan_dogs.png" height="350px">
-<img src="Figures/manhattan_filter_acd.png" height="350px">
+<img src="Figures/manhattan_dogs.png" height="375px">
+<img src="Figures/manhattan_filter_acd.png" height="375px">
 <small>Manhattan plots showing the genome wide association (GWA) between dog
 deafness and their genotype. The plot displays the genomic positions of single
 nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
@@ -78,11 +78,11 @@ of association with the trait on the y-axis. The red-dashed lines are representa
 
    <small>Points are jittered around their respective chromosome.</small>
 
-<img src="Figures/top_SNPs_comb.png" height="350px">
+<img src="Figures/top_SNPs_comb.png" height="375px">
 
 and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
 
-<img src="Figures/SNP_chr3_top.png" height="350px">
+<img src="Figures/SNP_chr3_top.png" height="375px">
 
 ## Resources & Data
 
