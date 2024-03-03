@@ -41,7 +41,7 @@ of association with the trait on the y-axis. The red-dashed lines are representa
 
 2. b. Plot of the top significant SNPs identified in the above GWAS.
 
-   <small>Points are jittered around their respective chromosome, not representing the chromosome position.</small>
+   <small>Points are jittered around their respective chromosome.</small>
 
 <img src="Figures/top_SNPs_comb.png" height="350px">
 
