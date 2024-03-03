@@ -44,7 +44,7 @@ The code of the pipeline to recreate the images is in `Code/genomics_proj/*.Rmd`
 
 - `GPtour` Genomic Prediction in R using Keras models https://github.com/miguelperezenciso/GPtour and https://keras.posit.co/articles/getting_started.html
 
-  ## Example case studies
+## Example case studies
 
 1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
    https://doi.org/10.1186/s12711-018-0422-x
