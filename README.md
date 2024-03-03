@@ -63,7 +63,7 @@ spatial arrangement reflects genetic dissimilarities. This exploratory analysis
 offers insights into genetic diversity, population structure, and relatedness.
 </small>
 
-1. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
+2. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
    **Hayward et al.** (2020) https://doi.org/10.1371/journal.pone.0232900
 
 <img src="Figures/manhattan_dogs.png" height="350px">
