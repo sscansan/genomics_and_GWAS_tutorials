@@ -56,7 +56,7 @@ sources, taken or modified as such.
 
 - `GPtour` Genomic Prediction in R using Keras models https://github.com/miguelperezenciso/GPtour and https://keras.posit.co/articles/getting_started.html
 
-- `GAPIT` Genome Association and Integrated https://github.com/jiabowang/GAPIT
+- `GAPIT` Genome Association and Integrated Tools https://github.com/jiabowang/GAPIT
 
 ## Example case studies
 

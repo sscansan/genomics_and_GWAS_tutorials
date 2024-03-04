@@ -97,7 +97,7 @@ eigen_percent_goat_pop <-
   geom_point(color = "grey20") +
   scale_x_continuous(expand = c(0.01, 0), breaks = c(1:10)) +
   scale_y_continuous(expand = c(0.01, 0)) +
-  labs(title = "Explained variances in the first 10 dimensions", x = "Dimensions", y = "Explained variance (%)") +
+  labs(title = "Explained var. in the first 10 dim.", x = "Dimensions", y = "Explained variance (%)") +
   theme_classic() +
   theme(
     aspect.ratio = 1,
@@ -263,7 +263,7 @@ knitr::plot_crop(path)
 ```
 
 ```{r}
-eigen_filter <- eigen_percent_goat_pop + mds_gooat_filtered
+eigen_filter <- eigen_percent_goat_pop + mds_goat_filtered
 
 path <- "Figures/goat_mds_eigen_filter.png"
 ggsave(path, plot = eigen_filter, width = 10, dpi = 120, type = "cairo")
