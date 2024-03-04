@@ -23,7 +23,7 @@ Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
 
 <small>The MDS plot visualizes genetic relationships among 4,653 individuals
 from 169 goat breeds. Genetic distances were computed using PLINK to generate
-the kinship matrix, and MDS analysis was conducted with the `cmdscale` function
+the distance matrix, and MDS analysis was conducted with the `cmdscale` function
 based on genotyping data from 49,953 SNPs. Each point represents a goat, and
 spatial arrangement reflects genetic dissimilarities. This exploratory analysis
 offers insights into genetic diversity, population structure, and relatedness.

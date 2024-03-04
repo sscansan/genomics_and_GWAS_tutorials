@@ -9,7 +9,7 @@ output:
     self_contained: true
     thumbnails: true
     lightbox: true
-    highlight: tango
+    highlight: tango Der Datensatz wurde zwischenzeitlich von einem anderen Benutzer oder in einem anderen Fenster bearbeitet - dieser aktuelle Stand wurde daher neu geladen und ihre ungespeicherten Änderungen evtl. verworfen. 
     gallery: true
     toc_depth: 3
     code_folding: show
@@ -19,7 +19,7 @@ knit:
   encoding, output_dir = "html") })
 ---
 
-# `rTASSEL` and goat genomics
+# `rTASSEL`
 
 `rTASSEL` is an extension to TASSEL 5.
 ```{r}
