@@ -1,30 +1,30 @@
 # Genomic projects tutorials
 
-!!! warning "This repository is under construction"
+> :warning: "This repository is under construction"
 
 This repository contains a collection of genomic projects that I am working on.
 GitHub repository of bioinformatic projects recolving around genomics using
 different tools like Plink through `plinkr` R package, `rTASSEL` and TASSEL 5
-(GUI), GEMMA for mixed models analysis in R, SAMtools from the command line to
-analyze BAM files, gBLUP coming soon.
+(GUI), GEMMA for mixed models analysis in R, SAMtools to analyze BAM files, gBLUP coming soon.
 
 The repository has been created for testing and self-teaching purposes of biological concept
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
-## **Contents**
+## Contents
 
 - [Genomic projects tutorials](#genomic-projects-tutorials)
-  - [**Contents**](#contents)
+  - [Contents](#contents)
   - [Tools](#tools)
   - [Example case studies](#example-case-studies)
   - [Resources \& Data](#resources--data)
   - [Setup of the working environment](#setup-of-the-working-environment)
     - [Get `PLINK` working in Linux](#get-plink-working-in-linux)
+      - [Get `plinkr` (`R`)](#get-plinkr-r)
     - [Get `TASSEL` (GUI) on Linux](#get-tassel-gui-on-linux)
-    - [Get `rTASSEL` working in Linux](#get-rtassel-working-in-linux)
+      - [Get `rTASSEL` (`R`)](#get-rtassel-r)
     - [Get `GEMMA`](#get-gemma)
-    - [Get `GAPIT`](#get-gapit)
+    - [Get `GAPIT` (`R`)](#get-gapit-r)
 
 ## Tools
 
@@ -180,6 +180,20 @@ OS: Linux<sup>\*</sup>/WSL
     plink --help
     ```
 
+#### Get `plinkr` (`R`)
+
+`PLINK` directly in r.
+
+refer to the installation guide at https://github.com/AJResearchGroup/plinkr/blob/master/doc/install.md
+
+```
+library(remotes)
+install_github("richelbilderbeek/plinkr")
+remotes::install_github("chrchang/plink-ng/2.0/pgenlibr")
+library(plinkr)
+install_plinks()
+```
+
 ### Get `TASSEL` (GUI) on Linux
 
 1. Go on the website
@@ -194,7 +208,7 @@ OS: Linux<sup>\*</sup>/WSL
    ~/Downloads/TASSEL_{xxx}_unix.sh
    ```
 
-### Get `rTASSEL` working in Linux
+#### Get `rTASSEL` (`R`)
 
 1. `rJava` installation
 
@@ -262,10 +276,15 @@ And use GEMMA with
 gemma -h
 ```
 
-### Get `GAPIT`
+### Get `GAPIT` (`R`)
+
+R package, here we are going to install it through GitHub.
+For the manual visit https://zzlab.net/GAPIT/gapit_help_document.pdf
 
 ```
-
+R> install.packages("devtools")
+R> devtools::install_github("jiabowang/GAPIT", force=TRUE)
+R> library(GAPIT)
 ```
 
 ---
