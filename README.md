@@ -12,6 +12,7 @@ The repository has been created for testing and self-teaching purposes of biolog
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
+<<<<<<< HEAD
 1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
    https://doi.org/10.1186/s12711-018-0422-x
 
@@ -49,6 +50,9 @@ of association with the trait on the y-axis. The red-dashed lines are representa
 and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
 
 <img src="Figures/SNP_chr3_top.png" style="max-height: 350px; width: auto;">
+=======
+The code of the pipeline to recreate the images is in `Code/genomics_proj/*.Rmd`
+>>>>>>> 7e192e6c6e9a318403f1aecf023d2b00146458db
 
 ## Tools
 
@@ -79,6 +83,46 @@ and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
 - `rMVP` A Memory-efficient, Visualization-enhanced, and Parallel-accelerated Tool for Genome-Wide Association Study https://github.com/xiaolei-lab/rMVP
 
 - `GPtour` Genomic Prediction in R using Keras models https://github.com/miguelperezenciso/GPtour and https://keras.posit.co/articles/getting_started.html
+
+## Example case studies
+
+1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
+   https://doi.org/10.1186/s12711-018-0422-x
+
+<img src="Figures/goat_mds_12.png" height="375px">
+<img src="Figures/goat_mds_eigen_filter.png" height="350px">
+
+<small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
+Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
+
+<small>The MDS plot visualizes genetic relationships among 4,653 individuals
+from 169 goat breeds. Genetic distances were computed using PLINK to generate
+the kinship matrix, and MDS analysis was conducted with the `cmdscale` function
+based on genotyping data from 49,953 SNPs. Each point represents a goat, and
+spatial arrangement reflects genetic dissimilarities. This exploratory analysis
+offers insights into genetic diversity, population structure, and relatedness.
+</small>
+
+2. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
+   **Hayward et al.** (2020) https://doi.org/10.1371/journal.pone.0232900
+
+<img src="Figures/manhattan_dogs.png" height="375px">
+<img src="Figures/manhattan_filter_acd.png" height="375px">
+<small>Manhattan plots showing the genome wide association (GWA) between dog
+deafness and their genotype. The plot displays the genomic positions of single
+nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
+corresponding -log<sub>10</sub> transformed P-values indicating the strength
+of association with the trait on the y-axis. The red-dashed lines are representation of the 99.99 percentile treshold of the LOD values.</small>
+
+2. b. Plot of the top significant SNPs identified in the above GWAS.
+
+   <small>Points are jittered around their respective chromosome.</small>
+
+<img src="Figures/top_SNPs_comb.png" height="375px">
+
+and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
+
+<img src="Figures/SNP_chr3_top.png" height="375px">
 
 ## Resources & Data
 
