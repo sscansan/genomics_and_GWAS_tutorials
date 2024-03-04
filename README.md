@@ -1,6 +1,6 @@
 # Genomic projects tutorials
 
-> :warning: "This repository is under construction"
+> :warning: This repository is under construction :warning:
 
 This repository contains a collection of genomic projects that I am working on.
 GitHub repository of bioinformatic projects recolving around genomics using
