@@ -12,7 +12,11 @@ The repository has been created for testing and self-teaching purposes of biolog
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
-- [Genomic projects tutorials](#genomic-projects-tutorials)
+## **Contents**
+
+---
+
+- [Genomic projects tutorials](#genomic-projects-tutorials) - [Contents](#contents)
   - [Tools](#tools)
   - [Example case studies](#example-case-studies)
   - [Resources \& Data](#resources--data)
@@ -21,6 +25,7 @@ sources, taken or modified as such.
     - [Get TASSEL (GUI) on Linux](#get-tassel-gui-on-linux)
     - [Get `rTASSEL` working in Linux](#get-rtassel-working-in-linux)
     - [Get `GEMMA`](#get-gemma)
+    - [Get `GAPIT`](#get-gapit)
 
 ## Tools
 
@@ -51,6 +56,8 @@ sources, taken or modified as such.
 - `rMVP` A Memory-efficient, Visualization-enhanced, and Parallel-accelerated Tool for Genome-Wide Association Study https://github.com/xiaolei-lab/rMVP
 
 - `GPtour` Genomic Prediction in R using Keras models https://github.com/miguelperezenciso/GPtour and https://keras.posit.co/articles/getting_started.html
+
+- `GAPIT` Genome Association and Integrated https://github.com/jiabowang/GAPIT
 
 ## Example case studies
 
@@ -135,16 +142,16 @@ OS: Linux<sup>\*</sup>/WSL
 
 <small><sup>\*</sup>Suggested</small>
 
-### Get PLINK working in Linux
+### Get `PLINK` working in Linux
 
 1.  Download
     [PLINK 1.90 Linux 64-bit](https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20231211.zip)
-2.  Install PLINK
+2.  Install `PLINK`
     ```
     cd Downloads/
     sudo unzip plink_linux_x86_64_20200616.zip -d plink_install
     ```
-3.  PLINK in `usr/local/bin`
+3.  `PLINK` in `usr/local/bin`
 
     ```
     cd plink_install
@@ -152,7 +159,7 @@ OS: Linux<sup>\*</sup>/WSL
     sudo chmod 755 /usr/local/bin/plink
     ```
 
-4.  Add PLINK to PATH
+4.  Add `PLINK` to PATH
 
     with bash/zsh/...
 
@@ -174,7 +181,7 @@ OS: Linux<sup>\*</sup>/WSL
     plink --help
     ```
 
-### Get TASSEL (GUI) on Linux
+### Get `TASSEL` (GUI) on Linux
 
 1. Go on the website
    [https://www.maizegenetics.net/tassel](https://www.maizegenetics.net/tassel)
@@ -237,7 +244,7 @@ OS: Linux<sup>\*</sup>/WSL
 
 ### Get `GEMMA`
 
-GEMMA can be installed from source at the GitHub repo, but is also available
+`GEMMA` can be installed from source at the GitHub repo, but is also available
 through Bioconda
 [http://www.ddocent.com/bioconda/](http://www.ddocent.com/bioconda/). To install
 is suggested to have miniconda installed and working, and then added the channel
@@ -254,6 +261,12 @@ And use GEMMA with
 
 ```
 gemma -h
+```
+
+### Get `GAPIT`
+
+```
+
 ```
 
 ---
