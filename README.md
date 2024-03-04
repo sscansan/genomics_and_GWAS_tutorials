@@ -12,6 +12,8 @@ The repository has been created for testing and self-teaching purposes of biolog
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
+[TOC]
+
 ## Tools
 
 - **PLINK 1.90**
