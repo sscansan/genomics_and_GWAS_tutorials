@@ -12,7 +12,15 @@ The repository has been created for testing and self-teaching purposes of biolog
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
-[TOC]
+- [Genomic projects tutorials](#genomic-projects-tutorials)
+  - [Tools](#tools)
+  - [Example case studies](#example-case-studies)
+  - [Resources \& Data](#resources--data)
+  - [Setup of the working environment](#setup-of-the-working-environment)
+    - [Get PLINK working in Linux](#get-plink-working-in-linux)
+    - [Get TASSEL (GUI) on Linux](#get-tassel-gui-on-linux)
+    - [Get `rTASSEL` working in Linux](#get-rtassel-working-in-linux)
+    - [Get `GEMMA`](#get-gemma)
 
 ## Tools
 
