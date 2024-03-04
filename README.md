@@ -12,7 +12,6 @@ The repository has been created for testing and self-teaching purposes of biolog
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
-<<<<<<< HEAD
 1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
    https://doi.org/10.1186/s12711-018-0422-x
 
@@ -50,9 +49,6 @@ of association with the trait on the y-axis. The red-dashed lines are representa
 and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
 
 <img src="Figures/SNP_chr3_top.png" style="max-height: 350px; width: auto;">
-=======
-The code of the pipeline to recreate the images is in `Code/genomics_proj/*.Rmd`
->>>>>>> 7e192e6c6e9a318403f1aecf023d2b00146458db
 
 ## Tools
 
