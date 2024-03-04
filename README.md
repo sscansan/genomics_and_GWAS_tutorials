@@ -14,15 +14,14 @@ sources, taken or modified as such.
 
 ## **Contents**
 
----
-
-- [Genomic projects tutorials](#genomic-projects-tutorials) - [Contents](#contents)
+- [Genomic projects tutorials](#genomic-projects-tutorials)
+  - [**Contents**](#contents)
   - [Tools](#tools)
   - [Example case studies](#example-case-studies)
   - [Resources \& Data](#resources--data)
   - [Setup of the working environment](#setup-of-the-working-environment)
-    - [Get PLINK working in Linux](#get-plink-working-in-linux)
-    - [Get TASSEL (GUI) on Linux](#get-tassel-gui-on-linux)
+    - [Get `PLINK` working in Linux](#get-plink-working-in-linux)
+    - [Get `TASSEL` (GUI) on Linux](#get-tassel-gui-on-linux)
     - [Get `rTASSEL` working in Linux](#get-rtassel-working-in-linux)
     - [Get `GEMMA`](#get-gemma)
     - [Get `GAPIT`](#get-gapit)
