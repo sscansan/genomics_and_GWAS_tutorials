@@ -35,6 +35,7 @@ library(readr)
 library(stringr)
 library(ggplot2)
 library(qqman)
+library(knitr)
 ```
 
 # Project 1
@@ -162,7 +163,9 @@ system("gemma -bfile Data/deafness_dogs/AfterQC/deafness_filter_acd -k ./output/
 system("rsync -av output/ Data/deafness_dogs/AfterQC/output/")
 system("rm -r output/")
 
-source("Code/genomics_proj/GWAS_plot_manhattan_filtered.R")
+
+purl("Code/genomics_proj/4b_GWAS_plot_manhattan_filtered.Rmd", output = "Code/genomics_proj/R_intermediate/4b_GWAS_plot_manhattan_filtered.R")
+source("Code/genomics_proj/R_intermediate/4b_GWAS_plot_manhattan_filtered.R")
 
 ```
 
