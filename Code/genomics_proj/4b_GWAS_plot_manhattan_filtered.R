@@ -113,12 +113,12 @@ ifelse(third_chrom_data$neg_log_p < 4.5, NA, third_chrom_data$neg_log_p)
 
 plot <- third_chrom_data %>%
   select(rs, ps_mb, neg_log_p) %>%
-  rename(LOD = neg_log_p) %>%
-  ggplot(aes(x = ps_mb, y = LOD, text = rs, color = LOD)) +
+  rename(LOG = neg_log_p) %>%
+  ggplot(aes(x = ps_mb, y = LOG, text = rs, color = LOG)) +
   geom_point(size = 2) +
   geom_hline(yintercept = tresh, linetype = "dashed", color = "indianred") +
   geom_text_repel(aes(label = rs), size = 3, max.overlaps = 8) +
-  scale_color_gradient(low = "dodgerblue", high = "firebrick") +
+  scale_color_gradient(bquote(-log[10](italic(P))), low = "dodgerblue", high = "firebrick") +
   labs(
     x = "Rel. position on chr. 3 (Mb)",
     y = bquote(-log[10](italic(P)))
@@ -132,7 +132,7 @@ plot <- third_chrom_data %>%
     aspect.ratio = 1
   )
 
-# plotly_chr3 <- plotly::ggplotly(plot, tooltip = c("ps_mb", "rs", "LOD"))
+# plotly_chr3 <- plotly::ggplotly(plot, tooltip = c("ps_mb", "rs", "LOG"))
 # htmlwidgets::saveWidget(as_widget(plotly_chr3), "tooltip.html")
 
 path_tops <- "Figures/SNP_chr3_top.png"
