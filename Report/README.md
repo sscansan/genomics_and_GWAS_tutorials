@@ -1,4 +1,4 @@
-at each update of the README.md in the root and the figures in the root's Figure folder, run 
+At each update of the README.md and figures in the root's Figure/ folder, before the LaTeX build run 
 
 ```bash update_figures_output.sh```
 
