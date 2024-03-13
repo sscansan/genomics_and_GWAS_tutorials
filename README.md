@@ -132,7 +132,7 @@ and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
 Install R:
 [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/)
 
-IDE:[VSCode](https://code.visualstudio.com/)/[RStudio](https://posit.co/download/)<sup>\*</sup>
+IDE:[VSCode](https://code.visualstudio.com/)<sup>\*</sup>/[RStudio](https://posit.co/download/)<sup>\*</sup>
 
 Install Python:
 [Miniconda 3](https://docs.anaconda.com/free/miniconda/index.html)<sup>\*</sup>
