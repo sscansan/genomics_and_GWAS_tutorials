@@ -1,17 +1,15 @@
 \contentsline {section}{\numberline {1}Genomic projects tutorials}{1}{}%
-\contentsline {subsection}{\numberline {1.1}Contents}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Contents}{1}{}%
 \contentsline {subsection}{\numberline {1.2}Tools}{2}{}%
-\contentsline {subsection}{\numberline {1.3}Example case studies}{3}{}%
-\contentsline {subsection}{\numberline {1.4}Resources \&{} Data}{4}{}%
-\contentsline {subsection}{\numberline {1.5}Setup of the working environment}{4}{}%
-\contentsline {subsubsection}{\numberline {1.5.1}Get \texttt {PLINK} working in Linux}{4}{}%
-\contentsline {paragraph}{Get \texttt {plinkr} (\texttt {R})}{5}{}%
-\contentsline {subsubsection}{\numberline {1.5.2}Get \texttt {TASSEL} (GUI) on Linux}{5}{}%
-\contentsline {paragraph}{Get \texttt {rTASSEL} (\texttt {R})}{5}{}%
-\contentsline {subsubsection}{\numberline {1.5.3}Get \texttt {GEMMA}}{6}{}%
-\contentsline {subsubsection}{\numberline {1.5.4}Get \texttt {GAPIT} (\texttt {R})}{6}{}%
-\contentsline {section}{\numberline {2}Project: SNP Profiling of worldwide goat populations}{6}{}%
-\contentsline {subsection}{\numberline {2.1}Data}{6}{}%
-\contentsline {section}{\numberline {3}Methods}{6}{}%
-\contentsline {subsubsection}{\numberline {3.0.1}Data import}{6}{}%
-\contentsline {section}{\numberline {4}Results}{6}{}%
+\contentsline {subsection}{\numberline {1.3}Example case studies}{2}{}%
+\contentsline {subsection}{\numberline {1.4}Resources \& Data}{5}{}%
+\contentsline {subsection}{\numberline {1.5}Setup of the working environment}{6}{}%
+\contentsline {subsubsection}{\numberline {1.5.1}{Get \texttt {PLINK} working in Linux}{Get PLINK working in Linux}}{6}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}{Get \texttt {TASSEL} (GUI) on Linux}{Get TASSEL (GUI) on Linux}}{7}{}%
+\contentsline {subsubsection}{\numberline {1.5.3}{Get \texttt {GEMMA}}{Get GEMMA}}{9}{}%
+\contentsline {subsubsection}{\numberline {1.5.4}{Get \texttt {GAPIT} (\texttt {R})}{Get GAPIT (R)}}{9}{}%
+\contentsline {section}{\numberline {2}Project: SNP Profiling of worldwide goat populations}{9}{}%
+\contentsline {subsection}{\numberline {2.1}Data}{9}{}%
+\contentsline {section}{\numberline {3}Methods}{9}{}%
+\contentsline {subsubsection}{\numberline {3.0.1}Data import}{9}{}%
+\contentsline {section}{\numberline {4}Results}{9}{}%

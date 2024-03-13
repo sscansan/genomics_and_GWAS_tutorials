@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Genomic projects tutorials</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="genomic-projects-tutorials">Genomic projects tutorials</h1>
+<blockquote>
+<p>:warning: This repository is under construction :warning:</p>
+</blockquote>
+<p>This repository contains a collection of genomic projects that I am working on.
+GitHub repository of bioinformatic projects recolving around genomics using
+different tools like Plink through <code>plinkr</code> R package, <code>rTASSEL</code> and TASSEL 5
+(GUI), GEMMA for mixed models analysis in R, SAMtools to analyze BAM files, gBLUP coming soon.</p>
+<p>The repository has been created for testing and self-teaching purposes of biological concept
+and bioinformatic tools, and make use of other repositories, scripts and data
+sources, taken or modified as such.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#genomic-projects-tutorials">Genomic projects tutorials</a>
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#example-case-studies">Example case studies</a></li>
+<li><a href="#resources--data">Resources &amp; Data</a></li>
+<li><a href="#setup-of-the-working-environment">Setup of the working environment</a>
+<ul>
+<li><a href="#get-plink-working-in-linux">Get <code>PLINK</code> working in Linux</a>
+<ul>
+<li><a href="#get-plinkr-r">Get <code>plinkr</code> (<code>R</code>)</a></li>
+</ul>
+</li>
+<li><a href="#get-tassel-gui-on-linux">Get <code>TASSEL</code> (GUI) on Linux</a>
+<ul>
+<li><a href="#get-rtassel-r">Get <code>rTASSEL</code> (<code>R</code>)</a></li>
+</ul>
+</li>
+<li><a href="#get-gemma">Get <code>GEMMA</code></a></li>
+<li><a href="#get-gapit-r">Get <code>GAPIT</code> (<code>R</code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="tools">Tools</h2>
+<ul>
+<li>
+<p><strong>PLINK 1.90</strong>
+<a href="https://www.cog-genomics.org/plink2/">https://www.cog-genomics.org/plink2/</a></p>
+</li>
+<li>
+<p><code>plinkr</code> R package repository documentation.
+<a href="https://github.com/AJResearchGroup/plinkr">https://github.com/AJResearchGroup/plinkr</a></p>
+</li>
+<li>
+<p><strong>TASSEL 5</strong>
+<a href="https://www.maizegenetics.net/tassel">https://www.maizegenetics.net/tassel</a>.
+<strong>Bradbury</strong> et al., (2007) TASSEL: software for association mapping of
+complex traits in diverse samples, Bioinformatics, Volume 23, Issue 19, Pages
+2633–2635
+<a href="https://doi.org/10.1093/bioinformatics/btm308">https://doi.org/10.1093/bioinformatics/btm308</a></p>
+</li>
+<li>
+<p><code>rTASSEL</code> R package repository documentation. <br> Vignettes:
+<a href="https://rtassel.maizegenetics.net/index.html">https://rtassel.maizegenetics.net/index.html</a>,
+Repository:
+<a href="https://github.com/maize-genetics/rTASSEL">https://github.com/maize-genetics/rTASSEL</a>.
+<strong>Monier et al.</strong>, (2022). rTASSEL: An R interface to TASSEL for analyzing
+genomic diversity. <em>Journal of Open Source Software</em>, 7(76), 4530,
+<a href="https://doi.org/10.21105/joss.04530">https://doi.org/10.21105/joss.04530</a></p>
+</li>
+<li>
+<p><code>GEMMA</code> Genome-wide Efficient Mixed Model Association
+<a href="https://github.com/genetics-statistics/GEMMA">https://github.com/genetics-statistics/GEMMA</a>.
+<strong>Xiang Zhou and Matthew Stephens</strong> (2012). Genome-wide efficient mixed-model
+analysis for association studies. <em>Nature Genetics</em> 44, 821–824.</p>
+</li>
+<li>
+<p><code>rMVP</code> A Memory-efficient, Visualization-enhanced, and Parallel-accelerated Tool for Genome-Wide Association Study <a href="https://github.com/xiaolei-lab/rMVP">https://github.com/xiaolei-lab/rMVP</a></p>
+</li>
+<li>
+<p><code>GPtour</code> Genomic Prediction in R using Keras models <a href="https://github.com/miguelperezenciso/GPtour">https://github.com/miguelperezenciso/GPtour</a> and <a href="https://keras.posit.co/articles/getting_started.html">https://keras.posit.co/articles/getting_started.html</a></p>
+</li>
+<li>
+<p><code>GAPIT</code> Genome Association and Integrated Tools <a href="https://github.com/jiabowang/GAPIT">https://github.com/jiabowang/GAPIT</a></p>
+</li>
+</ul>
+<h2 id="example-case-studies">Example case studies</h2>
+<ol>
+<li>SNP profiling of goat breeds.<br><em>Data source</em>: <strong>Colli et al.</strong> (2018)
+<a href="https://doi.org/10.1186/s12711-018-0422-x">https://doi.org/10.1186/s12711-018-0422-x</a></li>
+</ol>
+<p>\includegraphics[width=\linewidth]{Figures/goat_mds_12.png}</p>
+<p><img src="file:////home/sscansa/MEGA/R/GWAS/Figures/goat_mds_12.png" alt="alt-text">{ width=400 }</p>
+<p><img src="file:////home/sscansa/MEGA/R/GWAS/Figures/goat_mds_eigen_filter.png" alt="alt-text">{ width=20% }
+<img src="file:////home/sscansa/MEGA/R/GWAS/file.jpg" alt="">{ width=50% }</p>
+<blockquote>
+<p><strong>Multidimensional Scaling (MDS) Plot of a population of 4,653
+Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.</strong></p>
+<p>The MDS plot visualizes genetic relationships among 4,653 individuals
+from 169 goat breeds. Genetic distances were computed using PLINK to generate
+the distance matrix, and MDS analysis was conducted with the <code>cmdscale</code> function
+based on genotyping data from 49,953 SNPs. Each point represents a goat, and
+spatial arrangement reflects genetic dissimilarities. This exploratory analysis
+offers insights into genetic diversity, population structure, and relatedness.</p>
+</blockquote>
+<ol>
+<li>a. Manhattan plot of a GWAS on dog population for deafness.<em>Data source</em>:
+<strong>Hayward et al.</strong> (2020) <a href="https://doi.org/10.1371/journal.pone.0232900">https://doi.org/10.1371/journal.pone.0232900</a></li>
+</ol>
+<p><img src="file:////home/sscansa/MEGA/R/GWAS/Figures/manhattan_dogs.png" alt="">{ width=20% }
+<img src="file:////home/sscansa/MEGA/R/GWAS/Figures/manhattan_filter_acd.png" alt="">{ width=20% }</p>
+<blockquote>
+<p>Manhattan plots showing the genome wide association (GWA) between dog
+deafness and their genotype. The plot displays the genomic positions of single
+nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
+corresponding -log~10~ transformed P-values indicating the strength
+of association with the trait on the y-axis. The red-dashed lines are representation of the 99.99 percentile threshold of the LOD values.</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>b. Plot of the top significant SNPs identified in the above GWAS.</p>
+<p>Points are jittered around their respective chromosome.</p>
+</li>
+</ol>
+<p><img src="file:////home/sscansa/MEGA/R/GWAS/Figures/top_SNPs_comb.png" alt=""></p>
+<blockquote>
+<p>and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).</p>
+</blockquote>
+<p><img src="file:////home/sscansa/MEGA/R/GWAS/Figures/SNP_chr3_top.png" alt=""></p>
+<h2 id="resources--data">Resources &amp; Data</h2>
+<ul>
+<li>
+<p><strong>Marees et al.</strong> (2018) A tutorial on conducting genome-wide association
+studies: Quality control and statistical analysis. <em>Int J Methods Psychiatr
+Res</em>. 27:e1608.
+<a href="https://doi.org/10.1002/mpr.1608">https://doi.org/10.1002/mpr.1608</a></p>
+</li>
+<li>
+<p><strong>Marees et al.</strong> (2018) tutorial
+<a href="https://github.com/MareesAT/GWA_tutorial">https://github.com/MareesAT/GWA_tutorial</a></p>
+</li>
+<li>
+<p><strong>Gábor Mészáros</strong> (2021) Genomic Boot Camp Book
+<a href="https://genomicsbootcamp.github.io/book/">https://genomicsbootcamp.github.io/book/</a></p>
+</li>
+<li>
+<p><strong>Gábor Mészáros</strong> video tutorials
+<a href="https://www.youtube.com/c/GenomicsBootCamp">https://www.youtube.com/c/GenomicsBootCamp</a></p>
+</li>
+<li>
+<p><strong>Colli et al.</strong> (2018) Genome-wide SNP profiling of worldwide goat
+populations reveals strong partitioning of diversity and highlights
+post-domestication migration routes. <em>Genet Sel Evol</em> 50, 58.
+<a href="https://doi.org/10.1186/s12711-018-0422-x">https://doi.org/10.1186/s12711-018-0422-x</a></p>
+</li>
+<li>
+<p>DATA: <strong>Colli et al.</strong> (2020). Signatures of selection and environmental
+adaptation across the goat genome post-domestication [Dataset]. <em>Dryad</em>.
+<a href="https://doi.org/10.5061/dryad.v8g21pt">https://doi.org/10.5061/dryad.v8g21pt</a></p>
+</li>
+<li>
+<p><strong>Decker et al.</strong> (2014) Worldwide Patterns of Ancestry, Divergence, and
+Admixture in Domesticated Cattle. <em>PLOS Genetics</em> 10(3):
+e1004254.<a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004254">https://doi.org/10.1371/journal.pgen.1004254</a>,</p>
+</li>
+<li>
+<p>DATA: <strong>Decker et al.</strong> (2015) Worldwide patterns of ancestry, divergence, and
+admixture in domesticated cattle [Dataset]. Dryad.
+<a href="https://doi.org/10.5061/dryad.th092">https://doi.org/10.5061/dryad.th092</a></p>
+</li>
+</ul>
+<h2 id="setup-of-the-working-environment">Setup of the working environment</h2>
+<p>Install R:
+<a href="https://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a></p>
+<p>IDE:<a href="https://code.visualstudio.com/">VSCode</a>^*^/<a href="https://posit.co/download/">RStudio</a>^*^</p>
+<p>Install Python:
+<a href="https://docs.anaconda.com/free/miniconda/index.html">Miniconda 3</a>^*^</p>
+<p>OS: Linux^*^/WSL</p>
+<p>^*^Suggested</p>
+<h3 id="get-plink-working-in-linux">Get <code>PLINK</code> working in Linux</h3>
+<ol>
+<li>
+<p>Download
+<a href="https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20231211.zip">PLINK 1.90 Linux 64-bit</a></p>
+</li>
+<li>
+<p>Install <code>PLINK</code></p>
+<pre><code>cd Downloads/
+sudo unzip plink_linux_x86_64_20200616.zip -d plink_install
+</code></pre>
+</li>
+<li>
+<p><code>PLINK</code> in <code>usr/local/bin</code></p>
+<pre><code>cd plink_install
+sudo cp plink /usr/local/bin
+sudo chmod 755 /usr/local/bin/plink
+</code></pre>
+</li>
+<li>
+<p>Add <code>PLINK</code> to PATH</p>
+<p>with bash/zsh/...</p>
+<pre><code>sudo nano ~/.bashrc
+</code></pre>
+<p>adn include the line:</p>
+<pre><code>export PATH=/usr/local/bin:$PATH
+</code></pre>
+<p>Save and exit. Refresh the terminal and you should be able to call <code>plink</code>
+from the terminal at any user position in the system.</p>
+<pre><code>source ~/.bashrc
+plink --help
+</code></pre>
+</li>
+</ol>
+<h4 id="get-plinkr-r">Get <code>plinkr</code> (<code>R</code>)</h4>
+<p><code>PLINK</code> directly in r.</p>
+<p>refer to the installation guide at <a href="https://github.com/AJResearchGroup/plinkr/blob/master/doc/install.md">https://github.com/AJResearchGroup/plinkr/blob/master/doc/install.md</a></p>
+<pre><code>library(remotes)
+install_github(&quot;richelbilderbeek/plinkr&quot;)
+remotes::install_github(&quot;chrchang/plink-ng/2.0/pgenlibr&quot;)
+library(plinkr)
+install_plinks()
+</code></pre>
+<h3 id="get-tassel-gui-on-linux">Get <code>TASSEL</code> (GUI) on Linux</h3>
+<ol>
+<li>Go on the website
+<a href="https://www.maizegenetics.net/tassel">https://www.maizegenetics.net/tassel</a>
+and download the last UNIX verison.</li>
+<li>Download the TASSEL_{xxx}_unix.sh and make it executable<pre><code>chmod +x ~/Downloads/TASSEL_{xxx}_unix.sh
+</code></pre>
+</li>
+<li>Run the TASSEL installer<pre><code>~/Downloads/TASSEL_{xxx}_unix.sh
+</code></pre>
+</li>
+</ol>
+<h4 id="get-rtassel-r">Get <code>rTASSEL</code> (<code>R</code>)</h4>
+<ol>
+<li>
+<p><code>rJava</code> installation</p>
+<pre><code>sudo apt install default-jdk
+sudo R CMD javareconf
+R install.packages(&quot;rJava&quot;)
+</code></pre>
+</li>
+<li>
+<p>Installation in R</p>
+<pre><code>if (!require(&quot;devtools&quot;)) install.packages(&quot;devtools&quot;)
+devtools::install_github(
+ repo = &quot;maize-genetics/rTASSEL&quot;,
+ ref = &quot;master&quot;,
+ build_vignettes = TRUE,
+ dependencies = TRUE
+)
+</code></pre>
+</li>
+<li>
+<p>Run <code>rTASSEL</code></p>
+<ul>
+<li>Allocate job's memory^1^ and start the logger (here at the root of
+the project):</li>
+</ul>
+<p>^1^&quot;-Xmx50g&quot; and &quot;-Xms50g&quot;, &quot;<em>50g</em>&quot; represents 50 Gigabytes of
+memory.</p>
+<p><em>!! Choose an appropriate value that fits your machine !!</em></p>
+<pre><code>options(java.parameters = c(&quot;-Xmx50g&quot;, &quot;-Xms50g&quot;))
+rTASSEL::startLogger(fullPath = NULL, fileName = NULL)
+</code></pre>
+<ul>
+<li>Run &amp; infos</li>
+</ul>
+<pre><code>library(rTASSEL)
+??rTASSEL
+</code></pre>
+<p>Useful resource for <code>rTASSEL</code> are the vignettes and tutorials at
+<a href="https://rtassel.maizegenetics.net/index.html">https://rtassel.maizegenetics.net/index.html</a></p>
+</li>
+</ol>
+<h3 id="get-gemma">Get <code>GEMMA</code></h3>
+<p><code>GEMMA</code> can be installed from source at the GitHub repo, but is also available
+through Bioconda
+<a href="http://www.ddocent.com/bioconda/">http://www.ddocent.com/bioconda/</a>. To install
+is suggested to have miniconda installed and working, and then added the channel
+for Bioconda, you should already have defaults and conda-forge.</p>
+<pre><code>conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels biocond
+conda install gemma
+</code></pre>
+<p>And use GEMMA with</p>
+<pre><code>gemma -h
+</code></pre>
+<h3 id="get-gapit-r">Get <code>GAPIT</code> (<code>R</code>)</h3>
+<p>R package, here we are going to install it through GitHub.
+For the manual visit <a href="https://zzlab.net/GAPIT/gapit_help_document.pdf">https://zzlab.net/GAPIT/gapit_help_document.pdf</a></p>
+<pre><code>R&gt; install.packages(&quot;devtools&quot;)
+R&gt; devtools::install_github(&quot;jiabowang/GAPIT&quot;, force=TRUE)
+R&gt; library(GAPIT)
+</code></pre>
+<hr>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>

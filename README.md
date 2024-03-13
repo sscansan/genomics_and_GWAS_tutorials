@@ -63,40 +63,42 @@ sources, taken or modified as such.
 1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
    https://doi.org/10.1186/s12711-018-0422-x
 
-<img src="Figures/goat_mds_12.png" style="max-height: 350px; width: auto;">
-<img src="Figures/goat_mds_eigen_filter.png" style="max-height: 350px; width: auto;">
+![Multidimensional scaling of the genotypes](Figures/goat_mds_12.png)
 
-<small>**Multidimensional Scaling (MDS) Plot of a population of 4,653
-Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**</small>
+![Scree plot of all genotypes and multidimensional scaling of a subset of genotypes](Figures/goat_mds_eigen_filter.png)
 
-<small>The MDS plot visualizes genetic relationships among 4,653 individuals
-from 169 goat breeds. Genetic distances were computed using PLINK to generate
-the distance matrix, and MDS analysis was conducted with the `cmdscale` function
-based on genotyping data from 49,953 SNPs. Each point represents a goat, and
-spatial arrangement reflects genetic dissimilarities. This exploratory analysis
-offers insights into genetic diversity, population structure, and relatedness.
-</small>
+> **Multidimensional Scaling (MDS) Plot of a population of 4,653
+> Individuals from 169 Goat Breeds genotyped with 49,953 SNPs.**
+>
+> The MDS plot visualizes genetic relationships among 4,653 individuals
+> from 169 goat breeds. Genetic distances were computed using PLINK to generate
+> the distance matrix, and MDS analysis was conducted with the `cmdscale` function
+> based on genotyping data from 49,953 SNPs. Each point represents a goat, and
+> spatial arrangement reflects genetic dissimilarities. This exploratory analysis
+> offers insights into genetic diversity, population structure, and relatedness.
 
 1. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
    **Hayward et al.** (2020) https://doi.org/10.1371/journal.pone.0232900
 
-<img src="Figures/manhattan_dogs.png" style="max-height: 350px; width: auto;">
-<img src="Figures/manhattan_filter_acd.png" style="max-height: 350px; width: auto;">
-<small>Manhattan plots showing the genome wide association (GWA) between dog
-deafness and their genotype. The plot displays the genomic positions of single
-nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
-corresponding -log<sub>10</sub> transformed P-values indicating the strength
-of association with the trait on the y-axis. The red-dashed lines are representation of the 99.99 percentile treshold of the LOD values.</small>
+![Manhattan plot](Figures/manhattan_dogs.png)
 
-2. b. Plot of the top significant SNPs identified in the above GWAS.
+![Manhattan plot of a single canine breed](Figures/manhattan_filter_acd.png)
 
-   <small>Points are jittered around their respective chromosome.</small>
+> Manhattan plots showing the genome wide association (GWA) between dog
+> deafness and their genotype. The plot displays the genomic positions of single
+> nucleotide polymorphisms (SNPs) across the genome on the x-axis, with the
+> corresponding -log~10~ transformed P-values indicating the strength
+> of association with the trait on the y-axis. The red-dashed lines are representation of the 99.99 percentile threshold of the LOD values.
 
-<img src="Figures/top_SNPs_comb.png" style="max-height: 350px; width: auto;">
+1. b. Plot of the top significant SNPs identified in the above GWAS.
 
-and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
+   Points are jittered around their respective chromosome.
 
-<img src="Figures/SNP_chr3_top.png" style="max-height: 350px; width: auto;">
+![Top scoring SNPs](Figures/top_SNPs_comb.png)
+
+> and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
+
+![Top scoring SNPs of a ABC breed in the 3^rd^ chromosome](Figures/SNP_chr3_top.png)
 
 ## Resources & Data
 
@@ -132,14 +134,14 @@ and a zoom in the chromosome 3 above the 99.99 percentile (LOD score = 4.71).
 Install R:
 [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/)
 
-IDE:[VSCode](https://code.visualstudio.com/)<sup>\*</sup>/[RStudio](https://posit.co/download/)<sup>\*</sup>
+IDE:[VSCode](https://code.visualstudio.com/)^\*^/[RStudio](https://posit.co/download/)^\*^
 
 Install Python:
-[Miniconda 3](https://docs.anaconda.com/free/miniconda/index.html)<sup>\*</sup>
+[Miniconda 3](https://docs.anaconda.com/free/miniconda/index.html)^\*^
 
-OS: Linux<sup>\*</sup>/WSL
+OS: Linux^\*^/WSL
 
-<small><sup>\*</sup>Suggested</small>
+^\*^Suggested
 
 ### Get `PLINK` working in Linux
 
@@ -232,10 +234,10 @@ install_plinks()
 
 3. Run `rTASSEL`
 
-   - Allocate job's memory<sup>1</sup> and start the logger (here at the root of
+   - Allocate job's memory^1^ and start the logger (here at the root of
      the project):
 
-   <sup>1</sup>"-Xmx50g" and "-Xms50g", "_50g_" represents 50 Gigabytes of
+   ^1^"-Xmx50g" and "-Xms50g", "_50g_" represents 50 Gigabytes of
    memory.
 
    _!! Choose an appropriate value that fits your machine !!_
