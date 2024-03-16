@@ -1,0 +1,58 @@
+---
+title: "Wheat"
+#author:
+output:
+  #rmdformats::html_clean:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    use_bookdown: false
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    highlight: tango
+    gallery: true
+    toc_depth: 3
+    code_folding: show
+    css: css/custom.css
+knit:
+  (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
+  encoding, output_dir = "html") })
+---
+
+# Genomic project to investigate  the genetic basis of complex traits in Wheat (*T. aestivum*).
+
+```{r}
+rm(list = ls())
+```
+
+## Introduction
+
+## Durum wheat (*Triticum turgidum* subsp. *durum*)
+
+Data:
+Dell'Acqua, Matteo (2022). Characterization data for the EtNAM population and Ethiopian durum wheat landraces diversity panel [Dataset]. Dryad. https://doi.org/10.5061/dryad.w6m905qrv form the orginal research article https://onlinelibrary.wiley.com/doi/10.1111/pbi.12538
+
+
+Here we deal with data stored in the .Rdata format, great!
+```{r}
+data_et <- load("Data/Triticum-durum/etnam.data.gp.Rdata")
+data_et
+
+data <- load("Data/Triticum-durum/diversity.panel.data.gp.Rdata")
+data
+
+# Accessing the "met" object
+met_data <- met
+
+# Accessing the "farm" object
+farm_data <- farm
+
+# Accessing the "geno" object
+geno_data <- geno
+
+# Accessing the "snp.pos" object
+snp_pos_data <- snp.pos
+
+# Accessing the "info" object
+info_data <- info
+```
