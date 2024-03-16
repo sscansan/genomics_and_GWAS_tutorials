@@ -5,7 +5,7 @@
 This repository contains a collection of genomic projects that I am working on.
 GitHub repository of bioinformatic projects recolving around genomics using
 different tools like Plink through `plinkr` R package, `rTASSEL` and TASSEL 5
-(GUI), GEMMA for mixed models analysis in R, SAMtools to analyze BAM files, gBLUP coming soon.
+(GUI), GEMMA for mixed models analysis in R, SAMtools to analyze BAM files, and other coming soon!
 
 The repository has been created for testing and self-teaching purposes of biological concept
 and bioinformatic tools, and make use of other repositories, scripts and data
