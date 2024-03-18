@@ -67,4 +67,1038 @@ Package graphics Info: Driver file: luatex.def on input line 107.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/luatex.def
 File: luatex.def 2022/09/22 v1.2d Graphics/color driver for luatex
 ))
-\Gin@req@heigh
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/markdown/markdown.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-06-30 L3 programming layer (loader) 
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2023-04-19 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count191
+Inserting `l3color' in `luaotfload.parse_color'.
+\l__pdf_internal_box=\box51
+)) (/usr/local/texlive/2023/texmf-dist/tex/generic/markdown/markdown.tex
+\markdownOptionFrozenCacheCounter=\count192
+\markdownInputFileStream=\read2
+\markdownOutputFileStream=\write3
+Package markdown Info: Using mode 3: The lt3luabridge package on input line 2667.
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/lt3luabridge/lt3luabridge.tex
+\g_luabridge_method_int=\count193
+
+Package luabridge Info: Using direct Lua access as the bridging method
+
+))
+Package: markdown 2023-04-27 v2.23.0-0-g0b22f91 markdown renderer
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip50
+\plpartopsep=\skip51
+\plitemsep=\skip52
+\plparsep=\skip53
+\pl@lab=\toks18
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen142
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks20
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks21
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks22
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/csvsimple/csvsimple.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+)
+Package: csvsimple 2023/05/09 v2.4.0 LaTeX CSV file processing
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/csvsimple/csvsimple-legacy.sty
+Package: csvsimple-legacy 2023/05/09 version 2.4.0 LaTeX2e CSV file processing
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen151
+\pgfutil@tempdimb=\dimen152
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks27
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count272
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/04/15 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\csv@file=\read3
+\c@csvinputline=\count273
+\c@csvrow=\count274
+\c@csvcol=\count275
+\csv@out=\write4
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count276
+\FV@InFile=\read4
+\FV@TabBox=\box55
+\c@FancyVerbLine=\count277
+\FV@StepNumber=\count278
+\FV@OutFile=\write5
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+\markdownLaTeXCitationsCounter=\count279
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/gobble/gobble.sty
+Package: gobble 2019/01/04 v0.2 Provides more gobble macros
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/gobble/gobble.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\markdownLaTeXRowCounter=\count280
+\markdownLaTeXRowTotal=\count281
+\markdownLaTeXColumnCounter=\count282
+\markdownLaTeXColumnTotal=\count283
+\markdownLaTeXTable=\toks28
+\markdownLaTeXTableAlignment=\toks29
+\markdownLaTeXTableEnd=\toks30
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count284
+\float@exts=\toks31
+\float@box=\box56
+\@float@everytoks=\toks32
+\@floatcapt=\box57
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 112.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 112.
+) (./build/Genomics_proj.aux)
+\openout1 = Genomics_proj.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 11.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+ (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen153
+\scratchbox=\box58
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen154
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks34
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks35
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 16.41594pt on input line 17.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 18.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.54997pt on input line 18.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 20.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.54997pt on input line 20.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 24.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 24.
+
+No file Genomics_proj.toc.
+\tf@toc=\write6
+
+\openout6 = Genomics_proj.toc
+No file Genomics_proj.lof.
+\tf@lof=\write7
+
+\openout7 = Genomics_proj.lof
+No file Genomics_proj.lot.
+\tf@lot=\write8
+
+\openout8 = Genomics_proj.lot
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 33.
+
+Overfull \hbox (10.35065pt too wide) in paragraph at lines 35--36
+\T1/phv/m/n/10 wheat breed-ing. Plant Biotech-nol J, 14: 1800-1812. https://doi.org/10.1111/pbi.12538 
+ []
+
+
+Overfull \hbox (40.8072pt too wide) in paragraph at lines 39--40
+[]\T1/phv/m/n/10 The data are avail-able in the DRYAD repos-i-tory https://doi.org/10.5061/dryad.w6m905qrv. 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 47.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 9.49997pt on input line 47.
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 53.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (6.34518pt too wide) in paragraph at lines 55--56
+[]\T1/phv/m/n/10 These phe-no-typic data are here ex-plored to find struc-tures in the dataset: 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.49997pt on input line 57.
+<../Figures/wheat_corrplot.png, id=9, 421.575pt x 421.575pt>
+File: ../Figures/wheat_corrplot.png Graphic file (type png)
+<use ../Figures/wheat_corrplot.png>
+Package luatex.def Info: ../Figures/wheat_corrplot.png  used on input line 62.
+(luatex.def)             Requested size: 227.6278pt x 227.62204pt.
+<../Figures/wheat_exp_var_agro_data.png, id=10, 483.0045pt x 386.04225pt>
+File: ../Figures/wheat_exp_var_agro_data.png Graphic file (type png)
+<use ../Figures/wheat_exp_var_agro_data.png>
+Package luatex.def Info: ../Figures/wheat_exp_var_agro_data.png  used on input line 83.
+(luatex.def)             Requested size: 284.80066pt x 227.62204pt.
+(./output.tex
+./output.tex:1: Undefined control sequence.
+l.1 \hypertarget
+              {genomic-projects-tutorials}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2
+Missing character: There is no ’ (U+2019) in font phvro8t!
+Missing character: There is no ’ (U+2019) in font phvro8t!
+Missing character: There is no ’ (U+2019) in font phvro8t!
+] [3<../Figures/wheat_corrplot.png><../Figures/wheat_exp_var_agro_data.png>]
+./output.tex:18: Undefined control sequence.
+l.18 \hypertarget
+               {contents}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:22: Undefined control sequence.
+<recently read> \tightlist 
+           
+l.22 \tightlist
+             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 24.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 24.
+
+./output.tex:24: Undefined control sequence.
+l.24   \protect\hyperlink
+                       {genomic-projects-tutorials}{Genomic projects
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:28: Undefined control sequence.
+<recently read> \tightlist 
+           
+l.28   \tightlist
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:30: Undefined control sequence.
+l.30     \protect\hyperlink
+                         {contents}{Contents}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:32: Undefined control sequence.
+l.32     \protect\hyperlink
+                         {tools}{Tools}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:34: Undefined control sequence.
+l.34     \protect\hyperlink
+                         {example-case-studies}{Example case studies}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:36: Undefined control sequence.
+l.36     \protect\hyperlink
+                         {resources--data}{Resources \& Data}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:38: Undefined control sequence.
+l.38     \protect\hyperlink
+                         {setup-of-the-working-environment}{Setup of the
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:42: Undefined control sequence.
+<recently read> \tightlist 
+           
+l.42     \tightlist
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:44: Undefined control sequence.
+l.44       \protect\hyperlink
+                           {get-plink-working-in-linux}{Get \texttt{PLINK}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:48: Undefined control sequence.
+<recently read> \tightlist 
+           
+l.48       \tightlist
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:50: Undefined control sequence.
+l.50         \protect\hyperlink
+                             {get-plinkr-r}{Get \texttt{plinkr}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:54: Undefined control sequence.
+l.54       \protect\hyperlink
+                           {get-tassel-gui-on-linux}{Get \texttt{TASSEL}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:58: Undefined control sequence.
+<recently read> \tightlist 
+           
+l.58       \tightlist
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:60: Undefined control sequence.
+l.60         \protect\hyperlink
+                             {get-rtassel-r}{Get \texttt{rTASSEL}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:64: Undefined control sequence.
+l.64       \protect\hyperlink
+                           {get-gemma}{Get \texttt{GEMMA}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:66: Undefined control sequence.
+l.66       \protect\hyperlink
+                           {get-gapit-r}{Get \texttt{GAPIT} (\texttt{R})}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:71: Undefined control sequence.
+l.71 \hypertarget
+               {tools}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (42.53882pt too wide) in paragraph at lines 81--87
+\T1/phv/m/n/10 sue 19, Pages 2633--2635 $\T1/lmtt/m/n/10 https://doi.org/10.1093/bioinformatics/
+ []
+
+
+Overfull \hbox (1.08179pt too wide) in paragraph at lines 87--94
+[]\T1/lmtt/m/n/10 rTASSEL \T1/phv/m/n/10 R pack-age repos-i-tory doc-u-men-ta-tion. Vi-gnettes: $\T1/lmtt/m/n/10 https:
+ []
+
+
+Overfull \hbox (14.05968pt too wide) in paragraph at lines 87--94
+\T1/lmtt/m/n/10 //rtassel.maizegenetics.net/index.html$\T1/phv/m/n/10 , Repos-i-tory: $\T1/lmtt/m/n/10 https:
+ []
+
+
+Overfull \hbox (6.00258pt too wide) in paragraph at lines 87--94
+\T1/lmtt/m/n/10 //github.com/maize-[]genetics/rTASSEL$\T1/phv/m/n/10 . \T1/phv/b/n/10 Monier et al.\T1/phv/m/n/10 , (2022).
+ []
+
+
+Overfull \hbox (57.66174pt too wide) in paragraph at lines 99--103
+\T1/phv/m/n/10 accelerated Tool for Genome-Wide As-so-ci-a-tion Study https://github.com/xiaolei-
+ []
+
+[4]
+Overfull \hbox (89.33235pt too wide) in paragraph at lines 103--107
+[]\T1/lmtt/m/n/10 GPtour \T1/phv/m/n/10 Ge-nomic Pre-dic-tion in R us-ing Keras mod-els https://github.com/miguelperezen-
+ []
+
+
+Overfull \hbox (2.75175pt too wide) in paragraph at lines 103--107
+\T1/phv/m/n/10 ciso/GP-tour and https://keras.posit.co/ar-ti-cles/get-ting_started.html 
+ []
+
+
+Overfull \hbox (15.48334pt too wide) in paragraph at lines 107--109
+[]\T1/lmtt/m/n/10 GAPIT \T1/phv/m/n/10 Genome As-so-ci-a-tion and In-te-grated Tools https://github.com/ji-
+ []
+
+./output.tex:111: Undefined control sequence.
+l.111 \hypertarget
+                {example-case-studies}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:116: Undefined control sequence.
+l.116 \tightlist
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Figures/goat_mds_12.png, id=21, 722.7pt x 370.986pt>
+File: Figures/goat_mds_12.png Graphic file (type png)
+<use Figures/goat_mds_12.png>
+Package luatex.def Info: Figures/goat_mds_12.png  used on input line 124.
+(luatex.def)             Requested size: 345.0pt x 177.0976pt.
+<Figures/goat_mds_eigen_filter.png, id=22, 722.7pt x 324.61275pt>
+File: Figures/goat_mds_eigen_filter.png Graphic file (type png)
+<use Figures/goat_mds_eigen_filter.png>
+Package luatex.def Info: Figures/goat_mds_eigen_filter.png  used on input line 130.
+(luatex.def)             Requested size: 345.0pt x 154.96039pt.
+./output.tex:153: Undefined control sequence.
+l.153   \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (13.22481pt too wide) in paragraph at lines 155--158
+[]\T1/phv/m/n/10 Man-hat-tan plot of a GWAS on dog pop-u-la-tion for deaf-ness._Data
+ []
+
+<Figures/manhattan_dogs.png, id=23, 711.8595pt x 315.579pt>
+File: Figures/manhattan_dogs.png Graphic file (type png)
+<use Figures/manhattan_dogs.png>
+Package luatex.def Info: Figures/manhattan_dogs.png  used on input line 163.
+(luatex.def)             Requested size: 345.0pt x 152.94487pt.
+<Figures/manhattan_filter_acd.png, id=24, 711.8595pt x 315.579pt>
+File: Figures/manhattan_filter_acd.png Graphic file (type png)
+<use Figures/manhattan_filter_acd.png>
+Package luatex.def Info: Figures/manhattan_filter_acd.png  used on input line 169.
+(luatex.def)             Requested size: 345.0pt x 152.94487pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.64998pt on input line 177.
+
+Overfull \hbox (5.87653pt too wide) in paragraph at lines 174--181
+[]\T1/phv/m/n/10 Man-hat-tan plots show-ing the genome wide as-so-ci-a-tion (GWA)
+ []
+
+[5<./Figures/goat_mds_12.png>] [6<./Figures/goat_mds_eigen_filter.png><./Figures/manhattan_dogs.png><./Figures/manhattan_filter_acd.png>]
+./output.tex:189: Undefined control sequence.
+l.189   \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Figures/top_SNPs_comb.png, id=33, 838.93425pt x 358.33875pt>
+File: Figures/top_SNPs_comb.png Graphic file (type png)
+<use Figures/top_SNPs_comb.png>
+Package luatex.def Info: Figures/top_SNPs_comb.png  used on input line 199.
+(luatex.def)             Requested size: 345.0pt x 147.36273pt.
+<Figures/SNP_chr3_top.png, id=34, 345.08925pt x 263.18324pt>
+File: Figures/SNP_chr3_top.png Graphic file (type png)
+<use Figures/SNP_chr3_top.png>
+Package luatex.def Info: Figures/SNP_chr3_top.png  used on input line 210.
+(luatex.def)             Requested size: 345.0pt x 263.1344pt.
+./output.tex:215: Undefined control sequence.
+l.215 \hypertarget
+                {resources-data}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (0.30954pt too wide) in paragraph at lines 220--225
+\T1/phv/m/sl/10 ods Psy-chi-atr Res\T1/phv/m/n/10 . 27:e1608. $\T1/lmtt/m/n/10 https://doi.org/10.1002/mpr.
+ []
+
+
+Overfull \hbox (9.38805pt too wide) in paragraph at lines 234--239
+\T1/phv/m/n/10 post-domestication mi-gra-tion routes. \T1/phv/m/sl/10 Genet Sel Evol \T1/phv/m/n/10 50, 58. $\T1/lmtt/m/n/10 https:
+ []
+
+[7<./Figures/top_SNPs_comb.png>]
+./output.tex:247: Undefined control sequence.
+l.247   e1004254.\href
+                    {https://journals.plos.org/plosgenetics/article?id=10.13...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (28.05006pt too wide) in paragraph at lines 244--249
+\T1/phv/m/n/10 e1004254.https://jour-nals.plos.org/plos-ge-net-ics/ar-ti-cle?id=10.1371/jour-
+ []
+
+./output.tex:254: Undefined control sequence.
+l.254 \hypertarget
+                {setup-of-the-working-environment}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:258: Undefined control sequence.
+l.258 Install R: \href
+                    {https://cran.r-project.org/}{The Comprehensive R
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:261: Undefined control sequence.
+l.261 IDE:\href
+             {https://code.visualstudio.com/}{VSCode}\textsuperscript{*}/\hr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:261: Undefined control sequence.
+l.261 ...udio.com/}{VSCode}\textsuperscript{*}/\href
+                                                  {https://posit.co/download...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (32.60086pt too wide) in paragraph at lines 261--262
+[]\T1/phv/m/n/10 IDE:https://code.visualstudio.com/VSCode$[][]$/https://posit.co/download/RStudio$[][]$ 
+ []
+
+./output.tex:264: Undefined control sequence.
+l.264 \href
+         {https://docs.anaconda.com/free/miniconda/index.html}{Miniconda
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (11.55063pt too wide) in paragraph at lines 263--266
+[]\T1/phv/m/n/10 In-stall Python: https://docs.ana-conda.com/free/mini-conda/in-dex.htmlMini-
+ []
+
+./output.tex:271: Undefined control sequence.
+l.271 \hypertarget
+                {get-plink-working-in-linux}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[8<./Figures/SNP_chr3_top.png>]
+./output.tex:273: Undefined control sequence.
+<argument> \texorpdfstring 
+                {Get \texttt {PLINK} working in Linux}{Get PLINK working in Lin
+l.273 Linux}{Get PLINK working in Linux}}
+                                       \label{get-plink-working-in-linux}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 273.
+./output.tex:273: Undefined control sequence.
+<argument> ...hesubsubsection\endcsname }\fi \texorpdfstring 
+                                                  {Get \texttt {PLINK} worki...
+l.273 Linux}{Get PLINK working in Linux}}
+                                       \label{get-plink-working-in-linux}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:279: Undefined control sequence.
+l.279   \href
+           {https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_202312...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:279: Missing $ inserted.
+<inserted text> 
+$
+l.279 ...tps://s3.amazonaws.com/plink1-assets/plink_
+                                                  linux_x86_64_20231211.zip}...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./output.tex:279: Extra }, or forgotten $.
+l.279 ...nk1-assets/plink_linux_x86_64_20231211.zip}
+                                                  {PLINK
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+./output.tex:281: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.281 \item
+         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./output.tex:282: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.282   I
+       nstall \texttt{PLINK}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./output.tex:282: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.282   I
+       nstall \texttt{PLINK}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 4.74998pt on input line 282.
+
+./output.tex:284: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.284 \item
+         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./output.tex:285: Missing $ inserted.
+<inserted text> 
+$
+l.285   \texttt
+             {PLINK} in \texttt{usr/local/bin}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./output.tex:285: Missing } inserted.
+<inserted text> 
+}
+l.285   \texttt
+             {PLINK} in \texttt{usr/local/bin}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (646.44289pt too wide) in paragraph at lines 278--285
+[]\T1/phv/m/n/10 Down-load https://s3.amazonaws.com/plink1-assets/plink$[][]\OML/cmm/m/it/10 inux[]\OT1/cmr/m/n/10 86[]4[]0231211\OML/cmm/m/it/10 :zip[]Install[][][][]$ 
+ []
+
+./output.tex:316: Undefined control sequence.
+l.316 \hypertarget
+                {get-plinkr-r}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (58.36604pt too wide) in paragraph at lines 322--324
+[]\T1/phv/m/n/10 re-fer to the in-stal-la-tion guide at https://github.com/AJRe-search-Group/plinkr/blob/mas-
+ []
+
+./output.tex:333: Undefined control sequence.
+l.333 \hypertarget
+                {get-tassel-gui-on-linux}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:335: Undefined control sequence.
+<argument> \texorpdfstring 
+                {Get \texttt {TASSEL} (GUI) on Linux}{Get TASSEL (GUI) on Linux
+l.335 Linux}{Get TASSEL (GUI) on Linux}}
+                                      \label{get-tassel-gui-on-linux}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:335: Undefined control sequence.
+<argument> ...hesubsubsection\endcsname }\fi \texorpdfstring 
+                                                  {Get \texttt {TASSEL} (GUI...
+l.335 Linux}{Get TASSEL (GUI) on Linux}}
+                                      \label{get-tassel-gui-on-linux}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:356: Undefined control sequence.
+l.356 \hypertarget
+                {get-rtassel-r}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[9]
+./output.tex:386: Undefined control sequence.
+<recently read> \tightlist 
+           
+l.386   \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (7.4935pt too wide) in paragraph at lines 392--394
+[]$[][]$\T1/phv/m/n/10 ``-Xmx50g'' and ``-Xms50g'', ``\T1/phv/m/sl/10 50g\T1/phv/m/n/10 '' rep-re-sents 50 Gi-ga-bytes of mem-
+ []
+
+./output.tex:403: Undefined control sequence.
+<recently read> \tightlist 
+           
+l.403   \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:417: Undefined control sequence.
+l.417 \hypertarget
+                {get-gemma}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:419: Undefined control sequence.
+<argument> \texorpdfstring 
+                {Get \texttt {GEMMA}}{Get GEMMA}
+l.419 \texttt{GEMMA}}{Get GEMMA}}
+                               \label{get-gemma}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:419: Undefined control sequence.
+<argument> ...hesubsubsection\endcsname }\fi \texorpdfstring 
+                                                  {Get \texttt {GEMMA}}{Get ...
+l.419 \texttt{GEMMA}}{Get GEMMA}}
+                               \label{get-gemma}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10]
+./output.tex:440: Undefined control sequence.
+l.440 \hypertarget
+                {get-gapit-r}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:442: Undefined control sequence.
+<argument> \texorpdfstring 
+                {Get \texttt {GAPIT} (\texttt {R})}{Get GAPIT (R)}
+l.442 (\texttt{R})}{Get GAPIT (R)}}
+                                 \label{get-gapit-r}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./output.tex:442: Undefined control sequence.
+<argument> ...hesubsubsection\endcsname }\fi \texorpdfstring 
+                                                  {Get \texttt {GAPIT} (\tex...
+l.442 (\texttt{R})}{Get GAPIT (R)}}
+                                 \label{get-gapit-r}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [11] (./build/Genomics_proj.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-30>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+)
+
+Here is how much of LuaTeX's memory you used:
+ 7638 strings out of 477545
+ 100000,1977958 words of node,token memory allocated
+ 544 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 63 glue_spec, 6 attribute_list, 1 shape, 1 write nodes
+   avail lists: 1:1,2:471,3:264,4:9,5:351,6:70,7:5696,8:60,9:237,10:6,11:446
+ 28375 multiletter control sequences out of 65536+600000
+ 83 fonts using 5517823 bytes
+ 82i,7n,76p,941b,314s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Genomics_proj.pdf (11 pages, 1129217 bytes).
+
+PDF statistics: 92 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+
