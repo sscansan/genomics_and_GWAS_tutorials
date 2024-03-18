@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  18 MAR 2024 17:57
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  18 MAR 2024 19:39
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex
@@ -375,11 +375,11 @@ File: ../Figures/wheat_corrplot.png Graphic file (type png)
 <use ../Figures/wheat_corrplot.png>
 Package luatex.def Info: ../Figures/wheat_corrplot.png  used on input line 62.
 (luatex.def)             Requested size: 227.6278pt x 227.62204pt.
-<../Figures/wheat_exp_var_agro_data.png, id=10, 513.71925pt x 386.04225pt>
+<../Figures/wheat_exp_var_agro_data.png, id=10, 483.0045pt x 386.04225pt>
 File: ../Figures/wheat_exp_var_agro_data.png Graphic file (type png)
 <use ../Figures/wheat_exp_var_agro_data.png>
 Package luatex.def Info: ../Figures/wheat_exp_var_agro_data.png  used on input line 83.
-(luatex.def)             Requested size: 302.91144pt x 227.62204pt.
+(luatex.def)             Requested size: 284.80066pt x 227.62204pt.
 (./output.tex
 ./output.tex:1: Undefined control sequence.
 l.1 \hypertarget
@@ -1086,12 +1086,12 @@ Here is how much of LuaTeX's memory you used:
  100000,1977958 words of node,token memory allocated
  544 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 63 glue_spec, 6 attribute_list, 1 shape, 1 write nodes
-   avail lists: 1:1,2:486,3:265,4:9,5:353,6:70,7:5638,8:60,9:237,10:6,11:437
+   avail lists: 1:1,2:486,3:265,4:9,5:355,6:70,7:5649,8:60,9:237,10:6,11:437
  28373 multiletter control sequences out of 65536+600000
  81 fonts using 5356623 bytes
  82i,7n,76p,941b,314s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Genomics_proj.pdf (11 pages, 1134917 bytes).
+Output written on Genomics_proj.pdf (11 pages, 1129128 bytes).
 
 PDF statistics: 92 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

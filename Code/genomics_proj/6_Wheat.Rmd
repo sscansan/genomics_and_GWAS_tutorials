@@ -226,7 +226,7 @@ And perform PCA
 n_PCs <- 1:length(var_explained)
 
 exp_var_df <- tibble::tibble(PC = n_PCs) %>%
-  mutate(exp_var = var_explained, exp_var_perc = round(exp_var * 100, 2))
+  mutate(exp_var = var_explained, exp_var_perc = round(exp_var * 100, 1))
 
 plot_exp_var <-
   exp_var_df %>%
@@ -234,11 +234,12 @@ plot_exp_var <-
   geom_col(alpha = .6, fill = "steelblue") +
   geom_point(size = 2) +
   geom_line(aes(x = PC)) +
-  geom_text(aes(PC + 0.4, exp_var_perc + 4, label = paste0(exp_var_perc, "%")), angle = 45) +
+  geom_text(aes(PC + 0.3, exp_var_perc + 3, label = exp_var_perc), angle = 30) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, 72)) +
-  labs(x = "Dimension", y = "Explained Variances") +
+  #scale_x_discrete(expand = c(0, .9)) +
+  labs(x = "Dimension", y = "Explained variance (%)") +
   theme_classic() +
-  theme(aspect.ratio = .75)
+  theme(aspect.ratio = .8)
 
 
 path <- "Figures/wheat_exp_var_agro_data.png"
@@ -246,4 +247,6 @@ path <- "Figures/wheat_exp_var_agro_data.png"
 ggsave(path, plot = plot_exp_var, width = 10, dpi = 120)
 knitr::plot_crop(path)
 ```
+```{r}
 
+```

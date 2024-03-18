@@ -1,10 +1,10 @@
 # Fdb version 4
-["lualatex"] 1710781031 "/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex" "build/Genomics_proj.pdf" "Genomics_proj" 1710781035 2
+["lualatex"] 1710787144 "/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex" "build/Genomics_proj.pdf" "Genomics_proj" 1710787148 2
   "../Figures/wheat_corrplot.png" 1710778391 68153 a08400b03a601fcfaf18c8f0e2f1180d ""
-  "../Figures/wheat_exp_var_agro_data.png" 1710777104 40191 9b68de228594ede1f4a64ebeb8089004 ""
+  "../Figures/wheat_exp_var_agro_data.png" 1710787136 32126 7ed2880c9dda767edf683fe4b30dc2fb ""
   "/home/sscansa/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1689196955 127327 0c22a2c7faa4e80fd8c3443dc8dd3208 ""
   "/home/sscansa/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1689196955 350692 84fcdfdc5d8fb4c0b4328303e12305a0 ""
-  "/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex" 1710781031 4986 4caa76bd66f24a1dded52d3b368cab00 ""
+  "/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex" 1710787140 4986 b45cb565e7ed72395767c16a6c132c7c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm" 1136768653 6628 34c39492c0adc454c1c199922bba8363 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvr8c.tfm" 1136768653 1348 c311631dfec4123b7faa7f864709e626 ""
@@ -177,12 +177,12 @@
   "Figures/top_SNPs_comb.png" 1710347327 98116 dc86ae61f819574489fc93b545a84347 ""
   "Genomics_proj.lof" 0 -1 0 ""
   "Genomics_proj.lot" 0 -1 0 ""
-  "Genomics_proj.tex" 1710781031 4986 4caa76bd66f24a1dded52d3b368cab00 ""
+  "Genomics_proj.tex" 1710787140 4986 b45cb565e7ed72395767c16a6c132c7c ""
   "Genomics_proj.toc" 0 -1 0 ""
-  "build/Genomics_proj.aux" 1710781035 3970 860dd1b04cc6a534fb62453e064bb958 "lualatex"
-  "build/Genomics_proj.lof" 1710781035 1150 825a852e0a9221974e69fae53d5960d9 "lualatex"
-  "build/Genomics_proj.lot" 1710781034 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "build/Genomics_proj.toc" 1710781035 1206 80a39aa38307aba5d03cc61af2ac9b79 "lualatex"
+  "build/Genomics_proj.aux" 1710787148 3954 27f34776f3ca1163d48c31ed9556bd14 "lualatex"
+  "build/Genomics_proj.lof" 1710787148 1134 b8ecef640512230d55ec25f22a643962 "lualatex"
+  "build/Genomics_proj.lot" 1710787147 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "build/Genomics_proj.toc" 1710787148 1206 80a39aa38307aba5d03cc61af2ac9b79 "lualatex"
   "output.tex" 1710347327 13566 e701ceca0125bd7fe187ee622e0d1547 ""
   (generated)
   "build/Genomics_proj.aux"

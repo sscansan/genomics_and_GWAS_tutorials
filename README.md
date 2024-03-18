@@ -11,6 +11,8 @@ The repository has been created for testing and self-teaching purposes of biolog
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
+The report of the studies is in progress in Report/build/Genomics_proj.pdf
+
 ## Contents
 
 - [Genomic projects tutorials](#genomic-projects-tutorials)
