@@ -33,27 +33,131 @@ Data:
 Dell'Acqua, Matteo (2022). Characterization data for the EtNAM population and Ethiopian durum wheat landraces diversity panel [Dataset]. Dryad. https://doi.org/10.5061/dryad.w6m905qrv form the orginal research article https://onlinelibrary.wiley.com/doi/10.1111/pbi.12538
 
 
-Here we deal with data stored in the .Rdagst
-ta format, great!
+Here we deal with data stored in the .Rdagst data format, great!
+
+In the README_file.txt of the data repository we ahve the folllowing description:
+
+>The file "*diversity.panel.data.gp.Rdata*" contains molecular and phenotypic data
+relative to the Ethiopian durum wheat diversity panel used in this study.
+The Rdata file contains serveral R objects:
+>
+>- **info**, passport data for the accessions included in the study
+>- **geno**, containing genotypic data scored on 90K markers on the wheat array
+>- **snp.pos**, containing estimated genomic positions of the 90K markers
+>- **met**, containing agronomic characterization data
+>- **farm**, containing participatory variety selection data
+>
+>The file "*etnam.data.gp.Rdata*" contains molecular and phenotypic data
+relative to the EtNAM population used in this study.
+The Rdata file contains serveral R objects:
+>
+>- **infonam**, passport data for the accessions included in the study
+>- **infofound**, passport data for the parental lines of the EtNAM
+>- **genonam**, containing genotypic data scored on 13K markers on the wheat array
+>- **snp.pos.nam**, containing estimated genomic positions of the 90K markers
+>- **metnam**, containing agronomic characterization data
+>- **farmnam**, containing participatory variety selection data
+
+```{r, echo = FALSE}
+library(tidyverse)
+library(corrplot)
+```
 ```{r}
 data_et <- load("Data/Triticum-durum/etnam.data.gp.Rdata")
 data_et
+```
 
+```{r}
 data <- load("Data/Triticum-durum/diversity.panel.data.gp.Rdata")
 data
-
-# Accessing the "met" object
+# agronomic characterization data
 met_data <- met
-
-# Accessing the "farm" object
+# participatory variety selection data
 farm_data <- farm
-
-# Accessing the "geno" object
+# genotypic data scored on 90K markers on the wheat array
 geno_data <- geno
-
-# Accessing the "snp.pos" object
+# estimated genomic positions of the 90K markers
 snp_pos_data <- snp.pos
-
-# Accessing the "info" object
+# passport data for the accessions included in the study
 info_data <- info
 ```
+
+## Exploratory data analysis
+### Agronomic data
+```{r}
+met_data %>% head()
+```
+ID = identification
+DB = days to booting (d)
+DF = days to flowering (d)
+DM = days to maturity (d)
+PH = plant height (cm)
+NET = number of effective tillers per plant (n)
+SPL = spike length (cm)
+SPS = number of seeds per spike (n)
+BM = biomass (t/ha)
+GY = grain yeld (t/ha)
+TGW = thousand grain weight (g)
+
+##### Correlation Matrix:
+```{r}
+unique_ids <- make.unique(met_data$ID)
+
+rownames(met_data) <- unique_ids
+
+eda_met <- met_data %>%
+  select(DB:ncol(met_data))
+
+summary(eda_met)
+nrow(eda_met)
+
+eda_met <- na.omit(eda_met)
+
+eda_met_corr <- cor(eda_met)
+
+corrplot(eda_met_corr, method = "color", type = "lower", order = "hclust", tl.col = "black", tl.srt = 90)
+
+```
+
+```{r}
+# function cor.mtest to pass on a matrix  and perform the correlation test using the Pearson correlation coefficient as metric.
+# if Spearman or Kendall correlations are needed, then change the method argument in cor.test.
+cor.mtest <- function(mat, ...) {
+    mat <- as.matrix(mat)
+    n <- ncol(mat)
+    p.mat<- matrix(NA, n, n)
+    diag(p.mat) <- 0
+    for (i in 1:(n - 1)) {
+        for (j in (i + 1):n) {
+            tmp <- cor.test(mat[, i], mat[, j], ...)
+            p.mat[i, j] <- p.mat[j, i] <- tmp$p.value
+        }
+    }
+  colnames(p.mat) <- rownames(p.mat) <- colnames(mat)
+  p.mat
+}
+```
+```{r}
+eda_met <- as.matrix(eda_met)
+
+pearson_p <- cor.mtest(eda_met)
+head(pearson_p[, 1:5])
+
+#col <- colorRampPalette(c("#BB4444", "#EE9988", "#FFFFFF", "#77AADD", "#4477AA"))
+
+corrplot(
+  eda_met_corr,
+  #method = "color",
+  #col=col(200),
+  type = "upper",
+  order = "hclust",
+  tl.col = "black",
+  tl.srt = 90,
+  diag=FALSE,
+  p.mat = pearson_p,
+  sig.level = 0.01,
+  addCoef.col = "grey10"
+)
+
+```
+

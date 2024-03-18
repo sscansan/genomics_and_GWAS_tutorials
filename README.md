@@ -168,7 +168,7 @@ OS: Linux^\*^/WSL
     sudo nano ~/.bashrc
     ```
 
-    adn include the line:
+    and include the line:
 
     ```
     export PATH=/usr/local/bin:$PATH
