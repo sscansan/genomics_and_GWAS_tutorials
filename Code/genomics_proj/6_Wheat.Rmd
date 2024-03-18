@@ -143,21 +143,107 @@ eda_met <- as.matrix(eda_met)
 pearson_p <- cor.mtest(eda_met)
 head(pearson_p[, 1:5])
 
-#col <- colorRampPalette(c("#BB4444", "#EE9988", "#FFFFFF", "#77AADD", "#4477AA"))
+# col <- colorRampPalette(c("#BB4444", "#EE9988", "#FFFFFF", "#77AADD", "#4477AA"))
+
+h <- 700
+png("Figures/wheat_corrplot.png", width = h, height = h, res = 120)
 
 corrplot(
   eda_met_corr,
-  #method = "color",
+  method = "color",
   #col=col(200),
   type = "upper",
   order = "hclust",
   tl.col = "black",
   tl.srt = 90,
-  diag=FALSE,
+  diag = F,
   p.mat = pearson_p,
   sig.level = 0.01,
   addCoef.col = "grey10"
 )
 
+dev.off()
+
+```
+
+
+##### PCA
+To reveal hidden structures in the population.
+
+| prcomp() | name     | Description                                                                  |
+|----------|----------|------------------------------------------------------------------------------|
+| sdev 	   | sdev 	  | standard deviations of the principal components                              |
+| rotation | loadings | matrix of variable loadings (columns are eigenvectors)                       |
+| center 	 | center 	| variable means (means that were substracted)                                 |
+| scale 	 | scale 	  | variable standard deviations (the scaling applied to each variable)          |
+| x 	     | scores 	| coordinates of the individuals (observations) on the principal components.   |
+
+```{r}
+# using the eda_met data, after removing the NAs
+pca <- prcomp(eda_met, center = T, scale = T)
+pca
+```
+
+Perform SVD:
+```{r}
+# standardize data
+std_eda_met <- scale(eda_met)
+# cov matrix
+cov_mat <- cov(std_eda_met)
+# singular value decomposition
+svd_res <- svd(cov_mat)
+# we obrain the matrix $d, $u and $v: U and V are the orthogonal
+```
+
+We obtain the decomposition of the covariate matrix as:
+
+$ X=UDV^{T} $
+
+Where $U$ and $V$ are the orthogonal and $V^{T}$ the transposed.
+And $D$ is the diagonal matrix with the singular values.
+also represented as $D=U^{T}XV$
+
+with the function svd() we get the matrices $d which has the singular $X$ values [min(n.p)], $u with the left singular vectors [c(n,nu)], v with the right singlular vector of $X$ [c(p,nv)].
+
+Extract the values:
+```{r}
+# Extract singular values, left singular vectors (loadings), and right singular vectors (scores)
+singular_values <- svd_res$d
+loadings <- svd_res$u
+scores <- std_eda_met %*% svd_res$v
+```
+```{r}
+# Principal component loadings
+loadings
+# Principal component scores
+scores
+# Variance explained by each principal component
+var_explained
+```
+
+And perform PCA
+```{r}
+n_PCs <- 1:length(var_explained)
+
+exp_var_df <- tibble::tibble(PC = n_PCs) %>%
+  mutate(exp_var = var_explained, exp_var_perc = round(exp_var * 100, 2))
+
+plot_exp_var <-
+  exp_var_df %>%
+  ggplot(., aes(factor(PC), exp_var_perc)) +
+  geom_col(alpha = .6, fill = "steelblue") +
+  geom_point(size = 2) +
+  geom_line(aes(x = PC)) +
+  geom_text(aes(PC + 0.4, exp_var_perc + 4, label = paste0(exp_var_perc, "%")), angle = 45) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 72)) +
+  labs(x = "Dimension", y = "Explained Variances") +
+  theme_classic() +
+  theme(aspect.ratio = .75)
+
+
+path <- "Figures/wheat_exp_var_agro_data.png"
+
+ggsave(path, plot = plot_exp_var, width = 10, dpi = 120)
+knitr::plot_crop(path)
 ```
 

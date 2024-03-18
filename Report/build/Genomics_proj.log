@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  13 MAR 2024 17:29
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  18 MAR 2024 17:57
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex
@@ -325,11 +325,9 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.54997pt on input line 18.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 20.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 23.
+(Font)              scaled to size 13.67995pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 23.
+(Font)              scaled to size 13.67995pt on input line 24.
 
 No file Genomics_proj.toc.
 \tf@toc=\write6
@@ -343,6 +341,45 @@ No file Genomics_proj.lot.
 \tf@lot=\write8
 
 \openout8 = Genomics_proj.lot
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 33.
+
+Overfull \hbox (10.35065pt too wide) in paragraph at lines 35--36
+\T1/phv/m/n/10 wheat breed-ing. Plant Biotech-nol J, 14: 1800-1812. https://doi.org/10.1111/pbi.12538 
+ []
+
+
+Overfull \hbox (40.8072pt too wide) in paragraph at lines 39--40
+[]\T1/phv/m/n/10 The data are avail-able in the DRYAD repos-i-tory https://doi.org/10.5061/dryad.w6m905qrv. 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 47.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 9.49997pt on input line 47.
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 53.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (6.34518pt too wide) in paragraph at lines 55--56
+[]\T1/phv/m/n/10 These phe-no-typic data are here ex-plored to find struc-tures in the dataset: 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.49997pt on input line 57.
+<../Figures/wheat_corrplot.png, id=9, 421.575pt x 421.575pt>
+File: ../Figures/wheat_corrplot.png Graphic file (type png)
+<use ../Figures/wheat_corrplot.png>
+Package luatex.def Info: ../Figures/wheat_corrplot.png  used on input line 62.
+(luatex.def)             Requested size: 227.6278pt x 227.62204pt.
+<../Figures/wheat_exp_var_agro_data.png, id=10, 513.71925pt x 386.04225pt>
+File: ../Figures/wheat_exp_var_agro_data.png Graphic file (type png)
+<use ../Figures/wheat_exp_var_agro_data.png>
+Package luatex.def Info: ../Figures/wheat_exp_var_agro_data.png  used on input line 83.
+(luatex.def)             Requested size: 302.91144pt x 227.62204pt.
 (./output.tex
 ./output.tex:1: Undefined control sequence.
 l.1 \hypertarget
@@ -353,10 +390,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 10.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+[2
+Missing character: There is no ’ (U+2019) in font phvro8t!
+Missing character: There is no ’ (U+2019) in font phvro8t!
+Missing character: There is no ’ (U+2019) in font phvro8t!
+] [3<../Figures/wheat_corrplot.png><../Figures/wheat_exp_var_agro_data.png>]
 ./output.tex:18: Undefined control sequence.
 l.18 \hypertarget
                {contents}{%
@@ -366,8 +404,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 19.
 ./output.tex:22: Undefined control sequence.
 <recently read> \tightlist 
            
@@ -406,8 +442,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 30.
 ./output.tex:30: Undefined control sequence.
 l.30     \protect\hyperlink
                          {contents}{Contents}
@@ -513,9 +547,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[1
-
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 ./output.tex:60: Undefined control sequence.
 l.60         \protect\hyperlink
                              {get-rtassel-r}{Get \texttt{rTASSEL}
@@ -553,32 +584,43 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (55.88193pt too wide) in paragraph at lines 78--81
-[]\T1/lmtt/m/n/10 plinkr \T1/phv/m/n/10 R pack-age repos-i-tory doc-u-men-ta-tion. $\T1/lmtt/m/n/10 https://github.com/AJResearchGroup/
- []
-
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 91.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 91.
-
-Overfull \hbox (6.58167pt too wide) in paragraph at lines 87--94
-[]\T1/lmtt/m/n/10 rTASSEL \T1/phv/m/n/10 R pack-age repos-i-tory doc-u-men-ta-tion. Vi-gnettes: $\T1/lmtt/m/n/10 https://rtassel.
+Overfull \hbox (42.53882pt too wide) in paragraph at lines 81--87
+\T1/phv/m/n/10 sue 19, Pages 2633--2635 $\T1/lmtt/m/n/10 https://doi.org/10.1093/bioinformatics/
  []
 
 
-Overfull \hbox (62.05943pt too wide) in paragraph at lines 87--94
-\T1/lmtt/m/n/10 maizegenetics.net/index.html$\T1/phv/m/n/10 , Repos-i-tory: $\T1/lmtt/m/n/10 https://github.com/maize-[]genetics/
+Overfull \hbox (1.08179pt too wide) in paragraph at lines 87--94
+[]\T1/lmtt/m/n/10 rTASSEL \T1/phv/m/n/10 R pack-age repos-i-tory doc-u-men-ta-tion. Vi-gnettes: $\T1/lmtt/m/n/10 https:
  []
 
 
-Overfull \hbox (42.33238pt too wide) in paragraph at lines 103--107
+Overfull \hbox (14.05968pt too wide) in paragraph at lines 87--94
+\T1/lmtt/m/n/10 //rtassel.maizegenetics.net/index.html$\T1/phv/m/n/10 , Repos-i-tory: $\T1/lmtt/m/n/10 https:
+ []
+
+
+Overfull \hbox (6.00258pt too wide) in paragraph at lines 87--94
+\T1/lmtt/m/n/10 //github.com/maize-[]genetics/rTASSEL$\T1/phv/m/n/10 . \T1/phv/b/n/10 Monier et al.\T1/phv/m/n/10 , (2022).
+ []
+
+
+Overfull \hbox (57.66174pt too wide) in paragraph at lines 99--103
+\T1/phv/m/n/10 accelerated Tool for Genome-Wide As-so-ci-a-tion Study https://github.com/xiaolei-
+ []
+
+
+Overfull \hbox (89.33235pt too wide) in paragraph at lines 103--107
 []\T1/lmtt/m/n/10 GPtour \T1/phv/m/n/10 Ge-nomic Pre-dic-tion in R us-ing Keras mod-els https://github.com/miguelperezen-
  []
 
 
-Overfull \hbox (34.7355pt too wide) in paragraph at lines 107--109
-[]\T1/lmtt/m/n/10 GAPIT \T1/phv/m/n/10 Genome As-so-ci-a-tion and In-te-grated Tools https://github.com/ji-abowang/GAPIT 
+Overfull \hbox (2.75175pt too wide) in paragraph at lines 103--107
+\T1/phv/m/n/10 ciso/GP-tour and https://keras.posit.co/ar-ti-cles/get-ting_started.html 
+ []
+
+[4]
+Overfull \hbox (15.48334pt too wide) in paragraph at lines 107--109
+[]\T1/lmtt/m/n/10 GAPIT \T1/phv/m/n/10 Genome As-so-ci-a-tion and In-te-grated Tools https://github.com/ji-
  []
 
 ./output.tex:111: Undefined control sequence.
@@ -599,22 +641,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (62.82877pt too wide) in paragraph at lines 118--120
-[]\T1/phv/m/n/10 SNP pro-fil-ing of goat breeds.\T1/phv/m/sl/10 Data source\T1/phv/m/n/10 : \T1/phv/b/n/10 Colli et al. \T1/phv/m/n/10 (2018) https://doi.org/10.1186/s12711-
- []
-
-<Figures/goat_mds_12.png, id=9, 722.7pt x 370.986pt>
+<Figures/goat_mds_12.png, id=21, 722.7pt x 370.986pt>
 File: Figures/goat_mds_12.png Graphic file (type png)
 <use Figures/goat_mds_12.png>
 Package luatex.def Info: Figures/goat_mds_12.png  used on input line 124.
 (luatex.def)             Requested size: 345.0pt x 177.0976pt.
-<Figures/goat_mds_eigen_filter.png, id=10, 722.7pt x 324.61275pt>
+<Figures/goat_mds_eigen_filter.png, id=22, 722.7pt x 324.61275pt>
 File: Figures/goat_mds_eigen_filter.png Graphic file (type png)
 <use Figures/goat_mds_eigen_filter.png>
 Package luatex.def Info: Figures/goat_mds_eigen_filter.png  used on input line 130.
 (luatex.def)             Requested size: 345.0pt x 154.96039pt.
-[2] [3<./Figures/goat_mds_12.png><./Figures/goat_mds_eigen_filter.png>]
 ./output.tex:153: Undefined control sequence.
 l.153   \tightlist
                 
@@ -625,22 +661,28 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (7.97086pt too wide) in paragraph at lines 155--158
-[]\T1/phv/m/n/10 Man-hat-tan plot of a GWAS on dog pop-u-la-tion for deaf-ness._Data source_:
+Overfull \hbox (13.22481pt too wide) in paragraph at lines 155--158
+[]\T1/phv/m/n/10 Man-hat-tan plot of a GWAS on dog pop-u-la-tion for deaf-ness._Data
  []
 
-<Figures/manhattan_dogs.png, id=20, 711.8595pt x 315.579pt>
+<Figures/manhattan_dogs.png, id=23, 711.8595pt x 315.579pt>
 File: Figures/manhattan_dogs.png Graphic file (type png)
 <use Figures/manhattan_dogs.png>
 Package luatex.def Info: Figures/manhattan_dogs.png  used on input line 163.
 (luatex.def)             Requested size: 345.0pt x 152.94487pt.
-<Figures/manhattan_filter_acd.png, id=21, 711.8595pt x 315.579pt>
+<Figures/manhattan_filter_acd.png, id=24, 711.8595pt x 315.579pt>
 File: Figures/manhattan_filter_acd.png Graphic file (type png)
 <use Figures/manhattan_filter_acd.png>
 Package luatex.def Info: Figures/manhattan_filter_acd.png  used on input line 169.
 (luatex.def)             Requested size: 345.0pt x 152.94487pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 6.64998pt on input line 177.
+
+Overfull \hbox (5.87653pt too wide) in paragraph at lines 174--181
+[]\T1/phv/m/n/10 Man-hat-tan plots show-ing the genome wide as-so-ci-a-tion (GWA)
+ []
+
+[5<./Figures/goat_mds_12.png>] [6<./Figures/goat_mds_eigen_filter.png><./Figures/manhattan_dogs.png><./Figures/manhattan_filter_acd.png>]
 ./output.tex:189: Undefined control sequence.
 l.189   \tightlist
                 
@@ -650,18 +692,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[4<./Figures/manhattan_dogs.png><./Figures/manhattan_filter_acd.png>]
-<Figures/top_SNPs_comb.png, id=25, 838.93425pt x 358.33875pt>
+<Figures/top_SNPs_comb.png, id=33, 838.93425pt x 358.33875pt>
 File: Figures/top_SNPs_comb.png Graphic file (type png)
 <use Figures/top_SNPs_comb.png>
 Package luatex.def Info: Figures/top_SNPs_comb.png  used on input line 199.
 (luatex.def)             Requested size: 345.0pt x 147.36273pt.
-<Figures/SNP_chr3_top.png, id=26, 345.08925pt x 263.18324pt>
+<Figures/SNP_chr3_top.png, id=34, 345.08925pt x 263.18324pt>
 File: Figures/SNP_chr3_top.png Graphic file (type png)
 <use Figures/SNP_chr3_top.png>
 Package luatex.def Info: Figures/SNP_chr3_top.png  used on input line 210.
 (luatex.def)             Requested size: 345.0pt x 263.1344pt.
-
 ./output.tex:215: Undefined control sequence.
 l.215 \hypertarget
                 {resources-data}{%
@@ -672,20 +712,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (8.96573pt too wide) in paragraph at lines 225--228
-[]\T1/phv/b/n/10 Ma-rees et al. \T1/phv/m/n/10 (2018) tu-to-rial $\T1/lmtt/m/n/10 https://github.com/MareesAT/GWA_tutorial$ 
+Overfull \hbox (0.30954pt too wide) in paragraph at lines 220--225
+\T1/phv/m/sl/10 ods Psy-chi-atr Res\T1/phv/m/n/10 . 27:e1608. $\T1/lmtt/m/n/10 https://doi.org/10.1002/mpr.
  []
 
 
-Overfull \hbox (28.41689pt too wide) in paragraph at lines 228--231
-[]\T1/phv/b/n/10 Gá-bor Mészáros \T1/phv/m/n/10 (2021) Ge-nomic Boot Camp Book $\T1/lmtt/m/n/10 https://genomicsbootcamp.
+Overfull \hbox (9.38805pt too wide) in paragraph at lines 234--239
+\T1/phv/m/n/10 post-domestication mi-gra-tion routes. \T1/phv/m/sl/10 Genet Sel Evol \T1/phv/m/n/10 50, 58. $\T1/lmtt/m/n/10 https:
  []
 
-
-Overfull \hbox (35.73947pt too wide) in paragraph at lines 231--234
-[]\T1/phv/b/n/10 Gá-bor Mészáros \T1/phv/m/n/10 video tu-to-ri-als $\T1/lmtt/m/n/10 https://www.youtube.com/c/GenomicsBootCamp$ 
- []
-
+[7<./Figures/top_SNPs_comb.png>]
 ./output.tex:247: Undefined control sequence.
 l.247   e1004254.\href
                     {https://journals.plos.org/plosgenetics/article?id=10.13...
@@ -696,13 +732,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (0.33412pt too wide) in paragraph at lines 244--249
-\T1/phv/m/n/10 mix-ture in Do-mes-ti-cated Cat-tle. \T1/phv/m/sl/10 PLOS Ge-net-ics \T1/phv/m/n/10 10(3): e1004254.https://jour-
- []
-
-
-Overfull \hbox (80.86479pt too wide) in paragraph at lines 244--249
-\T1/phv/m/n/10 nals.plos.org/plos-ge-net-ics/ar-ti-cle?id=10.1371/jour-nal.pgen.1004254https://doi.org/10.1371/jour-
+Overfull \hbox (28.05006pt too wide) in paragraph at lines 244--249
+\T1/phv/m/n/10 e1004254.https://jour-nals.plos.org/plos-ge-net-ics/ar-ti-cle?id=10.1371/jour-
  []
 
 ./output.tex:254: Undefined control sequence.
@@ -714,7 +745,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[5<./Figures/top_SNPs_comb.png>]
 ./output.tex:258: Undefined control sequence.
 l.258 Install R: \href
                     {https://cran.r-project.org/}{The Comprehensive R
@@ -723,11 +753,6 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (10.86401pt too wide) in paragraph at lines 258--260
-[]\T1/phv/m/n/10 In-stall R: https://cran.r-project.org/The Com-pre-hen-sive R Archive Net-work (CRAN) 
- []
 
 ./output.tex:261: Undefined control sequence.
 l.261 IDE:\href
@@ -747,6 +772,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+Overfull \hbox (32.60086pt too wide) in paragraph at lines 261--262
+[]\T1/phv/m/n/10 IDE:https://code.visualstudio.com/VSCode$[][]$/https://posit.co/download/RStudio$[][]$ 
+ []
+
 ./output.tex:264: Undefined control sequence.
 l.264 \href
          {https://docs.anaconda.com/free/miniconda/index.html}{Miniconda
@@ -755,6 +785,11 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (11.55063pt too wide) in paragraph at lines 263--266
+[]\T1/phv/m/n/10 In-stall Python: https://docs.ana-conda.com/free/mini-conda/in-dex.htmlMini-
+ []
 
 ./output.tex:271: Undefined control sequence.
 l.271 \hypertarget
@@ -765,6 +800,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[8<./Figures/SNP_chr3_top.png>]
 ./output.tex:273: Undefined control sequence.
 <argument> \texorpdfstring 
                 {Get \texttt {PLINK} working in Linux}{Get PLINK working in Lin
@@ -885,11 +921,10 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (599.44292pt too wide) in paragraph at lines 278--285
+Overfull \hbox (646.44289pt too wide) in paragraph at lines 278--285
 []\T1/phv/m/n/10 Down-load https://s3.amazonaws.com/plink1-assets/plink$[][]\OML/cmm/m/it/10 inux[]\OT1/cmr/m/n/10 86[]4[]0231211\OML/cmm/m/it/10 :zip[]Install[][][][]$ 
  []
 
-[6<./Figures/SNP_chr3_top.png>]
 ./output.tex:316: Undefined control sequence.
 l.316 \hypertarget
                 {get-plinkr-r}{%
@@ -900,7 +935,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (23.36604pt too wide) in paragraph at lines 322--324
+Overfull \hbox (58.36604pt too wide) in paragraph at lines 322--324
 []\T1/phv/m/n/10 re-fer to the in-stal-la-tion guide at https://github.com/AJRe-search-Group/plinkr/blob/mas-
  []
 
@@ -944,7 +979,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[7]
+[9]
 ./output.tex:386: Undefined control sequence.
 <recently read> \tightlist 
            
@@ -955,6 +990,11 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (7.4935pt too wide) in paragraph at lines 392--394
+[]$[][]$\T1/phv/m/n/10 ``-Xmx50g'' and ``-Xms50g'', ``\T1/phv/m/sl/10 50g\T1/phv/m/n/10 '' rep-re-sents 50 Gi-ga-bytes of mem-
+ []
 
 ./output.tex:403: Undefined control sequence.
 <recently read> \tightlist 
@@ -998,7 +1038,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[8]
+[10]
 ./output.tex:440: Undefined control sequence.
 l.440 \hypertarget
                 {get-gapit-r}{%
@@ -1030,7 +1070,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) [9] (./build/Genomics_proj.aux)
+) [11] (./build/Genomics_proj.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -1042,19 +1082,19 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 7619 strings out of 477545
+ 7634 strings out of 477545
  100000,1977958 words of node,token memory allocated
- 514 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 58 glue_spec, 6 attribute_list, 1 write nodes
-   avail lists: 1:1,2:486,3:275,4:8,5:286,6:65,7:5514,8:60,9:216,10:7,11:349
- 28362 multiletter control sequences out of 65536+600000
- 89 fonts using 5889687 bytes
- 82i,6n,76p,373b,393s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 544 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 63 glue_spec, 6 attribute_list, 1 shape, 1 write nodes
+   avail lists: 1:1,2:486,3:265,4:9,5:353,6:70,7:5638,8:60,9:237,10:6,11:437
+ 28373 multiletter control sequences out of 65536+600000
+ 81 fonts using 5356623 bytes
+ 82i,7n,76p,941b,314s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Genomics_proj.pdf (9 pages, 1027422 bytes).
+Output written on Genomics_proj.pdf (11 pages, 1134917 bytes).
 
-PDF statistics: 82 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+PDF statistics: 92 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

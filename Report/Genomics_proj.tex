@@ -17,38 +17,73 @@
 \maketitle
 \begin{abstract}
 
-    So far this is the \LaTeX{} version of the README.md.
+    The first project is about
+    The second and third projects are genomic tutorials on two animal studies, the first on worlwide populations of goats, the second on the association of deafness in three dog breeds.
 
 \end{abstract}
 \tableofcontents
 \listoffigures
 \listoftables
 
-\input{output.tex}
 
 %\begin{twocolumn}
 
-\section{Project: SNP Profiling of worldwide goat populations}
+\section{Project: SNP Profiling Durum Wheat}
 
 \subsection{Data}
 
-Data source: Colli et al. (2018)
-https://doi.org/10.1186/s12711-018-0422-x
+Mengistu, D.K., Kidane, Y.G., Catellani, M., Frascaroli, E., Fadda, C., Pè, M.E. and Dell'Acqua, M. (2016), High-density molecular characterization and association mapping in Ethiopian durum wheat landraces reveals high diversity and potential for wheat breeding. Plant Biotechnol J, 14: 1800-1812. https://doi.org/10.1111/pbi.12538
 
-\section{Methods}
+The data used in this case study are derived from the  Durum wheat molecular characterization above-mentioned.
 
-\subsubsection{Data import}
+The data are available in the DRYAD repository https://doi.org/10.5061/dryad.w6m905qrv.
 
-\section{Results}
+For convenience, the abstract of the data accession is reported below:
 
-%\subsubsection{Multidimensional scaling}
-%\begin{figure*}
-%    \centering
-%    \includegraphics[height=8cm]{../Figures/goat_mds.pdf}
-%    \label{fig:gwas_pop_PCA}
-%    \caption{Multidimensional Scaling of the goat dataset}
-%\end{figure*}
+\quote{
+    \textit{<<Abstract: \\
+        In smallholder, low-input farming systems diffused in the Global South, farmers select and propagate crop varieties based on their traditional knowledge and experience. A quantitative integration of their knowledge into breeding pipelines may support the sustainable intensification of local farming. This data entry combines genomics with socioeconomics to tap into traditional knowledge in smallholder farming systems, focusing on durum wheat (Triticum durum Desf.). Data refer to a large nested association mapping (EtNAM) population that we developed by recombining elite international breeding line with Ethiopian traditional varieties maintained by local farmers. This entry carries also molecular and phenotypic data produced on a diversity panel (DP) of Ethiopian landraces previously characterized in four year-location combinations and published in Mengistu et al 2016.\\
+        EtNAM lines and DP genotypes were evaluated for agronomic performances and farmers’ appreciation in multiple locations, reveailing that gender and location can influence farmers’ preference and that women and men farmers can consistently identify the best durum wheat genotypes. We used this data to train a genomic selection (GS) model with farmer scores to show that their prediction accuracy over grain yield was higher than that of the benchmark GS model trained on grain yield. The data was also used in a genome wide association mapping (GWAS) and quantitative trait locus (QTL) mapping to identify genetic determinants of agronomic traits and farmer scores.  Our data shows that farmers’ traditional knowledge can be integrated in a quantitative framework to increase genetic gain in pre-breeding programs, supporting genomics-driven breeding for local adaptation.\\
+        The Rdata files contain phenotypic and molecular characterization data for 1,200 recombinant inbred lines (RILs) deriving from the EtNAM and phenotypic and molecular characterization data for 400 durum wheat genotypes in the Ethiopian DP.>>}\\
+    (Mengistu et al 2016 (https://doi.org/10.1111/pbi.12538).)
+}
 
+\subsection{Phenotype data}
+
+In the Rdata \texttt{diversity.panel.data.gp.Rdata}, the agronomic traits of the population of Durum wheat (\textit{Triticum turgidum} subsp. \textit{durum}).
+
+These phenotypic data are here explored to find structures in the dataset:
+
+\subsubsection{Correlation between variables}
+
+Here the Pearson's correlation is computed:
+\begin{figure*}
+    \centering
+    \includegraphics[height=8cm]{../Figures/wheat_corrplot.png}
+    \label{fig:wheat_corr}
+    \caption{Correlation between wheat agronomic traits variables.
+        DB = days to booting (d),
+        DF = days to flowering (d),
+        DM = days to maturity (d),
+        PH = plant height (cm),
+        NET = number of effective tillers per plant (n),
+        SPL = spike length (cm),
+        SPS = number of seeds per spike (n),
+        BM = biomass (t/ha),
+        GY = grain yeld (t/ha),
+        TGW = thousand grain weight (g).}
+\end{figure*}
+
+\subsubsection{PCA}
+
+As the agronomic data table is a multidimensional table, a multivariate analysis is necessary to explore the data:
+
+\begin{figure*}
+    \centering
+    \includegraphics[height=8cm]{../Figures/wheat_exp_var_agro_data.png}
+    \label{fig:wheat_}
+    \caption{Multidimensional Scaling of the goat dataset}
+\end{figure*}
 
 %\begin{figure*}
 %    \centering
@@ -56,6 +91,8 @@ https://doi.org/10.1186/s12711-018-0422-x
 %    \label{fig:gwas_PCA}
 %    \caption{Multidimensional Scaling of the goat dataset, subset of 6 goat breeds.}
 %\end{figure*}
+
+\input{output.tex}
 
 %\end{twocolumn}
 \end{document}
