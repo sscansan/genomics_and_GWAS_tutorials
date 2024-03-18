@@ -7,7 +7,10 @@
 \renewcommand\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 \usepackage{pdfpages}
-
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[hidelinks, colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[capitalise]{cleveref}
 
 \begin{document}
 
@@ -55,12 +58,15 @@ In the Rdata \texttt{diversity.panel.data.gp.Rdata}, the agronomic traits of the
 
 \subsubsection{Correlation between variables}
 
-Here the Pearson's correlation is computed:
-\begin{figure*}[!Ht]
+In \cref{fig:wheat_corr} the Pearson's correlation between agronomic traits is computed.
+
+\begin{figure}[!ht]
     \centering
-    \includegraphics[width = .7\linewidth]{../Figures/wheat_corrplot.png}
-    \label{fig:wheat_corr}
-    \caption{Correlation between wheat agronomic traits variables.
+    \subfloat[Corrplot]{\includegraphics[width = .49\linewidth]{../Figures/wheat_corrplot.png}\label{fig:wheat_corr}}
+    \subfloat[Screeplot]{\includegraphics[width = .49\linewidth]{../Figures/wheat_exp_var_agro_data.png}\label{fig:wheat_scree_pheno}}
+    \caption{%
+        a) Correlation between wheat agronomic traits variables.
+        b) Scree plot of the phenotype-agronomic data.
         DB = days to booting (d),
         DF = days to flowering (d),
         DM = days to maturity (d),
@@ -70,19 +76,17 @@ Here the Pearson's correlation is computed:
         SPS = number of seeds per spike (n),
         BM = biomass (t/ha),
         GY = grain yeld (t/ha),
-        TGW = thousand grain weight (g).}
-\end{figure*}
+        TGW = thousand grain weight (g).
+    }
+    \label{fig:wheat_corr_scree}
+\end{figure}
 
 \subsubsection{PCA}
 
-As the agronomic data table (phenotypic data) has nine variables, a multivariate analysis is necessary to better explore the data:
+As the agronomic data table (phenotypic data) has nine variables, a multivariate analysis is necessary to better explore the data.
+In \cref{fig:wheat_scree_pheno} we show the scree plot of the phenotype data.
+From this figure it follows that there are approximately 3 dimensions necessary to explain 88.5\% of the dataset variance.
 
-\begin{figure*}[!Ht]
-    \centering
-    \includegraphics[width = .7\linewidth]{../Figures/wheat_exp_var_agro_data.png}
-    \label{fig:wheat_}
-    \caption{Scree plot of the phenotypes}
-\end{figure*}
 
 %\begin{figure*}
 %    \centerin

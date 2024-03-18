@@ -108,10 +108,11 @@ TGW = thousand grain weight (g)
 ```{r}
 unique_ids <- make.unique(met_data$ID)
 
-rownames(met_data) <- unique_ids
+met_data_uniq <- met_data
+rownames(met_data_uniq) <- unique_ids
 
 eda_met <- met_data %>%
-  select(DB:ncol(met_data))
+  select(DB:ncol(met_data_uniq))
 
 summary(eda_met)
 nrow(eda_met)
@@ -185,19 +186,48 @@ To reveal hidden structures in the population.
 
 ```{r}
 # using the eda_met data, after removing the NAs
-pca <- prcomp(eda_met, center = T, scale = T)
-pca
+# pca <- prcomp(eda_met, center = T, scale = T)
+# pca
+```
+
+```{r}
+# Merge datasets
+
+head(met_data)
+head(info_data)
+
+b <- info_data %>%
+  select(DNA_CODE, SPECIES, TYPE) %>%
+  rename(ID = DNA_CODE)
+
+a <- met_data %>%
+  select(ID:ncol(.))
+
+# full dataset for the plot, here were also removed the NAs to keep the same number of rows of info_data and met_data
+join_df <-
+  full_join(a, b, by = "ID") %>%
+  select(ID, SPECIES, TYPE, DB:TGW) %>%
+  na.omit() %>%
+  as_tibble()
+
 ```
 
 Perform SVD:
 ```{r}
+
+#from the fulll joined data, select only the int and dbl  columns for the svd calculations.
+
+pca_df <- join_df %>%
+  select(DB:TGW)
+
 # standardize data
-std_eda_met <- scale(eda_met)
+std_pca_data <- scale(pca_df)
 # cov matrix
-cov_mat <- cov(std_eda_met)
+cov_mat <- cov(std_pca_data)
 # singular value decomposition
 svd_res <- svd(cov_mat)
 # we obrain the matrix $d, $u and $v: U and V are the orthogonal
+?base::svd
 ```
 
 We obtain the decomposition of the covariate matrix as:
@@ -215,7 +245,11 @@ Extract the values:
 # Extract singular values, left singular vectors (loadings), and right singular vectors (scores)
 singular_values <- svd_res$d
 loadings <- svd_res$u
-scores <- std_eda_met %*% svd_res$v
+scores <- std_pca_data %*% svd_res$v
+
+# calculate the explained variance
+tot_var <- sum(singular_values^2)
+var_explained <- (singular_values^2) / tot_var
 ```
 ```{r}
 # Principal component loadings
@@ -226,7 +260,7 @@ head(scores)
 head(var_explained)
 ```
 
-And perform PCA
+and plot scree plot, individuals and scores.
 ```{r}
 n_PCs <- 1:length(var_explained)
 
@@ -239,12 +273,12 @@ plot_exp_var <-
   geom_col(alpha = .6, fill = "gray") +
   geom_point(size = 2) +
   geom_line(aes(x = PC)) +
-  geom_text(aes(PC + 0.3, exp_var_perc + 3, label = exp_var_perc), angle = 30) +
-  scale_y_continuous(expand = c(0, 0), limits = c(0, 72)) +
+  geom_text(aes(PC + 0.2, exp_var_perc + 2, label = exp_var_perc), angle = 0) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 67)) +
   scale_x_discrete(expand = c(0, 0)) +
   labs(x = "Dimension", y = "Explained variance (%)") +
   theme_classic() +
-  theme(aspect.ratio = .8)
+  theme(aspect.ratio = 1)
 
 
 path <- "Figures/wheat_exp_var_agro_data.png"
@@ -253,27 +287,73 @@ ggsave(path, plot = plot_exp_var, width = 10, dpi = 120)
 knitr::plot_crop(path)
 ```
 Score plot of the individuals
-the 
+
 ```{r}
 # metadata?
 head(met_data)
 summary(met_data)
 # grouping and descriptive data of the individuals is not present in the `met_data` dataframe, thus we  need to merge it with the `info_data`, based on the columns `met_data$ID` and `info_data$DNA_CODE`
 head(info_data)
-# here there are the 
+# here there are collected descriptors as SPECIES and TYPE
 ```
 ```{r}
+info_data <- info
+
+info_data <- info_data %>%
+  select(DNA_CODE:ncol(.)) %>%
+  rename(ID = DNA_CODE)
+
+met_data <- met
+
+pca_met_join <- met_data %>%
+  na.omit() %>%
+  select(ID:ncol(met_data)) %>%
+  full_join(info_data, by = "ID")
+
+head(pca_met_join)
 
 ```
 ```{r}
 scores_df <- as.data.frame(scores)
+head(scores_df)
 
 ggplot(scores_df, aes(x = scores_df[,1], y = scores_df[,2])) +
-  geom_point() +
+  geom_point(aes(color = eda_met_join)) +
   labs(x = paste0("PC1 (", round(var_explained[1] * 100, 2), "%)"),
        y = paste0("PC2 (", round(var_explained[2] * 100, 2), "%)")) +
   ggtitle("PCA Plot of Individuals (PC1 vs PC2)") +
     theme_minimal() +
     theme(aspect.ratio = 1)
 
+```
+
+TEST
+```{r}
+pca_data <- met_data %>%
+  select(DB:ncol(met_data)) %>%
+  na.omit() %>%
+  as_tibble()
+
+std_pca_data <- scale(pca_data)
+cov_mat <- cov(std_pca_data)
+svd_res <- svd(cov_mat)
+scores <- std_pca_data %*% svd_res$v
+
+scores <- as_tibble(scores)
+
+# Join PCA scores with metadata
+head(pca_met_join) <- cbind(ID = met_data$ID, scores)
+pca_met_join <- full_join(pca_met_join, info_data, by = "ID")
+
+# Plot PCA scores
+ggplot(pca_met_join, aes(x = PC1, y = PC2, color = SPECIES)) +
+  geom_point() +
+  labs(x = paste0("PC1 (", round(var_explained[1] * 100, 2), "%)"),
+       y = paste0("PC2 (", round(var_explained[2] * 100, 2), "%)")) +
+  ggtitle("PCA Plot of Individuals (PC1 vs PC2)") +
+  theme_minimal() +
+  theme(aspect.ratio = 1)
+
+dim(met_data)
+dim(scores)
 ```

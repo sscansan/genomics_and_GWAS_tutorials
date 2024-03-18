@@ -1,2 +1,3 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Correlation between wheat agronomic traits variables. DB = days to booting (d), DF = days to flowering (d), DM = days to maturity (d), PH = plant height (cm), NET = number of effective tillers per plant (n), SPL = spike length (cm), SPS = number of seeds per spike (n), BM = biomass (t/ha), GY = grain yeld (t/ha), TGW = thousand grain weight (g).}}{3}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Scree plot of the phenotypes}}{14}{}%
+\contentsline {figure}{\numberline {1}{\ignorespaces a) Correlation between wheat agronomic traits variables. b) Scree plot of the phenotype-agronomic data. DB = days to booting (d), DF = days to flowering (d), DM = days to maturity (d), PH = plant height (cm), NET = number of effective tillers per plant (n), SPL = spike length (cm), SPS = number of seeds per spike (n), BM = biomass (t/ha), GY = grain yeld (t/ha), TGW = thousand grain weight (g). \relax }}{13}{figure.caption.4}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Corrplot}}}{13}{subfigure.1.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Screeplot}}}{13}{subfigure.1.2}%

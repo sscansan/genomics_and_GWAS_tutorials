@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  18 MAR 2024 20:42
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  19 MAR 2024 00:20
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex
@@ -285,324 +285,469 @@ File: ppluatex.def 2022/12/19 v0.5x Pdfpages driver for LuaTeX (AM)
 \AM@lof@heading=\toks33
 \c@AM@survey=\count289
 \AM@templatesizebox=\box57
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen160
+\captionmargin=\dimen161
+\caption@leftmargin=\dimen162
+\caption@rightmargin=\dimen163
+\caption@width=\dimen164
+\caption@indent=\dimen165
+\caption@parindent=\dimen166
+\caption@hangindent=\dimen167
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count290
+\c@continuedfloat=\count291
+)
+\c@KVtest=\count292
+\sf@farskip=\skip60
+\sf@captopadj=\dimen168
+\sf@capskip=\skip61
+\sf@nearskip=\skip62
+\c@subfigure=\count293
+\c@subfigure@save=\count294
+\c@lofdepth=\count295
+\c@subtable=\count296
+\c@subtable@save=\count297
+\c@lotdepth=\count298
+\sf@top=\skip63
+\sf@bottom=\skip64
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks34
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-08-07 v2.53 Cross-referencing by name of section
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count299
+)
+\@linkdim=\dimen169
+\Hy@linkcounter=\count300
+\Hy@pagecounter=\count301
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count302
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4050.
+Package hyperref Info: Hyper figures OFF on input line 4167.
+Package hyperref Info: Link nesting OFF on input line 4172.
+Package hyperref Info: Hyper index ON on input line 4175.
+Package hyperref Info: Plain pages OFF on input line 4182.
+Package hyperref Info: Backreferencing OFF on input line 4187.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4434.
+\c@Hy@tempcnt=\count303
+LaTeX Info: Redefining \url on input line 4772.
+\XeTeXLinkMargin=\dimen170
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count304
+\Field@Width=\dimen171
+\Fld@charsize=\dimen172
+Package hyperref Info: Hyper figures OFF on input line 6051.
+Package hyperref Info: Link nesting OFF on input line 6056.
+Package hyperref Info: Hyper index ON on input line 6059.
+Package hyperref Info: backreferencing OFF on input line 6066.
+Package hyperref Info: Link coloring ON on input line 6069.
+Package hyperref Info: Link coloring with OCG OFF on input line 6076.
+Package hyperref Info: PDF/A mode OFF on input line 6081.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count305
+\c@Item=\count306
+\c@Hfootnote=\count307
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2023-07-08 v7.01b Hyperref driver for luaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count308
+\c@bookmark@seq@number=\count309
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip65
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `subfig' support loaded on input line 3164.
+Package cleveref Info: always capitalise cross-reference names on input line 7825.
+Package cleveref Info: always capitalise cross-reference names on input line 7852.
 ) (./build/Genomics_proj.aux)
 \openout1 = Genomics_proj.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 15.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count290
-\scratchdimen=\dimen160
+\scratchcounter=\count310
+\scratchdimen=\dimen173
 \scratchbox=\box58
-\nofMPsegments=\count291
-\nofMParguments=\count292
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count293
-\MPscratchDim=\dimen161
-\MPnumerator=\count294
-\makeMPintoPDFobject=\count295
-\everyMPtoPDFconversion=\toks35
+\nofMPsegments=\count311
+\nofMParguments=\count312
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count313
+\MPscratchDim=\dimen174
+\MPnumerator=\count314
+\makeMPintoPDFobject=\count315
+\everyMPtoPDFconversion=\toks36
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (/usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
- (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/lscape.sty
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 15.
+ (./build/Genomics_proj.out) (./build/Genomics_proj.out)
+\@outlinefile=\write6
+
+\openout6 = Genomics_proj.out
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 18.
+(Font)              scaled to size 16.41594pt on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 18.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+(Font)              scaled to size 11.39996pt on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 19.
+(Font)              scaled to size 8.54997pt on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 19.
+(Font)              scaled to size 8.54997pt on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 21.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.54997pt on input line 21.
+(Font)              scaled to size 8.54997pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 25.
+(Font)              scaled to size 13.67995pt on input line 28.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 25.
+(Font)              scaled to size 13.67995pt on input line 28.
  (./build/Genomics_proj.toc
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.49997pt on input line 1.
 )
-\tf@toc=\write6
+\tf@toc=\write7
 
-\openout6 = Genomics_proj.toc
+\openout7 = Genomics_proj.toc
  (./build/Genomics_proj.lof)
-\tf@lof=\write7
+\tf@lof=\write8
 
-\openout7 = Genomics_proj.lof
+\openout8 = Genomics_proj.lof
  (./build/Genomics_proj.lot)
-\tf@lot=\write8
+\tf@lot=\write9
 
-\openout8 = Genomics_proj.lot
+\openout9 = Genomics_proj.lot
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 33.
+(Font)              scaled to size 11.39996pt on input line 36.
 
-Overfull \hbox (10.35065pt too wide) in paragraph at lines 35--36
+Overfull \hbox (10.35065pt too wide) in paragraph at lines 38--39
 \T1/phv/m/n/10 wheat breed-ing. Plant Biotech-nol J, 14: 1800-1812. https://doi.org/10.1111/pbi.12538 
+ []
+
+
+Overfull \hbox (40.8072pt too wide) in paragraph at lines 43--44
+[]\T1/phv/m/n/10 The data are avail-able in the DRYAD repos-i-tory https://doi.org/10.5061/dryad.w6m905qrv. 
  []
 
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (40.8072pt too wide) in paragraph at lines 40--41
-[]\T1/phv/m/n/10 The data are avail-able in the DRYAD repos-i-tory https://doi.org/10.5061/dryad.w6m905qrv. 
- []
-
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 48.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 51.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 48.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 54.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+(Font)              scaled to size 9.49997pt on input line 51.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 57.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-
-/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex:59: LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \begin{figure*}[!Ht]
-                       
-Option `H' ignored and `p' used.
-
-<../Figures/wheat_corrplot.png, id=9, 421.575pt x 421.575pt>
+<../Figures/wheat_corrplot.png, id=49, 421.575pt x 421.575pt>
 File: ../Figures/wheat_corrplot.png Graphic file (type png)
 <use ../Figures/wheat_corrplot.png>
-Package luatex.def Info: ../Figures/wheat_corrplot.png  used on input line 61.
-(luatex.def)             Requested size: 241.49895pt x 241.50316pt.
-
-/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex:80: LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.80 \begin{figure*}[!Ht]
-                       
-Option `H' ignored and `p' used.
-
-<../Figures/wheat_exp_var_agro_data.png, id=10, 483.0045pt x 386.04225pt>
+Package luatex.def Info: ../Figures/wheat_corrplot.png  used on input line 65.
+(luatex.def)             Requested size: 169.0519pt x 169.05156pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 65.
+<../Figures/wheat_exp_var_agro_data.png, id=50, 526.96875pt x 520.344pt>
 File: ../Figures/wheat_exp_var_agro_data.png Graphic file (type png)
 <use ../Figures/wheat_exp_var_agro_data.png>
-Package luatex.def Info: ../Figures/wheat_exp_var_agro_data.png  used on input line 82.
-(luatex.def)             Requested size: 241.49895pt x 193.01476pt.
-[2
+Package luatex.def Info: ../Figures/wheat_exp_var_agro_data.png  used on input line 66.
+(luatex.def)             Requested size: 169.0519pt x 166.92635pt.
+ [2
 Missing character: There is no ’ (U+2019) in font phvro8t!
 Missing character: There is no ’ (U+2019) in font phvro8t!
 Missing character: There is no ’ (U+2019) in font phvro8t!
-] [3<../Figures/wheat_corrplot.png>]
-<build/output.pdf, id=18, 597.50829pt x 845.04709pt>
+]
+<build/output.pdf, id=59, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf>
-Package luatex.def Info: build/output.pdf  used on input line 95.
+Package luatex.def Info: build/output.pdf  used on input line 99.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf>
-Package luatex.def Info: build/output.pdf  used on input line 95.
+Package luatex.def Info: build/output.pdf  used on input line 99.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<build/output.pdf, id=21, page=1, 597.50829pt x 845.04709pt>
+<build/output.pdf, id=62, page=1, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 95.
+Package luatex.def Info: build/output.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.50787pt x 845.04503pt.
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 95.
+Package luatex.def Info: build/output.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [4]
+ [3]
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 95.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 95.
+Package luatex.def Info: build/output.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 95.
+Package luatex.def Info: build/output.pdf , page1 used on input line 99.
+(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
+File: build/output.pdf Graphic file (type pdf)
+<use build/output.pdf, page 1>
+Package luatex.def Info: build/output.pdf , page1 used on input line 99.
+(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
+ [4<./build/output.pdf>]
+<build/output.pdf, id=87, page=2, 597.50829pt x 845.04709pt>
+File: build/output.pdf Graphic file (type pdf)
+<use build/output.pdf, page 2>
+Package luatex.def Info: build/output.pdf , page2 used on input line 99.
+(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
+File: build/output.pdf Graphic file (type pdf)
+<use build/output.pdf, page 2>
+Package luatex.def Info: build/output.pdf , page2 used on input line 99.
+(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
+File: build/output.pdf Graphic file (type pdf)
+<use build/output.pdf, page 2>
+Package luatex.def Info: build/output.pdf , page2 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [5<./build/output.pdf>]
-<build/output.pdf, id=42, page=2, 597.50829pt x 845.04709pt>
+<build/output.pdf, id=98, page=3, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 2>
-Package luatex.def Info: build/output.pdf , page2 used on input line 95.
+<use build/output.pdf, page 3>
+Package luatex.def Info: build/output.pdf , page3 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 2>
-Package luatex.def Info: build/output.pdf , page2 used on input line 95.
+<use build/output.pdf, page 3>
+Package luatex.def Info: build/output.pdf , page3 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 2>
-Package luatex.def Info: build/output.pdf , page2 used on input line 95.
+<use build/output.pdf, page 3>
+Package luatex.def Info: build/output.pdf , page3 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [6<./build/output.pdf>]
-<build/output.pdf, id=52, page=3, 597.50829pt x 845.04709pt>
+<build/output.pdf, id=106, page=4, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 3>
-Package luatex.def Info: build/output.pdf , page3 used on input line 95.
+<use build/output.pdf, page 4>
+Package luatex.def Info: build/output.pdf , page4 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 3>
-Package luatex.def Info: build/output.pdf , page3 used on input line 95.
+<use build/output.pdf, page 4>
+Package luatex.def Info: build/output.pdf , page4 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 3>
-Package luatex.def Info: build/output.pdf , page3 used on input line 95.
+<use build/output.pdf, page 4>
+Package luatex.def Info: build/output.pdf , page4 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [7<./build/output.pdf>]
-<build/output.pdf, id=59, page=4, 597.50829pt x 845.04709pt>
+<build/output.pdf, id=113, page=5, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 4>
-Package luatex.def Info: build/output.pdf , page4 used on input line 95.
+<use build/output.pdf, page 5>
+Package luatex.def Info: build/output.pdf , page5 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 4>
-Package luatex.def Info: build/output.pdf , page4 used on input line 95.
+<use build/output.pdf, page 5>
+Package luatex.def Info: build/output.pdf , page5 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 4>
-Package luatex.def Info: build/output.pdf , page4 used on input line 95.
+<use build/output.pdf, page 5>
+Package luatex.def Info: build/output.pdf , page5 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [8<./build/output.pdf>]
-<build/output.pdf, id=65, page=5, 597.50829pt x 845.04709pt>
+<build/output.pdf, id=123, page=6, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 5>
-Package luatex.def Info: build/output.pdf , page5 used on input line 95.
+<use build/output.pdf, page 6>
+Package luatex.def Info: build/output.pdf , page6 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 5>
-Package luatex.def Info: build/output.pdf , page5 used on input line 95.
+<use build/output.pdf, page 6>
+Package luatex.def Info: build/output.pdf , page6 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 5>
-Package luatex.def Info: build/output.pdf , page5 used on input line 95.
+<use build/output.pdf, page 6>
+Package luatex.def Info: build/output.pdf , page6 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [9<./build/output.pdf>]
-<build/output.pdf, id=74, page=6, 597.50829pt x 845.04709pt>
+<build/output.pdf, id=148, page=7, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 6>
-Package luatex.def Info: build/output.pdf , page6 used on input line 95.
+<use build/output.pdf, page 7>
+Package luatex.def Info: build/output.pdf , page7 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 6>
-Package luatex.def Info: build/output.pdf , page6 used on input line 95.
+<use build/output.pdf, page 7>
+Package luatex.def Info: build/output.pdf , page7 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 6>
-Package luatex.def Info: build/output.pdf , page6 used on input line 95.
+<use build/output.pdf, page 7>
+Package luatex.def Info: build/output.pdf , page7 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [10<./build/output.pdf>]
-<build/output.pdf, id=98, page=7, 597.50829pt x 845.04709pt>
+<build/output.pdf, id=153, page=8, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 7>
-Package luatex.def Info: build/output.pdf , page7 used on input line 95.
+<use build/output.pdf, page 8>
+Package luatex.def Info: build/output.pdf , page8 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 7>
-Package luatex.def Info: build/output.pdf , page7 used on input line 95.
+<use build/output.pdf, page 8>
+Package luatex.def Info: build/output.pdf , page8 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 7>
-Package luatex.def Info: build/output.pdf , page7 used on input line 95.
+<use build/output.pdf, page 8>
+Package luatex.def Info: build/output.pdf , page8 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [11<./build/output.pdf>]
-<build/output.pdf, id=103, page=8, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 8>
-Package luatex.def Info: build/output.pdf , page8 used on input line 95.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 8>
-Package luatex.def Info: build/output.pdf , page8 used on input line 95.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 8>
-Package luatex.def Info: build/output.pdf , page8 used on input line 95.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [12<./build/output.pdf>]
-<build/output.pdf, id=107, page=9, 597.50829pt x 845.04709pt>
+<build/output.pdf, id=160, page=9, 597.50829pt x 845.04709pt>
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf, page 9>
-Package luatex.def Info: build/output.pdf , page9 used on input line 95.
+Package luatex.def Info: build/output.pdf , page9 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf, page 9>
-Package luatex.def Info: build/output.pdf , page9 used on input line 95.
+Package luatex.def Info: build/output.pdf , page9 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
 File: build/output.pdf Graphic file (type pdf)
 <use build/output.pdf, page 9>
-Package luatex.def Info: build/output.pdf , page9 used on input line 95.
+Package luatex.def Info: build/output.pdf , page9 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [13<./build/output.pdf>] [14<../Figures/wheat_exp_var_agro_data.png>] (./build/Genomics_proj.aux)
+ [12<./build/output.pdf>] [13<../Figures/wheat_corrplot.png><../Figures/wheat_exp_var_agro_data.png>] (./build/Genomics_proj.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `Genomics_proj.out' has not changed.
+(rerunfilecheck)             Checksum: 55E58AD42EC5F0DE66E847042C74DA72;732.
 )
 
 Here is how much of LuaTeX's memory you used:
- 8521 strings out of 477545
- 100000,1977958 words of node,token memory allocated
- 554 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 65 glue_spec, 6 attribute_list, 1 shape, 1 write nodes
-   avail lists: 1:1,2:341,3:140,4:46,5:424,6:38,7:6674,8:1,9:209,10:6,11:532
- 29172 multiletter control sequences out of 65536+600000
- 74 fonts using 4808319 bytes
- 82i,17n,76p,941b,489s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 18365 strings out of 477545
+ 125039,1977958 words of node,token memory allocated
+ 584 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 69 glue_spec, 7 attribute_list, 1 shape, 1 write, 1 pdf_action nodes
+   avail lists: 1:1,2:413,3:262,4:103,5:434,6:61,7:6609,8:1,9:385,10:6,11:517
+ 38829 multiletter control sequences out of 65536+600000
+ 76 fonts using 4969199 bytes
+ 82i,17n,76p,941b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Genomics_proj.pdf (14 pages, 1169901 bytes).
+Output written on Genomics_proj.pdf (13 pages, 1173948 bytes).
 
-PDF statistics: 131 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 189 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 131072)
+ 41 words of extra memory for PDF output out of 10000 (max. 100000000)
 

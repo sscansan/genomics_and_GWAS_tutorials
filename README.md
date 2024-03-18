@@ -1,6 +1,6 @@
 # Genomic projects tutorials
 
-> :warning: This repository is under construction :warning:
+> :warning: Repository under construction :warning:
 
 This repository contains a collection of genomic projects that I am working on.
 GitHub repository of bioinformatic projects recolving around genomics using
@@ -11,7 +11,9 @@ The repository has been created for testing and self-teaching purposes of biolog
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
-The report of the studies is in progress in Report/build/Genomics_proj.pdf
+The report of the studies is in progress in:
+
+> "Report/build/Genomics_proj.pdf"
 
 ## Contents
 
