@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  18 MAR 2024 20:43
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  19 MAR 2024 00:34
  restricted system commands enabled.
  file:line:error style messages enabled.
-**/home/sscansa/MEGA/R/GWAS/Report/output.tex
-(/home/sscansa/MEGA/R/GWAS/Report/output.tex
+**/home/sscansa/MEGA/R/GWAS/Report/readme.tex
+(/home/sscansa/MEGA/R/GWAS/Report/readme.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
 Lua module: luaotfload 2022-10-03 3.23 Lua based OpenType font support
@@ -236,29 +236,29 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 112.
-) (./build/output.aux)
-\openout1 = output.aux
+) (./build/readme.aux)
+\openout1 = readme.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count284
@@ -300,10 +300,23 @@ Package grfext Info: Graphics extension search list:
 (grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:12: Undefined control sequence.
-l.12 \hypertarget
-               {genomic-projects-tutorials}{%
+)) (./output.tex
+
+./output.tex:1: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{document}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./output.tex:3: Undefined control sequence.
+l.3 \hypertarget
+              {genomic-projects-tutorials}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -311,15 +324,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 13.
+(Font)              scaled to size 13.67995pt on input line 4.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 13.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 21.
+(Font)              scaled to size 13.67995pt on input line 4.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 12.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:32: Undefined control sequence.
-l.32 \hypertarget
+./output.tex:23: Undefined control sequence.
+l.23 \hypertarget
                {contents}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -328,13 +341,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 33.
+(Font)              scaled to size 11.39996pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 33.
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:36: Undefined control sequence.
+(Font)              scaled to size 11.39996pt on input line 24.
+./output.tex:27: Undefined control sequence.
 <recently read> \tightlist 
            
-l.36   \tightlist
+l.27   \tightlist
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -342,15 +355,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 38.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 29.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 38.
+(Font)              scaled to size 9.49997pt on input line 29.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:38: Undefined control sequence.
-l.38         \protect\hyperlink
+./output.tex:29: Undefined control sequence.
+l.29         \protect\hyperlink
                              {genomic-projects-tutorials}{Genomic projects
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -358,10 +371,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:42: Undefined control sequence.
+./output.tex:33: Undefined control sequence.
 <recently read> \tightlist 
            
-l.42           \tightlist
+l.33           \tightlist
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -370,9 +383,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 44.
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:44: Undefined control sequence.
-l.44                 \protect\hyperlink
+(Font)              scaled to size 9.49997pt on input line 35.
+./output.tex:35: Undefined control sequence.
+l.35                 \protect\hyperlink
                                      {contents}{Contents}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -380,8 +393,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:46: Undefined control sequence.
-l.46                 \protect\hyperlink
+./output.tex:37: Undefined control sequence.
+l.37                 \protect\hyperlink
                                      {tools}{Tools}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -389,8 +402,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:48: Undefined control sequence.
-l.48                 \protect\hyperlink
+./output.tex:39: Undefined control sequence.
+l.39                 \protect\hyperlink
                                      {example-case-studies}{Example case stu...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -398,8 +411,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:50: Undefined control sequence.
-l.50                 \protect\hyperlink
+./output.tex:41: Undefined control sequence.
+l.41                 \protect\hyperlink
                                      {resources--data}{Resources \& Data}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -407,8 +420,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:52: Undefined control sequence.
-l.52                 \protect\hyperlink
+./output.tex:43: Undefined control sequence.
+l.43                 \protect\hyperlink
                                      {setup-of-the-working-environment}{Setu...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -416,10 +429,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:56: Undefined control sequence.
+./output.tex:47: Undefined control sequence.
 <recently read> \tightlist 
            
-l.56                   \tightlist
+l.47                   \tightlist
                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -427,8 +440,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:58: Undefined control sequence.
-l.58                         \protect\hyperlink
+./output.tex:49: Undefined control sequence.
+l.49                         \protect\hyperlink
                                              {get-plink-working-in-linux}{Ge...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -436,10 +449,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:62: Undefined control sequence.
+./output.tex:53: Undefined control sequence.
 <recently read> \tightlist 
            
-l.62                           \tightlist
+l.53                           \tightlist
                                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -447,8 +460,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:64: Undefined control sequence.
-l.64 ...                          \protect\hyperlink
+./output.tex:55: Undefined control sequence.
+l.55 ...                          \protect\hyperlink
                                                   {get-plinkr-r}{Get \texttt...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -456,8 +469,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:68: Undefined control sequence.
-l.68                         \protect\hyperlink
+./output.tex:59: Undefined control sequence.
+l.59                         \protect\hyperlink
                                              {get-tassel-gui-on-linux}{Get \...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -465,10 +478,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:72: Undefined control sequence.
+./output.tex:63: Undefined control sequence.
 <recently read> \tightlist 
            
-l.72                           \tightlist
+l.63                           \tightlist
                                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -476,8 +489,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:74: Undefined control sequence.
-l.74 ...                          \protect\hyperlink
+./output.tex:65: Undefined control sequence.
+l.65 ...                          \protect\hyperlink
                                                   {get-rtassel-r}{Get \textt...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -485,8 +498,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:78: Undefined control sequence.
-l.78                         \protect\hyperlink
+./output.tex:69: Undefined control sequence.
+l.69                         \protect\hyperlink
                                              {get-gemma}{Get \texttt{GEMMA}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -494,8 +507,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:80: Undefined control sequence.
-l.80                         \protect\hyperlink
+./output.tex:71: Undefined control sequence.
+l.71                         \protect\hyperlink
                                              {get-gapit-r}{Get \texttt{GAPIT...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -503,8 +516,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:85: Undefined control sequence.
-l.85 \hypertarget
+./output.tex:76: Undefined control sequence.
+l.76 \hypertarget
                {tools}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -512,46 +525,55 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (55.88193pt too wide) in paragraph at lines 92--95
+Overfull \hbox (55.88193pt too wide) in paragraph at lines 83--86
 []\T1/lmtt/m/n/10 plinkr \T1/phv/m/n/10 R pack-age repos-i-tory doc-u-men-ta-tion. $\T1/lmtt/m/n/10 https://github.com/AJResearchGroup/
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 105.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 96.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 105.
+(Font)              scaled to size 9.49997pt on input line 96.
 
-Overfull \hbox (6.58167pt too wide) in paragraph at lines 101--108
+Overfull \hbox (6.58167pt too wide) in paragraph at lines 92--99
 []\T1/lmtt/m/n/10 rTASSEL \T1/phv/m/n/10 R pack-age repos-i-tory doc-u-men-ta-tion. Vi-gnettes: $\T1/lmtt/m/n/10 https://rtassel.
  []
 
 
-Overfull \hbox (62.05943pt too wide) in paragraph at lines 101--108
+Overfull \hbox (62.05943pt too wide) in paragraph at lines 92--99
 \T1/lmtt/m/n/10 maizegenetics.net/index.html$\T1/phv/m/n/10 , Repos-i-tory: $\T1/lmtt/m/n/10 https://github.com/maize-[]genetics/
  []
+
+./output.tex:99: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.99         \texttt
+                  {GEMMA} Genome-wide Efficient Mixed Model Association
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (42.33238pt too wide) in paragraph at lines 117--121
+Overfull \hbox (42.33238pt too wide) in paragraph at lines 108--112
 []\T1/lmtt/m/n/10 GPtour \T1/phv/m/n/10 Ge-nomic Pre-dic-tion in R us-ing Keras mod-els https://github.com/miguelperezen-
  []
 
 
-Overfull \hbox (34.7355pt too wide) in paragraph at lines 121--123
+Overfull \hbox (34.7355pt too wide) in paragraph at lines 112--114
 []\T1/lmtt/m/n/10 GAPIT \T1/phv/m/n/10 Genome As-so-ci-a-tion and In-te-grated Tools https://github.com/ji-abowang/GAPIT 
  []
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:125: Undefined control sequence.
-l.125 \hypertarget
+./output.tex:116: Undefined control sequence.
+l.116 \hypertarget
                 {example-case-studies}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -559,8 +581,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:130: Undefined control sequence.
-l.130   \tightlist
+./output.tex:121: Undefined control sequence.
+l.121   \tightlist
                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -569,23 +591,32 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (62.82877pt too wide) in paragraph at lines 132--134
+Overfull \hbox (62.82877pt too wide) in paragraph at lines 123--125
 []\T1/phv/m/n/10 SNP pro-fil-ing of goat breeds.\T1/phv/m/sl/10 Data source\T1/phv/m/n/10 : \T1/phv/b/n/10 Colli et al. \T1/phv/m/n/10 (2018) https://doi.org/10.1186/s12711-
  []
 
 <Figures/goat_mds_12.png, id=9, 722.7pt x 370.986pt>
 File: Figures/goat_mds_12.png Graphic file (type png)
 <use Figures/goat_mds_12.png>
-Package luatex.def Info: Figures/goat_mds_12.png  used on input line 138.
+Package luatex.def Info: Figures/goat_mds_12.png  used on input line 129.
 (luatex.def)             Requested size: 345.0pt x 177.0976pt.
 <Figures/goat_mds_eigen_filter.png, id=10, 722.7pt x 324.61275pt>
 File: Figures/goat_mds_eigen_filter.png Graphic file (type png)
 <use Figures/goat_mds_eigen_filter.png>
-Package luatex.def Info: Figures/goat_mds_eigen_filter.png  used on input line 144.
+Package luatex.def Info: Figures/goat_mds_eigen_filter.png  used on input line 135.
 (luatex.def)             Requested size: 345.0pt x 154.96039pt.
+./output.tex:151: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.151 \end{quote}
+               
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
 [2<./Figures/goat_mds_12.png>]
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:167: Undefined control sequence.
-l.167           \tightlist
+./output.tex:158: Undefined control sequence.
+l.158           \tightlist
                         
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -594,24 +625,24 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (7.97086pt too wide) in paragraph at lines 169--172
+Overfull \hbox (7.97086pt too wide) in paragraph at lines 160--163
 []\T1/phv/m/n/10 Man-hat-tan plot of a GWAS on dog pop-u-la-tion for deaf-ness._Data source_:
  []
 
 <Figures/manhattan_dogs.png, id=16, 711.8595pt x 315.579pt>
 File: Figures/manhattan_dogs.png Graphic file (type png)
 <use Figures/manhattan_dogs.png>
-Package luatex.def Info: Figures/manhattan_dogs.png  used on input line 177.
+Package luatex.def Info: Figures/manhattan_dogs.png  used on input line 168.
 (luatex.def)             Requested size: 345.0pt x 152.94487pt.
 <Figures/manhattan_filter_acd.png, id=17, 711.8595pt x 315.579pt>
 File: Figures/manhattan_filter_acd.png Graphic file (type png)
 <use Figures/manhattan_filter_acd.png>
-Package luatex.def Info: Figures/manhattan_filter_acd.png  used on input line 183.
+Package luatex.def Info: Figures/manhattan_filter_acd.png  used on input line 174.
 (luatex.def)             Requested size: 345.0pt x 152.94487pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 191.
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:203: Undefined control sequence.
-l.203           \tightlist
+(Font)              scaled to size 6.64998pt on input line 182.
+./output.tex:194: Undefined control sequence.
+l.194           \tightlist
                         
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -622,17 +653,36 @@ and I'll forget about whatever was undefined.
 <Figures/top_SNPs_comb.png, id=18, 838.93425pt x 358.33875pt>
 File: Figures/top_SNPs_comb.png Graphic file (type png)
 <use Figures/top_SNPs_comb.png>
-Package luatex.def Info: Figures/top_SNPs_comb.png  used on input line 213.
+Package luatex.def Info: Figures/top_SNPs_comb.png  used on input line 204.
 (luatex.def)             Requested size: 345.0pt x 147.36273pt.
-[3<./Figures/goat_mds_eigen_filter.png><./Figures/manhattan_dogs.png>] [4<./Figures/manhattan_filter_acd.png><./Figures/top_SNPs_comb.png>]
+./output.tex:211: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.211 \end{quote}
+               
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[3<./Figures/goat_mds_eigen_filter.png><./Figures/manhattan_dogs.png>]
+./output.tex:211: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.211 \end{quote}
+               
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[4<./Figures/manhattan_filter_acd.png><./Figures/top_SNPs_comb.png>]
 <Figures/SNP_chr3_top.png, id=26, 345.08925pt x 263.18324pt>
 File: Figures/SNP_chr3_top.png Graphic file (type png)
 <use Figures/SNP_chr3_top.png>
-Package luatex.def Info: Figures/SNP_chr3_top.png  used on input line 224.
+Package luatex.def Info: Figures/SNP_chr3_top.png  used on input line 215.
 (luatex.def)             Requested size: 345.0pt x 263.1344pt.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:229: Undefined control sequence.
-l.229 \hypertarget
+./output.tex:220: Undefined control sequence.
+l.220 \hypertarget
                 {resources-data}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -641,22 +691,22 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (8.96573pt too wide) in paragraph at lines 239--242
+Overfull \hbox (8.96573pt too wide) in paragraph at lines 230--233
 []\T1/phv/b/n/10 Ma-rees et al. \T1/phv/m/n/10 (2018) tu-to-rial $\T1/lmtt/m/n/10 https://github.com/MareesAT/GWA_tutorial$ 
  []
 
 
-Overfull \hbox (28.41689pt too wide) in paragraph at lines 242--245
+Overfull \hbox (28.41689pt too wide) in paragraph at lines 233--236
 []\T1/phv/b/n/10 Gá-bor Mészáros \T1/phv/m/n/10 (2021) Ge-nomic Boot Camp Book $\T1/lmtt/m/n/10 https://genomicsbootcamp.
  []
 
 
-Overfull \hbox (35.73947pt too wide) in paragraph at lines 245--248
+Overfull \hbox (35.73947pt too wide) in paragraph at lines 236--239
 []\T1/phv/b/n/10 Gá-bor Mészáros \T1/phv/m/n/10 video tu-to-ri-als $\T1/lmtt/m/n/10 https://www.youtube.com/c/GenomicsBootCamp$ 
  []
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:255: Extra }, or forgotten $.
-l.255         {\[}
+./output.tex:246: Extra }, or forgotten $.
+l.246         {\[}
                 Dataset{\]}. \emph{Dryad}.
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -664,10 +714,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:255: Missing } inserted.
+./output.tex:246: Missing } inserted.
 <inserted text> 
 }
-l.255         {\[}Dataset{\]
+l.246         {\[}Dataset{\]
                           }. \emph{Dryad}.
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -675,9 +725,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+./output.tex:249: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.249         \textbf
+                   {Decker et al.} (2014) Worldwide Patterns of Ancestry,
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
 [5<./Figures/SNP_chr3_top.png>]
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:261: Undefined control sequence.
-l.261         e1004254.\href
+./output.tex:252: Undefined control sequence.
+l.252         e1004254.\href
                           {https://journals.plos.org/plosgenetics/article?id...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -686,17 +745,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (0.33412pt too wide) in paragraph at lines 258--263
+Overfull \hbox (0.33412pt too wide) in paragraph at lines 249--254
 \T1/phv/m/n/10 mix-ture in Do-mes-ti-cated Cat-tle. \T1/phv/m/sl/10 PLOS Ge-net-ics \T1/phv/m/n/10 10(3): e1004254.https://jour-
  []
 
 
-Overfull \hbox (80.86479pt too wide) in paragraph at lines 258--263
+Overfull \hbox (80.86479pt too wide) in paragraph at lines 249--254
 \T1/phv/m/n/10 nals.plos.org/plos-ge-net-ics/ar-ti-cle?id=10.1371/jour-nal.pgen.1004254https://doi.org/10.1371/jour-
  []
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:264: Extra }, or forgotten $.
-l.264 ..., and admixture in domesticated cattle {\[}
+./output.tex:255: Extra }, or forgotten $.
+l.255 ..., and admixture in domesticated cattle {\[}
                                                   Dataset{\]}. Dryad.
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -704,10 +763,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:264: Missing } inserted.
+./output.tex:255: Missing } inserted.
 <inserted text> 
 }
-l.264 ...xture in domesticated cattle {\[}Dataset{\]
+l.255 ...xture in domesticated cattle {\[}Dataset{\]
                                                   }. Dryad.
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -715,8 +774,8 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:268: Undefined control sequence.
-l.268 \hypertarget
+./output.tex:259: Undefined control sequence.
+l.259 \hypertarget
                 {setup-of-the-working-environment}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -724,8 +783,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:272: Undefined control sequence.
-l.272 Install R: \href
+./output.tex:263: Undefined control sequence.
+l.263 Install R: \href
                     {https://cran.r-project.org/}{The Comprehensive R
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -734,12 +793,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (10.86401pt too wide) in paragraph at lines 272--274
+Overfull \hbox (10.86401pt too wide) in paragraph at lines 263--265
 []\T1/phv/m/n/10 In-stall R: https://cran.r-project.org/The Com-pre-hen-sive R Archive Net-work (CRAN) 
  []
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:275: Undefined control sequence.
-l.275 IDE:\href
+./output.tex:266: Undefined control sequence.
+l.266 IDE:\href
              {https://code.visualstudio.com/}{VSCode}\textsuperscript{*}/\hr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -747,8 +806,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:275: Undefined control sequence.
-l.275 ...udio.com/}{VSCode}\textsuperscript{*}/\href
+./output.tex:266: Undefined control sequence.
+l.266 ...udio.com/}{VSCode}\textsuperscript{*}/\href
                                                   {https://posit.co/download...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -756,8 +815,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:278: Undefined control sequence.
-l.278 \href
+./output.tex:269: Undefined control sequence.
+l.269 \href
          {https://docs.anaconda.com/free/miniconda/index.html}{Miniconda
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -765,8 +824,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:285: Undefined control sequence.
-l.285 \hypertarget
+./output.tex:276: Undefined control sequence.
+l.276 \hypertarget
                 {get-plink-working-in-linux}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -774,10 +833,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:287: Undefined control sequence.
+./output.tex:278: Undefined control sequence.
 <argument> \texorpdfstring 
                 {Get \texttt {PLINK} working in Linux}{Get PLINK working in Lin
-l.287       Linux}{Get PLINK working in Linux}}
+l.278       Linux}{Get PLINK working in Linux}}
                                              \label{get-plink-working-in-lin...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -786,11 +845,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 287.
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:287: Undefined control sequence.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 278.
+./output.tex:278: Undefined control sequence.
 <argument> ...hesubsubsection\endcsname }\fi \texorpdfstring 
                                                   {Get \texttt {PLINK} worki...
-l.287       Linux}{Get PLINK working in Linux}}
+l.278       Linux}{Get PLINK working in Linux}}
                                              \label{get-plink-working-in-lin...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -798,8 +857,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:293: Undefined control sequence.
-l.293         \href
+./output.tex:284: Undefined control sequence.
+l.284         \href
                  {https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -807,16 +866,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:293: Missing $ inserted.
+./output.tex:284: Missing $ inserted.
 <inserted text> 
 $
-l.293 ...tps://s3.amazonaws.com/plink1-assets/plink_
+l.284 ...tps://s3.amazonaws.com/plink1-assets/plink_
                                                   linux_x86_64_20231211.zip}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:293: Extra }, or forgotten $.
-l.293 ...nk1-assets/plink_linux_x86_64_20231211.zip}
+./output.tex:284: Extra }, or forgotten $.
+l.284 ...nk1-assets/plink_linux_x86_64_20231211.zip}
                                                   {PLINK
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -825,67 +884,67 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:295: LaTeX Error: Command \item invalid in math mode.
+./output.tex:286: LaTeX Error: Command \item invalid in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.295   \item
+l.286   \item
            
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:296: LaTeX Error: Something's wrong--perhaps a missing \item.
+./output.tex:287: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.296         I
+l.287         I
              nstall \texttt{PLINK}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:296: LaTeX Error: Something's wrong--perhaps a missing \item.
+./output.tex:287: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.296         I
+l.287         I
              nstall \texttt{PLINK}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 4.74998pt on input line 296.
+(Font)              scaled to size 4.74998pt on input line 287.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:298: LaTeX Error: Command \item invalid in math mode.
+./output.tex:289: LaTeX Error: Command \item invalid in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.298   \item
+l.289   \item
            
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:299: Missing $ inserted.
+./output.tex:290: Missing $ inserted.
 <inserted text> 
 $
-l.299         \texttt
+l.290         \texttt
                    {PLINK} in \texttt{usr/local/bin}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:299: Missing } inserted.
+./output.tex:290: Missing } inserted.
 <inserted text> 
 }
-l.299         \texttt
+l.290         \texttt
                    {PLINK} in \texttt{usr/local/bin}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -894,12 +953,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (599.44292pt too wide) in paragraph at lines 292--299
+Overfull \hbox (599.44292pt too wide) in paragraph at lines 283--290
 []\T1/phv/m/n/10 Down-load https://s3.amazonaws.com/plink1-assets/plink$[][]\OML/cmm/m/it/10 inux[]\OT1/cmr/m/n/10 86[]4[]0231211\OML/cmm/m/it/10 :zip[]Install[][][][]$ 
  []
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:330: Undefined control sequence.
-l.330 \hypertarget
+./output.tex:321: Undefined control sequence.
+l.321 \hypertarget
                 {get-plinkr-r}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -908,13 +967,22 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (23.36604pt too wide) in paragraph at lines 336--338
+Overfull \hbox (23.36604pt too wide) in paragraph at lines 327--329
 []\T1/phv/m/n/10 re-fer to the in-stal-la-tion guide at https://github.com/AJRe-search-Group/plinkr/blob/mas-
  []
 
+./output.tex:330: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.330 \begin{verbatim}
+                    
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
 [6]
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:347: Undefined control sequence.
-l.347 \hypertarget
+./output.tex:338: Undefined control sequence.
+l.338 \hypertarget
                 {get-tassel-gui-on-linux}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -922,10 +990,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:349: Undefined control sequence.
+./output.tex:340: Undefined control sequence.
 <argument> \texorpdfstring 
                 {Get \texttt {TASSEL} (GUI) on Linux}{Get TASSEL (GUI) on Linux
-l.349       Linux}{Get TASSEL (GUI) on Linux}}
+l.340       Linux}{Get TASSEL (GUI) on Linux}}
                                             \label{get-tassel-gui-on-linux}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -933,10 +1001,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:349: Undefined control sequence.
+./output.tex:340: Undefined control sequence.
 <argument> ...hesubsubsection\endcsname }\fi \texorpdfstring 
                                                   {Get \texttt {TASSEL} (GUI...
-l.349       Linux}{Get TASSEL (GUI) on Linux}}
+l.340       Linux}{Get TASSEL (GUI) on Linux}}
                                             \label{get-tassel-gui-on-linux}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -944,8 +1012,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:370: Undefined control sequence.
-l.370 \hypertarget
+./output.tex:361: Undefined control sequence.
+l.361 \hypertarget
                 {get-rtassel-r}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -953,22 +1021,31 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:400: Undefined control sequence.
+./output.tex:391: Undefined control sequence.
 <recently read> \tightlist 
            
-l.400           \tightlist
+l.391           \tightlist
                         
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+./output.tex:395: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.395         \end{itemize}
+                         
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
 [7]
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:417: Undefined control sequence.
+./output.tex:408: Undefined control sequence.
 <recently read> \tightlist 
            
-l.417           \tightlist
+l.408           \tightlist
                         
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -976,8 +1053,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:431: Undefined control sequence.
-l.431 \hypertarget
+./output.tex:422: Undefined control sequence.
+l.422 \hypertarget
                 {get-gemma}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -985,10 +1062,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:433: Undefined control sequence.
+./output.tex:424: Undefined control sequence.
 <argument> \texorpdfstring 
                 {Get \texttt {GEMMA}}{Get GEMMA}
-l.433       \texttt{GEMMA}}{Get GEMMA}}
+l.424       \texttt{GEMMA}}{Get GEMMA}}
                                      \label{get-gemma}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -996,10 +1073,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:433: Undefined control sequence.
+./output.tex:424: Undefined control sequence.
 <argument> ...hesubsubsection\endcsname }\fi \texorpdfstring 
                                                   {Get \texttt {GEMMA}}{Get ...
-l.433       \texttt{GEMMA}}{Get GEMMA}}
+l.424       \texttt{GEMMA}}{Get GEMMA}}
                                      \label{get-gemma}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1007,8 +1084,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:454: Undefined control sequence.
-l.454 \hypertarget
+./output.tex:445: Undefined control sequence.
+l.445 \hypertarget
                 {get-gapit-r}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1016,10 +1093,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:456: Undefined control sequence.
+./output.tex:447: Undefined control sequence.
 <argument> \texorpdfstring 
                 {Get \texttt {GAPIT} (\texttt {R})}{Get GAPIT (R)}
-l.456       (\texttt{R})}{Get GAPIT (R)}}
+l.447       (\texttt{R})}{Get GAPIT (R)}}
                                        \label{get-gapit-r}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1027,10 +1104,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/sscansa/MEGA/R/GWAS/Report/output.tex:456: Undefined control sequence.
+./output.tex:447: Undefined control sequence.
 <argument> ...hesubsubsection\endcsname }\fi \texorpdfstring 
                                                   {Get \texttt {GAPIT} (\tex...
-l.456       (\texttt{R})}{Get GAPIT (R)}}
+l.447       (\texttt{R})}{Get GAPIT (R)}}
                                        \label{get-gapit-r}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1038,7 +1115,26 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[8] [9] (./build/output.aux)
+./output.tex:458: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.458 ...ter}\rule{0.5\linewidth}{0.5pt}\end{center}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[8]
+./output.tex:460: Missing number, treated as zero.
+<to be read again> 
+\hfil 
+l.460 \end{document}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[9] (./build/readme.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -1047,19 +1143,23 @@ L3 programming layer <2023-06-30>
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-)
+))
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 1 (\begingroup)
+### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 7487 strings out of 477545
+ 7495 strings out of 477545
  100000,1977958 words of node,token memory allocated
  512 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 56 glue_spec, 8 attribute_list, 1 write nodes
-   avail lists: 1:1,2:465,3:241,4:7,5:267,6:71,7:4429,8:60,9:227,10:5,11:286
- 28254 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:465,3:241,4:7,5:267,6:71,7:4427,8:60,9:227,10:5,11:286
+ 28257 multiletter control sequences out of 65536+600000
  57 fonts using 3757431 bytes
- 82i,6n,76p,366b,315s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 82i,6n,76p,366b,341s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on output.pdf (9 pages, 1027146 bytes).
+Output written on readme.pdf (9 pages, 1027019 bytes).
 
 PDF statistics: 82 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream

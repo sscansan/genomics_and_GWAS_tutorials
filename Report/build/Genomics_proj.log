@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  19 MAR 2024 00:20
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  19 MAR 2024 00:35
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex
@@ -581,151 +581,150 @@ Package luatex.def Info: ../Figures/wheat_exp_var_agro_data.png  used on input l
 Missing character: There is no ’ (U+2019) in font phvro8t!
 Missing character: There is no ’ (U+2019) in font phvro8t!
 Missing character: There is no ’ (U+2019) in font phvro8t!
-]
-<build/output.pdf, id=59, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf>
-Package luatex.def Info: build/output.pdf  used on input line 99.
+] [3<../Figures/wheat_corrplot.png><../Figures/wheat_exp_var_agro_data.png>]
+<build/readme.pdf, id=65, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf>
+Package luatex.def Info: build/readme.pdf  used on input line 99.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf>
-Package luatex.def Info: build/output.pdf  used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf>
+Package luatex.def Info: build/readme.pdf  used on input line 99.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<build/output.pdf, id=62, page=1, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 99.
+<build/readme.pdf, id=68, page=1, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 1>
+Package luatex.def Info: build/readme.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.50787pt x 845.04503pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 1>
+Package luatex.def Info: build/readme.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [3]
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 1>
+Package luatex.def Info: build/readme.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 1>
+Package luatex.def Info: build/readme.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 1>
-Package luatex.def Info: build/output.pdf , page1 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 1>
+Package luatex.def Info: build/readme.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [4<./build/output.pdf>]
-<build/output.pdf, id=87, page=2, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 2>
-Package luatex.def Info: build/output.pdf , page2 used on input line 99.
+ [4<./build/readme.pdf>]
+<build/readme.pdf, id=87, page=2, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 2>
+Package luatex.def Info: build/readme.pdf , page2 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 2>
-Package luatex.def Info: build/output.pdf , page2 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 2>
+Package luatex.def Info: build/readme.pdf , page2 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 2>
-Package luatex.def Info: build/output.pdf , page2 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 2>
+Package luatex.def Info: build/readme.pdf , page2 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [5<./build/output.pdf>]
-<build/output.pdf, id=98, page=3, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 3>
-Package luatex.def Info: build/output.pdf , page3 used on input line 99.
+ [5<./build/readme.pdf>]
+<build/readme.pdf, id=98, page=3, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 3>
+Package luatex.def Info: build/readme.pdf , page3 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 3>
-Package luatex.def Info: build/output.pdf , page3 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 3>
+Package luatex.def Info: build/readme.pdf , page3 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 3>
-Package luatex.def Info: build/output.pdf , page3 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 3>
+Package luatex.def Info: build/readme.pdf , page3 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [6<./build/output.pdf>]
-<build/output.pdf, id=106, page=4, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 4>
-Package luatex.def Info: build/output.pdf , page4 used on input line 99.
+ [6<./build/readme.pdf>]
+<build/readme.pdf, id=106, page=4, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 4>
+Package luatex.def Info: build/readme.pdf , page4 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 4>
-Package luatex.def Info: build/output.pdf , page4 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 4>
+Package luatex.def Info: build/readme.pdf , page4 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 4>
-Package luatex.def Info: build/output.pdf , page4 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 4>
+Package luatex.def Info: build/readme.pdf , page4 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [7<./build/output.pdf>]
-<build/output.pdf, id=113, page=5, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 5>
-Package luatex.def Info: build/output.pdf , page5 used on input line 99.
+ [7<./build/readme.pdf>]
+<build/readme.pdf, id=113, page=5, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 5>
+Package luatex.def Info: build/readme.pdf , page5 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 5>
-Package luatex.def Info: build/output.pdf , page5 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 5>
+Package luatex.def Info: build/readme.pdf , page5 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 5>
-Package luatex.def Info: build/output.pdf , page5 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 5>
+Package luatex.def Info: build/readme.pdf , page5 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [8<./build/output.pdf>]
-<build/output.pdf, id=123, page=6, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 6>
-Package luatex.def Info: build/output.pdf , page6 used on input line 99.
+ [8<./build/readme.pdf>]
+<build/readme.pdf, id=123, page=6, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 6>
+Package luatex.def Info: build/readme.pdf , page6 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 6>
-Package luatex.def Info: build/output.pdf , page6 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 6>
+Package luatex.def Info: build/readme.pdf , page6 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 6>
-Package luatex.def Info: build/output.pdf , page6 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 6>
+Package luatex.def Info: build/readme.pdf , page6 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [9<./build/output.pdf>]
-<build/output.pdf, id=148, page=7, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 7>
-Package luatex.def Info: build/output.pdf , page7 used on input line 99.
+ [9<./build/readme.pdf>]
+<build/readme.pdf, id=148, page=7, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 7>
+Package luatex.def Info: build/readme.pdf , page7 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 7>
-Package luatex.def Info: build/output.pdf , page7 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 7>
+Package luatex.def Info: build/readme.pdf , page7 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 7>
-Package luatex.def Info: build/output.pdf , page7 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 7>
+Package luatex.def Info: build/readme.pdf , page7 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [10<./build/output.pdf>]
-<build/output.pdf, id=153, page=8, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 8>
-Package luatex.def Info: build/output.pdf , page8 used on input line 99.
+ [10<./build/readme.pdf>]
+<build/readme.pdf, id=154, page=8, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 8>
+Package luatex.def Info: build/readme.pdf , page8 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 8>
-Package luatex.def Info: build/output.pdf , page8 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 8>
+Package luatex.def Info: build/readme.pdf , page8 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 8>
-Package luatex.def Info: build/output.pdf , page8 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 8>
+Package luatex.def Info: build/readme.pdf , page8 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [11<./build/output.pdf>]
-<build/output.pdf, id=160, page=9, 597.50829pt x 845.04709pt>
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 9>
-Package luatex.def Info: build/output.pdf , page9 used on input line 99.
+ [11<./build/readme.pdf>]
+<build/readme.pdf, id=160, page=9, 597.50829pt x 845.04709pt>
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 9>
+Package luatex.def Info: build/readme.pdf , page9 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 9>
-Package luatex.def Info: build/output.pdf , page9 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 9>
+Package luatex.def Info: build/readme.pdf , page9 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: build/output.pdf Graphic file (type pdf)
-<use build/output.pdf, page 9>
-Package luatex.def Info: build/output.pdf , page9 used on input line 99.
+File: build/readme.pdf Graphic file (type pdf)
+<use build/readme.pdf, page 9>
+Package luatex.def Info: build/readme.pdf , page9 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [12<./build/output.pdf>] [13<../Figures/wheat_corrplot.png><../Figures/wheat_exp_var_agro_data.png>] (./build/Genomics_proj.aux)
+ [12<./build/readme.pdf>] (./build/Genomics_proj.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -735,7 +734,7 @@ Package rerunfilecheck Info: File `Genomics_proj.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 18365 strings out of 477545
+ 18364 strings out of 477545
  125039,1977958 words of node,token memory allocated
  584 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 69 glue_spec, 7 attribute_list, 1 shape, 1 write, 1 pdf_action nodes
@@ -744,10 +743,10 @@ Here is how much of LuaTeX's memory you used:
  76 fonts using 4969199 bytes
  82i,17n,76p,941b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Genomics_proj.pdf (13 pages, 1173948 bytes).
+Output written on Genomics_proj.pdf (12 pages, 1173550 bytes).
 
-PDF statistics: 189 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 131072)
+PDF statistics: 185 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 131072)
  41 words of extra memory for PDF output out of 10000 (max. 100000000)
 

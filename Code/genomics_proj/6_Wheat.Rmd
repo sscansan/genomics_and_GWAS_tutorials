@@ -215,12 +215,12 @@ join_df <-
 Perform SVD:
 ```{r}
 
-#from the fulll joined data, select only the int and dbl  columns for the svd calculations.
+# from the fulll joined data, select only the int and dbl  columns for the svd calculations.
 
 pca_df <- join_df %>%
   select(DB:TGW)
 
-# standardize data
+# standardize data center around zero and scale around 1 unit variance (st.dev)
 std_pca_data <- scale(pca_df)
 # cov matrix
 cov_mat <- cov(std_pca_data)
