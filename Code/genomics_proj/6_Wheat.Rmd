@@ -72,14 +72,19 @@ data <- load("Data/Triticum-durum/diversity.panel.data.gp.Rdata")
 data
 # agronomic characterization data
 met_data <- met
+head(met_data)
 # participatory variety selection data
 farm_data <- farm
+head(farm)
 # genotypic data scored on 90K markers on the wheat array
 geno_data <- geno
+head(geno)
 # estimated genomic positions of the 90K markers
 snp_pos_data <- snp.pos
+head(snp_pos_data)
 # passport data for the accessions included in the study
 info_data <- info
+head(info_data)
 ```
 
 ## Exploratory data analysis
@@ -214,11 +219,11 @@ scores <- std_eda_met %*% svd_res$v
 ```
 ```{r}
 # Principal component loadings
-loadings
+head(loadings)
 # Principal component scores
-scores
+head(scores)
 # Variance explained by each principal component
-var_explained
+head(var_explained)
 ```
 
 And perform PCA
@@ -231,12 +236,12 @@ exp_var_df <- tibble::tibble(PC = n_PCs) %>%
 plot_exp_var <-
   exp_var_df %>%
   ggplot(., aes(factor(PC), exp_var_perc)) +
-  geom_col(alpha = .6, fill = "steelblue") +
+  geom_col(alpha = .6, fill = "gray") +
   geom_point(size = 2) +
   geom_line(aes(x = PC)) +
   geom_text(aes(PC + 0.3, exp_var_perc + 3, label = exp_var_perc), angle = 30) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, 72)) +
-  #scale_x_discrete(expand = c(0, .9)) +
+  scale_x_discrete(expand = c(0, 0)) +
   labs(x = "Dimension", y = "Explained variance (%)") +
   theme_classic() +
   theme(aspect.ratio = .8)
@@ -247,6 +252,28 @@ path <- "Figures/wheat_exp_var_agro_data.png"
 ggsave(path, plot = plot_exp_var, width = 10, dpi = 120)
 knitr::plot_crop(path)
 ```
+Score plot of the individuals
+the 
 ```{r}
+# metadata?
+head(met_data)
+summary(met_data)
+# grouping and descriptive data of the individuals is not present in the `met_data` dataframe, thus we  need to merge it with the `info_data`, based on the columns `met_data$ID` and `info_data$DNA_CODE`
+head(info_data)
+# here there are the 
+```
+```{r}
+
+```
+```{r}
+scores_df <- as.data.frame(scores)
+
+ggplot(scores_df, aes(x = scores_df[,1], y = scores_df[,2])) +
+  geom_point() +
+  labs(x = paste0("PC1 (", round(var_explained[1] * 100, 2), "%)"),
+       y = paste0("PC2 (", round(var_explained[2] * 100, 2), "%)")) +
+  ggtitle("PCA Plot of Individuals (PC1 vs PC2)") +
+    theme_minimal() +
+    theme(aspect.ratio = 1)
 
 ```

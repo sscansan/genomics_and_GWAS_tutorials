@@ -2,14 +2,4 @@
 \contentsline {subsection}{\numberline {1.1}Data}{1}{}%
 \contentsline {subsection}{\numberline {1.2}Phenotype data}{2}{}%
 \contentsline {subsubsection}{\numberline {1.2.1}Correlation between variables}{2}{}%
-\contentsline {subsubsection}{\numberline {1.2.2}PCA}{2}{}%
-\contentsline {section}{\numberline {2}Genomic projects tutorials}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Contents}{4}{}%
-\contentsline {subsection}{\numberline {2.2}Tools}{4}{}%
-\contentsline {subsection}{\numberline {2.3}Example case studies}{5}{}%
-\contentsline {subsection}{\numberline {2.4}Resources \& Data}{7}{}%
-\contentsline {subsection}{\numberline {2.5}Setup of the working environment}{8}{}%
-\contentsline {subsubsection}{\numberline {2.5.1}{Get \texttt {PLINK} working in Linux}{Get PLINK working in Linux}}{9}{}%
-\contentsline {subsubsection}{\numberline {2.5.2}{Get \texttt {TASSEL} (GUI) on Linux}{Get TASSEL (GUI) on Linux}}{9}{}%
-\contentsline {subsubsection}{\numberline {2.5.3}{Get \texttt {GEMMA}}{Get GEMMA}}{11}{}%
-\contentsline {subsubsection}{\numberline {2.5.4}{Get \texttt {GAPIT} (\texttt {R})}{Get GAPIT (R)}}{11}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}PCA}{4}{}%

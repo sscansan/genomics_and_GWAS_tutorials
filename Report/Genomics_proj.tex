@@ -3,9 +3,10 @@
 \usepackage{graphicx}
 \usepackage[hybrid]{markdown}
 \usepackage[scaled]{helvet}
-\usepackage{float}
+%\usepackage{float}
 \renewcommand\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
+\usepackage{pdfpages}
 
 
 \begin{document}
@@ -27,14 +28,14 @@
 
 
 %\begin{twocolumn}
-
 \section{Project: SNP Profiling Durum Wheat}
 
 \subsection{Data}
 
 Mengistu, D.K., Kidane, Y.G., Catellani, M., Frascaroli, E., Fadda, C., Pè, M.E. and Dell'Acqua, M. (2016), High-density molecular characterization and association mapping in Ethiopian durum wheat landraces reveals high diversity and potential for wheat breeding. Plant Biotechnol J, 14: 1800-1812. https://doi.org/10.1111/pbi.12538
 
-The data used in this case study are derived from the  Durum wheat molecular characterization above-mentioned.
+The data used in this case study are derived from the durum wheat molecular characterization above-mentioned.
+311 accessions of durum wheat were genotyped and phenotyped for some agronomic traits of interest.
 
 The data are available in the DRYAD repository https://doi.org/10.5061/dryad.w6m905qrv.
 
@@ -52,14 +53,12 @@ For convenience, the abstract of the data accession is reported below:
 
 In the Rdata \texttt{diversity.panel.data.gp.Rdata}, the agronomic traits of the population of Durum wheat (\textit{Triticum turgidum} subsp. \textit{durum}).
 
-These phenotypic data are here explored to find structures in the dataset:
-
 \subsubsection{Correlation between variables}
 
 Here the Pearson's correlation is computed:
-\begin{figure*}
+\begin{figure*}[!Ht]
     \centering
-    \includegraphics[height=8cm]{../Figures/wheat_corrplot.png}
+    \includegraphics[width = .7\linewidth]{../Figures/wheat_corrplot.png}
     \label{fig:wheat_corr}
     \caption{Correlation between wheat agronomic traits variables.
         DB = days to booting (d),
@@ -78,21 +77,23 @@ Here the Pearson's correlation is computed:
 
 As the agronomic data table (phenotypic data) has nine variables, a multivariate analysis is necessary to better explore the data:
 
-\begin{figure*}
+\begin{figure*}[!Ht]
     \centering
-    \includegraphics[height=8cm]{../Figures/wheat_exp_var_agro_data.png}
+    \includegraphics[width = .7\linewidth]{../Figures/wheat_exp_var_agro_data.png}
     \label{fig:wheat_}
     \caption{Scree plot of the phenotypes}
 \end{figure*}
 
 %\begin{figure*}
-%    \centering
+%    \centerin
 %    \includegraphics[height=8cm]{../Figures/goat_mds_filtered.pdf}
 %    \label{fig:gwas_PCA}
 %    \caption{Multidimensional Scaling of the goat dataset, subset of 6 goat breeds.}
 %\end{figure*}
 
-\input{output.tex}
+
+\includepdf[pages=-,pagecommand={},width=\pagewidth]{build/output.pdf}
+
 
 %\end{twocolumn}
 \end{document}
