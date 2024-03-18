@@ -33,7 +33,8 @@ Data:
 Dell'Acqua, Matteo (2022). Characterization data for the EtNAM population and Ethiopian durum wheat landraces diversity panel [Dataset]. Dryad. https://doi.org/10.5061/dryad.w6m905qrv form the orginal research article https://onlinelibrary.wiley.com/doi/10.1111/pbi.12538
 
 
-Here we deal with data stored in the .Rdata format, great!
+Here we deal with data stored in the .Rdagst
+ta format, great!
 ```{r}
 data_et <- load("Data/Triticum-durum/etnam.data.gp.Rdata")
 data_et
