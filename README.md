@@ -11,7 +11,7 @@ The repository has been created for testing and self-teaching purposes of biolog
 and bioinformatic tools, and make use of other repositories, scripts and data
 sources, taken or modified as such.
 
-The report of the studies is in progress in:
+The report of the studies in progress is at:
 
 > "Report/build/Genomics_proj.pdf"
 
