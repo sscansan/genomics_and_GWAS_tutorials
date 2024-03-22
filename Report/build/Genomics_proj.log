@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  19 MAR 2024 00:35
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.7.12)  22 MAR 2024 22:58
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/sscansa/MEGA/R/GWAS/Report/Genomics_proj.tex
@@ -549,30 +549,29 @@ Overfull \hbox (10.35065pt too wide) in paragraph at lines 38--39
 \T1/phv/m/n/10 wheat breed-ing. Plant Biotech-nol J, 14: 1800-1812. https://doi.org/10.1111/pbi.12538 
  []
 
+[1
 
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (40.8072pt too wide) in paragraph at lines 43--44
 []\T1/phv/m/n/10 The data are avail-able in the DRYAD repos-i-tory https://doi.org/10.5061/dryad.w6m905qrv. 
  []
 
-[1
-
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 51.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 9.49997pt on input line 51.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 57.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<../Figures/wheat_corrplot.png, id=49, 421.575pt x 421.575pt>
+<../Figures/wheat_corrplot.png, id=50, 569.0058pt x 494.8086pt>
 File: ../Figures/wheat_corrplot.png Graphic file (type png)
 <use ../Figures/wheat_corrplot.png>
 Package luatex.def Info: ../Figures/wheat_corrplot.png  used on input line 65.
-(luatex.def)             Requested size: 169.0519pt x 169.05156pt.
+(luatex.def)             Requested size: 169.0519pt x 147.00163pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.59998pt on input line 65.
-<../Figures/wheat_exp_var_agro_data.png, id=50, 526.96875pt x 520.344pt>
+<../Figures/wheat_exp_var_agro_data.png, id=51, 526.96875pt x 520.344pt>
 File: ../Figures/wheat_exp_var_agro_data.png Graphic file (type png)
 <use ../Figures/wheat_exp_var_agro_data.png>
 Package luatex.def Info: ../Figures/wheat_exp_var_agro_data.png  used on input line 66.
@@ -582,7 +581,7 @@ Missing character: There is no ’ (U+2019) in font phvro8t!
 Missing character: There is no ’ (U+2019) in font phvro8t!
 Missing character: There is no ’ (U+2019) in font phvro8t!
 ] [3<../Figures/wheat_corrplot.png><../Figures/wheat_exp_var_agro_data.png>]
-<build/readme.pdf, id=65, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=67, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf>
 Package luatex.def Info: build/readme.pdf  used on input line 99.
@@ -591,7 +590,7 @@ File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf>
 Package luatex.def Info: build/readme.pdf  used on input line 99.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<build/readme.pdf, id=68, page=1, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=70, page=1, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 1>
 Package luatex.def Info: build/readme.pdf , page1 used on input line 99.
@@ -613,7 +612,7 @@ File: build/readme.pdf Graphic file (type pdf)
 Package luatex.def Info: build/readme.pdf , page1 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [4<./build/readme.pdf>]
-<build/readme.pdf, id=87, page=2, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=89, page=2, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 2>
 Package luatex.def Info: build/readme.pdf , page2 used on input line 99.
@@ -627,7 +626,7 @@ File: build/readme.pdf Graphic file (type pdf)
 Package luatex.def Info: build/readme.pdf , page2 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [5<./build/readme.pdf>]
-<build/readme.pdf, id=98, page=3, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=100, page=3, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 3>
 Package luatex.def Info: build/readme.pdf , page3 used on input line 99.
@@ -641,7 +640,7 @@ File: build/readme.pdf Graphic file (type pdf)
 Package luatex.def Info: build/readme.pdf , page3 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [6<./build/readme.pdf>]
-<build/readme.pdf, id=106, page=4, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=108, page=4, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 4>
 Package luatex.def Info: build/readme.pdf , page4 used on input line 99.
@@ -655,7 +654,7 @@ File: build/readme.pdf Graphic file (type pdf)
 Package luatex.def Info: build/readme.pdf , page4 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [7<./build/readme.pdf>]
-<build/readme.pdf, id=113, page=5, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=115, page=5, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 5>
 Package luatex.def Info: build/readme.pdf , page5 used on input line 99.
@@ -669,7 +668,7 @@ File: build/readme.pdf Graphic file (type pdf)
 Package luatex.def Info: build/readme.pdf , page5 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [8<./build/readme.pdf>]
-<build/readme.pdf, id=123, page=6, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=125, page=6, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 6>
 Package luatex.def Info: build/readme.pdf , page6 used on input line 99.
@@ -683,7 +682,7 @@ File: build/readme.pdf Graphic file (type pdf)
 Package luatex.def Info: build/readme.pdf , page6 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [9<./build/readme.pdf>]
-<build/readme.pdf, id=148, page=7, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=150, page=7, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 7>
 Package luatex.def Info: build/readme.pdf , page7 used on input line 99.
@@ -697,7 +696,7 @@ File: build/readme.pdf Graphic file (type pdf)
 Package luatex.def Info: build/readme.pdf , page7 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [10<./build/readme.pdf>]
-<build/readme.pdf, id=154, page=8, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=156, page=8, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 8>
 Package luatex.def Info: build/readme.pdf , page8 used on input line 99.
@@ -711,7 +710,7 @@ File: build/readme.pdf Graphic file (type pdf)
 Package luatex.def Info: build/readme.pdf , page8 used on input line 99.
 (luatex.def)             Requested size: 597.53416pt x 845.08371pt.
  [11<./build/readme.pdf>]
-<build/readme.pdf, id=160, page=9, 597.50829pt x 845.04709pt>
+<build/readme.pdf, id=162, page=9, 597.50829pt x 845.04709pt>
 File: build/readme.pdf Graphic file (type pdf)
 <use build/readme.pdf, page 9>
 Package luatex.def Info: build/readme.pdf , page9 used on input line 99.
@@ -738,15 +737,15 @@ Here is how much of LuaTeX's memory you used:
  125039,1977958 words of node,token memory allocated
  584 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 69 glue_spec, 7 attribute_list, 1 shape, 1 write, 1 pdf_action nodes
-   avail lists: 1:1,2:413,3:262,4:103,5:434,6:61,7:6609,8:1,9:385,10:6,11:517
+   avail lists: 1:1,2:409,3:258,4:103,5:462,6:58,7:7091,8:1,9:379,10:6,11:555
  38829 multiletter control sequences out of 65536+600000
  76 fonts using 4969199 bytes
  82i,17n,76p,941b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Genomics_proj.pdf (12 pages, 1173550 bytes).
+Output written on Genomics_proj.pdf (12 pages, 1267130 bytes).
 
-PDF statistics: 185 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
+PDF statistics: 187 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  24 named destinations out of 1000 (max. 131072)
  41 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -107,68 +107,101 @@ TGW = thousand grain weight (g)
 ##### Correlation Matrix:
 ```{r}
 unique_ids <- make.unique(met_data$ID)
+head(unique_ids)
 
 met_data_uniq <- met_data
+head(met_data_uniq)
+
 rownames(met_data_uniq) <- unique_ids
+head(met_data_uniq)
 
 eda_met <- met_data %>%
   select(DB:ncol(met_data_uniq))
 
+head(eda_met)
 summary(eda_met)
 nrow(eda_met)
 
 eda_met <- na.omit(eda_met)
+head(eda_met)
 
 eda_met_corr <- cor(eda_met)
+head(eda_met_corr)
 
+# easy with corrplot, or...
 corrplot(eda_met_corr, method = "color", type = "lower", order = "hclust", tl.col = "black", tl.srt = 90)
 
-```
+# melt the correlation matrix in a table
+require(reshape2)
+corr_tbl <- eda_met_corr %>%
+  melt() %>% # alternatively use pivot_longer()
+  as_tibble()
 
-```{r}
-# function cor.mtest to pass on a matrix  and perform the correlation test using the Pearson correlation coefficient as metric.
-# if Spearman or Kendall correlations are needed, then change the method argument in cor.test.
-cor.mtest <- function(mat, ...) {
-    mat <- as.matrix(mat)
-    n <- ncol(mat)
-    p.mat<- matrix(NA, n, n)
-    diag(p.mat) <- 0
-    for (i in 1:(n - 1)) {
-        for (j in (i + 1):n) {
-            tmp <- cor.test(mat[, i], mat[, j], ...)
-            p.mat[i, j] <- p.mat[j, i] <- tmp$p.value
-        }
-    }
-  colnames(p.mat) <- rownames(p.mat) <- colnames(mat)
-  p.mat
+corr_tbl %>%
+  ggplot(aes(x = Var1, y = Var2, fill = value)) +
+  geom_tile() +
+  scale_fill_continuous(name = "Pearson \n correlation") +
+  labs(x = "", y = "") +
+  theme(aspect.ratio = 1)
+
+# split upper and lower triangles
+{
+  get_lower_tri <- function(eda_met_corr) {
+    eda_met_corr[upper.tri(eda_met_corr)] <- NA
+    return(eda_met_corr)
+  }
+
+  get_upper_tri <- function(eda_met_corr) {
+    eda_met_corr[lower.tri(eda_met_corr)] <- NA
+    return(eda_met_corr)
+  }
 }
-```
-```{r}
-eda_met <- as.matrix(eda_met)
 
-pearson_p <- cor.mtest(eda_met)
-head(pearson_p[, 1:5])
+tri_up <- get_upper_tri(eda_met_corr)
+tri_down <- get_lower_tri(eda_met_corr)
 
-# col <- colorRampPalette(c("#BB4444", "#EE9988", "#FFFFFF", "#77AADD", "#4477AA"))
+# hierarchical clustering for
 
-h <- 700
-png("Figures/wheat_corrplot.png", width = h, height = h, res = 120)
+reorder_cor <- function(eda_met_corr){
+  dd <- as.dist((1 - eda_met_corr) / 2)
+  hc <- hclust(dd)
+  eda_met_corr <- eda_met_corr[hc$order, hc$order]
+}
 
-corrplot(
-  eda_met_corr,
-  method = "color",
-  #col=col(200),
-  type = "upper",
-  order = "hclust",
-  tl.col = "black",
-  tl.srt = 90,
-  diag = F,
-  p.mat = pearson_p,
-  sig.level = 0.01,
-  addCoef.col = "grey10"
-)
+eda_met_corr <- reorder_cor(eda_met_corr)
+tri_down <- get_lower_tri(eda_met_corr)
 
-dev.off()
+melt_tri_down <- melt(tri_down, na.rm = TRUE) %>%
+  filter(Var1 != Var2)
+
+cor_plot <-
+  melt_tri_down %>%
+  na.omit() %>%
+  ggplot(aes(x = Var1, y = Var2, fill = value)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = round(value, 2))) +
+  scale_fill_gradient2(
+    limit = c(-1, 1),
+    high = "firebrick3",
+    mid = "white",
+    low = "navyblue",
+    name = "Pearson \n correlation") +
+  scale_y_discrete(position = "right") +
+  labs(x = "", y = "") +
+  theme_minimal() +
+  theme(
+    aspect.ratio = 1,
+    axis.ticks = element_line(),
+    axis.text = element_text(size = 12),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = c(.1, .75)
+  ) +
+  guides(
+    fill = guide_colourbar(barheight = 10)
+  )
+
+  ggsave(plot = cor_plot, "Figures/wheat_corrplot.png")
 
 ```
 
