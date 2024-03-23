@@ -60,7 +60,6 @@ The Rdata file contains serveral R objects:
 
 ```{r, echo = FALSE}
 library(tidyverse)
-library(corrplot)
 ```
 ```{r}
 data_et <- load("Data/Triticum-durum/etnam.data.gp.Rdata")
@@ -129,6 +128,7 @@ eda_met_corr <- cor(eda_met)
 head(eda_met_corr)
 
 # easy with corrplot, or...
+require(corrplot)
 corrplot(eda_met_corr, method = "color", type = "lower", order = "hclust", tl.col = "black", tl.srt = 90)
 
 # melt the correlation matrix in a table
@@ -226,29 +226,27 @@ To reveal hidden structures in the population.
 ```{r}
 # Merge datasets
 
-head(met_data)
-head(info_data)
+met_data <- met_data  %>% as_tibble()
+info_data <- info_data  %>% as_tibble()
 
 b <- info_data %>%
   select(DNA_CODE, SPECIES, TYPE) %>%
   rename(ID = DNA_CODE)
 
 a <- met_data %>%
-  select(ID:ncol(.))
+  select(-BLK, -ROW) %>%
+  arrange(ID)
 
 # full dataset for the plot, here were also removed the NAs to keep the same number of rows of info_data and met_data
 join_df <-
   full_join(a, b, by = "ID") %>%
-  select(ID, SPECIES, TYPE, DB:TGW) %>%
-  na.omit() %>%
-  as_tibble()
-
+  select(-PLOT, -COL) %>%
+  na.omit()
 ```
 
 Perform SVD:
 ```{r}
-
-# from the fulll joined data, select only the int and dbl  columns for the svd calculations.
+# from the full joined data, select only the <int> and <dbl>  columns for the svd calculations.
 
 pca_df <- join_df %>%
   select(DB:TGW)
@@ -259,37 +257,41 @@ std_pca_data <- scale(pca_df)
 cov_mat <- cov(std_pca_data)
 # singular value decomposition
 svd_res <- svd(cov_mat)
-# we obrain the matrix $d, $u and $v: U and V are the orthogonal
-?base::svd
+
+svd_res
+
+??svd()
 ```
 
 We obtain the decomposition of the covariate matrix as:
 
-$ X=UDV^{T} $
+$ X=U\Sigma V^{T} $
 
-Where $U$ and $V$ are the orthogonal and $V^{T}$ the transposed.
-And $D$ is the diagonal matrix with the singular values.
-also represented as $D=U^{T}XV$
+Where:
 
-with the function svd() we get the matrices $d which has the singular $X$ values [min(n.p)], $u with the left singular vectors [c(n,nu)], v with the right singlular vector of $X$ [c(p,nv)].
+$[U]$ is the left singular vectors matrix of dimensions $n \times p$ as the number of variables ($p$) and observations ($n$). Each column is a vector $\vec{u}_{i \dots n}$ representing the directions of maximum variance in $X$-the original data set.
+
+$[\Sigma]$ (or $D$) is the diagonal matrix, contain the singular values of the original data matrix. The singular values represent the maximum variance captured by each principal component. The values are arranged in descending order by importanceof each principal component.
+
+$[V]$ is the right ingular vector matrix, containing the coefficients (loadings) of the original variables on the proncipal components. Each column contains the loadings of one principal component for each original variable. Dimensions of $V$ are $p \times p$, as $p$ the number of variables. Often $V$ is rapresented in the transposed form $V^T$ because the columns represent the loading of the original variables on the PCs.
 
 Extract the values:
 ```{r}
-# Extract singular values, left singular vectors (loadings), and right singular vectors (scores)
+# singular values, left singular vectors (loadings), and right singular vectors (scores)
 singular_values <- svd_res$d
-loadings <- svd_res$u
-scores <- std_pca_data %*% svd_res$v
+loadings <- svd_res$v
+scores <- std_pca_data %*% svd_res$u
 
-# calculate the explained variance
+# explained variance
 tot_var <- sum(singular_values^2)
 var_explained <- (singular_values^2) / tot_var
 ```
 ```{r}
-# Principal component loadings
+#  loadings
 head(loadings)
-# Principal component scores
+# scores
 head(scores)
-# Variance explained by each principal component
+# explained variances
 head(var_explained)
 ```
 
