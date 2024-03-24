@@ -69,21 +69,34 @@ data_et
 ```{r}
 data <- load("Data/Triticum-durum/diversity.panel.data.gp.Rdata")
 data
+
 # agronomic characterization data
 met_data <- met
-head(met_data)
+met_data %>% as_tibble()
+
 # participatory variety selection data
 farm_data <- farm
-head(farm)
+farm %>% as_tibble()
+
 # genotypic data scored on 90K markers on the wheat array
 geno_data <- geno
-head(geno)
+geno %>%
+  as_tibble(rownames = "row_n")
+
 # estimated genomic positions of the 90K markers
-snp_pos_data <- snp.pos
-head(snp_pos_data)
+snp_fpos_data <- snp.pos
+snp_pos_data %>%
+  as_tibble() %>%
+  select(rs., alleles, chrom, pos, strand) #  %>% na.omit()
+
 # passport data for the accessions included in the study
 info_data <- info
-head(info_data)
+info_data %>%
+  rename(
+    "code" = "ID",
+    "ID" = "DNA_CODE"
+  ) %>%
+  as_tibble()
 ```
 
 ## Exploratory data analysis
@@ -106,10 +119,8 @@ TGW = thousand grain weight (g)
 ##### Correlation Matrix:
 ```{r}
 unique_ids <- make.unique(met_data$ID)
-head(unique_ids)
 
 met_data_uniq <- met_data
-head(met_data_uniq)
 
 rownames(met_data_uniq) <- unique_ids
 head(met_data_uniq)
@@ -241,7 +252,13 @@ a <- met_data %>%
 join_df <-
   full_join(a, b, by = "ID") %>%
   select(-PLOT, -COL) %>%
-  na.omit()
+  na.omit() #how to select the filtered out NAs?
+
+# which data are NAs?
+
+full_join(a, b, by = "ID") %>%
+  select(-PLOT, -COL) %>%
+  mutate(NAs = is.na())
 ```
 
 Perform SVD:
@@ -260,7 +277,7 @@ svd_res <- svd(cov_mat)
 
 svd_res
 
-??svd()
+?base::svd()
 ```
 
 We obtain the decomposition of the covariate matrix as:
@@ -275,7 +292,6 @@ $[\Sigma]$ (or $D$) is the diagonal matrix, contain the singular values of the o
 
 $[V]$ is the right ingular vector matrix, containing the coefficients (loadings) of the original variables on the proncipal components. Each column contains the loadings of one principal component for each original variable. Dimensions of $V$ are $p \times p$, as $p$ the number of variables. Often $V$ is rapresented in the transposed form $V^T$ because the columns represent the loading of the original variables on the PCs.
 
-Extract the values:
 ```{r}
 # singular values, left singular vectors (loadings), and right singular vectors (scores)
 singular_values <- svd_res$d
@@ -325,7 +341,7 @@ Score plot of the individuals
 
 ```{r}
 # metadata?
-head(met_data)
+met_data %>% as_tibble()
 summary(met_data)
 # grouping and descriptive data of the individuals is not present in the `met_data` dataframe, thus we  need to merge it with the `info_data`, based on the columns `met_data$ID` and `info_data$DNA_CODE`
 head(info_data)
@@ -336,22 +352,27 @@ info_data <- info
 
 info_data <- info_data %>%
   select(DNA_CODE:ncol(.)) %>%
-  rename(ID = DNA_CODE)
+  rename(ID = DNA_CODE)  %>%
+  as_tibble()
 
-met_data <- met
+met_data <- met %>% as_tibble()
 
 pca_met_join <- met_data %>%
-  na.omit() %>%
   select(ID:ncol(met_data)) %>%
-  full_join(info_data, by = "ID")
-
-head(pca_met_join)
-
+  full_join(info_data, by = "ID") %>%
+  na.omit()
 ```
 ```{r}
-scores_df <- as.data.frame(scores)
-head(scores_df)
+# Join PCA scores with metadata
 
+scores_df <- scores %>% as_tibble()
+
+pca_met_join <- cbind(ID = met_data$ID, scores_df)
+pca_met_join <- full_join(pca_met_join, info_data, by = "ID")
+```
+
+```{r}
+# plot individuals
 ggplot(scores_df, aes(x = scores_df[,1], y = scores_df[,2])) +
   geom_point(aes(color = eda_met_join)) +
   labs(x = paste0("PC1 (", round(var_explained[1] * 100, 2), "%)"),
@@ -372,7 +393,7 @@ pca_data <- met_data %>%
 std_pca_data <- scale(pca_data)
 cov_mat <- cov(std_pca_data)
 svd_res <- svd(cov_mat)
-scores <- std_pca_data %*% svd_res$v
+scores <- std_pca_data %*% svd_res$u
 
 scores <- as_tibble(scores)
 
