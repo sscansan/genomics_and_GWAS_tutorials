@@ -62,11 +62,9 @@ In \cref{fig:wheat_corr} the Pearson's correlation between agronomic traits is c
 
 \begin{figure}[!ht]
     \centering
-    \subfloat[Corrplot]{\includegraphics[width = .49\linewidth]{../Figures/wheat_corrplot.png}\label{fig:wheat_corr}}
-    \subfloat[Screeplot]{\includegraphics[width = .49\linewidth]{../Figures/wheat_exp_var_agro_data.png}\label{fig:wheat_scree_pheno}}
-    \caption{%
-        a) Correlation between wheat agronomic traits variables.
-        b) Scree plot of the phenotype-agronomic data.
+    \includegraphics[width = .49\linewidth]{../Figures/wheat_corrplot.png}
+    \caption{
+        Correlation between wheat agronomic traits variables.
         DB = days to booting (days),
         DF = days to flowering (days),
         DM = days to maturity (days),
@@ -78,8 +76,10 @@ In \cref{fig:wheat_corr} the Pearson's correlation between agronomic traits is c
         GY = grain yeld (t/ha),
         TGW = thousand grain weight (g).
     }
-    \label{fig:wheat_corr_scree}
+    \label{fig:wheat_corr}
 \end{figure}
+
+
 
 \subsubsection{PCA}
 
@@ -87,13 +87,27 @@ As the agronomic data table (phenotypic data) has nine variables, a multivariate
 In \cref{fig:wheat_scree_pheno} we show the scree plot of the phenotype data.
 From this figure it follows that there are approximately 3 dimensions necessary to explain 88.5\% of the dataset variance.
 
-
-%\begin{figure*}
-%    \centerin
-%    \includegraphics[height=8cm]{../Figures/goat_mds_filtered.pdf}
-%    \label{fig:gwas_PCA}
-%    \caption{Multidimensional Scaling of the goat dataset, subset of 6 goat breeds.}
-%\end{figure*}
+\begin{figure}[!ht]
+    \centering
+    \subfloat[Screeplot]{\includegraphics[width = .4\linewidth]{../Figures/wheat_exp_var_agro_data.png}\label{fig:wheat_scree_pheno}}
+    \subfloat[score\_plot]{\includegraphics[width = .75\linewidth]{../Figures/wheat_pca_agronomic_location.png}\label{fig:wheat_pca_location}}
+    \caption{
+        a) Scree plot of the phenotype-agronomic data.
+        b) PCA biplot of the agronomic traits.
+        In the biplot, the ellipses are calculated on a normal multivariate distribution that indicate the 95\% CI.
+        PCA of the wheat agronomic traits dataset.
+        DB = days to booting (days),
+        DF = days to flowering (days),
+        DM = days to maturity (days),
+        PH = plant height (days),
+        NET = number of effective tillers per plant (n),
+        SPL = spike length (cm),
+        SPS = number of seeds per spike (n),
+        BM = biomass (t/ha),
+        GY = grain yeld (t/ha),
+        TGW = thousand grain weight (g)}
+    \label{fig:scree_PCA_location}
+\end{figure}
 
 \newpage
 \includepdf[pages=-,pagecommand={},width=\pagewidth]{build/readme.pdf}

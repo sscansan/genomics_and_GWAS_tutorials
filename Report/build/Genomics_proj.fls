@@ -239,11 +239,13 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT ./build/../Figures/wheat_corrplot.png
 INPUT ../Figures/wheat_corrplot.png
+INPUT ./build/../Figures/wheat_exp_var_agro_data.png
+INPUT ../Figures/wheat_exp_var_agro_data.png
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
-INPUT ./build/../Figures/wheat_exp_var_agro_data.png
-INPUT ../Figures/wheat_exp_var_agro_data.png
+INPUT ./build/../Figures/wheat_pca_agronomic_location.png
+INPUT ../Figures/wheat_pca_agronomic_location.png
 INPUT ./build/readme.pdf
 INPUT ./build/readme.pdf
 INPUT ./build/readme.pdf
