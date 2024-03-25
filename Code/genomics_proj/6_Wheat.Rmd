@@ -383,21 +383,25 @@ scores_df %>%
   select(LOCATION, YEAR, REP, ID, SPECIES, TYPE, V1, V2) %>%
   rename("PC1" = "V1", "PC2" = "V2") %>%
   ggplot(aes(x = PC1, y = PC2, color = as.factor(YEAR))) +
-  geom_point() +
-  theme(aspect.ratio = 1)
+  geom_point(size = 2, alpha = .75) +
+  theme(
+    aspect.ratio = 1,
+    panel.grid = element_blank()
+  ) +
+  theme_minimal()
 
   scores_df %>%
   select(LOCATION, YEAR, REP, ID, SPECIES, TYPE, V1, V2) %>%
   rename("PC1" = "V1", "PC2" = "V2") %>%
   ggplot(aes(x = PC1, y = PC2, color = as.factor(TYPE))) +
-  geom_point() +
+  geom_point(size = 2, alpha = .75) +
   theme(aspect.ratio = 1)
 
   scores_df %>%
     select(LOCATION, YEAR, REP, ID, SPECIES, TYPE, V1, V2) %>%
     rename("PC1" = "V1", "PC2" = "V2") %>%
     ggplot(aes(x = PC1, y = PC2, color = as.factor(LOCATION))) +
-    geom_point() +
+    geom_point(size = 2, alpha = .75) +
     theme(aspect.ratio = 1)
 ```
 
