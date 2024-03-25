@@ -71,7 +71,7 @@ data <- load("Data/Triticum-durum/diversity.panel.data.gp.Rdata")
 data
 
 # agronomic characterization data
-met_data <- met
+met_data <- met  %>% as_tibble
 met_data %>% as_tibble()
 
 # participatory variety selection data
@@ -102,7 +102,7 @@ info_data %>%
 ## Exploratory data analysis
 ### Agronomic data
 ```{r}
-met_data %>% head()
+met_data
 ```
 ID = identification
 DB = days to booting (d)
@@ -217,7 +217,7 @@ cor_plot <-
 ```
 
 
-##### PCA
+##### barebone PCA, step by step.
 To reveal hidden structures in the population.
 
 | prcomp() | name     | Description                                                                  |
@@ -245,8 +245,8 @@ b <- info_data %>%
   rename(ID = DNA_CODE)
 
 a <- met_data %>%
-  select(-BLK, -ROW) %>%
-  arrange(ID)
+  select(-BLK, -ROW) #%>%
+  #arrange(ID)
 
 # full dataset for the plot, here were also removed the NAs to keep the same number of rows of info_data and met_data
 join_df <-
@@ -255,18 +255,36 @@ join_df <-
   na.omit() #how to select the filtered out NAs?
 
 # which data are NAs?
+# negative selection, just the NAs
 
-full_join(a, b, by = "ID") %>%
+join_df_na <- full_join(a, b, by = "ID") %>%
   select(-PLOT, -COL) %>%
-  mutate(NAs = is.na())
+  filter(if_any(everything(), is.na))
 ```
+we have now two datasets, which have the same columns, created by the joining of the agronomic data with some grouping data that will be useful in the pca to group variables.
+The difference between the two datasets is that now one have the data excluding the rows that have any NA, and the second have only the rows where are present NAs.
+This because the SVD doesn't alow NAs in the dataset.
+
+To prove that it works, we count the rows of first dataset before and after filtering for NAs:
+before 2549, after 2388, \Delta = 161
+nrows(join_df_na) = 161
+Right.
 
 Perform SVD:
 ```{r}
 # from the full joined data, select only the <int> and <dbl>  columns for the svd calculations.
+# provinding a combined ID as rownames, we make sure that the data are not getting scrambled, and we can avoid to have then duplicate values.
+# this is useful later in the plotting to map the data points in the PC space, it is used to join the datasets of the scores nad the pca_df_rownames dataframe, containing the grouping variables
 
-pca_df <- join_df %>%
-  select(DB:TGW)
+
+pca_df_rownames <- join_df %>%
+  mutate(combined_ID = paste(ID, LOCATION, YEAR, REP, sep = "_"))
+
+pca_df_rownames <- as.data.frame(pca_df_rownames)
+rownames(pca_df_rownames) <- pca_df_rownames$combined_ID
+
+pca_df <- pca_df_rownames %>%
+  select(DB:BM)
 
 # standardize data center around zero and scale around 1 unit variance (st.dev)
 std_pca_data <- scale(pca_df)
@@ -341,12 +359,71 @@ Score plot of the individuals
 
 ```{r}
 # metadata?
-met_data %>% as_tibble()
-summary(met_data)
+met_data
 # grouping and descriptive data of the individuals is not present in the `met_data` dataframe, thus we  need to merge it with the `info_data`, based on the columns `met_data$ID` and `info_data$DNA_CODE`
-head(info_data)
+info_data
 # here there are collected descriptors as SPECIES and TYPE
+
+# joined data
+join_df
+join_df_na
+pca_df_rownames
 ```
+```{r}
+scores
+row_names_scores <- rownames(scores)
+
+scores_df <- scores %>%
+  as.data.frame() %>%
+  mutate(combined_ID = row_names_scores) %>%
+  as_tibble() %>%
+  full_join(pca_df_rownames, by = "combined_ID")
+
+scores_df %>%
+  select(LOCATION, YEAR, REP, ID, SPECIES, TYPE, V1, V2) %>%
+  rename("PC1" = "V1", "PC2" = "V2") %>%
+  ggplot(aes(x = PC1, y = PC2, color = as.factor(YEAR))) +
+  geom_point() +
+  theme(aspect.ratio = 1)
+
+  scores_df %>%
+  select(LOCATION, YEAR, REP, ID, SPECIES, TYPE, V1, V2) %>%
+  rename("PC1" = "V1", "PC2" = "V2") %>%
+  ggplot(aes(x = PC1, y = PC2, color = as.factor(TYPE))) +
+  geom_point() +
+  theme(aspect.ratio = 1)
+
+  scores_df %>%
+    select(LOCATION, YEAR, REP, ID, SPECIES, TYPE, V1, V2) %>%
+    rename("PC1" = "V1", "PC2" = "V2") %>%
+    ggplot(aes(x = PC1, y = PC2, color = as.factor(LOCATION))) +
+    geom_point() +
+    theme(aspect.ratio = 1)
+```
+
+By this first overview of the PCA seems that the biggest factor contributing to the variation in the dataset is the location geregera vs hagreselam.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```{r}
 info_data <- info
 
