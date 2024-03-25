@@ -322,15 +322,6 @@ scores <- std_pca_data %*% svd_res$u
 tot_var <- sum(singular_values^2)
 var_explained <- (singular_values^2) / tot_var
 ```
-```{r}
-#  loadings
-loadings %>% as_tibble()
-# scores
-scores %>% as_tibble()
-# explained variances
-var_explained %>% as_tibble()
-```
-
 and plot scree plot, individuals and scores.
 ```{r}
 n_PCs <- 1:length(var_explained)
@@ -395,6 +386,31 @@ loadings_plot_df <- loadings_plot_df %>%
   as.data.frame() %>%
   rownames_to_column(var = "var") %>%
   as_tibble()
+```
+
+```{r}
+  scores_df %>%
+  select(LOCATION, YEAR, REP, ID, SPECIES, TYPE, V1, V2) %>%
+  rename("PC1" = "V1", "PC2" = "V2") %>%
+  ggplot(aes(x = PC1, y = PC2)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey30") +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey30") +
+  geom_point(aes(color = as.factor(TYPE)), alpha = .25) +
+  scale_color_discrete(name = "TYPE") +
+  stat_ellipse(aes(fill = TYPE, color = TYPE), geom = "polygon", type = "norm", alpha = 0.1, show.legend = FALSE) +
+  geom_point(data = loadings_plot_df[, 2:3], aes(x = PC1*9, y = PC2*9), color = "grey30") +
+  #geom_segment(data = loadings_plot_df[, 2:3], aes(x = 0, y = 0, xend = PC1 * 9, yend = PC2 * 9), arrow = arrow(length = unit(0.1, "inches")), color = "grey30") +
+  geom_text(data = loadings_plot_df, aes(x = PC1*9, y = PC2*9, label = var), hjust = -0.2, vjust = -0.2, size = 4) +
+  labs(
+    x = paste0("PC1 (", round(var_explained[1]*100, 1), "%)"),
+    y = paste0("PC2 (", round(var_explained[2]*100, 1), "%)")
+  ) +
+  theme_bw() +
+    theme(
+      aspect.ratio = 1,
+      # panel.background = element_rect(fill = "gray95"),
+      panel.grid = element_blank()
+    )
 
 pca_location <-
   scores_df %>%
@@ -403,11 +419,12 @@ pca_location <-
   ggplot(aes(x = PC1, y = PC2)) +
   geom_vline(xintercept = 0, linetype = "dashed", color = "grey30") +
   geom_hline(yintercept = 0, linetype = "dashed", color = "grey30") +
-  geom_point(aes(color = as.factor(LOCATION)), alpha = .3) +
+  geom_point(aes(color = as.factor(LOCATION)), alpha = .25) +
   scale_color_discrete(name = "Location") +
   stat_ellipse(aes(fill = LOCATION, color = LOCATION), geom = "polygon", type = "norm", alpha = 0.1, show.legend = FALSE) +
-  geom_segment(data = loadings_plot_df[, 2:3], aes(x = 0, y = 0, xend = PC1 * 9, yend = PC2 * 9), arrow = arrow(length = unit(0.1, "inches")), color = "grey30") +
-  geom_text(data = loadings_plot_df, aes(x = PC1*9, y = PC2*9, label = var), hjust = -0.1, vjust = -0.1, size = 3) +
+  geom_point(data = loadings_plot_df[, 2:3], aes(x = PC1*9, y = PC2*9), color = "grey30") +
+  #geom_segment(data = loadings_plot_df[, 2:3], aes(x = 0, y = 0, xend = PC1 * 9, yend = PC2 * 9), arrow = arrow(length = unit(0.1, "inches")), color = "grey30") +
+  geom_text(data = loadings_plot_df, aes(x = PC1*9, y = PC2*9, label = var), hjust = -0.2, vjust = -0.2, size = 4) +
   labs(
     x = paste0("PC1 (", round(var_explained[1]*100, 1), "%)"),
     y = paste0("PC2 (", round(var_explained[2]*100, 1), "%)")
