@@ -1,6 +1,7 @@
 \documentclass[a4paper,onecolumn,10pt]{article}
 
-\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper,margin=3cm}
 \usepackage[hybrid]{markdown}
 \usepackage[scaled]{helvet}
 %\usepackage{float}
@@ -9,6 +10,7 @@
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{subfig}
+\usepackage{float}
 \usepackage[hidelinks, colorlinks=true, linkcolor=blue]{hyperref}
 \usepackage[capitalise]{cleveref}
 
@@ -60,7 +62,7 @@ In the Rdata \texttt{diversity.panel.data.gp.Rdata}, the agronomic traits of the
 
 In \cref{fig:wheat_corr} the Pearson's correlation between agronomic traits is computed.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width = .49\linewidth]{../Figures/wheat_corrplot.png}
     \caption{
@@ -80,6 +82,26 @@ In \cref{fig:wheat_corr} the Pearson's correlation between agronomic traits is c
 \end{figure}
 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \linewidth]{../Figures/wheat_eda.png}
+    \caption{
+        Correlation between wheat agronomic traits variables.
+        The contrast between different sampling locations is highlighted with diverging colors, in red the location Geregera, and with teal the location Hagreselam.
+        DB = days to booting (days),
+        DF = days to flowering (days),
+        DM = days to maturity (days),
+        PH = plant height (days),
+        NET = number of effective tillers per plant (n),
+        SPL = spike length (cm),
+        SPS = number of seeds per spike (n),
+        BM = biomass (t/ha),
+        GY = grain yeld (t/ha),
+        TGW = thousand grain weight (g).
+    }
+    \label{fig:wheat_eda}
+\end{figure}
+
 
 \subsubsection{PCA}
 
@@ -87,7 +109,7 @@ As the agronomic data table (phenotypic data) has nine variables, a multivariate
 In \cref{fig:wheat_scree_pheno} we show the scree plot of the phenotype data.
 From this figure it follows that there are approximately 3 dimensions necessary to explain 88.5\% of the dataset variance.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \subfloat[Screeplot]{\includegraphics[width = .4\linewidth]{../Figures/wheat_exp_var_agro_data.png}\label{fig:wheat_scree_pheno}}
     \subfloat[score\_plot]{\includegraphics[width = .75\linewidth]{../Figures/wheat_pca_agronomic_location.png}\label{fig:wheat_pca_location}}
@@ -110,6 +132,8 @@ From this figure it follows that there are approximately 3 dimensions necessary 
 \end{figure}
 
 \newpage
+\thispagestyle{empty}
+
 \includepdf[pages=-,pagecommand={},width=\pagewidth]{build/readme.pdf}
 
 

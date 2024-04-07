@@ -272,7 +272,7 @@ for Bioconda, you should already have defaults and conda-forge.
 ```
 conda config --add channels defaults
 conda config --add channels conda-forge
-conda config --add channels biocond
+conda config --add channels bioconda
 conda install gemma
 ```
 

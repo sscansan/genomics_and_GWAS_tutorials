@@ -1,5 +1,5 @@
 ---
-title: "Wheat"
+title: "Wheat_eda"
 #author:
 output:
   #rmdformats::html_clean:
@@ -430,11 +430,13 @@ pca_location <-
     y = paste0("PC2 (", round(var_explained[2]*100, 1), "%)")
   ) +
   theme_bw() +
-  theme(
-    aspect.ratio = 1,
-    #panel.background = element_rect(fill = "gray95"),
-    panel.grid = element_blank()
-  )
+    theme(
+      aspect.ratio = 1,
+      # panel.background = element_rect(fill = "gray95"),
+      panel.grid = element_blank()
+    )
+
+  pca_location
 
 path_PCA_location <- "Figures/wheat_pca_agronomic_location.png"
 
@@ -442,4 +444,22 @@ ggsave(path_PCA_location, plot = pca_location, width = 6, dpi = 120)
 knitr::plot_crop(path_PCA_location)
 ```
 
-By this first overview of the PCA seems that the biggest factor contributing to the variation in the dataset is the location geregera vs hagreselam.
+By this first overview of the PCA seems that the biggest factor contributing to the variation in the dataset is the location: geregera vs hagreselam.
+
+```{r}
+require(GGally)
+
+join_df %>%
+  select(TYPE) %>%
+  mutate(unique(n()))
+
+eda_plot <- join_df %>%
+  select(LOCATION, TYPE, DB:(ncol(.) - 2)) %>%
+  ggpairs(aes(color = LOCATION, alpha = .3)) +
+  theme_bw() +
+  theme(panel.grid.minor = element_blank())
+
+path <- "Figures/wheat_eda.png"
+ggsave(path, plot = eda_plot, dpi = 120)
+knitr::plot_crop(path)
+ ```

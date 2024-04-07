@@ -62,12 +62,10 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
 INPUT /home/sscansa/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz
 INPUT /home/sscansa/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/luatex.def
+INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/markdown/markdown.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
@@ -98,6 +96,11 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/luatex.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/gobble/gobble.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/gobble/gobble.tex
@@ -118,8 +121,8 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/pdfpages/ppluatex.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/subfig/subfig.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.lua
@@ -239,6 +242,8 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT ./build/../Figures/wheat_corrplot.png
 INPUT ../Figures/wheat_corrplot.png
+INPUT ../Figures/wheat_eda.png
+INPUT ../Figures/wheat_eda.png
 INPUT ./build/../Figures/wheat_exp_var_agro_data.png
 INPUT ../Figures/wheat_exp_var_agro_data.png
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
