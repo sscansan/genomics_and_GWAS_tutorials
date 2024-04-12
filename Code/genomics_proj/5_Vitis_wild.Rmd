@@ -1,0 +1,276 @@
+  ---
+  title: "Vitis_wild"
+  #author:
+  output:
+    #rmdformats::html_clean:
+    rmdformats::downcute:
+      downcute_theme: "chaos"
+      use_bookdown: false
+      self_contained: true
+      thumbnails: true
+      lightbox: true
+      highlight: tango
+      gallery: true
+      toc_depth: 3
+      code_folding: show
+      css: css/custom.css
+  knit:
+    (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
+    encoding, output_dir = "html") })
+  ---
+
+  # Genomic project to investigate  the genetic basis of complex traits in Vitis vinifera.
+
+  ## Introduction
+
+  The aim of this project is to identify and characterize genes associated with important plant traits using high-throughput sequencing technologies.
+
+  ## Data
+  Here we analyse the data of the paper:
+  Smith HM, Smith BP, Morales NB, Moskwa S, Clingeleffer PR, Thomas MR (2018) SNP markers tightly linked to root knot nematode resistance in grapevine (Vitis cinerea) identified by a genotyping-by-sequencing approach followed by Sequenom MassARRAY validation. PLoS ONE 13 (2): e0193121. https://doi.org/10.1371/journal.pone.0193121
+
+  Data can be found in the DRYAD repository:
+  Smith, Harley M. et al. (2019). Data from: SNP markers tightly linked to root knot nematode resistance in grapevine (Vitis cinerea) identified by a genotyping-by-sequencing approach followed by Sequenom MassARRAY validation [Dataset]. Dryad. https://doi.org/10.5061/dryad.1d7n9
+
+  After downloading and unzipping the files, I used `rTASSEL` to run a quality control on the file `all.taxamerged.filtered.recode.vcf` which is described in the *README.txt* to be the data from the sequencing. This file contains SNP data for C2-50, Riesling and the 90 C2-50 x Riesling F1 individuals.
+
+  In `rTASSEL`, i import the `all.taxamerged.filtered.recode.vcf` file
+
+  ```{r}
+rm(list = ls())
+  ```
+  ```{r}
+library(tidyverse)
+library(rTASSEL)
+library(plinkr)
+library(ggtext)
+library(patchwork)
+
+BiocManager::install("snpStats")
+  ```
+
+  ## QC
+  ```{r}
+path <- "Data/vitis_112_wildgrapes/dataverse_files"
+path_qc <- "Data/vitis_112_wildgrapes/dataverse_files/AfterQC"
+
+list.files(path)
+  ```
+  ```{r}
+# default is --mind 0.1, and this leaves 3 samples out. However, if we want to keep the samples we have to accept a 25% missingness in the genotypes, and that includes also the 2 samples (<20%), and 1 sample (<25%).
+system(
+  str_c(
+    "plink \\
+  --file ", path, "/genotypes_SYLV \\
+  --chr-set 19 no-xy \\
+  --geno 0.1 \\
+  --mind 0.25 \\
+  --maf 0.05 \\
+  --autosome \\
+  --allow-no-sex \\
+  --nonfounders \\
+  --allow-extra-chr \\
+  --make-bed \\
+  --out ", path, "/AfterQC/qc"
+  )
+)
+  ```
+
+  ```{r}
+# map file import
+map_file <- list.files(path, pattern = "*.map", full.names = T)
+
+map <- read.table(map_file)
+
+map_table <- map %>%
+  as_tibble() %>%
+  rename(
+    chr = V1,
+    snp_ID = V2,
+    pos_M = V3,
+    pos = V4
+  )
+  ```
+  ```{r}
+# fam file import
+
+fam_files <- list.files(path_qc, pattern = "*fam", full.names = T)
+
+fam <- read.table(fam_files)
+
+fam_table <- fam %>%
+  as_tibble() %>%
+  rename(
+    fam_ID = V1,
+    indiv_ID = V2,
+    parental_ID_1 = V3,
+    parental_ID_2 = V4,
+    sex = V5,
+    phenotype = V6
+  )
+  ```
+  ```{r}
+# passport data
+
+passport_file <- list.files(path, pattern = "*.txt", full.names = T)
+
+pass <- read.table(passport_file[1], sep = "\t", header = T)
+
+pass_table <- pass %>%
+  as_tibble()
+  ```
+  ```{r}
+# ped file import
+ped_file <- list.files(path_qc, pattern = "*.ped", full.names = T)
+
+ped <- read.table(ped_file)
+
+ped_table <- ped %>%
+  as_tibble()
+  ```
+  ```{r}
+# ped file import
+bim_file <- list.files(path_qc, pattern = "*.bim", full.names = T)
+
+bim <- read.table(bim_file)
+
+bim_table <- bim %>%
+  as_tibble() %>%
+  rename(chr = V1, snp_id = V2, pos_M = V3, pos_bp = V4, allele_1 = V5, allele_2 = V6)
+  ```
+
+
+  ## After QC
+  ### PCA
+  ```{r}
+system(str_c("plink \\
+  --chr-set 29 no-xy \\
+  --allow-no-sex \\
+  --nonfounders \\
+  --allow-extra-chr \\
+  --file ", path, "/genotypes_SYLV", " \\
+  --distance-matrix \\
+  --out ", path, "/AfterQC/dist"))
+
+dist_matrix <- read.table(paste0(path_qc, "/dist.mdist"), header = F)
+
+mds_pop <- cmdscale(dist_matrix, eig = TRUE, 10) # 10 as the number of components
+head(mds_pop)
+
+fam_ind <- data.frame(
+  # famids = read.table(paste0(path_qc,"/dist.mdist.id"))[, 1],
+  IID = read.table(paste0(path_qc, "/dist.mdist.id"))[, 2]
+)
+
+nrow(fam_ind)
+nrow(mds_pop$points)
+
+eigenvec_populations <- cbind(fam_ind, mds_pop$points)
+
+eigen_percent <- round(((mds_pop$eig) / sum(mds_pop$eig)) * 100, 1)
+  ```
+  ```{r}
+eig_pop <- eigenvec_populations %>%
+  as_tibble() %>%
+  select(IID, "1", "2", "3")
+
+pass_tbl <- pass_table %>%
+  rename(IID = DNA.ID)
+
+table_pca <- left_join(eig_pop, pass_tbl, by = "IID")
+
+table_pca$Subtaxa %>% unique()
+
+table_pca %>%
+  ggplot() +
+  geom_bar(aes(x = Subtaxa))
+
+table_pca_names <- table_pca %>%
+  mutate(
+    OriginGeo = case_when(
+      OriginGeo == "CHE" ~ "Swiss",
+      OriginGeo == "FRA" ~ "France",
+      OriginGeo == "DEU" ~ "Germany",
+      OriginGeo == "ESP" ~ "Spain",
+      OriginGeo == "Tun" ~ "Tunisia",
+      OriginGeo == "TUN" ~ "Tunisia",
+      OriginGeo == "DZA" ~ "Algeria",
+      OriginGeo == "GEO" ~ "Georgia",
+      OriginGeo == "GRC" ~ "Greece",
+      OriginGeo == "HUN" ~ "Hungary",
+      OriginGeo == "MAR" ~ "Marocco",
+      OriginGeo == "SVK" ~ "Slovakia",
+      OriginGeo == "TUR" ~ "Turkey",
+      .default = OriginGeo
+    )
+  )
+
+table_pca_names %>%
+  ggplot() +
+  geom_bar(aes(x = fct_infreq(OriginGeo), fill = Subtaxa)) +
+  labs(x = "geographical origin") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+table_pca_names_filtered <-
+  table_pca_names %>%
+  filter(Subtaxa != "subsp. sativa")
+
+table_pca_names_filtered %>%
+  ggplot() +
+  geom_bar(aes(x = fct_infreq(OriginGeo), fill = Subtaxa)) +
+  labs(x = "geographical origin") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  ```
+  ```{r}
+# explained variances plot
+eigen_percent_goat_pop <-
+  eigen_percent %>%
+  as.data.frame(.) %>%
+  rename("exp_var" = ".") %>%
+  mutate("row" = as.numeric(rownames(.))) %>%
+  select("row", "exp_var") %>%
+  filter(row_number() <= 10) %>%
+  as_tibble() %>%
+  ggplot(aes(., x = row, y = exp_var)) +
+  geom_col(color = "gray", fill = "gray", alpha = .75) +
+  geom_line(color = "gray20") +
+  geom_point(color = "grey20") +
+  scale_x_continuous(expand = c(0.01, 0), breaks = c(1:10)) +
+  scale_y_continuous(expand = c(0.01, 0)) +
+  labs(title = "Explained var. in the first 10 dim.", x = "Dimensions", y = "Explained variance (%)") +
+  theme_classic() +
+  theme(
+    aspect.ratio = 1.75,
+    panel.grid = element_blank(),
+    axis.ticks = element_line()
+  )
+
+# individuals plot
+mds_vitis <-
+  table_pca_names_filtered %>%
+  ggplot(.) +
+  geom_vline(xintercept = 0, linetype = "dotted", color = "grey20") +
+  geom_hline(yintercept = 0, linetype = "dotted", color = "grey20") +
+  geom_point(aes(x = -`1`, y = `2`, color = OriginGeo), size = 3, alpha = .8, show.legend = T) +
+  labs(
+    title = paste("MDS of", nrow(table_pca_names_filtered), " *V. vinifera* subsp. *sylvestris*"),
+    x = paste0("Dim. 1 (", eigen_percent[1], " %)"),
+    y = paste0("Dim. 2 (", eigen_percent[2], " %)")
+  ) +
+  # theme_pomological_fancy() +
+  # scale_color_pomological() +
+  theme_minimal() +
+  theme(
+    aspect.ratio = 1,
+    plot.title = element_markdown(),
+    panel.grid = element_blank(),
+    axis.ticks = element_line()
+  )
+  ```
+  ```{r}
+eigen_percent_goat_pop + mds_vitis
+
+path <- "Figures/vitis_wild_.png"
+ggsave(path, plot = mds_goat_var, width = 10, dpi = 120, type = "cairo")
+knitr::plot_crop(path)
+  ```

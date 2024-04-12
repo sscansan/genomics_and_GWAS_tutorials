@@ -1,0 +1,18 @@
+PLINK v1.90b7.2 64-bit (11 Dec 2023)
+Options in effect:
+  --allow-no-sex
+  --chr-set 29 no-xy
+  --distance-matrix
+  --file path_qc
+  --nonfounders
+  --out path_qc
+
+Hostname: pop-os
+Working directory: /home/sscansa/MEGA/R/GWAS
+Start time: Fri Apr 12 16:51:40 2024
+
+Random number seed: 1712933500
+63484 MB RAM detected; reserving 31742 MB for main workspace.
+Error: Failed to open path_qc.map.
+
+End time: Fri Apr 12 16:51:40 2024

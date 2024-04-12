@@ -153,6 +153,7 @@ mds_goat_2 <-
 #assemble
 require("patchwork")
 mds_goat_var <- mds_goat | mds_goat_2
+
 #save_cut
 path <- "Figures/goat_mds_12.png"
 ggsave(path, plot = mds_goat_var, width = 10, dpi = 120, type = "cairo")
@@ -163,7 +164,7 @@ knitr::plot_crop(path)
 
 ```
 
-## MDS in plink
+## MDS directly in plink
 There is an option to direct create the distance matrix, eigenvectors and eigenvalues directly in plink
 ```{r}
 goats <- readr::read_tsv("Data/ADAPTmap_genotypeTOP_20160222_full/ADAPTmap_genotypeTOP_20160222_full.fam", col_names = F)

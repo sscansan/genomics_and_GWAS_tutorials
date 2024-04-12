@@ -1,5 +1,5 @@
 ---
-title: "Vitis"
+title: "Vitis_nematode"
 #author:
 output:
   #rmdformats::html_clean:
@@ -36,37 +36,3 @@ After downloading and unzipping the files, I used `rTASSEL` to run a quality con
 
 In `rTASSEL`, i import the `all.taxamerged.filtered.recode.vcf` file
 
-```{r}
-rm(list = ls())
-```
-```{r}
-library(rTASSEL)
-library(tidyverse)
-# if (!require("BiocManager", quietly = TRUE))
-#     install.packages("BiocManager")
-# BiocManager::install("ggtree")
-library(ggtree)
-```
-```{r}
-pathVCF <- "Data/SNP_linked_rootknot_nematode_resistance_grapevine/SNP_data/all.taxamerged.filtered.recode.vcf"
-tassel_in_geno_vcf_all <- readGenotypeTableFromPath(pathVCF)
- ```
-
- ```{r}
-pathVCF <- "Data/SNP_linked_rootknot_nematode_resistance_grapevine/SNP_data/Riesling_2973_SNPset.vcf"
-tassel_in_geno_vcf_riesling <- readGenotypeTableFromPath(pathVCF)
- ```
-
-  ```{r}
-pathVCF <- "Data/SNP_linked_rootknot_nematode_resistance_grapevine/SNP_data/C2_50_3974_SNPset.vcf"
-tassel_in_geno_vcf_c2 <- readGenotypeTableFromPath(pathVCF)
- ```
- ```{r}
-#pathPheno <- "Data/SNP_linked_rootknot_nematode_resistance_grapevine/SNP_data/C2_50_367_MJR1.out.txt"
-#read_table(pathPheno)
-#tassel_in_pheno <- readPhenotypeFromPath(pathPheno)
- ```
- ```{r}
- genoMat <- as.matrix(tassel_in_geno_vcf_all)
- genoMat
- ```
