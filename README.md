@@ -106,6 +106,7 @@ The report of the studies in progress is at:
 
 ## Resources & Data
 
+- **Uffelmann et al.** (2021) Genome-Wide association studies. _Nature Reviews Methods Primers_ [https://www.nature.com/articles/s43586-021-00056-9](https://www.nature.com/articles/s43586-021-00056-9)
 - **Marees et al.** (2018) A tutorial on conducting genome-wide association
   studies: Quality control and statistical analysis. _Int J Methods Psychiatr
   Res_. 27:e1608.
