@@ -14,6 +14,8 @@
 \usepackage[hidelinks, colorlinks=true, linkcolor=blue]{hyperref}
 \usepackage[capitalise]{cleveref}
 
+\usepackage{xurl}
+
 \begin{document}
 
 
@@ -33,7 +35,7 @@
 
 
 %\begin{twocolumn}
-\section{Project: SNP Profiling Durum Wheat}
+\section{Project: SNP Profiling of a Durum Wheat collection}
 
 \subsection{Data}
 
@@ -103,7 +105,7 @@ In \cref{fig:wheat_corr} the Pearson's correlation between agronomic traits is c
 \end{figure}
 
 
-\subsubsection{PCA}
+\subsubsection{PCoA}
 
 As the agronomic data table (phenotypic data) has nine variables, a multivariate analysis is necessary to better explore the data.
 In \cref{fig:wheat_scree_pheno} we show the scree plot of the phenotype data.
@@ -115,9 +117,9 @@ From this figure it follows that there are approximately 3 dimensions necessary 
     \subfloat[score\_plot]{\includegraphics[width = .75\linewidth]{../Figures/wheat_pca_agronomic_location.png}\label{fig:wheat_pca_location}}
     \caption{
         a) Scree plot of the phenotype-agronomic data.
-        b) PCA biplot of the agronomic traits.
+        b) PCoA biplot of the agronomic traits.
         In the biplot, the ellipses are calculated on a normal multivariate distribution that indicate the 95\% CI.
-        PCA of the wheat agronomic traits dataset.
+        PCoA of the wheat agronomic traits dataset.
         DB = days to booting (days),
         DF = days to flowering (days),
         DM = days to maturity (days),
@@ -131,8 +133,25 @@ From this figure it follows that there are approximately 3 dimensions necessary 
     \label{fig:scree_PCA_location}
 \end{figure}
 
+% ########################################################
 \newpage
-\thispagestyle{empty}
+\section{\textit{Vitis vinifera} subsp. \textit{sativa} collection}
+
+Data coming from the repository: \href{https://entrepot.recherche.data.gouv.fr/dataset.xhtml;jsessionid=2f4de81d5749162093ac55d6a7b0?persistentId=doi:10.15454/9RUCEP&version=&q=&fileAccess=&fileTag=&fileSortField=date&fileSortOrder=}{A dataset of 9.896 single nuclear polymorphisms for 112 wild grapes, obtained with the GrapeReSeq 18K Vitis chip}
+
+The data have been published in: Ramos-Madrigal, J., Runge, A.K.W., Bouby, L. et al. Palaeogenomic insights into the origins of French grapevine diversity. \textit{Nat. Plants} 5, 595–603 (2019). \href{https://doi.org/10.1038/s41477-019-0437-5}{https://doi.org/10.1038/s41477-019-0437-5}
+
+\quote{The dataset, comprising 9.896 SNPs for 112 wild grapes (Vitis vinifera subsp. sylvestris), is made available here in support of the paper : Ramos-Madrigal J, Wiborg Runge AK, Bouby L, Lacombe T, Samaniego-Castruita JA, Adam-Blondon AF, Figueiral I, Hallavant C, Martínez-Zapater JM, Schaal C, Töpfer R, Petersen B, Sicheritz-Pontén T, This P, Bacilieri R, Gilbert MTP, Wales, 2019. Palaeogenomic insights into the origins of French grapevine diversity. Submitted to Nature Plants, 2019. These 9.869 SNPs are a subset of the 10.207 SNPs for cultivated grapes previously published by Le Paslier et al, 2018 (\url{https://doi.org/10.15454/1.4861359557068474E12}). Plant material was harvested in two grapevine collections (FAO WIEWS instcode FRA139 and DEU098), respectively: A) France, “INRA Domaine de Vassal, Marseillan-Plage” (\url{http://www6.montpellier.inra.fr/vassal}) ; and B) Germany, “JKI Geilweilerhof, Siebeldingen” (\url{http://www.deutsche-genbank-reben.julius-kuehn.de/}) (2019-04-10) }
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{../Figures/vitis_wild_.png}
+    \label{fig:vitis_wild_pca}
+    \caption{}
+\end{figure}
+
+
+\newpage\thispagestyle{empty}
 
 \includepdf[pages=-,pagecommand={},width=\pagewidth]{build/readme.pdf}
 

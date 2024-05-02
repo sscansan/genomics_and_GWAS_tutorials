@@ -1,45 +1,49 @@
-  ---
-  title: "Vitis_wild"
-  #author:
-  output:
-    #rmdformats::html_clean:
-    rmdformats::downcute:
-      downcute_theme: "chaos"
-      use_bookdown: false
-      self_contained: true
-      thumbnails: true
-      lightbox: true
-      highlight: tango
-      gallery: true
-      toc_depth: 3
-      code_folding: show
-      css: css/custom.css
-  knit:
-    (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
-    encoding, output_dir = "html") })
-  ---
+---
 
-  # Genomic project to investigate  the genetic basis of complex traits in Vitis vinifera.
+title: "Vitis_wild"
+#author:
+output:
+#rmdformats::html_clean:
+rmdformats::downcute:
+downcute_theme: "chaos"
+use_bookdown: false
+self_contained: true
+thumbnails: true
+lightbox: true
+highlight: tango
+gallery: true
+toc_depth: 3
+code_folding: show
+css: css/custom.css
+knit:
+(function(inputFile, encoding) { rmarkdown::render(inputFile, encoding =
+encoding, output_dir = "html") })
 
-  ## Introduction
+---
 
-  The aim of this project is to identify and characterize genes associated with important plant traits using high-throughput sequencing technologies.
+# Genomic project to investigate the genetic basis of complex traits in Vitis vinifera.
 
-  ## Data
-  Here we analyse the data of the paper:
-  Smith HM, Smith BP, Morales NB, Moskwa S, Clingeleffer PR, Thomas MR (2018) SNP markers tightly linked to root knot nematode resistance in grapevine (Vitis cinerea) identified by a genotyping-by-sequencing approach followed by Sequenom MassARRAY validation. PLoS ONE 13 (2): e0193121. https://doi.org/10.1371/journal.pone.0193121
+## Introduction
 
-  Data can be found in the DRYAD repository:
-  Smith, Harley M. et al. (2019). Data from: SNP markers tightly linked to root knot nematode resistance in grapevine (Vitis cinerea) identified by a genotyping-by-sequencing approach followed by Sequenom MassARRAY validation [Dataset]. Dryad. https://doi.org/10.5061/dryad.1d7n9
+The aim of this project is to identify and characterize genes associated with important plant traits using high-throughput sequencing technologies.
 
-  After downloading and unzipping the files, I used `rTASSEL` to run a quality control on the file `all.taxamerged.filtered.recode.vcf` which is described in the *README.txt* to be the data from the sequencing. This file contains SNP data for C2-50, Riesling and the 90 C2-50 x Riesling F1 individuals.
+## Data
 
-  In `rTASSEL`, i import the `all.taxamerged.filtered.recode.vcf` file
+Here we analyse the data of the paper:
+Smith HM, Smith BP, Morales NB, Moskwa S, Clingeleffer PR, Thomas MR (2018) SNP markers tightly linked to root knot nematode resistance in grapevine (Vitis cinerea) identified by a genotyping-by-sequencing approach followed by Sequenom MassARRAY validation. PLoS ONE 13 (2): e0193121. https://doi.org/10.1371/journal.pone.0193121
 
-  ```{r}
+Data can be found in the DRYAD repository:
+Smith, Harley M. et al. (2019). Data from: SNP markers tightly linked to root knot nematode resistance in grapevine (Vitis cinerea) identified by a genotyping-by-sequencing approach followed by Sequenom MassARRAY validation [Dataset]. Dryad. https://doi.org/10.5061/dryad.1d7n9
+
+After downloading and unzipping the files, I used `rTASSEL` to run a quality control on the file `all.taxamerged.filtered.recode.vcf` which is described in the _README.txt_ to be the data from the sequencing. This file contains SNP data for C2-50, Riesling and the 90 C2-50 x Riesling F1 individuals.
+
+In `rTASSEL`, i import the `all.taxamerged.filtered.recode.vcf` file
+
+```{r}
 rm(list = ls())
-  ```
-  ```{r}
+```
+
+```{r}
 library(tidyverse)
 library(rTASSEL)
 library(plinkr)
@@ -47,36 +51,38 @@ library(ggtext)
 library(patchwork)
 
 BiocManager::install("snpStats")
-  ```
+```
 
-  ## QC
-  ```{r}
+## QC
+
+```{r}
 path <- "Data/vitis_112_wildgrapes/dataverse_files"
 path_qc <- "Data/vitis_112_wildgrapes/dataverse_files/AfterQC"
 
 list.files(path)
-  ```
-  ```{r}
+```
+
+```{r}
 # default is --mind 0.1, and this leaves 3 samples out. However, if we want to keep the samples we have to accept a 25% missingness in the genotypes, and that includes also the 2 samples (<20%), and 1 sample (<25%).
 system(
   str_c(
     "plink \\
-  --file ", path, "/genotypes_SYLV \\
-  --chr-set 19 no-xy \\
-  --geno 0.1 \\
-  --mind 0.25 \\
-  --maf 0.05 \\
-  --autosome \\
-  --allow-no-sex \\
-  --nonfounders \\
-  --allow-extra-chr \\
-  --make-bed \\
-  --out ", path, "/AfterQC/qc"
+--file ", path, "/genotypes_SYLV \\
+--chr-set 19 no-xy \\
+--geno 0.1 \\
+--mind 0.25 \\
+--maf 0.05 \\
+--autosome \\
+--allow-no-sex \\
+--nonfounders \\
+--allow-extra-chr \\
+--make-bed \\
+--out ", path, "/AfterQC/qc"
   )
 )
-  ```
+```
 
-  ```{r}
+```{r}
 # map file import
 map_file <- list.files(path, pattern = "*.map", full.names = T)
 
@@ -90,8 +96,9 @@ map_table <- map %>%
     pos_M = V3,
     pos = V4
   )
-  ```
-  ```{r}
+```
+
+```{r}
 # fam file import
 
 fam_files <- list.files(path_qc, pattern = "*fam", full.names = T)
@@ -108,8 +115,9 @@ fam_table <- fam %>%
     sex = V5,
     phenotype = V6
   )
-  ```
-  ```{r}
+```
+
+```{r}
 # passport data
 
 passport_file <- list.files(path, pattern = "*.txt", full.names = T)
@@ -118,8 +126,9 @@ pass <- read.table(passport_file[1], sep = "\t", header = T)
 
 pass_table <- pass %>%
   as_tibble()
-  ```
-  ```{r}
+```
+
+```{r}
 # ped file import
 ped_file <- list.files(path_qc, pattern = "*.ped", full.names = T)
 
@@ -127,8 +136,9 @@ ped <- read.table(ped_file)
 
 ped_table <- ped %>%
   as_tibble()
-  ```
-  ```{r}
+```
+
+```{r}
 # ped file import
 bim_file <- list.files(path_qc, pattern = "*.bim", full.names = T)
 
@@ -137,20 +147,21 @@ bim <- read.table(bim_file)
 bim_table <- bim %>%
   as_tibble() %>%
   rename(chr = V1, snp_id = V2, pos_M = V3, pos_bp = V4, allele_1 = V5, allele_2 = V6)
-  ```
+```
 
+## After QC
 
-  ## After QC
-  ### PCA
-  ```{r}
+### PCA
+
+```{r}
 system(str_c("plink \\
-  --chr-set 29 no-xy \\
-  --allow-no-sex \\
-  --nonfounders \\
-  --allow-extra-chr \\
-  --file ", path, "/genotypes_SYLV", " \\
-  --distance-matrix \\
-  --out ", path, "/AfterQC/dist"))
+--chr-set 29 no-xy \\
+--allow-no-sex \\
+--nonfounders \\
+--allow-extra-chr \\
+--file ", path, "/genotypes_SYLV", " \\
+--distance-matrix \\
+--out ", path, "/AfterQC/dist"))
 
 dist_matrix <- read.table(paste0(path_qc, "/dist.mdist"), header = F)
 
@@ -168,8 +179,9 @@ nrow(mds_pop$points)
 eigenvec_populations <- cbind(fam_ind, mds_pop$points)
 
 eigen_percent <- round(((mds_pop$eig) / sum(mds_pop$eig)) * 100, 1)
-  ```
-  ```{r}
+```
+
+```{r}
 eig_pop <- eigenvec_populations %>%
   as_tibble() %>%
   select(IID, "1", "2", "3")
@@ -220,8 +232,9 @@ table_pca_names_filtered %>%
   geom_bar(aes(x = fct_infreq(OriginGeo), fill = Subtaxa)) +
   labs(x = "geographical origin") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-  ```
-  ```{r}
+```
+
+```{r}
 # explained variances plot
 eigen_percent_goat_pop <-
   eigen_percent %>%
@@ -266,11 +279,12 @@ mds_vitis <-
     panel.grid = element_blank(),
     axis.ticks = element_line()
   )
-  ```
-  ```{r}
-eigen_percent_goat_pop + mds_vitis
+```
+
+```{r}
+pca_vitis <- eigen_percent_goat_pop + mds_vitis
 
 path <- "Figures/vitis_wild_.png"
-ggsave(path, plot = mds_goat_var, width = 10, dpi = 120, type = "cairo")
+ggsave(path, plot = pca_vitis, width = 10, dpi = 120, type = "cairo")
 knitr::plot_crop(path)
-  ```
+```

@@ -148,12 +148,12 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/xurl/xurl.sty
 INPUT ./build/Genomics_proj.aux
 OUTPUT build/Genomics_proj.aux
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -226,6 +226,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8t.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/helvetic/phvbo8t.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8r.tfm
 OUTPUT build/Genomics_proj.toc
 INPUT ./build/Genomics_proj.lof
 OUTPUT build/Genomics_proj.lof
@@ -242,7 +245,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT ./build/../Figures/wheat_corrplot.png
 INPUT ../Figures/wheat_corrplot.png
-INPUT ../Figures/wheat_eda.png
+INPUT ./build/../Figures/wheat_eda.png
 INPUT ../Figures/wheat_eda.png
 INPUT ./build/../Figures/wheat_exp_var_agro_data.png
 INPUT ../Figures/wheat_exp_var_agro_data.png
@@ -251,6 +254,11 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT ./build/../Figures/wheat_pca_agronomic_location.png
 INPUT ../Figures/wheat_pca_agronomic_location.png
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8t.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/helvetic/phvbo8t.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8r.tfm
+INPUT ../Figures/vitis_wild_.png
+INPUT ../Figures/vitis_wild_.png
 INPUT ./build/readme.pdf
 INPUT ./build/readme.pdf
 INPUT ./build/readme.pdf
@@ -298,5 +306,6 @@ INPUT ./build/Genomics_proj.aux
 INPUT ./build/Genomics_proj.out
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb

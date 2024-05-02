@@ -1,5 +1,6 @@
-\contentsline {section}{\numberline {1}Project: SNP Profiling Durum Wheat}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Data}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {1}Project: SNP Profiling of a Durum Wheat collection}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Data}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Phenotype data}{2}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}Correlation between variables}{2}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}PCA}{4}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2}PCoA}{4}{subsubsection.1.2.2}%
+\contentsline {section}{\numberline {2}\textit {Vitis vinifera} subsp. \textit {sativa} collection}{5}{section.2}%
