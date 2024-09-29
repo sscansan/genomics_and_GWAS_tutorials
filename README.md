@@ -64,8 +64,20 @@ The report of the studies in progress is at:
 
 ## Example case studies
 
-1. SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
-   https://doi.org/10.1186/s12711-018-0422-x
+1. _Vitis vinifera_ subsp. _sylvestris_ collection
+
+Data coming from the repository: [Repository](https://entrepot.recherche.data.gouv.fr/dataset.xhtml;jsessionid=2f4de81d5749162093ac55d6a7b0?persistentId=doi:10.15454/9RUCEP&version=&q=&fileAccess=&fileTag=&fileSortField=date&fileSortOrder=).
+
+A dataset of 9.896 single nuclear polymorphisms for 112 wild grapes, obtained with the **GrapeReSeq 18K Vitis chip**
+
+The data have been published in: Ramos-Madrigal, J., Runge, A.K.W., Bouby, L. et al. Palaeogenomic insights into the origins of French grapevine diversity. \textit{Nat. Plants} 5, 595–603 (2019). https://doi.org/10.1038/s41477-019-0437-5
+
+> The dataset, comprising 9.896 SNPs for 112 wild grapes (_Vitis vinifera_ subsp. _sylvestris_), is made available here in support of the paper : Ramos-Madrigal J, Wiborg Runge AK, Bouby L, Lacombe T, Samaniego-Castruita JA, Adam-Blondon AF, Figueiral I, Hallavant C, Martínez-Zapater JM, Schaal C, Töpfer R, Petersen B, Sicheritz-Pontén T, This P, Bacilieri R, Gilbert MTP, Wales, 2019. Palaeogenomic insights into the origins of French grapevine diversity. Submitted to Nature Plants, 2019. These 9.869 SNPs are a subset of the 10.207 SNPs for cultivated grapes previously published by Le Paslier et al, 2018 (\url{https://doi.org/10.15454/1.4861359557068474E12}). Plant material was harvested in two grapevine collections (FAO WIEWS instcode FRA139 and DEU098), respectively: A) France, “INRA Domaine de Vassal, Marseillan-Plage” (http://www6.montpellier.inra.fr/vassal) ; and B) Germany, “JKI Geilweilerhof, Siebeldingen” (http://www.deutsche-genbank-reben.julius-kuehn.de/) (2019-04-10) }
+
+![Vitis Wild PCA](Figures/vitis_wild_.png)
+
+1.  SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
+    https://doi.org/10.1186/s12711-018-0422-x
 
 ![Multidimensional scaling of the genotypes](Figures/goat_mds_12.png)
 

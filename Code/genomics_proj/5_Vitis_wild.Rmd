@@ -44,13 +44,27 @@ rm(list = ls())
 ```
 
 ```{r}
-library(tidyverse)
-library(rTASSEL)
+usePackage <- function(package) {
+  if (!require(package, character.only = TRUE)) {
+    install.packages(package)
+    library(package, character.only = TRUE)
+  }
+}
+
+if (!require("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
+BiocManager::install(version = "3.19")
+```
+```{r}
+usePackage("tidyverse")
+library("rTASSEL") # no point in usePackage as rTASSEL is installed through its github repo
 library(plinkr)
-library(ggtext)
-library(patchwork)
+usePackage("ggtext")
+usePackage("patchwork")
 
 BiocManager::install("snpStats")
+library(snpStats)
 ```
 
 ## QC
@@ -130,7 +144,7 @@ pass_table <- pass %>%
 
 ```{r}
 # ped file import
-ped_file <- list.files(path_qc, pattern = "*.ped", full.names = T)
+ped_file <- list.files(path, pattern = "*.ped", full.names = T)
 
 ped <- read.table(ped_file)
 
@@ -146,7 +160,14 @@ bim <- read.table(bim_file)
 
 bim_table <- bim %>%
   as_tibble() %>%
-  rename(chr = V1, snp_id = V2, pos_M = V3, pos_bp = V4, allele_1 = V5, allele_2 = V6)
+  rename(
+    chr = V1,
+    snp_id = V2,
+    pos_M = V3,
+    pos_bp = V4,
+    allele_1 = V5,
+    allele_2 = V6
+  )
 ```
 
 ## After QC
