@@ -76,7 +76,7 @@ The data have been published in: Ramos-Madrigal, J., Runge, A.K.W., Bouby, L. et
 
 ![Vitis Wild PCA](Figures/vitis_wild_.png)
 
-1.  SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
+2.  SNP profiling of goat breeds.<br>_Data source_: **Colli et al.** (2018)
     https://doi.org/10.1186/s12711-018-0422-x
 
 ![Multidimensional scaling of the genotypes](Figures/goat_mds_12.png)
@@ -93,7 +93,7 @@ The data have been published in: Ramos-Madrigal, J., Runge, A.K.W., Bouby, L. et
 > spatial arrangement reflects genetic dissimilarities. This exploratory analysis
 > offers insights into genetic diversity, population structure, and relatedness.
 
-1. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
+2. a. Manhattan plot of a GWAS on dog population for deafness._Data source_:
    **Hayward et al.** (2020) https://doi.org/10.1371/journal.pone.0232900
 
 ![Manhattan plot](Figures/manhattan_dogs.png)
@@ -106,7 +106,7 @@ The data have been published in: Ramos-Madrigal, J., Runge, A.K.W., Bouby, L. et
 > corresponding -log~10~ transformed P-values indicating the strength
 > of association with the trait on the y-axis. The red-dashed lines are representation of the 99.99 percentile threshold of the LOD values.
 
-1. b. Plot of the top significant SNPs identified in the above GWAS.
+2. b. Plot of the top significant SNPs identified in the above GWAS.
 
    Points are jittered around their respective chromosome.
 
